@@ -1,0 +1,1 @@
+# vulture-whitelist-generators
