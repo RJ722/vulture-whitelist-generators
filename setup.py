@@ -19,7 +19,7 @@ setuptools.setup(
     url='https://github.com/RJ722/vulture-whitelist-generators',
     license='MIT',
     classifiers=[
-        'Development Status :: 5 - Production/Stable',
+        'Development Status :: 3 - Alpha',
         'Environment :: Console',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
@@ -35,4 +35,5 @@ setuptools.setup(
     entry_points={
         'console_scripts': ['vulture-whitelist = generators.main:main']
     },
+    packages=['generators'],
 )
