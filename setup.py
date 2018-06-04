@@ -33,6 +33,6 @@ setuptools.setup(
         'Topic :: Software Development :: Quality Assurance'
     ],
     entry_points={
-        'console_scripts': ['vulture-whitelist = generators.main:main'],
+        'console_scripts': ['vulture-whitelist = generators.main:main']
     },
 )

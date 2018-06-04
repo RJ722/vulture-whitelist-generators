@@ -12,7 +12,7 @@ binding generator for PySide2 projects soon.
 Installation
 ------------
 
-``vulture-whitelist`` is a standard PyPi package and can be installed using
+``vulture-whitelist`` is a standard PyPI package and can be installed using
 ``pip``::
 
     $ pip install vulture-whitelist
