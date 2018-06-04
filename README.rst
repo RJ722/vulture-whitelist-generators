@@ -34,4 +34,7 @@ Generate a whitelist for ``sip`` projects:
 
 ::
 
-    $ vulture-whitelist sip /path/to/input-sip-files --sip /path/to/sip-binary
+    $ vulture-whitelist sip --sip /path/to/sip-binary
+
+
+This will create a ``whitelist.py`` into the current direcotry.
