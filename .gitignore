@@ -2,5 +2,10 @@
 MANIFEST
 build/
 dist/
+htmlcov/
 vulture_whitelist.egg-info/
+.cache/
+.coverage
+.pytest_cache/
+.tox/
 __pycache__
