@@ -1,8 +1,25 @@
 #! /usr/bin/env python
 
+import sys
+
+from setuptools.command.test import test as TestCommand
 import setuptools
 
 from generators.main import __version__
+
+
+class PyTest(TestCommand):
+    def finalize_options(self):
+        TestCommand.finalize_options(self)
+
+        self.test_args = []
+        self.test_suite = True
+
+    def run_tests(self):
+        # import here, cause outside the eggs aren't loaded
+        import pytest
+
+        sys.exit(pytest.main(self.test_args))
 
 
 setuptools.setup(
@@ -32,6 +49,7 @@ setuptools.setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Quality Assurance'
     ],
+    tests_require=['lxml', 'pytest', 'pytest-cov'],
     entry_points={
         'console_scripts': ['vulture-whitelist = generators.main:main']
     },
