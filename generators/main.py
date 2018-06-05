@@ -1,12 +1,12 @@
 import argparse
 
-from . import qt_utils
+from . import qt
 
 
 __version__ = '0.1'
 
 CREATORS = {
-    'sip': qt_utils.create_whitelist
+    'sip': qt.create_whitelist
 }
 
 

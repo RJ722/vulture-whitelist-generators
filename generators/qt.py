@@ -1,8 +1,9 @@
 import itertools
-from lxml import etree
 import os
 import subprocess
 import tempfile
+
+from lxml import etree
 
 
 FEATURES = ['PyQt_Accessibility', 'PyQt_SessionManager', 'PyQt_SSL',
