@@ -1,4 +1,5 @@
 *.py[cod]
+MANIFEST
 build/
 dist/
 vulture_whitelist.egg-info/
