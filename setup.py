@@ -5,7 +5,7 @@ import sys
 from setuptools.command.test import test as TestCommand
 import setuptools
 
-from generators.main import __version__
+from vulture_whitelist.main import __version__
 
 
 class PyTest(TestCommand):
@@ -23,7 +23,7 @@ class PyTest(TestCommand):
 
 
 setuptools.setup(
-    name='vulture-whitelist',
+    name='vulture_whitelist',
     version=__version__,
     description=(
         'Create whitelists to tackle false positives in Vulture automatically'
@@ -49,9 +49,10 @@ setuptools.setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Quality Assurance'
     ],
+    install_requires=['lxml'],
     tests_require=['lxml', 'pytest', 'pytest-cov'],
     entry_points={
-        'console_scripts': ['vulture-whitelist = generators.main:main']
+        'console_scripts': ['vulture-whitelist = vulture_whitelist.main:main']
     },
-    packages=['generators'],
+    packages=['vulture_whitelist'],
 )
