@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtMultimediaWidgets">
+  <Class name="QVideoWidget" inherits="QWidget QMediaBindableInterface">
+    <Function name="QVideoWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QVideoWidget.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QVideoWidget.paintEvent" virtual="1">
+      <Argument typename="QPaintEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QVideoWidget.moveEvent" virtual="1">
+      <Argument typename="QMoveEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QVideoWidget.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QVideoWidget.hideEvent" virtual="1">
+      <Argument typename="QHideEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QVideoWidget.showEvent" virtual="1">
+      <Argument typename="QShowEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QVideoWidget.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class" name="event"/>
+    </Function>
+    <Signal default="1" name="QVideoWidget.saturationChanged" sig="void saturationChanged(int)"/>
+    <Signal default="1" name="QVideoWidget.hueChanged" sig="void hueChanged(int)"/>
+    <Signal default="1" name="QVideoWidget.contrastChanged" sig="void contrastChanged(int)"/>
+    <Signal default="1" name="QVideoWidget.brightnessChanged" sig="void brightnessChanged(int)"/>
+    <Signal default="1" name="QVideoWidget.fullScreenChanged" sig="void fullScreenChanged(bool)"/>
+    <Function name="QVideoWidget.setSaturation" slot="void setSaturation(int)">
+      <Argument typename="int" name="saturation"/>
+    </Function>
+    <Function name="QVideoWidget.setHue" slot="void setHue(int)">
+      <Argument typename="int" name="hue"/>
+    </Function>
+    <Function name="QVideoWidget.setContrast" slot="void setContrast(int)">
+      <Argument typename="int" name="contrast"/>
+    </Function>
+    <Function name="QVideoWidget.setBrightness" slot="void setBrightness(int)">
+      <Argument typename="int" name="brightness"/>
+    </Function>
+    <Function name="QVideoWidget.setAspectRatioMode" slot="void setAspectRatioMode( ::Qt::AspectRatioMode)">
+      <Argument typename="Qt.AspectRatioMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QVideoWidget.setFullScreen" slot="void setFullScreen(bool)">
+      <Argument typename="bool" name="fullScreen"/>
+    </Function>
+    <Function name="QVideoWidget.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.saturation">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.hue">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.contrast">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.brightness">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.aspectRatioMode">
+      <Argument typename="Qt.AspectRatioMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoWidget.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraViewfinder" inherits="QVideoWidget">
+    <Function name="QCameraViewfinder.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QCameraViewfinder.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QCameraViewfinder.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGraphicsVideoItem" inherits="QGraphicsObject QMediaBindableInterface">
+    <Function name="QGraphicsVideoItem.__init__">
+      <Argument typename="QGraphicsItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.itemChange" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QGraphicsItem.GraphicsItemChange" typetype="enum" name="change"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.timerEvent" virtual="1">
+      <Argument typename="QTimerEvent" typetype="class" name="event"/>
+    </Function>
+    <Signal default="1" name="QGraphicsVideoItem.nativeSizeChanged" sig="void nativeSizeChanged(const  ::QSizeF&amp;)"/>
+    <Function name="QGraphicsVideoItem.paint" virtual="1">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+      <Argument typename="QStyleOptionGraphicsItem" typetype="class" name="option"/>
+      <Argument typename="QWidget" typetype="class" name="widget" default="None"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.boundingRect" virtual="1">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.nativeSize">
+      <Argument typename="QSizeF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.setSize">
+      <Argument typename="QSizeF" typetype="class" name="size"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.size">
+      <Argument typename="QSizeF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.setOffset">
+      <Argument typename="QPointF" typetype="class" name="offset"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.offset">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.setAspectRatioMode">
+      <Argument typename="Qt.AspectRatioMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.aspectRatioMode">
+      <Argument typename="Qt.AspectRatioMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGraphicsVideoItem.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>
