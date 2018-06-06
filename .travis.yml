@@ -10,7 +10,7 @@ python:
 matrix:
   fast_finish: true
 install:
-  - pip install lxml tox coveralls
+  - pip install coveralls lxml sip tox
   - python setup.py bdist_wheel
   - pip install --use-wheel ./dist/vulture_whitelist*.whl
 script:
