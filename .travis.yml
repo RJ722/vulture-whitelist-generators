@@ -1,0 +1,19 @@
+language: python
+python:
+- pypy
+- pypy3
+- '3.4'
+- '3.5'
+- '3.6'
+- '3.7'
+
+matrix:
+  fast_finish: true
+install:
+  - pip install lxml tox coveralls
+  - python setup.py bdist_wheel
+  - pip install --use-wheel ./dist/vulture_whitelist*.whl
+script:
+  - tox -e cleanup,py,docs,style,vulture
+after_success:
+  - coveralls
