@@ -1,16 +1,27 @@
 language: python
 python:
-- pypy
-- pypy3
 - '3.4'
 - '3.5'
 - '3.6'
-- '3.7'
+- 3.7-dev
 
 matrix:
   fast_finish: true
+
+before_install:
+  - sudo mkdir -p /downloads
+  - sudo chmod a+rw /downloads
+  - curl -L https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.8/sip-4.19.8.tar.gz -o /downloads/sip.tar.gz 
+  - sudo mkdir -p /builds
+  - sudo chmod a+rw /builds
 install:
-  - pip install coveralls lxml sip tox
+  - tar xzf /downloads/sip.tar.gz --keep-newer-files
+  - pushd sip-4.19.8
+  - python configure.py
+  - make
+  - sudo make install
+  - popd
+  - pip install coveralls lxml tox
   - python setup.py bdist_wheel
   - pip install --use-wheel ./dist/vulture_whitelist*.whl
 script:

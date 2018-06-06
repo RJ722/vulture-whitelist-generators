@@ -49,7 +49,7 @@ setuptools.setup(
         'Programming Language :: Python :: Implementation :: PyPy',
         'Topic :: Software Development :: Quality Assurance'
     ],
-    install_requires=['lxml', 'sip'],
+    install_requires=['lxml'],
     tests_require=['lxml', 'pytest', 'pytest-cov', 'sip'],
     entry_points={
         'console_scripts': ['vulture-whitelist = vulture_whitelist.main:main']
