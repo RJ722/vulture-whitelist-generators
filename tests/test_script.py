@@ -16,6 +16,7 @@ def test_qt_whitelist():
     whitelist_generated = os.path.join(
         TESTS, 'test-data', 'sip', 'whitelist.py')
     whitelist_sample = os.path.join(SAMPLE_WHITELISTS, 'qtbluetooth.py')
+    subprocess.call(['cat', whitelist_generated])
     assert filecmp.cmp(whitelist_generated, whitelist_sample, shallow=False)
     os.remove(whitelist_generated)
 
