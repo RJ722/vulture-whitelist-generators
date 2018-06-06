@@ -22,6 +22,7 @@ From local repository::
 
     $ git clone https://github.com/RJ722/vulture-whitelist-generators
     $ cd vulture-whitelist-generators
+    $ pip install lxml
     $ pip install .
 
 
@@ -35,3 +36,4 @@ containing the ``.sip`` files for your project and run::
 
 
 This will create a ``whitelist.py`` into the current direcotry.
+
