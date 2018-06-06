@@ -54,13 +54,13 @@ class QtWhitelistCreator:
             subprocess.call(sipcmd)
 
     def get_modules(self):
-        for filename in os.listdir():
+        for filename in sorted(os.listdir()):
             filepath = os.path.abspath(filename)
             if os.path.isdir(filepath):
                 yield filename
 
     def parse_xmls(self, xmldir):
-        for basename in os.listdir(xmldir):
+        for basename in sorted(os.listdir(xmldir)):
             xmlfile = os.path.join(xmldir, basename)
             with open(xmlfile, 'r') as f:
                 tree = etree.parse(f)

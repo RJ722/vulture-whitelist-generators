@@ -1,18 +1,4 @@
-# _QOpenGLFunctions_2_0
-
-# _QOpenGLFunctions_2_1
-_QOpenGLFunctions_2_1.QOpenGLFunctions_2_1.initializeOpenGLFunctions
-
-# _QOpenGLFunctions_4_1_Core
-_QOpenGLFunctions_4_1_Core.QOpenGLFunctions_4_1_Core.initializeOpenGLFunctions
-
-# _QOpenGLFunctions_ES2
-
 # Enginio
-
-# pylupdate
-
-# pyrcc
 
 # QAxContainer
 QAxContainer.QAxBase.clear
@@ -2894,4 +2880,18 @@ QtXmlPatterns.QXmlSerializer.processingInstruction
 QtXmlPatterns.QXmlSerializer.startDocument
 QtXmlPatterns.QXmlSerializer.startElement
 QtXmlPatterns.QXmlSerializer.startOfSequence
+
+# _QOpenGLFunctions_2_0
+
+# _QOpenGLFunctions_2_1
+_QOpenGLFunctions_2_1.QOpenGLFunctions_2_1.initializeOpenGLFunctions
+
+# _QOpenGLFunctions_4_1_Core
+_QOpenGLFunctions_4_1_Core.QOpenGLFunctions_4_1_Core.initializeOpenGLFunctions
+
+# _QOpenGLFunctions_ES2
+
+# pylupdate
+
+# pyrcc
 

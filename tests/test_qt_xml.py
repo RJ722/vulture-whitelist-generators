@@ -18,7 +18,7 @@ def test_whitelist_from_xml():
     c = QtWhitelistCreator(args)
     with open(args.name, 'w') as outfile:
         xmldata = os.path.join(TESTS, 'test-data', 'xml-data')
-        for xmldir in os.listdir(xmldata):
+        for xmldir in sorted(os.listdir(xmldata)):
             tmp = os.path.join(xmldata, xmldir)
             c._write_mod_whitelist(
                 outfile, xmldir, c.name_set(tmp))
