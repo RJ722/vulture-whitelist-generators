@@ -1,5 +1,4 @@
 *.py[cod]
-MANIFEST
 build/
 dist/
 htmlcov/
