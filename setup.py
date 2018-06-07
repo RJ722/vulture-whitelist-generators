@@ -50,7 +50,7 @@ setuptools.setup(
         'Topic :: Software Development :: Quality Assurance'
     ],
     install_requires=['lxml'],
-    tests_require=['lxml', 'pytest', 'pytest-cov', 'vulture'],
+    tests_require=['pytest', 'pytest-cov', 'vulture'],
     entry_points={
         'console_scripts': ['vulture-whitelist = vulture_whitelist.main:main']
     },
