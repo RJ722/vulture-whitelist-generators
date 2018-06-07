@@ -3,7 +3,7 @@ import os
 import subprocess
 import tempfile
 
-from .utils import log
+from .utils import Creator, log
 
 from lxml import etree
 
@@ -19,14 +19,10 @@ TIMELINE = ['Qt_5_0_0', 'Qt_5_0_1', 'Qt_5_0_2', 'Qt_5_1_0', 'Qt_5_1_1',
             'Qt_5_4_0', 'Qt_5_4_1', 'Qt_5_4_2', 'Qt_5_5_0']
 
 
-class QtWhitelistCreator:
+class QtWhitelistCreator(Creator):
     """
     Takes in sip files and emits a whitelist.
     """
-
-    def __init__(self, args):
-        self.sip = args.sip[0]
-        self.whitelist_name = args.name[0]
 
     def _write_mod_whitelist(self, f, module, name_set):
         f.write('# {}\n'.format(module))

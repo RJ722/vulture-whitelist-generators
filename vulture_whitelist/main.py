@@ -5,20 +5,20 @@ from . import qt
 
 __version__ = '0.1'
 
-CREATORS = {
-    'sip': qt.QtWhitelistCreator
+CREATORS_META = {
+    'sip': (qt.QtWhitelistCreator, 'sip')
 }
 
 
 def get_creator(framework):
-    return CREATORS.get(framework)
+    return CREATORS_META.get(framework)
 
 
 def _parse_args():
     version = "vulture-whitelist {0}".format(__version__)
     parser = argparse.ArgumentParser(prog='vulture-whitelist')
     parser.add_argument('--version', action='version', version=version)
-    parser.add_argument('framework', choices=CREATORS.keys(), help=(
+    parser.add_argument('framework', choices=CREATORS_META.keys(), help=(
         'Framweork to generate a whitelist for.'))
     parser.add_argument('--name', nargs=1, default=['whitelist.py'], help=(
         'Name of the whitelist.'))
@@ -29,5 +29,5 @@ def _parse_args():
 
 def main():
     args = _parse_args()
-    creator = get_creator(args.framework)
-    creator(args).create()
+    creator, argv = get_creator(args.framework)
+    creator(args.name[0], argv).create()
