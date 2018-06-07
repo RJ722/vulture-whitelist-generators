@@ -1,3 +1,4 @@
+sudo: required
 language: python
 python:
 - '3.4'
@@ -9,22 +10,16 @@ matrix:
   fast_finish: true
 
 before_install:
-  - sudo mkdir -p /downloads
-  - sudo chmod a+rw /downloads
-  - curl -L https://sourceforge.net/projects/pyqt/files/sip/sip-4.19.8/sip-4.19.8.tar.gz -o /downloads/sip.tar.gz 
-  - sudo mkdir -p /builds
-  - sudo chmod a+rw /builds
+  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 7638D0442B90D010
+  - sudo apt-get install python-sip
+
 install:
-  - tar xzf /downloads/sip.tar.gz --keep-newer-files
-  - pushd sip-4.19.8
-  - python configure.py
-  - make
-  - sudo make install
-  - popd
   - pip install coveralls lxml tox
   - python setup.py bdist_wheel
   - pip install --use-wheel ./dist/vulture_whitelist*.whl
+
 script:
   - tox -e cleanup,py,docs,style,vulture
+
 after_success:
   - coveralls
