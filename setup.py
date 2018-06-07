@@ -1,30 +1,13 @@
 #! /usr/bin/env python
 
-import sys
-
-from setuptools.command.test import test as TestCommand
 import setuptools
 
-from vulture_whitelist.main import __version__
-
-
-class PyTest(TestCommand):
-    def finalize_options(self):
-        TestCommand.finalize_options(self)
-
-        self.test_args = []
-        self.test_suite = True
-
-    def run_tests(self):
-        # import here, cause outside the eggs aren't loaded
-        import pytest
-
-        sys.exit(pytest.main(self.test_args))
+import vulture_whitelist
 
 
 setuptools.setup(
     name='vulture_whitelist',
-    version=__version__,
+    version=vulture_whitelist.__version__,
     description=(
         'Create whitelists to tackle false positives in Vulture automatically'
         ' for frameworks using Python bindings for C and C++ libraries.'),
