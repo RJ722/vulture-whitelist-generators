@@ -2,7 +2,7 @@ vulture-whitelist-generators
 ============================
 
 Create whitelists to tackle false positives in Vulture automatically for
-frameworks using Python bindings for C and C++ libraries, for eg. PyQt.
+frameworks using Python bindings for C and C++ libraries, e.g. PyQt.
 
 Currently, whitelists can only be generated for projects using ``sip`` as the
 binding generator, like PyQt. But, we also plan to support ``shiboken`` - the
@@ -15,15 +15,14 @@ Installation
 ``vulture_whitelist`` is a standard PyPI package and can be installed using
 ``pip``::
 
-    $ pip install vulture_whitelist
+    $ pip3 install vulture_whitelist
 
 
 From local repository::
 
     $ git clone https://github.com/RJ722/vulture-whitelist-generators
     $ cd vulture-whitelist-generators
-    $ pip install lxml
-    $ pip install .
+    $ pip3 install .
 
 
 Usage
