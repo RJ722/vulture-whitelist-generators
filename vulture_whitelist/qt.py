@@ -29,7 +29,6 @@ class QtWhitelistCreator(Creator):
         for name in sorted(name_set):
             f.write('{}.{}\n'.format(module, name))
         f.write('\n')
-        f.flush()
 
     def _prepare_sip_command(self, module, outdir, sip_executable):
         for exclusive_tags in itertools.product(TIMELINE, PLATFORMS):
