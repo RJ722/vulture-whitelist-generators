@@ -1,11 +1,13 @@
-from . import SAMPLE_WHITELISTS
-
 import os
 import vulture
 
-v = vulture.Vulture(verbose=True)
-#  Feed the pre-generated whitelist to Vulture.
-v.scavenge([os.path.join(SAMPLE_WHITELISTS, 'qtall.py')])
+import pytest
+from . import SAMPLE_WHITELISTS
+
+
+@pytest.fixture
+def v():
+    return vulture.Vulture(verbose=True)
 
 
 def check(items_or_names, expected_names):
@@ -19,7 +21,7 @@ def check(items_or_names, expected_names):
         assert names == expected_names
 
 
-def test_closeEvent_method():
+def test_closeEvent_method(v):
     code = """\
 from PyQt5.QtWidgets import QWidget
 
@@ -31,4 +33,7 @@ class Example(QWidget):
     check(v.defined_classes, ['Example'])
     check(v.unused_classes, ['Example'])
     check(v.defined_funcs, ['closeEvent'])
+    check(v.unused_funcs, ['closeEvent'])
+    #  Feed the pre-generated whitelist to Vulture.
+    v.scavenge([os.path.join(SAMPLE_WHITELISTS, 'qtall.py')])
     check(v.unused_funcs, [])
