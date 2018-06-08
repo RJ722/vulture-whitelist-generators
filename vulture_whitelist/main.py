@@ -1,6 +1,6 @@
 import argparse
 
-from . import qt
+from vulture_whitelist import qt
 
 
 __version__ = '0.1'
@@ -15,7 +15,7 @@ def get_creator(framework):
 
 
 def _parse_args():
-    version = "vulture-whitelist {0}".format(__version__)
+    version = "vulture-whitelist {}".format(__version__)
     parser = argparse.ArgumentParser(prog='vulture-whitelist')
     parser.add_argument('--version', action='version', version=version)
     parser.add_argument('framework', choices=CREATORS_META.keys(), help=(

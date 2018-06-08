@@ -1,9 +1,8 @@
-from . import TESTS, SAMPLE_WHITELISTS
-
 import filecmp
 import os
 
 from vulture_whitelist.qt import QtWhitelistCreator
+from tests import TESTS, SAMPLE_WHITELISTS
 
 
 def test_whitelist_from_xml():

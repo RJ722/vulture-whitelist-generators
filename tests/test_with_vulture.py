@@ -3,7 +3,7 @@ import textwrap
 import vulture
 
 import pytest
-from . import SAMPLE_WHITELISTS
+from tests import SAMPLE_WHITELISTS
 
 
 @pytest.fixture

@@ -3,7 +3,7 @@ import os
 import subprocess
 import tempfile
 
-from .utils import Creator, log
+from vulture_whitelist.utils import Creator, log
 
 from lxml import etree
 

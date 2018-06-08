@@ -2,7 +2,7 @@ import filecmp
 import os
 import subprocess
 
-from . import TESTS, SAMPLE_WHITELISTS
+from tests import TESTS, SAMPLE_WHITELISTS
 from vulture_whitelist import __version__
 
 
