@@ -1,3 +1,1 @@
-from vulture_whitelist.main import __version__
-
-assert __version__
+__version__ = 0.1

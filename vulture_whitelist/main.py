@@ -1,9 +1,6 @@
 import argparse
 
-from vulture_whitelist import qt
-
-
-__version__ = '0.1'
+from vulture_whitelist import __version__, qt
 
 CREATORS_META = {
     'sip': (qt.QtWhitelistCreator, 'sip')
