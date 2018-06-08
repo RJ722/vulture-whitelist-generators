@@ -1,4 +1,5 @@
 import os
+import textwrap
 import vulture
 
 import pytest
@@ -23,13 +24,13 @@ def check(items_or_names, expected_names):
 
 def test_closeEvent_method(v):
     code = """\
-from PyQt5.QtWidgets import QWidget
+    from PyQt5.QtWidgets import QWidget
 
-class Example(QWidget):
-    def closeEvent(self, event):
-        pass
-"""
-    v.scan(code)
+    class Example(QWidget):
+        def closeEvent(self, event):
+            pass
+    """
+    v.scan(textwrap.dedent(code))
     check(v.defined_classes, ['Example'])
     check(v.unused_classes, ['Example'])
     check(v.defined_funcs, ['closeEvent'])
