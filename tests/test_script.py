@@ -6,18 +6,16 @@ from tests import TESTS, SAMPLE_WHITELISTS
 from vulture_whitelist import __version__
 
 
-def create_whitelist_from_test_sip_files():
+def create_whitelist_from_test_sip_files(name):
     path = os.path.join(TESTS, 'test-data', 'sip')
-    subprocess.call(['vulture-whitelist', 'sip'], cwd=path)
+    subprocess.call(['vulture-whitelist', 'sip', '--name', name], cwd=path)
 
 
-def test_qt_whitelist():
-    create_whitelist_from_test_sip_files()
-    whitelist_generated = os.path.join(
-        TESTS, 'test-data', 'sip', 'whitelist.py')
+def test_qt_whitelist(tmpdir):
+    whitelist = str(tmpdir.mkdir("whitelists").join("whitelist.py"))
+    create_whitelist_from_test_sip_files(whitelist)
     whitelist_sample = os.path.join(SAMPLE_WHITELISTS, 'qtbluetooth.py')
-    assert filecmp.cmp(whitelist_generated, whitelist_sample, shallow=False)
-    os.remove(whitelist_generated)
+    assert filecmp.cmp(whitelist, whitelist_sample, shallow=False)
 
 
 def test_version():
