@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtTest">
+  <Class name="QSignalSpy" inherits="QObject">
+    <Function name="QSignalSpy.__init__">
+      <Argument typename="object" name="signal"/>
+    </Function>
+    <Function name="QSignalSpy.__delitem__">
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSignalSpy.__setitem__">
+      <Argument typename="int" name="i"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QSignalSpy.__getitem__">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSignalSpy.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSignalSpy.wait">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="timeout" default="5000"/>
+    </Function>
+    <Function name="QSignalSpy.signal">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSignalSpy.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QTest">
+    <Enum name="QTest.MouseAction">
+      <EnumMember name="QTest.MousePress"/>
+      <EnumMember name="QTest.MouseRelease"/>
+      <EnumMember name="QTest.MouseClick"/>
+      <EnumMember name="QTest.MouseDClick"/>
+      <EnumMember name="QTest.MouseMove"/>
+    </Enum>
+    <Enum name="QTest.KeyAction">
+      <EnumMember name="QTest.Press"/>
+      <EnumMember name="QTest.Release"/>
+      <EnumMember name="QTest.Click"/>
+    </Enum>
+    <Function name="QTest.touchEvent" static="1">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="QTouchDevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QTest.touchEvent" static="1">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="QTouchDevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QTest.qWaitForWindowExposed" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="int" name="timeout" default="5000"/>
+    </Function>
+    <Function name="QTest.qWaitForWindowExposed" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="int" name="timeout" default="1000"/>
+    </Function>
+    <Function name="QTest.qWaitForWindowActive" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="int" name="timeout" default="5000"/>
+    </Function>
+    <Function name="QTest.qWaitForWindowActive" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="int" name="timeout" default="1000"/>
+    </Function>
+    <Function name="QTest.qWait" static="1">
+      <Argument typename="int" name="ms"/>
+    </Function>
+    <Function name="QTest.waitForEvents" static="1"/>
+    <Function name="QTest.mouseEvent" static="1">
+      <Argument typename="QTest.MouseAction" typetype="enum" name="action"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier"/>
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseEvent" static="1">
+      <Argument typename="QTest.MouseAction" typetype="enum" name="action"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier"/>
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseRelease" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="0"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseRelease" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.KeyboardModifiers()"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mousePress" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="0"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mousePress" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.KeyboardModifiers()"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseMove" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseMove" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseDClick" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="0"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseDClick" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.KeyboardModifiers()"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseClick" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="0"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.mouseClick" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.MouseButton" typetype="enum" name="button"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.KeyboardModifiers()"/>
+      <Argument typename="QPoint" typetype="class" name="pos" default="QPoint()"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyRelease" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyRelease" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyRelease" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyRelease" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyPress" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyPress" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyPress" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyPress" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyEvent" static="1">
+      <Argument typename="QTest.KeyAction" typetype="enum" name="action"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyEvent" static="1">
+      <Argument typename="QTest.KeyAction" typetype="enum" name="action"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="str" name="ascii"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyEvent" static="1">
+      <Argument typename="QTest.KeyAction" typetype="enum" name="action"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyEvent" static="1">
+      <Argument typename="QTest.KeyAction" typetype="enum" name="action"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="str" name="ascii"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyClicks" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="QString" typetype="mappedtype" name="sequence"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyClick" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyClick" static="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyClick" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="Qt.Key" typetype="enum" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.keyClick" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="str" name="key"/>
+      <Argument typename="Qt.KeyboardModifiers" typetype="class" name="modifier" default="Qt.NoModifier"/>
+      <Argument typename="int" name="delay" default="-1"/>
+    </Function>
+    <Function name="QTest.qSleep" static="1">
+      <Argument typename="int" name="ms"/>
+    </Function>
+  </Class>
+  <Class name="QTest.QTouchEventSequence">
+    <Function name="QTest.QTouchEventSequence.__init__">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.commit">
+      <Argument typename="bool" name="processEvents" default="True"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.stationary">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.release">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWindow" typetype="class" name="window" default="None"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.release">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.move">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWindow" typetype="class" name="window" default="None"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.move">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.press">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWindow" typetype="class" name="window" default="None"/>
+    </Function>
+    <Function name="QTest.QTouchEventSequence.press">
+      <Argument typename="QTest.QTouchEventSequence" typetype="class" dir="out"/>
+      <Argument typename="int" name="touchId"/>
+      <Argument typename="QPoint" typetype="class" name="pt"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+  </Class>
+</Module>

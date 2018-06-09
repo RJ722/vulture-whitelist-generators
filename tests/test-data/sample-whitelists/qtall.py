@@ -850,6 +850,32 @@ QtNetwork.QTcpServer.incomingConnection
 QtNetwork.QTcpServer.nextPendingConnection
 
 # QtNetworkAuth
+QtNetworkAuth.QAbstractOAuth.deleteResource
+QtNetworkAuth.QAbstractOAuth.get
+QtNetworkAuth.QAbstractOAuth.grant
+QtNetworkAuth.QAbstractOAuth.head
+QtNetworkAuth.QAbstractOAuth.post
+QtNetworkAuth.QAbstractOAuth.put
+QtNetworkAuth.QAbstractOAuth.resourceOwnerAuthorization
+QtNetworkAuth.QAbstractOAuth2.createAuthenticatedUrl
+QtNetworkAuth.QAbstractOAuth2.deleteResource
+QtNetworkAuth.QAbstractOAuth2.get
+QtNetworkAuth.QAbstractOAuth2.head
+QtNetworkAuth.QAbstractOAuth2.post
+QtNetworkAuth.QAbstractOAuth2.put
+QtNetworkAuth.QAbstractOAuthReplyHandler.callback
+QtNetworkAuth.QAbstractOAuthReplyHandler.networkReplyFinished
+QtNetworkAuth.QOAuth1.deleteResource
+QtNetworkAuth.QOAuth1.get
+QtNetworkAuth.QOAuth1.grant
+QtNetworkAuth.QOAuth1.head
+QtNetworkAuth.QOAuth1.post
+QtNetworkAuth.QOAuth1.put
+QtNetworkAuth.QOAuth2AuthorizationCodeFlow.grant
+QtNetworkAuth.QOAuth2AuthorizationCodeFlow.resourceOwnerAuthorization
+QtNetworkAuth.QOAuthHttpServerReplyHandler.callback
+QtNetworkAuth.QOAuthOobReplyHandler.callback
+QtNetworkAuth.QOAuthOobReplyHandler.networkReplyFinished
 
 # QtNfc
 QtNfc.QNearFieldTarget.accessMethods
@@ -969,6 +995,7 @@ QtQml.QQmlPropertyMap.updateValue
 QtQml.QQmlPropertyValueSource.setTarget
 
 # QtQuick
+QtQuick.QQuickAsyncImageProvider.requestImageResponse
 QtQuick.QQuickFramebufferObject.Renderer.createFramebufferObject
 QtQuick.QQuickFramebufferObject.Renderer.render
 QtQuick.QQuickFramebufferObject.Renderer.synchronize
@@ -983,6 +1010,9 @@ QtQuick.QQuickImageProvider.imageType
 QtQuick.QQuickImageProvider.requestImage
 QtQuick.QQuickImageProvider.requestPixmap
 QtQuick.QQuickImageProvider.requestTexture
+QtQuick.QQuickImageResponse.cancel
+QtQuick.QQuickImageResponse.errorString
+QtQuick.QQuickImageResponse.textureFactory
 QtQuick.QQuickItem.childMouseEventFilter
 QtQuick.QQuickItem.classBegin
 QtQuick.QQuickItem.componentComplete
@@ -1018,6 +1048,7 @@ QtQuick.QQuickItem.updatePolish
 QtQuick.QQuickItem.wheelEvent
 QtQuick.QQuickItemGrabResult.event
 QtQuick.QQuickPaintedItem.isTextureProvider
+QtQuick.QQuickPaintedItem.itemChange
 QtQuick.QQuickPaintedItem.paint
 QtQuick.QQuickPaintedItem.releaseResources
 QtQuick.QQuickPaintedItem.textureProvider
@@ -1054,6 +1085,20 @@ QtQuick.QSGDynamicTexture.updateTexture
 QtQuick.QSGFlatColorMaterial.compare
 QtQuick.QSGFlatColorMaterial.createShader
 QtQuick.QSGFlatColorMaterial.type
+QtQuick.QSGImageNode.filtering
+QtQuick.QSGImageNode.mipmapFiltering
+QtQuick.QSGImageNode.ownsTexture
+QtQuick.QSGImageNode.rect
+QtQuick.QSGImageNode.setFiltering
+QtQuick.QSGImageNode.setMipmapFiltering
+QtQuick.QSGImageNode.setOwnsTexture
+QtQuick.QSGImageNode.setRect
+QtQuick.QSGImageNode.setSourceRect
+QtQuick.QSGImageNode.setTexture
+QtQuick.QSGImageNode.setTextureCoordinatesTransform
+QtQuick.QSGImageNode.sourceRect
+QtQuick.QSGImageNode.texture
+QtQuick.QSGImageNode.textureCoordinatesTransform
 QtQuick.QSGMaterial.compare
 QtQuick.QSGMaterial.createShader
 QtQuick.QSGMaterial.type
@@ -1070,6 +1115,27 @@ QtQuick.QSGNode.preprocess
 QtQuick.QSGOpaqueTextureMaterial.compare
 QtQuick.QSGOpaqueTextureMaterial.createShader
 QtQuick.QSGOpaqueTextureMaterial.type
+QtQuick.QSGRectangleNode.color
+QtQuick.QSGRectangleNode.rect
+QtQuick.QSGRectangleNode.setColor
+QtQuick.QSGRectangleNode.setRect
+QtQuick.QSGRenderNode.RenderState.clipRegion
+QtQuick.QSGRenderNode.RenderState.get
+QtQuick.QSGRenderNode.RenderState.projectionMatrix
+QtQuick.QSGRenderNode.RenderState.scissorEnabled
+QtQuick.QSGRenderNode.RenderState.scissorRect
+QtQuick.QSGRenderNode.RenderState.stencilEnabled
+QtQuick.QSGRenderNode.RenderState.stencilValue
+QtQuick.QSGRenderNode.changedStates
+QtQuick.QSGRenderNode.flags
+QtQuick.QSGRenderNode.rect
+QtQuick.QSGRenderNode.releaseResources
+QtQuick.QSGRenderNode.render
+QtQuick.QSGRendererInterface.getResource
+QtQuick.QSGRendererInterface.graphicsApi
+QtQuick.QSGRendererInterface.shaderCompilationType
+QtQuick.QSGRendererInterface.shaderSourceType
+QtQuick.QSGRendererInterface.shaderType
 QtQuick.QSGTexture.bind
 QtQuick.QSGTexture.hasAlphaChannel
 QtQuick.QSGTexture.hasMipmaps
@@ -1100,6 +1166,7 @@ QtQuickWidgets.QQuickWidget.mouseDoubleClickEvent
 QtQuickWidgets.QQuickWidget.mouseMoveEvent
 QtQuickWidgets.QQuickWidget.mousePressEvent
 QtQuickWidgets.QQuickWidget.mouseReleaseEvent
+QtQuickWidgets.QQuickWidget.paintEvent
 QtQuickWidgets.QQuickWidget.resizeEvent
 QtQuickWidgets.QQuickWidget.showEvent
 QtQuickWidgets.QQuickWidget.sizeHint
@@ -1115,7 +1182,9 @@ QtSensors.QCompassFilter.filter
 QtSensors.QDistanceFilter.filter
 QtSensors.QGyroscopeFilter.filter
 QtSensors.QHolsterFilter.filter
+QtSensors.QHumidityFilter.filter
 QtSensors.QIRProximityFilter.filter
+QtSensors.QLidFilter.filter
 QtSensors.QLightFilter.filter
 QtSensors.QMagnetometerFilter.filter
 QtSensors.QOrientationFilter.filter
@@ -1175,6 +1244,7 @@ QtSql.QSqlQueryModel.indexInQuery
 QtSql.QSqlQueryModel.insertColumns
 QtSql.QSqlQueryModel.queryChange
 QtSql.QSqlQueryModel.removeColumns
+QtSql.QSqlQueryModel.roleNames
 QtSql.QSqlQueryModel.rowCount
 QtSql.QSqlQueryModel.setHeaderData
 QtSql.QSqlRelationalDelegate.createEditor
@@ -1257,8 +1327,11 @@ QtSvg.QSvgWidget.sizeHint
 QtWebChannel.QWebChannelAbstractTransport.sendMessage
 
 # QtWebEngine
+QtWebEngine.QQuickWebEngineScript.timerEvent
 
 # QtWebEngineCore
+QtWebEngineCore.QWebEngineUrlRequestInterceptor.interceptRequest
+QtWebEngineCore.QWebEngineUrlSchemeHandler.requestStarted
 
 # QtWebEngineWidgets
 QtWebEngineWidgets.QWebEnginePage.acceptNavigationRequest
@@ -1273,7 +1346,13 @@ QtWebEngineWidgets.QWebEnginePage.javaScriptPrompt
 QtWebEngineWidgets.QWebEnginePage.triggerAction
 QtWebEngineWidgets.QWebEngineView.contextMenuEvent
 QtWebEngineWidgets.QWebEngineView.createWindow
+QtWebEngineWidgets.QWebEngineView.dragEnterEvent
+QtWebEngineWidgets.QWebEngineView.dragLeaveEvent
+QtWebEngineWidgets.QWebEngineView.dragMoveEvent
+QtWebEngineWidgets.QWebEngineView.dropEvent
 QtWebEngineWidgets.QWebEngineView.event
+QtWebEngineWidgets.QWebEngineView.hideEvent
+QtWebEngineWidgets.QWebEngineView.showEvent
 QtWebEngineWidgets.QWebEngineView.sizeHint
 
 # QtWebKit
@@ -1684,6 +1763,7 @@ QtWidgets.QFileSystemModel.mimeTypes
 QtWidgets.QFileSystemModel.parent
 QtWidgets.QFileSystemModel.rowCount
 QtWidgets.QFileSystemModel.setData
+QtWidgets.QFileSystemModel.sibling
 QtWidgets.QFileSystemModel.sort
 QtWidgets.QFileSystemModel.supportedDropActions
 QtWidgets.QFileSystemModel.timerEvent
@@ -2154,11 +2234,13 @@ QtWidgets.QListView.viewOptions
 QtWidgets.QListView.viewportSizeHint
 QtWidgets.QListView.visualRect
 QtWidgets.QListView.visualRegionForSelection
+QtWidgets.QListView.wheelEvent
 QtWidgets.QListWidget.dropEvent
 QtWidgets.QListWidget.dropMimeData
 QtWidgets.QListWidget.event
 QtWidgets.QListWidget.mimeData
 QtWidgets.QListWidget.mimeTypes
+QtWidgets.QListWidget.setSelectionModel
 QtWidgets.QListWidget.supportedDropActions
 QtWidgets.QListWidgetItem.__lt__
 QtWidgets.QListWidgetItem.clone

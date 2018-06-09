@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<Module version="0" name="QAxContainer">
+  <Class name="QAxBase">
+    <Function name="QAxBase.__init__"/>
+    <Function name="QAxBase.__init__">
+      <Argument typename="QAxBase" typetype="class"/>
+    </Function>
+    <Function name="QAxBase.disableEventSink"/>
+    <Function name="QAxBase.disableClassInfo"/>
+    <Function name="QAxBase.disableMetaObject"/>
+    <Function name="QAxBase.setControl">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QAxBase.clear" virtual="1"/>
+    <Signal default="1" name="QAxBase.exception" sig="void exception(int,const QString&amp;,const QString&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QAxBase.propertyChanged" sig="void propertyChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAxBase.signal" sig="void signal(const QString&amp;,int,void*)"/>
+    <Function name="QAxBase.asVariant">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAxBase.verbs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAxBase.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAxBase.setPropertyWritable" virtual="1">
+      <Argument typename="str"/>
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QAxBase.propertyWritable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="str"/>
+    </Function>
+    <Function name="QAxBase.generateDocumentation">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAxBase.setPropertyBag">
+      <Argument typename="unknown-type" typetype="mappedtype"/>
+    </Function>
+    <Function name="QAxBase.propertyBag">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAxBase.querySubObject">
+      <Argument typename="QAxObject" typetype="class" dir="out"/>
+      <Argument typename="str"/>
+      <Argument typename="unknown-type" typetype="mappedtype"/>
+    </Function>
+    <Function name="QAxBase.querySubObject">
+      <Argument typename="QAxObject" typetype="class" dir="out"/>
+      <Argument typename="str"/>
+      <Argument typename="QVariant" typetype="class" name="value1" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value2" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value3" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value4" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value5" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value6" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value7" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value8" default="None"/>
+    </Function>
+    <Function name="QAxBase.dynamicCall">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="str"/>
+      <Argument typename="unknown-type" typetype="mappedtype"/>
+    </Function>
+    <Function name="QAxBase.dynamicCall">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="str"/>
+      <Argument typename="QVariant" typetype="class" name="value1" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value2" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value3" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value4" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value5" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value6" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value7" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="value8" default="None"/>
+    </Function>
+    <Function name="QAxBase.control">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAxObject" inherits="QObject QAxBase">
+    <Function name="QAxObject.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAxObject.__init__">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAxObject.connectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class"/>
+    </Function>
+    <Function name="QAxObject.doVerb">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+  </Class>
+  <Class name="QAxWidget" inherits="QWidget QAxBase">
+    <Function name="QAxWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QAxWidget.__init__">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QAxWidget.connectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class"/>
+    </Function>
+    <Function name="QAxWidget.translateKeyEvent" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int"/>
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QAxWidget.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class"/>
+    </Function>
+    <Function name="QAxWidget.changeEvent" virtual="1">
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QAxWidget.createHostWindow" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QAxWidget.minimumSizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAxWidget.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAxWidget.doVerb">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QAxWidget.clear" virtual="1"/>
+  </Class>
+</Module>

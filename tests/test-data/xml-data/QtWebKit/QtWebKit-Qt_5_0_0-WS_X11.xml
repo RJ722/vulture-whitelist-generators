@@ -1,0 +1,697 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebKit">
+  <Class name="QWebDatabase">
+    <Function name="QWebDatabase.__init__">
+      <Argument typename="QWebDatabase" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebDatabase.removeAllDatabases" static="1"/>
+    <Function name="QWebDatabase.removeDatabase" static="1">
+      <Argument typename="QWebDatabase" typetype="class" name="db"/>
+    </Function>
+    <Function name="QWebDatabase.origin">
+      <Argument typename="QWebSecurityOrigin" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebDatabase.fileName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebDatabase.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebDatabase.expectedSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebDatabase.displayName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebDatabase.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebElement">
+    <Function name="QWebElement.__init__"/>
+    <Function name="QWebElement.__init__">
+      <Argument typename="QWebElement" typetype="class"/>
+    </Function>
+    <Enum name="QWebElement.StyleResolveStrategy">
+      <EnumMember name="QWebElement.InlineStyle"/>
+      <EnumMember name="QWebElement.CascadedStyle"/>
+      <EnumMember name="QWebElement.ComputedStyle"/>
+    </Enum>
+    <Function name="QWebElement.render">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+    </Function>
+    <Function name="QWebElement.render">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+      <Argument typename="QRect" typetype="class" name="clip"/>
+    </Function>
+    <Function name="QWebElement.setStyleProperty">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QWebElement.styleProperty">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QWebElement.StyleResolveStrategy" typetype="enum" name="strategy"/>
+    </Function>
+    <Function name="QWebElement.evaluateJavaScript">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="scriptSource"/>
+    </Function>
+    <Function name="QWebElement.removeAllChildren"/>
+    <Function name="QWebElement.removeFromDocument"/>
+    <Function name="QWebElement.takeFromDocument">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.clone">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.replace">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.replace">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.encloseWith">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.encloseWith">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.encloseContentsWith">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.encloseContentsWith">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.prependOutside">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.prependOutside">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.appendOutside">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.appendOutside">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.prependInside">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.prependInside">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.appendInside">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.appendInside">
+      <Argument typename="QWebElement" typetype="class" name="element"/>
+    </Function>
+    <Function name="QWebElement.webFrame">
+      <Argument typename="QWebFrame" typetype="opaque" dir="out"/>
+    </Function>
+    <Function name="QWebElement.document">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.previousSibling">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.nextSibling">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.lastChild">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.firstChild">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.parent">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.namespaceUri">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.localName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.prefix">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.tagName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.geometry">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElement.setFocus"/>
+    <Function name="QWebElement.hasFocus">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebElement.toggleClass">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.removeClass">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.addClass">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.hasClass">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.classes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.attributeNames">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri" default="''"/>
+    </Function>
+    <Function name="QWebElement.hasAttributes">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebElement.removeAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.removeAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.hasAttributeNS">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.hasAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebElement.attributeNS">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue" default="''"/>
+    </Function>
+    <Function name="QWebElement.attribute">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue" default="''"/>
+    </Function>
+    <Function name="QWebElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QWebElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QWebElement.toInnerXml">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.setInnerXml">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.toOuterXml">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.setOuterXml">
+      <Argument typename="QString" typetype="mappedtype" name="markup"/>
+    </Function>
+    <Function name="QWebElement.toPlainText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElement.setPlainText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QWebElement.findFirst">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="selectorQuery"/>
+    </Function>
+    <Function name="QWebElement.findAll">
+      <Argument typename="QWebElementCollection" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="selectorQuery"/>
+    </Function>
+    <Function name="QWebElement.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebElement.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebElement" typetype="class" name="o"/>
+    </Function>
+    <Function name="QWebElement.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebElement" typetype="class" name="o"/>
+    </Function>
+  </Class>
+  <Class name="QWebElementCollection">
+    <Function name="QWebElementCollection.__init__"/>
+    <Function name="QWebElementCollection.__init__">
+      <Argument typename="QWebElement" typetype="class" name="contextElement"/>
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QWebElementCollection.__init__">
+      <Argument typename="QWebElementCollection" typetype="class"/>
+    </Function>
+    <Function name="QWebElementCollection.toList">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebElementCollection.last">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElementCollection.first">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebElementCollection.__getitem__">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QWebElementCollection.at">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QWebElementCollection.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebElementCollection.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebElementCollection.append">
+      <Argument typename="QWebElementCollection" typetype="class" name="collection"/>
+    </Function>
+    <Function name="QWebElementCollection.__iadd__">
+      <Argument typename="QWebElementCollection" typetype="class" dir="out"/>
+      <Argument typename="QWebElementCollection" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebElementCollection.__add__">
+      <Argument typename="QWebElementCollection" typetype="class" dir="out"/>
+      <Argument typename="QWebElementCollection" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QWebHistoryItem">
+    <Function name="QWebHistoryItem.__init__">
+      <Argument typename="QWebHistoryItem" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebHistoryItem.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.setUserData">
+      <Argument typename="QVariant" typetype="class" name="userData"/>
+    </Function>
+    <Function name="QWebHistoryItem.userData">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.lastVisited">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryItem.originalUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebHistory">
+    <Function name="QWebHistory.setMaximumItemCount">
+      <Argument typename="int" name="count"/>
+    </Function>
+    <Function name="QWebHistory.maximumItemCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.currentItemIndex">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.itemAt">
+      <Argument typename="QWebHistoryItem" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QWebHistory.forwardItem">
+      <Argument typename="QWebHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.currentItem">
+      <Argument typename="QWebHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.backItem">
+      <Argument typename="QWebHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.goToItem">
+      <Argument typename="QWebHistoryItem" typetype="class" name="item"/>
+    </Function>
+    <Function name="QWebHistory.forward"/>
+    <Function name="QWebHistory.back"/>
+    <Function name="QWebHistory.canGoForward">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.canGoBack">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.forwardItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="maxItems"/>
+    </Function>
+    <Function name="QWebHistory.backItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="maxItems"/>
+    </Function>
+    <Function name="QWebHistory.items">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHistory.clear"/>
+  </Class>
+  <Class name="QWebHistoryInterface" inherits="QObject">
+    <Function name="QWebHistoryInterface.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebHistoryInterface.addHistoryEntry" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="url"/>
+    </Function>
+    <Function name="QWebHistoryInterface.historyContains" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="url"/>
+    </Function>
+    <Function name="QWebHistoryInterface.defaultInterface" static="1">
+      <Argument typename="QWebHistoryInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHistoryInterface.setDefaultInterface" static="1">
+      <Argument typename="QWebHistoryInterface" typetype="class" name="defaultInterface"/>
+    </Function>
+  </Class>
+  <Class name="QWebPluginFactory" inherits="QObject">
+    <Function name="QWebPluginFactory.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QWebPluginFactory.Extension">
+    </Enum>
+    <Function name="QWebPluginFactory.supportsExtension" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPluginFactory.Extension" typetype="enum" name="extension"/>
+    </Function>
+    <Function name="QWebPluginFactory.extension" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPluginFactory.Extension" typetype="enum" name="extension"/>
+      <Argument typename="QWebPluginFactory.ExtensionOption" typetype="class" name="option" default="None"/>
+      <Argument typename="QWebPluginFactory.ExtensionReturn" typetype="class" name="output" default="None"/>
+    </Function>
+    <Function name="QWebPluginFactory.create" abstract="1" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="argumentNames"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="argumentValues"/>
+    </Function>
+    <Function name="QWebPluginFactory.refreshPlugins" virtual="1"/>
+    <Function name="QWebPluginFactory.plugins" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebPluginFactory.MimeType">
+    <Function name="QWebPluginFactory.MimeType.__init__"/>
+    <Function name="QWebPluginFactory.MimeType.__init__">
+      <Argument typename="QWebPluginFactory.MimeType" typetype="class"/>
+    </Function>
+    <Member name="QWebPluginFactory.MimeType.description" typename="QString" typetype="mappedtype"/>
+    <Member name="QWebPluginFactory.MimeType.fileExtensions" typename="QStringList" typetype="mappedtype"/>
+    <Member name="QWebPluginFactory.MimeType.name" typename="QString" typetype="mappedtype"/>
+    <Function name="QWebPluginFactory.MimeType.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPluginFactory.MimeType" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebPluginFactory.MimeType.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPluginFactory.MimeType" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QWebPluginFactory.Plugin">
+    <Function name="QWebPluginFactory.Plugin.__init__"/>
+    <Function name="QWebPluginFactory.Plugin.__init__">
+      <Argument typename="QWebPluginFactory.Plugin" typetype="class"/>
+    </Function>
+    <Member name="QWebPluginFactory.Plugin.description" typename="QString" typetype="mappedtype"/>
+    <Member name="QWebPluginFactory.Plugin.mimeTypes" typename="unknown-type" typetype="mappedtype"/>
+    <Member name="QWebPluginFactory.Plugin.name" typename="QString" typetype="mappedtype"/>
+  </Class>
+  <Class name="QWebPluginFactory.ExtensionOption">
+    <Function name="QWebPluginFactory.ExtensionOption.__init__"/>
+    <Function name="QWebPluginFactory.ExtensionOption.__init__">
+      <Argument typename="QWebPluginFactory.ExtensionOption" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QWebPluginFactory.ExtensionReturn">
+    <Function name="QWebPluginFactory.ExtensionReturn.__init__"/>
+    <Function name="QWebPluginFactory.ExtensionReturn.__init__">
+      <Argument typename="QWebPluginFactory.ExtensionReturn" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QWebSecurityOrigin">
+    <Function name="QWebSecurityOrigin.__init__">
+      <Argument typename="QWebSecurityOrigin" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.setApplicationCacheQuota">
+      <Argument typename="int" name="quota"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.localSchemes" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.removeLocalScheme" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="scheme"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.addLocalScheme" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="scheme"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.databases">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.setDatabaseQuota">
+      <Argument typename="int" name="quota"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.databaseQuota">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.databaseUsage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.port">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.host">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.scheme">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSecurityOrigin.allOrigins" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebSettings">
+    <Enum name="QWebSettings.ThirdPartyCookiePolicy">
+      <EnumMember name="QWebSettings.AlwaysAllowThirdPartyCookies"/>
+      <EnumMember name="QWebSettings.AlwaysBlockThirdPartyCookies"/>
+      <EnumMember name="QWebSettings.AllowThirdPartyWithExistingCookies"/>
+    </Enum>
+    <Enum name="QWebSettings.FontSize">
+      <EnumMember name="QWebSettings.MinimumFontSize"/>
+      <EnumMember name="QWebSettings.MinimumLogicalFontSize"/>
+      <EnumMember name="QWebSettings.DefaultFontSize"/>
+      <EnumMember name="QWebSettings.DefaultFixedFontSize"/>
+    </Enum>
+    <Enum name="QWebSettings.WebGraphic">
+      <EnumMember name="QWebSettings.MissingImageGraphic"/>
+      <EnumMember name="QWebSettings.MissingPluginGraphic"/>
+      <EnumMember name="QWebSettings.DefaultFrameIconGraphic"/>
+      <EnumMember name="QWebSettings.TextAreaSizeGripCornerGraphic"/>
+      <EnumMember name="QWebSettings.InputSpeechButtonGraphic"/>
+      <EnumMember name="QWebSettings.SearchCancelButtonGraphic"/>
+      <EnumMember name="QWebSettings.SearchCancelButtonPressedGraphic"/>
+    </Enum>
+    <Enum name="QWebSettings.WebAttribute">
+      <EnumMember name="QWebSettings.AutoLoadImages"/>
+      <EnumMember name="QWebSettings.JavascriptEnabled"/>
+      <EnumMember name="QWebSettings.JavaEnabled"/>
+      <EnumMember name="QWebSettings.PluginsEnabled"/>
+      <EnumMember name="QWebSettings.PrivateBrowsingEnabled"/>
+      <EnumMember name="QWebSettings.JavascriptCanOpenWindows"/>
+      <EnumMember name="QWebSettings.JavascriptCanCloseWindows"/>
+      <EnumMember name="QWebSettings.JavascriptCanAccessClipboard"/>
+      <EnumMember name="QWebSettings.DeveloperExtrasEnabled"/>
+      <EnumMember name="QWebSettings.LinksIncludedInFocusChain"/>
+      <EnumMember name="QWebSettings.ZoomTextOnly"/>
+      <EnumMember name="QWebSettings.PrintElementBackgrounds"/>
+      <EnumMember name="QWebSettings.OfflineStorageDatabaseEnabled"/>
+      <EnumMember name="QWebSettings.OfflineWebApplicationCacheEnabled"/>
+      <EnumMember name="QWebSettings.LocalStorageDatabaseEnabled"/>
+      <EnumMember name="QWebSettings.LocalStorageEnabled"/>
+      <EnumMember name="QWebSettings.LocalContentCanAccessRemoteUrls"/>
+      <EnumMember name="QWebSettings.DnsPrefetchEnabled"/>
+      <EnumMember name="QWebSettings.XSSAuditingEnabled"/>
+      <EnumMember name="QWebSettings.AcceleratedCompositingEnabled"/>
+      <EnumMember name="QWebSettings.SpatialNavigationEnabled"/>
+      <EnumMember name="QWebSettings.LocalContentCanAccessFileUrls"/>
+      <EnumMember name="QWebSettings.TiledBackingStoreEnabled"/>
+      <EnumMember name="QWebSettings.FrameFlatteningEnabled"/>
+      <EnumMember name="QWebSettings.SiteSpecificQuirksEnabled"/>
+      <EnumMember name="QWebSettings.WebGLEnabled"/>
+      <EnumMember name="QWebSettings.HyperlinkAuditingEnabled"/>
+      <EnumMember name="QWebSettings.CSSRegionsEnabled"/>
+      <EnumMember name="QWebSettings.CSSGridLayoutEnabled"/>
+      <EnumMember name="QWebSettings.ScrollAnimatorEnabled"/>
+      <EnumMember name="QWebSettings.CaretBrowsingEnabled"/>
+      <EnumMember name="QWebSettings.NotificationsEnabled"/>
+    </Enum>
+    <Enum name="QWebSettings.FontFamily">
+      <EnumMember name="QWebSettings.StandardFont"/>
+      <EnumMember name="QWebSettings.FixedFont"/>
+      <EnumMember name="QWebSettings.SerifFont"/>
+      <EnumMember name="QWebSettings.SansSerifFont"/>
+      <EnumMember name="QWebSettings.CursiveFont"/>
+      <EnumMember name="QWebSettings.FantasyFont"/>
+    </Enum>
+    <Function name="QWebSettings.thirdPartyCookiePolicy">
+      <Argument typename="QWebSettings.ThirdPartyCookiePolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setThirdPartyCookiePolicy">
+      <Argument typename="QWebSettings.ThirdPartyCookiePolicy" typetype="enum"/>
+    </Function>
+    <Function name="QWebSettings.enablePersistentStorage" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="path" default="''"/>
+    </Function>
+    <Function name="QWebSettings.clearMemoryCaches" static="1"/>
+    <Function name="QWebSettings.localStoragePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setLocalStoragePath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebSettings.offlineWebApplicationCacheQuota" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setOfflineWebApplicationCacheQuota" static="1">
+      <Argument typename="int" name="maximumSize"/>
+    </Function>
+    <Function name="QWebSettings.offlineWebApplicationCachePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setOfflineWebApplicationCachePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebSettings.defaultTextEncoding">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setDefaultTextEncoding">
+      <Argument typename="QString" typetype="mappedtype" name="encoding"/>
+    </Function>
+    <Function name="QWebSettings.offlineStorageDefaultQuota" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setOfflineStorageDefaultQuota" static="1">
+      <Argument typename="int" name="maximumSize"/>
+    </Function>
+    <Function name="QWebSettings.offlineStoragePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setOfflineStoragePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebSettings.setObjectCacheCapacities" static="1">
+      <Argument typename="int" name="cacheMinDeadCapacity"/>
+      <Argument typename="int" name="cacheMaxDead"/>
+      <Argument typename="int" name="totalCapacity"/>
+    </Function>
+    <Function name="QWebSettings.maximumPagesInCache" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setMaximumPagesInCache" static="1">
+      <Argument typename="int" name="pages"/>
+    </Function>
+    <Function name="QWebSettings.webGraphic" static="1">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+      <Argument typename="QWebSettings.WebGraphic" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebSettings.setWebGraphic" static="1">
+      <Argument typename="QWebSettings.WebGraphic" typetype="enum" name="type"/>
+      <Argument typename="QPixmap" typetype="class" name="graphic"/>
+    </Function>
+    <Function name="QWebSettings.iconForUrl" static="1">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebSettings.clearIconDatabase" static="1"/>
+    <Function name="QWebSettings.iconDatabasePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setIconDatabasePath" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="location"/>
+    </Function>
+    <Function name="QWebSettings.userStyleSheetUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSettings.setUserStyleSheetUrl">
+      <Argument typename="QUrl" typetype="class" name="location"/>
+    </Function>
+    <Function name="QWebSettings.resetAttribute">
+      <Argument typename="QWebSettings.WebAttribute" typetype="enum" name="attr"/>
+    </Function>
+    <Function name="QWebSettings.testAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebSettings.WebAttribute" typetype="enum" name="attr"/>
+    </Function>
+    <Function name="QWebSettings.setAttribute">
+      <Argument typename="QWebSettings.WebAttribute" typetype="enum" name="attr"/>
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QWebSettings.resetFontSize">
+      <Argument typename="QWebSettings.FontSize" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebSettings.fontSize">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QWebSettings.FontSize" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebSettings.setFontSize">
+      <Argument typename="QWebSettings.FontSize" typetype="enum" name="type"/>
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QWebSettings.resetFontFamily">
+      <Argument typename="QWebSettings.FontFamily" typetype="enum" name="which"/>
+    </Function>
+    <Function name="QWebSettings.fontFamily">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QWebSettings.FontFamily" typetype="enum" name="which"/>
+    </Function>
+    <Function name="QWebSettings.setFontFamily">
+      <Argument typename="QWebSettings.FontFamily" typetype="enum" name="which"/>
+      <Argument typename="QString" typetype="mappedtype" name="family"/>
+    </Function>
+    <Function name="QWebSettings.globalSettings" static="1">
+      <Argument typename="QWebSettings" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QWebHistory" typetype="class"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QWebHistory" typetype="class"/>
+  </Function>
+  <Function name="qWebKitMinorVersion" static="1">
+    <Argument typename="int" dir="out"/>
+  </Function>
+  <Function name="qWebKitMajorVersion" static="1">
+    <Argument typename="int" dir="out"/>
+  </Function>
+  <Function name="qWebKitVersion" static="1">
+    <Argument typename="QString" typetype="mappedtype" dir="out"/>
+  </Function>
+</Module>

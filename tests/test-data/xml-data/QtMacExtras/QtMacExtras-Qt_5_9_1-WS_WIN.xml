@@ -1,0 +1,144 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtMacExtras">
+  <Class name="QMacPasteboardMime">
+    <Function name="QMacPasteboardMime.__init__">
+      <Argument typename="int" name="t"/>
+    </Function>
+    <Function name="QMacPasteboardMime.__init__">
+      <Argument typename="QMacPasteboardMime" typetype="class"/>
+    </Function>
+    <Enum name="QMacPasteboardMime.QMacPasteboardMimeType">
+      <EnumMember name="QMacPasteboardMime.MIME_DND"/>
+      <EnumMember name="QMacPasteboardMime.MIME_CLIP"/>
+      <EnumMember name="QMacPasteboardMime.MIME_QT_CONVERTOR"/>
+      <EnumMember name="QMacPasteboardMime.MIME_QT3_CONVERTOR"/>
+      <EnumMember name="QMacPasteboardMime.MIME_ALL"/>
+    </Enum>
+    <Function name="QMacPasteboardMime.count" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QMimeData" typetype="class" name="mimeData"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertFromMime" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="QVariant" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertToMime" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.flavorFor" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+    </Function>
+    <Function name="QMacPasteboardMime.mimeFor" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.canConvert" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertorName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <OpaqueClass name="NSToolbar"/>
+  <Class name="QMacToolBar" inherits="QObject">
+    <Function name="QMacToolBar.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QMacToolBar.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QMacToolBar.nativeToolbar">
+      <Argument typename="NSToolbar" typetype="opaque" dir="out"/>
+    </Function>
+    <Function name="QMacToolBar.detachFromWindow"/>
+    <Function name="QMacToolBar.attachToWindow">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QMacToolBar.allowedItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMacToolBar.setAllowedItems">
+      <Argument typename="unknown-type" typetype="mappedtype" name="allowedItems"/>
+    </Function>
+    <Function name="QMacToolBar.items">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMacToolBar.setItems">
+      <Argument typename="unknown-type" typetype="mappedtype" name="items"/>
+    </Function>
+    <Function name="QMacToolBar.addSeparator"/>
+    <Function name="QMacToolBar.addAllowedItem">
+      <Argument typename="QMacToolBarItem" typetype="class" dir="out"/>
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QMacToolBar.addItem">
+      <Argument typename="QMacToolBarItem" typetype="class" dir="out"/>
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+  </Class>
+  <OpaqueClass name="NSToolbarItem"/>
+  <Class name="QMacToolBarItem" inherits="QObject">
+    <Function name="QMacToolBarItem.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QMacToolBarItem.StandardItem">
+      <EnumMember name="QMacToolBarItem.NoStandardItem"/>
+      <EnumMember name="QMacToolBarItem.Space"/>
+      <EnumMember name="QMacToolBarItem.FlexibleSpace"/>
+    </Enum>
+    <Signal default="1" name="QMacToolBarItem.activated" sig="void activated()"/>
+    <Function name="QMacToolBarItem.nativeToolBarItem">
+      <Argument typename="NSToolbarItem" typetype="opaque" dir="out"/>
+    </Function>
+    <Function name="QMacToolBarItem.setIcon">
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QMacToolBarItem.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMacToolBarItem.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QMacToolBarItem.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMacToolBarItem.setStandardItem">
+      <Argument typename="QMacToolBarItem.StandardItem" typetype="enum" name="standardItem"/>
+    </Function>
+    <Function name="QMacToolBarItem.standardItem">
+      <Argument typename="QMacToolBarItem.StandardItem" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMacToolBarItem.setSelectable">
+      <Argument typename="bool" name="selectable"/>
+    </Function>
+    <Function name="QMacToolBarItem.selectable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QtMac">
+    <Function name="QtMac.isMainWindow" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtMac.badgeLabelText" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QtMac.setBadgeLabelText" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+  </Class>
+  <Function name="qRegisterDraggedTypes" static="1">
+    <Argument typename="QStringList" typetype="mappedtype" name="types"/>
+  </Function>
+</Module>

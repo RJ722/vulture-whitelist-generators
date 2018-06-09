@@ -1,0 +1,1676 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtBluetooth">
+  <Class name="QBluetooth">
+    <Enum name="QBluetooth.Security">
+      <EnumMember name="QBluetooth.NoSecurity"/>
+      <EnumMember name="QBluetooth.Authorization"/>
+      <EnumMember name="QBluetooth.Authentication"/>
+      <EnumMember name="QBluetooth.Encryption"/>
+      <EnumMember name="QBluetooth.Secure"/>
+    </Enum>
+  </Class>
+  <Class name="QBluetooth.SecurityFlags" convert="1">
+    <Function name="QBluetooth.SecurityFlags.__init__"/>
+    <Function name="QBluetooth.SecurityFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__init__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__ixor__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__xor__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__ior__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__or__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__iand__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__and__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__invert__">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetooth.SecurityFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothAddress">
+    <Function name="QBluetoothAddress.__init__"/>
+    <Function name="QBluetoothAddress.__init__">
+      <Argument typename="int" name="address"/>
+    </Function>
+    <Function name="QBluetoothAddress.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+    </Function>
+    <Function name="QBluetoothAddress.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothAddress.__ge__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothAddress.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothAddress.toUInt64">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothAddress.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothAddress.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothAddress.__lt__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothAddress.clear"/>
+    <Function name="QBluetoothAddress.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothDeviceDiscoveryAgent" inherits="QObject">
+    <Function name="QBluetoothDeviceDiscoveryAgent.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QBluetoothDeviceDiscoveryAgent.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="deviceAdapter"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothDeviceDiscoveryAgent.InquiryType">
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.GeneralUnlimitedInquiry"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.LimitedInquiry"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceDiscoveryAgent.Error">
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.NoError"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.InputOutputError"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.PoweredOffError"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.InvalidBluetoothAdapterError"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.UnsupportedPlatformError"/>
+      <EnumMember name="QBluetoothDeviceDiscoveryAgent.UnknownError"/>
+    </Enum>
+    <Signal default="1" name="QBluetoothDeviceDiscoveryAgent.canceled" sig="void canceled()"/>
+    <Signal default="1" name="QBluetoothDeviceDiscoveryAgent.finished" sig="void finished()"/>
+    <Signal default="1" name="QBluetoothDeviceDiscoveryAgent.deviceDiscovered" sig="void deviceDiscovered(const  ::QBluetoothDeviceInfo&amp;)"/>
+    <Function name="QBluetoothDeviceDiscoveryAgent.stop" slot="void stop()"/>
+    <Function name="QBluetoothDeviceDiscoveryAgent.start" slot="void start()"/>
+    <Function name="QBluetoothDeviceDiscoveryAgent.discoveredDevices">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceDiscoveryAgent.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceDiscoveryAgent.error">
+      <Argument typename="QBluetoothDeviceDiscoveryAgent.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QBluetoothDeviceDiscoveryAgent.error" sig="void error( ::QBluetoothDeviceDiscoveryAgent::Error)"/>
+    <Function name="QBluetoothDeviceDiscoveryAgent.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceDiscoveryAgent.setInquiryType">
+      <Argument typename="QBluetoothDeviceDiscoveryAgent.InquiryType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QBluetoothDeviceDiscoveryAgent.inquiryType">
+      <Argument typename="QBluetoothDeviceDiscoveryAgent.InquiryType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothDeviceInfo">
+    <Function name="QBluetoothDeviceInfo.__init__"/>
+    <Function name="QBluetoothDeviceInfo.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="int" name="classOfDevice"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.__init__">
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="int" name="classOfDevice"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.__init__">
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QBluetoothDeviceInfo.CoreConfiguration">
+      <EnumMember name="QBluetoothDeviceInfo.UnknownCoreConfiguration"/>
+      <EnumMember name="QBluetoothDeviceInfo.LowEnergyCoreConfiguration"/>
+      <EnumMember name="QBluetoothDeviceInfo.BaseRateCoreConfiguration"/>
+      <EnumMember name="QBluetoothDeviceInfo.BaseRateAndLowEnergyCoreConfiguration"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.DataCompleteness">
+      <EnumMember name="QBluetoothDeviceInfo.DataComplete"/>
+      <EnumMember name="QBluetoothDeviceInfo.DataIncomplete"/>
+      <EnumMember name="QBluetoothDeviceInfo.DataUnavailable"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.ServiceClass">
+      <EnumMember name="QBluetoothDeviceInfo.NoService"/>
+      <EnumMember name="QBluetoothDeviceInfo.PositioningService"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkingService"/>
+      <EnumMember name="QBluetoothDeviceInfo.RenderingService"/>
+      <EnumMember name="QBluetoothDeviceInfo.CapturingService"/>
+      <EnumMember name="QBluetoothDeviceInfo.ObjectTransferService"/>
+      <EnumMember name="QBluetoothDeviceInfo.AudioService"/>
+      <EnumMember name="QBluetoothDeviceInfo.TelephonyService"/>
+      <EnumMember name="QBluetoothDeviceInfo.InformationService"/>
+      <EnumMember name="QBluetoothDeviceInfo.AllServices"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorHealthClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedHealthDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthBloodPressureMonitor"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthThermometer"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthWeightScale"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthGlucoseMeter"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthPulseOximeter"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthDataDisplay"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthStepCounter"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorToyClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedToy"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyRobot"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyVehicle"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyDoll"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyController"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyGame"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorWearableClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedWearableDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableWristWatch"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearablePager"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableJacket"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableHelmet"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableGlasses"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorImagingClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedImagingDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.ImageDisplay"/>
+      <EnumMember name="QBluetoothDeviceInfo.ImageCamera"/>
+      <EnumMember name="QBluetoothDeviceInfo.ImageScanner"/>
+      <EnumMember name="QBluetoothDeviceInfo.ImagePrinter"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorPeripheralClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.KeyboardPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.PointingDevicePeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.KeyboardWithPointingDevicePeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.JoystickPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.GamepadPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.RemoteControlPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.SensingDevicePeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.DigitizerTabletPeripheral"/>
+      <EnumMember name="QBluetoothDeviceInfo.CardReaderPeripheral"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorAudioVideoClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedAudioVideoDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableHeadsetDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.HandsFreeDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.Microphone"/>
+      <EnumMember name="QBluetoothDeviceInfo.Loudspeaker"/>
+      <EnumMember name="QBluetoothDeviceInfo.Headphones"/>
+      <EnumMember name="QBluetoothDeviceInfo.PortableAudioDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.CarAudio"/>
+      <EnumMember name="QBluetoothDeviceInfo.SetTopBox"/>
+      <EnumMember name="QBluetoothDeviceInfo.HiFiAudioDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.Vcr"/>
+      <EnumMember name="QBluetoothDeviceInfo.VideoCamera"/>
+      <EnumMember name="QBluetoothDeviceInfo.Camcorder"/>
+      <EnumMember name="QBluetoothDeviceInfo.VideoMonitor"/>
+      <EnumMember name="QBluetoothDeviceInfo.VideoDisplayAndLoudspeaker"/>
+      <EnumMember name="QBluetoothDeviceInfo.VideoConferencing"/>
+      <EnumMember name="QBluetoothDeviceInfo.GamingDevice"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorNetworkClass">
+      <EnumMember name="QBluetoothDeviceInfo.NetworkFullService"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorOne"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorTwo"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorThree"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorFour"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorFive"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkLoadFactorSix"/>
+      <EnumMember name="QBluetoothDeviceInfo.NetworkNoService"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorPhoneClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedPhone"/>
+      <EnumMember name="QBluetoothDeviceInfo.CellularPhone"/>
+      <EnumMember name="QBluetoothDeviceInfo.CordlessPhone"/>
+      <EnumMember name="QBluetoothDeviceInfo.SmartPhone"/>
+      <EnumMember name="QBluetoothDeviceInfo.WiredModemOrVoiceGatewayPhone"/>
+      <EnumMember name="QBluetoothDeviceInfo.CommonIsdnAccessPhone"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorComputerClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.DesktopComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.ServerComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.LaptopComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.HandheldClamShellComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.HandheldComputer"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableComputer"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MinorMiscellaneousClass">
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedMiscellaneous"/>
+    </Enum>
+    <Enum name="QBluetoothDeviceInfo.MajorDeviceClass">
+      <EnumMember name="QBluetoothDeviceInfo.MiscellaneousDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.ComputerDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.PhoneDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.LANAccessDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.AudioVideoDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.PeripheralDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.ImagingDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.WearableDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.ToyDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.HealthDevice"/>
+      <EnumMember name="QBluetoothDeviceInfo.UncategorizedDevice"/>
+    </Enum>
+    <Function name="QBluetoothDeviceInfo.deviceUuid">
+      <Argument typename="QBluetoothUuid" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.setDeviceUuid">
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.coreConfigurations">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.setCoreConfigurations">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" name="coreConfigs"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.serviceUuidsCompleteness">
+      <Argument typename="QBluetoothDeviceInfo.DataCompleteness" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.serviceUuids">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo.DataCompleteness" typetype="enum" name="completeness" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.setServiceUuids">
+      <Argument typename="unknown-type" typetype="mappedtype" name="uuids"/>
+      <Argument typename="QBluetoothDeviceInfo.DataCompleteness" typetype="enum" name="completeness"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.setRssi">
+      <Argument typename="int" name="signal"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.rssi">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.minorDeviceClass">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.majorDeviceClass">
+      <Argument typename="QBluetoothDeviceInfo.MajorDeviceClass" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.serviceClasses">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.address">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.setCached">
+      <Argument typename="bool" name="cached"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.isCached">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothDeviceInfo.ServiceClasses" convert="1">
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__init__"/>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__init__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__ixor__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__xor__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__ior__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__or__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__iand__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__and__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__invert__">
+      <Argument typename="QBluetoothDeviceInfo.ServiceClasses" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.ServiceClasses.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothDeviceInfo.CoreConfigurations" convert="1">
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__init__"/>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__init__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__ixor__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__xor__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__ior__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__or__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__iand__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__and__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__invert__">
+      <Argument typename="QBluetoothDeviceInfo.CoreConfigurations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothDeviceInfo.CoreConfigurations.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothHostInfo">
+    <Function name="QBluetoothHostInfo.__init__"/>
+    <Function name="QBluetoothHostInfo.__init__">
+      <Argument typename="QBluetoothHostInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothHostInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothHostInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.setAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QBluetoothHostInfo.address">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothLocalDevice" inherits="QObject">
+    <Function name="QBluetoothLocalDevice.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothLocalDevice.Error">
+      <EnumMember name="QBluetoothLocalDevice.NoError"/>
+      <EnumMember name="QBluetoothLocalDevice.PairingError"/>
+      <EnumMember name="QBluetoothLocalDevice.UnknownError"/>
+    </Enum>
+    <Enum name="QBluetoothLocalDevice.HostMode">
+      <EnumMember name="QBluetoothLocalDevice.HostPoweredOff"/>
+      <EnumMember name="QBluetoothLocalDevice.HostConnectable"/>
+      <EnumMember name="QBluetoothLocalDevice.HostDiscoverable"/>
+      <EnumMember name="QBluetoothLocalDevice.HostDiscoverableLimitedInquiry"/>
+    </Enum>
+    <Enum name="QBluetoothLocalDevice.Pairing">
+      <EnumMember name="QBluetoothLocalDevice.Unpaired"/>
+      <EnumMember name="QBluetoothLocalDevice.Paired"/>
+      <EnumMember name="QBluetoothLocalDevice.AuthorizedPaired"/>
+    </Enum>
+    <Signal default="1" name="QBluetoothLocalDevice.deviceDisconnected" sig="void deviceDisconnected(const  ::QBluetoothAddress&amp;)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.deviceConnected" sig="void deviceConnected(const  ::QBluetoothAddress&amp;)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.error" sig="void error( ::QBluetoothLocalDevice::Error)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.pairingDisplayConfirmation" sig="void pairingDisplayConfirmation(const  ::QBluetoothAddress&amp;,QString)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.pairingDisplayPinCode" sig="void pairingDisplayPinCode(const  ::QBluetoothAddress&amp;,QString)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.pairingFinished" sig="void pairingFinished(const  ::QBluetoothAddress&amp;, ::QBluetoothLocalDevice::Pairing)"/>
+    <Signal default="1" name="QBluetoothLocalDevice.hostModeStateChanged" sig="void hostModeStateChanged( ::QBluetoothLocalDevice::HostMode)"/>
+    <Function name="QBluetoothLocalDevice.pairingConfirmation" slot="void pairingConfirmation(bool)">
+      <Argument typename="bool" name="confirmation"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.connectedDevices">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.allDevices" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.address">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.powerOn"/>
+    <Function name="QBluetoothLocalDevice.hostMode">
+      <Argument typename="QBluetoothLocalDevice.HostMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.setHostMode">
+      <Argument typename="QBluetoothLocalDevice.HostMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.pairingStatus">
+      <Argument typename="QBluetoothLocalDevice.Pairing" typetype="enum" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.requestPairing">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+      <Argument typename="QBluetoothLocalDevice.Pairing" typetype="enum" name="pairing"/>
+    </Function>
+    <Function name="QBluetoothLocalDevice.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothServer" inherits="QObject">
+    <Function name="QBluetoothServer.__init__">
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" name="serverType"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothServer.Error">
+      <EnumMember name="QBluetoothServer.NoError"/>
+      <EnumMember name="QBluetoothServer.UnknownError"/>
+      <EnumMember name="QBluetoothServer.PoweredOffError"/>
+      <EnumMember name="QBluetoothServer.InputOutputError"/>
+      <EnumMember name="QBluetoothServer.ServiceAlreadyRegisteredError"/>
+      <EnumMember name="QBluetoothServer.UnsupportedProtocolError"/>
+    </Enum>
+    <Signal default="1" name="QBluetoothServer.newConnection" sig="void newConnection()"/>
+    <Function name="QBluetoothServer.error">
+      <Argument typename="QBluetoothServer.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QBluetoothServer.error" sig="void error( ::QBluetoothServer::Error)"/>
+    <Function name="QBluetoothServer.serverType">
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.securityFlags">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.setSecurityFlags">
+      <Argument typename="QBluetooth.SecurityFlags" typetype="class" name="security"/>
+    </Function>
+    <Function name="QBluetoothServer.serverPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.serverAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.nextPendingConnection">
+      <Argument typename="QBluetoothSocket" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.hasPendingConnections">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.maxPendingConnections">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.setMaxPendingConnections">
+      <Argument typename="int" name="numConnections"/>
+    </Function>
+    <Function name="QBluetoothServer.isListening">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServer.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="address" default="QBluetoothAddress()"/>
+      <Argument typename="int" name="port" default="0"/>
+    </Function>
+    <Function name="QBluetoothServer.listen">
+      <Argument typename="QBluetoothServiceInfo" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName" default="''"/>
+    </Function>
+    <Function name="QBluetoothServer.close"/>
+  </Class>
+  <Class name="QBluetoothServiceDiscoveryAgent" inherits="QObject">
+    <Function name="QBluetoothServiceDiscoveryAgent.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="deviceAdapter"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothServiceDiscoveryAgent.DiscoveryMode">
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.MinimalDiscovery"/>
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.FullDiscovery"/>
+    </Enum>
+    <Enum name="QBluetoothServiceDiscoveryAgent.Error">
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.NoError"/>
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.InputOutputError"/>
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.PoweredOffError"/>
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.InvalidBluetoothAdapterError"/>
+      <EnumMember name="QBluetoothServiceDiscoveryAgent.UnknownError"/>
+    </Enum>
+    <Signal default="1" name="QBluetoothServiceDiscoveryAgent.canceled" sig="void canceled()"/>
+    <Signal default="1" name="QBluetoothServiceDiscoveryAgent.finished" sig="void finished()"/>
+    <Signal default="1" name="QBluetoothServiceDiscoveryAgent.serviceDiscovered" sig="void serviceDiscovered(const  ::QBluetoothServiceInfo&amp;)"/>
+    <Function name="QBluetoothServiceDiscoveryAgent.clear" slot="void clear()"/>
+    <Function name="QBluetoothServiceDiscoveryAgent.stop" slot="void stop()"/>
+    <Function name="QBluetoothServiceDiscoveryAgent.start" slot="void start( ::QBluetoothServiceDiscoveryAgent::DiscoveryMode = QBluetoothServiceDiscoveryAgent.MinimalDiscovery)">
+      <Argument typename="QBluetoothServiceDiscoveryAgent.DiscoveryMode" typetype="enum" name="mode" default="QBluetoothServiceDiscoveryAgent.MinimalDiscovery"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.remoteAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.setRemoteAddress">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.uuidFilter">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.setUuidFilter">
+      <Argument typename="unknown-type" typetype="mappedtype" name="uuids"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.setUuidFilter">
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.discoveredServices">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceDiscoveryAgent.error">
+      <Argument typename="QBluetoothServiceDiscoveryAgent.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QBluetoothServiceDiscoveryAgent.error" sig="void error( ::QBluetoothServiceDiscoveryAgent::Error)"/>
+    <Function name="QBluetoothServiceDiscoveryAgent.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothServiceInfo">
+    <Function name="QBluetoothServiceInfo.__init__"/>
+    <Function name="QBluetoothServiceInfo.__init__">
+      <Argument typename="QBluetoothServiceInfo" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QBluetoothServiceInfo.Protocol">
+      <EnumMember name="QBluetoothServiceInfo.UnknownProtocol"/>
+      <EnumMember name="QBluetoothServiceInfo.L2capProtocol"/>
+      <EnumMember name="QBluetoothServiceInfo.RfcommProtocol"/>
+    </Enum>
+    <Enum name="QBluetoothServiceInfo.AttributeId">
+      <EnumMember name="QBluetoothServiceInfo.ServiceRecordHandle"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceClassIds"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceRecordState"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceId"/>
+      <EnumMember name="QBluetoothServiceInfo.ProtocolDescriptorList"/>
+      <EnumMember name="QBluetoothServiceInfo.BrowseGroupList"/>
+      <EnumMember name="QBluetoothServiceInfo.LanguageBaseAttributeIdList"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceInfoTimeToLive"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceAvailability"/>
+      <EnumMember name="QBluetoothServiceInfo.BluetoothProfileDescriptorList"/>
+      <EnumMember name="QBluetoothServiceInfo.DocumentationUrl"/>
+      <EnumMember name="QBluetoothServiceInfo.ClientExecutableUrl"/>
+      <EnumMember name="QBluetoothServiceInfo.IconUrl"/>
+      <EnumMember name="QBluetoothServiceInfo.AdditionalProtocolDescriptorList"/>
+      <EnumMember name="QBluetoothServiceInfo.PrimaryLanguageBase"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceName"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceDescription"/>
+      <EnumMember name="QBluetoothServiceInfo.ServiceProvider"/>
+    </Enum>
+    <Function name="QBluetoothServiceInfo.serviceClassUuids">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serviceUuid">
+      <Argument typename="QBluetoothUuid" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setServiceUuid">
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serviceAvailability">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setServiceAvailability">
+      <Argument typename="int" name="availability"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serviceProvider">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setServiceProvider">
+      <Argument typename="QString" typetype="mappedtype" name="provider"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serviceDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setServiceDescription">
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serviceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setServiceName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setAttribute">
+      <Argument typename="int" name="attributeId"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="value"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setAttribute">
+      <Argument typename="int" name="attributeId"/>
+      <Argument typename="Sequence" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setAttribute">
+      <Argument typename="int" name="attributeId"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.unregisterService">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.registerService">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="localAdapter" default="QBluetoothAddress()"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.isRegistered">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.protocolDescriptor">
+      <Argument typename="Sequence" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothUuid.ProtocolUuid" typetype="enum" name="protocol"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.serverChannel">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.protocolServiceMultiplexer">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.socketProtocol">
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.removeAttribute">
+      <Argument typename="int" name="attributeId"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="attributeId"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.attributes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.attribute">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="attributeId"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.device">
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.setDevice">
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" name="info"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.isComplete">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothServiceInfo.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothSocket" inherits="QIODevice">
+    <Function name="QBluetoothSocket.__init__">
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" name="socketType"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QBluetoothSocket.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothSocket.SocketError">
+      <EnumMember name="QBluetoothSocket.NoSocketError"/>
+      <EnumMember name="QBluetoothSocket.UnknownSocketError"/>
+      <EnumMember name="QBluetoothSocket.HostNotFoundError"/>
+      <EnumMember name="QBluetoothSocket.ServiceNotFoundError"/>
+      <EnumMember name="QBluetoothSocket.NetworkError"/>
+      <EnumMember name="QBluetoothSocket.UnsupportedProtocolError"/>
+      <EnumMember name="QBluetoothSocket.OperationError"/>
+    </Enum>
+    <Enum name="QBluetoothSocket.SocketState">
+      <EnumMember name="QBluetoothSocket.UnconnectedState"/>
+      <EnumMember name="QBluetoothSocket.ServiceLookupState"/>
+      <EnumMember name="QBluetoothSocket.ConnectingState"/>
+      <EnumMember name="QBluetoothSocket.ConnectedState"/>
+      <EnumMember name="QBluetoothSocket.BoundState"/>
+      <EnumMember name="QBluetoothSocket.ClosingState"/>
+      <EnumMember name="QBluetoothSocket.ListeningState"/>
+    </Enum>
+    <Function name="QBluetoothSocket.doDeviceDiscovery">
+      <Argument typename="QBluetoothServiceInfo" typetype="class" name="service"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="openMode"/>
+    </Function>
+    <Function name="QBluetoothSocket.setSocketError">
+      <Argument typename="QBluetoothSocket.SocketError" typetype="enum" name="error"/>
+    </Function>
+    <Function name="QBluetoothSocket.setSocketState">
+      <Argument typename="QBluetoothSocket.SocketState" typetype="enum" name="state"/>
+    </Function>
+    <Function name="QBluetoothSocket.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+    </Function>
+    <Function name="QBluetoothSocket.readData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Signal default="1" name="QBluetoothSocket.stateChanged" sig="void stateChanged( ::QBluetoothSocket::SocketState)"/>
+    <Signal default="1" name="QBluetoothSocket.disconnected" sig="void disconnected()"/>
+    <Signal default="1" name="QBluetoothSocket.connected" sig="void connected()"/>
+    <Function name="QBluetoothSocket.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.error">
+      <Argument typename="QBluetoothSocket.SocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QBluetoothSocket.error" sig="void error( ::QBluetoothSocket::SocketError)"/>
+    <Function name="QBluetoothSocket.state">
+      <Argument typename="QBluetoothSocket.SocketState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.socketType">
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.socketDescriptor">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.setSocketDescriptor">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="socketDescriptor"/>
+      <Argument typename="QBluetoothServiceInfo.Protocol" typetype="enum" name="socketType"/>
+      <Argument typename="QBluetoothSocket.SocketState" typetype="enum" name="state" default="QBluetoothSocket.ConnectedState"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QBluetoothSocket.peerPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.peerAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.peerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.localPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.localAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.localName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.disconnectFromService"/>
+    <Function name="QBluetoothSocket.connectToService">
+      <Argument typename="QBluetoothServiceInfo" typetype="class" name="service"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QBluetoothSocket.connectToService">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QBluetoothSocket.connectToService">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QBluetoothSocket.canReadLine" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.bytesToWrite" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.bytesAvailable" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.isSequential" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothSocket.close" virtual="1"/>
+    <Function name="QBluetoothSocket.abort"/>
+  </Class>
+  <Class name="QBluetoothTransferManager" inherits="QObject">
+    <Function name="QBluetoothTransferManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QBluetoothTransferManager.finished" sig="void finished( ::QBluetoothTransferReply*)"/>
+    <Function name="QBluetoothTransferManager.put">
+      <Argument typename="QBluetoothTransferReply" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothTransferRequest" typetype="class" name="request"/>
+      <Argument typename="QIODevice" typetype="class" name="data"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothTransferReply" inherits="QObject">
+    <Function name="QBluetoothTransferReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QBluetoothTransferReply.TransferError">
+      <EnumMember name="QBluetoothTransferReply.NoError"/>
+      <EnumMember name="QBluetoothTransferReply.UnknownError"/>
+      <EnumMember name="QBluetoothTransferReply.FileNotFoundError"/>
+      <EnumMember name="QBluetoothTransferReply.HostNotFoundError"/>
+      <EnumMember name="QBluetoothTransferReply.UserCanceledTransferError"/>
+      <EnumMember name="QBluetoothTransferReply.IODeviceNotReadableError"/>
+      <EnumMember name="QBluetoothTransferReply.ResourceBusyError"/>
+      <EnumMember name="QBluetoothTransferReply.SessionError"/>
+    </Enum>
+    <Function name="QBluetoothTransferReply.setRequest">
+      <Argument typename="QBluetoothTransferRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QBluetoothTransferReply.setManager">
+      <Argument typename="QBluetoothTransferManager" typetype="class" name="manager"/>
+    </Function>
+    <Signal default="1" name="QBluetoothTransferReply.transferProgress" sig="void transferProgress( ::qint64, ::qint64)"/>
+    <Signal default="1" name="QBluetoothTransferReply.finished" sig="void finished( ::QBluetoothTransferReply*)"/>
+    <Function name="QBluetoothTransferReply.abort" slot="void abort()"/>
+    <Function name="QBluetoothTransferReply.request">
+      <Argument typename="QBluetoothTransferRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothTransferReply.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothTransferReply.error" abstract="1" virtual="1">
+      <Argument typename="QBluetoothTransferReply.TransferError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QBluetoothTransferReply.error" sig="void error( ::QBluetoothTransferReply::TransferError)"/>
+    <Function name="QBluetoothTransferReply.manager">
+      <Argument typename="QBluetoothTransferManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothTransferReply.isRunning" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QBluetoothTransferReply.isFinished" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothTransferRequest">
+    <Function name="QBluetoothTransferRequest.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="address" default="QBluetoothAddress()"/>
+    </Function>
+    <Function name="QBluetoothTransferRequest.__init__">
+      <Argument typename="QBluetoothTransferRequest" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QBluetoothTransferRequest.Attribute">
+      <EnumMember name="QBluetoothTransferRequest.DescriptionAttribute"/>
+      <EnumMember name="QBluetoothTransferRequest.TimeAttribute"/>
+      <EnumMember name="QBluetoothTransferRequest.TypeAttribute"/>
+      <EnumMember name="QBluetoothTransferRequest.LengthAttribute"/>
+      <EnumMember name="QBluetoothTransferRequest.NameAttribute"/>
+    </Enum>
+    <Function name="QBluetoothTransferRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothTransferRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothTransferRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothTransferRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothTransferRequest.address">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QBluetoothTransferRequest.setAttribute">
+      <Argument typename="QBluetoothTransferRequest.Attribute" typetype="enum" name="code"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QBluetoothTransferRequest.attribute">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothTransferRequest.Attribute" typetype="enum" name="code"/>
+      <Argument typename="QVariant" typetype="class" name="defaultValue" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QBluetoothUuid" inherits="QUuid">
+    <Function name="QBluetoothUuid.__init__"/>
+    <Function name="QBluetoothUuid.__init__">
+      <Argument typename="int" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.__init__">
+      <Argument typename="quint128" typetype="mappedtype" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.__init__">
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.__init__">
+      <Argument typename="QUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Enum name="QBluetoothUuid.DescriptorType">
+      <EnumMember name="QBluetoothUuid.UnknownDescriptorType"/>
+      <EnumMember name="QBluetoothUuid.CharacteristicExtendedProperties"/>
+      <EnumMember name="QBluetoothUuid.CharacteristicUserDescription"/>
+      <EnumMember name="QBluetoothUuid.ClientCharacteristicConfiguration"/>
+      <EnumMember name="QBluetoothUuid.ServerCharacteristicConfiguration"/>
+      <EnumMember name="QBluetoothUuid.CharacteristicPresentationFormat"/>
+      <EnumMember name="QBluetoothUuid.CharacteristicAggregateFormat"/>
+      <EnumMember name="QBluetoothUuid.ValidRange"/>
+      <EnumMember name="QBluetoothUuid.ExternalReportReference"/>
+      <EnumMember name="QBluetoothUuid.ReportReference"/>
+      <EnumMember name="QBluetoothUuid.EnvironmentalSensingConfiguration"/>
+      <EnumMember name="QBluetoothUuid.EnvironmentalSensingMeasurement"/>
+      <EnumMember name="QBluetoothUuid.EnvironmentalSensingTriggerSetting"/>
+    </Enum>
+    <Enum name="QBluetoothUuid.CharacteristicType">
+      <EnumMember name="QBluetoothUuid.DeviceName"/>
+      <EnumMember name="QBluetoothUuid.Appearance"/>
+      <EnumMember name="QBluetoothUuid.PeripheralPrivacyFlag"/>
+      <EnumMember name="QBluetoothUuid.ReconnectionAddress"/>
+      <EnumMember name="QBluetoothUuid.PeripheralPreferredConnectionParameters"/>
+      <EnumMember name="QBluetoothUuid.ServiceChanged"/>
+      <EnumMember name="QBluetoothUuid.AlertLevel"/>
+      <EnumMember name="QBluetoothUuid.TxPowerLevel"/>
+      <EnumMember name="QBluetoothUuid.DateTime"/>
+      <EnumMember name="QBluetoothUuid.DayOfWeek"/>
+      <EnumMember name="QBluetoothUuid.DayDateTime"/>
+      <EnumMember name="QBluetoothUuid.ExactTime256"/>
+      <EnumMember name="QBluetoothUuid.DSTOffset"/>
+      <EnumMember name="QBluetoothUuid.TimeZone"/>
+      <EnumMember name="QBluetoothUuid.LocalTimeInformation"/>
+      <EnumMember name="QBluetoothUuid.TimeWithDST"/>
+      <EnumMember name="QBluetoothUuid.TimeAccuracy"/>
+      <EnumMember name="QBluetoothUuid.TimeSource"/>
+      <EnumMember name="QBluetoothUuid.ReferenceTimeInformation"/>
+      <EnumMember name="QBluetoothUuid.TimeUpdateControlPoint"/>
+      <EnumMember name="QBluetoothUuid.TimeUpdateState"/>
+      <EnumMember name="QBluetoothUuid.GlucoseMeasurement"/>
+      <EnumMember name="QBluetoothUuid.BatteryLevel"/>
+      <EnumMember name="QBluetoothUuid.TemperatureMeasurement"/>
+      <EnumMember name="QBluetoothUuid.TemperatureType"/>
+      <EnumMember name="QBluetoothUuid.IntermediateTemperature"/>
+      <EnumMember name="QBluetoothUuid.MeasurementInterval"/>
+      <EnumMember name="QBluetoothUuid.BootKeyboardInputReport"/>
+      <EnumMember name="QBluetoothUuid.SystemID"/>
+      <EnumMember name="QBluetoothUuid.ModelNumberString"/>
+      <EnumMember name="QBluetoothUuid.SerialNumberString"/>
+      <EnumMember name="QBluetoothUuid.FirmwareRevisionString"/>
+      <EnumMember name="QBluetoothUuid.HardwareRevisionString"/>
+      <EnumMember name="QBluetoothUuid.SoftwareRevisionString"/>
+      <EnumMember name="QBluetoothUuid.ManufacturerNameString"/>
+      <EnumMember name="QBluetoothUuid.IEEE1107320601RegulatoryCertificationDataList"/>
+      <EnumMember name="QBluetoothUuid.CurrentTime"/>
+      <EnumMember name="QBluetoothUuid.ScanRefresh"/>
+      <EnumMember name="QBluetoothUuid.BootKeyboardOutputReport"/>
+      <EnumMember name="QBluetoothUuid.BootMouseInputReport"/>
+      <EnumMember name="QBluetoothUuid.GlucoseMeasurementContext"/>
+      <EnumMember name="QBluetoothUuid.BloodPressureMeasurement"/>
+      <EnumMember name="QBluetoothUuid.IntermediateCuffPressure"/>
+      <EnumMember name="QBluetoothUuid.HeartRateMeasurement"/>
+      <EnumMember name="QBluetoothUuid.BodySensorLocation"/>
+      <EnumMember name="QBluetoothUuid.HeartRateControlPoint"/>
+      <EnumMember name="QBluetoothUuid.AlertStatus"/>
+      <EnumMember name="QBluetoothUuid.RingerControlPoint"/>
+      <EnumMember name="QBluetoothUuid.RingerSetting"/>
+      <EnumMember name="QBluetoothUuid.AlertCategoryIDBitMask"/>
+      <EnumMember name="QBluetoothUuid.AlertCategoryID"/>
+      <EnumMember name="QBluetoothUuid.AlertNotificationControlPoint"/>
+      <EnumMember name="QBluetoothUuid.UnreadAlertStatus"/>
+      <EnumMember name="QBluetoothUuid.NewAlert"/>
+      <EnumMember name="QBluetoothUuid.SupportedNewAlertCategory"/>
+      <EnumMember name="QBluetoothUuid.SupportedUnreadAlertCategory"/>
+      <EnumMember name="QBluetoothUuid.BloodPressureFeature"/>
+      <EnumMember name="QBluetoothUuid.HIDInformation"/>
+      <EnumMember name="QBluetoothUuid.ReportMap"/>
+      <EnumMember name="QBluetoothUuid.HIDControlPoint"/>
+      <EnumMember name="QBluetoothUuid.Report"/>
+      <EnumMember name="QBluetoothUuid.ProtocolMode"/>
+      <EnumMember name="QBluetoothUuid.ScanIntervalWindow"/>
+      <EnumMember name="QBluetoothUuid.PnPID"/>
+      <EnumMember name="QBluetoothUuid.GlucoseFeature"/>
+      <EnumMember name="QBluetoothUuid.RecordAccessControlPoint"/>
+      <EnumMember name="QBluetoothUuid.RSCMeasurement"/>
+      <EnumMember name="QBluetoothUuid.RSCFeature"/>
+      <EnumMember name="QBluetoothUuid.SCControlPoint"/>
+      <EnumMember name="QBluetoothUuid.CSCMeasurement"/>
+      <EnumMember name="QBluetoothUuid.CSCFeature"/>
+      <EnumMember name="QBluetoothUuid.SensorLocation"/>
+      <EnumMember name="QBluetoothUuid.CyclingPowerMeasurement"/>
+      <EnumMember name="QBluetoothUuid.CyclingPowerVector"/>
+      <EnumMember name="QBluetoothUuid.CyclingPowerFeature"/>
+      <EnumMember name="QBluetoothUuid.CyclingPowerControlPoint"/>
+      <EnumMember name="QBluetoothUuid.LocationAndSpeed"/>
+      <EnumMember name="QBluetoothUuid.Navigation"/>
+      <EnumMember name="QBluetoothUuid.PositionQuality"/>
+      <EnumMember name="QBluetoothUuid.LNFeature"/>
+      <EnumMember name="QBluetoothUuid.LNControlPoint"/>
+      <EnumMember name="QBluetoothUuid.MagneticDeclination"/>
+      <EnumMember name="QBluetoothUuid.Elevation"/>
+      <EnumMember name="QBluetoothUuid.Pressure"/>
+      <EnumMember name="QBluetoothUuid.Temperature"/>
+      <EnumMember name="QBluetoothUuid.Humidity"/>
+      <EnumMember name="QBluetoothUuid.TrueWindSpeed"/>
+      <EnumMember name="QBluetoothUuid.TrueWindDirection"/>
+      <EnumMember name="QBluetoothUuid.ApparentWindSpeed"/>
+      <EnumMember name="QBluetoothUuid.ApparentWindDirection"/>
+      <EnumMember name="QBluetoothUuid.GustFactor"/>
+      <EnumMember name="QBluetoothUuid.PollenConcentration"/>
+      <EnumMember name="QBluetoothUuid.UVIndex"/>
+      <EnumMember name="QBluetoothUuid.Irradiance"/>
+      <EnumMember name="QBluetoothUuid.Rainfall"/>
+      <EnumMember name="QBluetoothUuid.WindChill"/>
+      <EnumMember name="QBluetoothUuid.HeatIndex"/>
+      <EnumMember name="QBluetoothUuid.DewPoint"/>
+      <EnumMember name="QBluetoothUuid.DescriptorValueChanged"/>
+      <EnumMember name="QBluetoothUuid.AerobicHeartRateLowerLimit"/>
+      <EnumMember name="QBluetoothUuid.AerobicThreshold"/>
+      <EnumMember name="QBluetoothUuid.Age"/>
+      <EnumMember name="QBluetoothUuid.AnaerobicHeartRateLowerLimit"/>
+      <EnumMember name="QBluetoothUuid.AnaerobicHeartRateUpperLimit"/>
+      <EnumMember name="QBluetoothUuid.AnaerobicThreshold"/>
+      <EnumMember name="QBluetoothUuid.AerobicHeartRateUpperLimit"/>
+      <EnumMember name="QBluetoothUuid.DateOfBirth"/>
+      <EnumMember name="QBluetoothUuid.DateOfThresholdAssessment"/>
+      <EnumMember name="QBluetoothUuid.EmailAddress"/>
+      <EnumMember name="QBluetoothUuid.FatBurnHeartRateLowerLimit"/>
+      <EnumMember name="QBluetoothUuid.FatBurnHeartRateUpperLimit"/>
+      <EnumMember name="QBluetoothUuid.FirstName"/>
+      <EnumMember name="QBluetoothUuid.FiveZoneHeartRateLimits"/>
+      <EnumMember name="QBluetoothUuid.Gender"/>
+      <EnumMember name="QBluetoothUuid.HeartRateMax"/>
+      <EnumMember name="QBluetoothUuid.Height"/>
+      <EnumMember name="QBluetoothUuid.HipCircumference"/>
+      <EnumMember name="QBluetoothUuid.LastName"/>
+      <EnumMember name="QBluetoothUuid.MaximumRecommendedHeartRate"/>
+      <EnumMember name="QBluetoothUuid.RestingHeartRate"/>
+      <EnumMember name="QBluetoothUuid.SportTypeForAerobicAnaerobicThresholds"/>
+      <EnumMember name="QBluetoothUuid.ThreeZoneHeartRateLimits"/>
+      <EnumMember name="QBluetoothUuid.TwoZoneHeartRateLimits"/>
+      <EnumMember name="QBluetoothUuid.VO2Max"/>
+      <EnumMember name="QBluetoothUuid.WaistCircumference"/>
+      <EnumMember name="QBluetoothUuid.Weight"/>
+      <EnumMember name="QBluetoothUuid.DatabaseChangeIncrement"/>
+      <EnumMember name="QBluetoothUuid.UserIndex"/>
+      <EnumMember name="QBluetoothUuid.BodyCompositionFeature"/>
+      <EnumMember name="QBluetoothUuid.BodyCompositionMeasurement"/>
+      <EnumMember name="QBluetoothUuid.WeightMeasurement"/>
+      <EnumMember name="QBluetoothUuid.WeightScaleFeature"/>
+      <EnumMember name="QBluetoothUuid.UserControlPoint"/>
+      <EnumMember name="QBluetoothUuid.MagneticFluxDensity2D"/>
+      <EnumMember name="QBluetoothUuid.MagneticFluxDensity3D"/>
+      <EnumMember name="QBluetoothUuid.Language"/>
+      <EnumMember name="QBluetoothUuid.BarometricPressureTrend"/>
+    </Enum>
+    <Enum name="QBluetoothUuid.ServiceClassUuid">
+      <EnumMember name="QBluetoothUuid.ServiceDiscoveryServer"/>
+      <EnumMember name="QBluetoothUuid.BrowseGroupDescriptor"/>
+      <EnumMember name="QBluetoothUuid.PublicBrowseGroup"/>
+      <EnumMember name="QBluetoothUuid.SerialPort"/>
+      <EnumMember name="QBluetoothUuid.LANAccessUsingPPP"/>
+      <EnumMember name="QBluetoothUuid.DialupNetworking"/>
+      <EnumMember name="QBluetoothUuid.IrMCSync"/>
+      <EnumMember name="QBluetoothUuid.ObexObjectPush"/>
+      <EnumMember name="QBluetoothUuid.OBEXFileTransfer"/>
+      <EnumMember name="QBluetoothUuid.IrMCSyncCommand"/>
+      <EnumMember name="QBluetoothUuid.Headset"/>
+      <EnumMember name="QBluetoothUuid.AudioSource"/>
+      <EnumMember name="QBluetoothUuid.AudioSink"/>
+      <EnumMember name="QBluetoothUuid.AV_RemoteControlTarget"/>
+      <EnumMember name="QBluetoothUuid.AdvancedAudioDistribution"/>
+      <EnumMember name="QBluetoothUuid.AV_RemoteControl"/>
+      <EnumMember name="QBluetoothUuid.AV_RemoteControlController"/>
+      <EnumMember name="QBluetoothUuid.HeadsetAG"/>
+      <EnumMember name="QBluetoothUuid.PANU"/>
+      <EnumMember name="QBluetoothUuid.NAP"/>
+      <EnumMember name="QBluetoothUuid.GN"/>
+      <EnumMember name="QBluetoothUuid.DirectPrinting"/>
+      <EnumMember name="QBluetoothUuid.ReferencePrinting"/>
+      <EnumMember name="QBluetoothUuid.ImagingResponder"/>
+      <EnumMember name="QBluetoothUuid.ImagingAutomaticArchive"/>
+      <EnumMember name="QBluetoothUuid.ImagingReferenceObjects"/>
+      <EnumMember name="QBluetoothUuid.Handsfree"/>
+      <EnumMember name="QBluetoothUuid.HandsfreeAudioGateway"/>
+      <EnumMember name="QBluetoothUuid.DirectPrintingReferenceObjectsService"/>
+      <EnumMember name="QBluetoothUuid.ReflectedUI"/>
+      <EnumMember name="QBluetoothUuid.BasicPrinting"/>
+      <EnumMember name="QBluetoothUuid.PrintingStatus"/>
+      <EnumMember name="QBluetoothUuid.HumanInterfaceDeviceService"/>
+      <EnumMember name="QBluetoothUuid.HardcopyCableReplacement"/>
+      <EnumMember name="QBluetoothUuid.HCRPrint"/>
+      <EnumMember name="QBluetoothUuid.HCRScan"/>
+      <EnumMember name="QBluetoothUuid.SIMAccess"/>
+      <EnumMember name="QBluetoothUuid.PhonebookAccessPCE"/>
+      <EnumMember name="QBluetoothUuid.PhonebookAccessPSE"/>
+      <EnumMember name="QBluetoothUuid.PhonebookAccess"/>
+      <EnumMember name="QBluetoothUuid.HeadsetHS"/>
+      <EnumMember name="QBluetoothUuid.MessageAccessServer"/>
+      <EnumMember name="QBluetoothUuid.MessageNotificationServer"/>
+      <EnumMember name="QBluetoothUuid.MessageAccessProfile"/>
+      <EnumMember name="QBluetoothUuid.PnPInformation"/>
+      <EnumMember name="QBluetoothUuid.GenericNetworking"/>
+      <EnumMember name="QBluetoothUuid.GenericFileTransfer"/>
+      <EnumMember name="QBluetoothUuid.GenericAudio"/>
+      <EnumMember name="QBluetoothUuid.GenericTelephony"/>
+      <EnumMember name="QBluetoothUuid.VideoSource"/>
+      <EnumMember name="QBluetoothUuid.VideoSink"/>
+      <EnumMember name="QBluetoothUuid.VideoDistribution"/>
+      <EnumMember name="QBluetoothUuid.HDP"/>
+      <EnumMember name="QBluetoothUuid.HDPSource"/>
+      <EnumMember name="QBluetoothUuid.HDPSink"/>
+      <EnumMember name="QBluetoothUuid.BasicImage"/>
+      <EnumMember name="QBluetoothUuid.GNSS"/>
+      <EnumMember name="QBluetoothUuid.GNSSServer"/>
+      <EnumMember name="QBluetoothUuid.Display3D"/>
+      <EnumMember name="QBluetoothUuid.Glasses3D"/>
+      <EnumMember name="QBluetoothUuid.Synchronization3D"/>
+      <EnumMember name="QBluetoothUuid.MPSProfile"/>
+      <EnumMember name="QBluetoothUuid.MPSService"/>
+      <EnumMember name="QBluetoothUuid.GenericAccess"/>
+      <EnumMember name="QBluetoothUuid.GenericAttribute"/>
+      <EnumMember name="QBluetoothUuid.ImmediateAlert"/>
+      <EnumMember name="QBluetoothUuid.LinkLoss"/>
+      <EnumMember name="QBluetoothUuid.TxPower"/>
+      <EnumMember name="QBluetoothUuid.CurrentTimeService"/>
+      <EnumMember name="QBluetoothUuid.ReferenceTimeUpdateService"/>
+      <EnumMember name="QBluetoothUuid.NextDSTChangeService"/>
+      <EnumMember name="QBluetoothUuid.Glucose"/>
+      <EnumMember name="QBluetoothUuid.HealthThermometer"/>
+      <EnumMember name="QBluetoothUuid.DeviceInformation"/>
+      <EnumMember name="QBluetoothUuid.HeartRate"/>
+      <EnumMember name="QBluetoothUuid.PhoneAlertStatusService"/>
+      <EnumMember name="QBluetoothUuid.BatteryService"/>
+      <EnumMember name="QBluetoothUuid.BloodPressure"/>
+      <EnumMember name="QBluetoothUuid.AlertNotificationService"/>
+      <EnumMember name="QBluetoothUuid.HumanInterfaceDevice"/>
+      <EnumMember name="QBluetoothUuid.ScanParameters"/>
+      <EnumMember name="QBluetoothUuid.RunningSpeedAndCadence"/>
+      <EnumMember name="QBluetoothUuid.CyclingSpeedAndCadence"/>
+      <EnumMember name="QBluetoothUuid.CyclingPower"/>
+      <EnumMember name="QBluetoothUuid.LocationAndNavigation"/>
+      <EnumMember name="QBluetoothUuid.EnvironmentalSensing"/>
+      <EnumMember name="QBluetoothUuid.BodyComposition"/>
+      <EnumMember name="QBluetoothUuid.UserData"/>
+      <EnumMember name="QBluetoothUuid.WeightScale"/>
+      <EnumMember name="QBluetoothUuid.BondManagement"/>
+      <EnumMember name="QBluetoothUuid.ContinuousGlucoseMonitoring"/>
+    </Enum>
+    <Enum name="QBluetoothUuid.ProtocolUuid">
+      <EnumMember name="QBluetoothUuid.Sdp"/>
+      <EnumMember name="QBluetoothUuid.Udp"/>
+      <EnumMember name="QBluetoothUuid.Rfcomm"/>
+      <EnumMember name="QBluetoothUuid.Tcp"/>
+      <EnumMember name="QBluetoothUuid.TcsBin"/>
+      <EnumMember name="QBluetoothUuid.TcsAt"/>
+      <EnumMember name="QBluetoothUuid.Att"/>
+      <EnumMember name="QBluetoothUuid.Obex"/>
+      <EnumMember name="QBluetoothUuid.Ip"/>
+      <EnumMember name="QBluetoothUuid.Ftp"/>
+      <EnumMember name="QBluetoothUuid.Http"/>
+      <EnumMember name="QBluetoothUuid.Wsp"/>
+      <EnumMember name="QBluetoothUuid.Bnep"/>
+      <EnumMember name="QBluetoothUuid.Upnp"/>
+      <EnumMember name="QBluetoothUuid.Hidp"/>
+      <EnumMember name="QBluetoothUuid.HardcopyControlChannel"/>
+      <EnumMember name="QBluetoothUuid.HardcopyDataChannel"/>
+      <EnumMember name="QBluetoothUuid.HardcopyNotification"/>
+      <EnumMember name="QBluetoothUuid.Avctp"/>
+      <EnumMember name="QBluetoothUuid.Avdtp"/>
+      <EnumMember name="QBluetoothUuid.Cmtp"/>
+      <EnumMember name="QBluetoothUuid.UdiCPlain"/>
+      <EnumMember name="QBluetoothUuid.McapControlChannel"/>
+      <EnumMember name="QBluetoothUuid.McapDataChannel"/>
+      <EnumMember name="QBluetoothUuid.L2cap"/>
+    </Enum>
+    <Function name="QBluetoothUuid.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="other"/>
+    </Function>
+    <Function name="QBluetoothUuid.descriptorToString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothUuid.DescriptorType" typetype="enum" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.characteristicToString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothUuid.CharacteristicType" typetype="enum" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.protocolToString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothUuid.ProtocolUuid" typetype="enum" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.serviceClassToString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QBluetoothUuid.ServiceClassUuid" typetype="enum" name="uuid"/>
+    </Function>
+    <Function name="QBluetoothUuid.toUInt128">
+      <Argument typename="quint128" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QBluetoothUuid.toUInt32">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QBluetoothUuid.toUInt16">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QBluetoothUuid.minimumSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QBluetoothUuid.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyCharacteristic">
+    <Function name="QLowEnergyCharacteristic.__init__"/>
+    <Function name="QLowEnergyCharacteristic.__init__">
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QLowEnergyCharacteristic.PropertyType">
+      <EnumMember name="QLowEnergyCharacteristic.Unknown"/>
+      <EnumMember name="QLowEnergyCharacteristic.Broadcasting"/>
+      <EnumMember name="QLowEnergyCharacteristic.Read"/>
+      <EnumMember name="QLowEnergyCharacteristic.WriteNoResponse"/>
+      <EnumMember name="QLowEnergyCharacteristic.Write"/>
+      <EnumMember name="QLowEnergyCharacteristic.Notify"/>
+      <EnumMember name="QLowEnergyCharacteristic.Indicate"/>
+      <EnumMember name="QLowEnergyCharacteristic.WriteSigned"/>
+      <EnumMember name="QLowEnergyCharacteristic.ExtendedProperty"/>
+    </Enum>
+    <Function name="QLowEnergyCharacteristic.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.descriptors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.descriptor">
+      <Argument typename="QLowEnergyDescriptor" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.handle">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.properties">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.value">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.uuid">
+      <Argument typename="QBluetoothUuid" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="other"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyCharacteristic.PropertyTypes" convert="1">
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__init__"/>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__init__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__ixor__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__xor__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__ior__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__or__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__iand__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__and__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__invert__">
+      <Argument typename="QLowEnergyCharacteristic.PropertyTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyCharacteristic.PropertyTypes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyController" inherits="QObject">
+    <Function name="QLowEnergyController.__init__">
+      <Argument typename="QBluetoothDeviceInfo" typetype="class" name="remoteDevice"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QLowEnergyController.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="remoteDevice"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QLowEnergyController.__init__">
+      <Argument typename="QBluetoothAddress" typetype="class" name="remoteDevice"/>
+      <Argument typename="QBluetoothAddress" typetype="class" name="localDevice"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QLowEnergyController.RemoteAddressType">
+      <EnumMember name="QLowEnergyController.PublicAddress"/>
+      <EnumMember name="QLowEnergyController.RandomAddress"/>
+    </Enum>
+    <Enum name="QLowEnergyController.ControllerState">
+      <EnumMember name="QLowEnergyController.UnconnectedState"/>
+      <EnumMember name="QLowEnergyController.ConnectingState"/>
+      <EnumMember name="QLowEnergyController.ConnectedState"/>
+      <EnumMember name="QLowEnergyController.DiscoveringState"/>
+      <EnumMember name="QLowEnergyController.DiscoveredState"/>
+      <EnumMember name="QLowEnergyController.ClosingState"/>
+    </Enum>
+    <Enum name="QLowEnergyController.Error">
+      <EnumMember name="QLowEnergyController.NoError"/>
+      <EnumMember name="QLowEnergyController.UnknownError"/>
+      <EnumMember name="QLowEnergyController.UnknownRemoteDeviceError"/>
+      <EnumMember name="QLowEnergyController.NetworkError"/>
+      <EnumMember name="QLowEnergyController.InvalidBluetoothAdapterError"/>
+      <EnumMember name="QLowEnergyController.ConnectionError"/>
+    </Enum>
+    <Signal default="1" name="QLowEnergyController.discoveryFinished" sig="void discoveryFinished()"/>
+    <Signal default="1" name="QLowEnergyController.serviceDiscovered" sig="void serviceDiscovered(const  ::QBluetoothUuid&amp;)"/>
+    <Signal default="1" name="QLowEnergyController.stateChanged" sig="void stateChanged( ::QLowEnergyController::ControllerState)"/>
+    <Signal default="1" name="QLowEnergyController.disconnected" sig="void disconnected()"/>
+    <Signal default="1" name="QLowEnergyController.connected" sig="void connected()"/>
+    <Function name="QLowEnergyController.remoteName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.error">
+      <Argument typename="QLowEnergyController.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QLowEnergyController.error" sig="void error( ::QLowEnergyController::Error)"/>
+    <Function name="QLowEnergyController.createServiceObject">
+      <Argument typename="QLowEnergyService" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="service"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QLowEnergyController.services">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.discoverServices"/>
+    <Function name="QLowEnergyController.disconnectFromDevice"/>
+    <Function name="QLowEnergyController.connectToDevice"/>
+    <Function name="QLowEnergyController.setRemoteAddressType">
+      <Argument typename="QLowEnergyController.RemoteAddressType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QLowEnergyController.remoteAddressType">
+      <Argument typename="QLowEnergyController.RemoteAddressType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.state">
+      <Argument typename="QLowEnergyController.ControllerState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.remoteAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyController.localAddress">
+      <Argument typename="QBluetoothAddress" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyDescriptor">
+    <Function name="QLowEnergyDescriptor.__init__"/>
+    <Function name="QLowEnergyDescriptor.__init__">
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="other"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.type">
+      <Argument typename="QBluetoothUuid.DescriptorType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.handle">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.uuid">
+      <Argument typename="QBluetoothUuid" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.value">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="other"/>
+    </Function>
+    <Function name="QLowEnergyDescriptor.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyService" inherits="QObject">
+    <Enum name="QLowEnergyService.WriteMode">
+      <EnumMember name="QLowEnergyService.WriteWithResponse"/>
+      <EnumMember name="QLowEnergyService.WriteWithoutResponse"/>
+    </Enum>
+    <Enum name="QLowEnergyService.ServiceState">
+      <EnumMember name="QLowEnergyService.InvalidService"/>
+      <EnumMember name="QLowEnergyService.DiscoveryRequired"/>
+      <EnumMember name="QLowEnergyService.DiscoveringServices"/>
+      <EnumMember name="QLowEnergyService.ServiceDiscovered"/>
+    </Enum>
+    <Enum name="QLowEnergyService.ServiceError">
+      <EnumMember name="QLowEnergyService.NoError"/>
+      <EnumMember name="QLowEnergyService.OperationError"/>
+      <EnumMember name="QLowEnergyService.CharacteristicWriteError"/>
+      <EnumMember name="QLowEnergyService.DescriptorWriteError"/>
+      <EnumMember name="QLowEnergyService.CharacteristicReadError"/>
+      <EnumMember name="QLowEnergyService.DescriptorReadError"/>
+      <EnumMember name="QLowEnergyService.UnknownError"/>
+    </Enum>
+    <Enum name="QLowEnergyService.ServiceType">
+      <EnumMember name="QLowEnergyService.PrimaryService"/>
+      <EnumMember name="QLowEnergyService.IncludedService"/>
+    </Enum>
+    <Signal default="1" name="QLowEnergyService.descriptorRead" sig="void descriptorRead(const  ::QLowEnergyDescriptor&amp;,const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QLowEnergyService.characteristicRead" sig="void characteristicRead(const  ::QLowEnergyCharacteristic&amp;,const  ::QByteArray&amp;)"/>
+    <Function name="QLowEnergyService.readDescriptor">
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="descriptor"/>
+    </Function>
+    <Function name="QLowEnergyService.readCharacteristic">
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="characteristic"/>
+    </Function>
+    <Signal default="1" name="QLowEnergyService.descriptorWritten" sig="void descriptorWritten(const  ::QLowEnergyDescriptor&amp;,const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QLowEnergyService.characteristicWritten" sig="void characteristicWritten(const  ::QLowEnergyCharacteristic&amp;,const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QLowEnergyService.characteristicChanged" sig="void characteristicChanged(const  ::QLowEnergyCharacteristic&amp;,const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QLowEnergyService.stateChanged" sig="void stateChanged( ::QLowEnergyService::ServiceState)"/>
+    <Function name="QLowEnergyService.writeDescriptor">
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="descriptor"/>
+      <Argument typename="QByteArray" typetype="class" name="newValue"/>
+    </Function>
+    <Function name="QLowEnergyService.writeCharacteristic">
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="characteristic"/>
+      <Argument typename="QByteArray" typetype="class" name="newValue"/>
+      <Argument typename="QLowEnergyService.WriteMode" typetype="enum" name="mode" default="QLowEnergyService.WriteWithResponse"/>
+    </Function>
+    <Function name="QLowEnergyService.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" name="characteristic"/>
+    </Function>
+    <Function name="QLowEnergyService.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyDescriptor" typetype="class" name="descriptor"/>
+    </Function>
+    <Function name="QLowEnergyService.error">
+      <Argument typename="QLowEnergyService.ServiceError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QLowEnergyService.error" sig="void error( ::QLowEnergyService::ServiceError)"/>
+    <Function name="QLowEnergyService.discoverDetails"/>
+    <Function name="QLowEnergyService.serviceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.serviceUuid">
+      <Argument typename="QBluetoothUuid" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.characteristics">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.characteristic">
+      <Argument typename="QLowEnergyCharacteristic" typetype="class" dir="out"/>
+      <Argument typename="QBluetoothUuid" typetype="class" name="uuid"/>
+    </Function>
+    <Function name="QLowEnergyService.state">
+      <Argument typename="QLowEnergyService.ServiceState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.type">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.includedServices">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLowEnergyService.ServiceTypes" convert="1">
+    <Function name="QLowEnergyService.ServiceTypes.__init__"/>
+    <Function name="QLowEnergyService.ServiceTypes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__init__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__ixor__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__xor__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__ior__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__or__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__iand__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__and__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__invert__">
+      <Argument typename="QLowEnergyService.ServiceTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLowEnergyService.ServiceTypes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+</Module>

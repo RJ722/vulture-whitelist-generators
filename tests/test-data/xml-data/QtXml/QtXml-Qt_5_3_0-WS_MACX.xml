@@ -1,0 +1,1489 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtXml">
+  <Class name="QXmlNamespaceSupport">
+    <Function name="QXmlNamespaceSupport.__init__"/>
+    <Function name="QXmlNamespaceSupport.reset"/>
+    <Function name="QXmlNamespaceSupport.popContext"/>
+    <Function name="QXmlNamespaceSupport.pushContext"/>
+    <Function name="QXmlNamespaceSupport.prefixes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.prefixes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.processName">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="bool"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.splitName">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.uri">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.prefix">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QXmlNamespaceSupport.setPrefix">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+  </Class>
+  <Class name="QXmlAttributes">
+    <Function name="QXmlAttributes.__init__"/>
+    <Function name="QXmlAttributes.__init__">
+      <Argument typename="QXmlAttributes" typetype="class"/>
+    </Function>
+    <Function name="QXmlAttributes.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlAttributes.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlAttributes.append">
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+      <Argument typename="QString" typetype="mappedtype" name="localPart"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlAttributes.clear"/>
+    <Function name="QXmlAttributes.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QXmlAttributes.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QXmlAttributes.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QXmlAttributes.type">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QXmlAttributes.type">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QXmlAttributes.type">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QXmlAttributes.uri">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QXmlAttributes.qName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QXmlAttributes.localName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QXmlAttributes.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlAttributes.index">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QXmlAttributes.index">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+      <Argument typename="QString" typetype="mappedtype" name="localPart"/>
+    </Function>
+  </Class>
+  <Class name="QXmlInputSource">
+    <Function name="QXmlInputSource.__init__"/>
+    <Function name="QXmlInputSource.__init__">
+      <Argument typename="QIODevice" typetype="class" name="dev"/>
+    </Function>
+    <Function name="QXmlInputSource.__init__">
+      <Argument typename="QXmlInputSource" typetype="class"/>
+    </Function>
+    <Member name="QXmlInputSource.EndOfData" const="1" static="1" typename="int"/>
+    <Member name="QXmlInputSource.EndOfDocument" const="1" static="1" typename="int"/>
+    <Function name="QXmlInputSource.fromRawData" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="bool" name="beginning" default="False"/>
+    </Function>
+    <Function name="QXmlInputSource.reset" virtual="1"/>
+    <Function name="QXmlInputSource.next" virtual="1">
+      <Argument typename="QChar" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlInputSource.data" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlInputSource.fetchData" virtual="1"/>
+    <Function name="QXmlInputSource.setData" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="dat"/>
+    </Function>
+    <Function name="QXmlInputSource.setData" virtual="1">
+      <Argument typename="QByteArray" typetype="class" name="dat"/>
+    </Function>
+  </Class>
+  <Class name="QXmlParseException">
+    <Function name="QXmlParseException.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name" default="''"/>
+      <Argument typename="int" name="column" default="-1"/>
+      <Argument typename="int" name="line" default="-1"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId" default="''"/>
+    </Function>
+    <Function name="QXmlParseException.__init__">
+      <Argument typename="QXmlParseException" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlParseException.message">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlParseException.systemId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlParseException.publicId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlParseException.lineNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlParseException.columnNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlReader">
+    <Function name="QXmlReader.__init__"/>
+    <Function name="QXmlReader.__init__">
+      <Argument typename="QXmlReader" typetype="class"/>
+    </Function>
+    <Function name="QXmlReader.parse" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="input"/>
+    </Function>
+    <Function name="QXmlReader.parse" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="input"/>
+    </Function>
+    <Function name="QXmlReader.declHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlDeclHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setDeclHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlDeclHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.lexicalHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlLexicalHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setLexicalHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlLexicalHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.errorHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlErrorHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setErrorHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlErrorHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.contentHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlContentHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setContentHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlContentHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.DTDHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlDTDHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setDTDHandler" abstract="1" virtual="1">
+      <Argument typename="QXmlDTDHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.entityResolver" abstract="1" virtual="1">
+      <Argument typename="QXmlEntityResolver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.setEntityResolver" abstract="1" virtual="1">
+      <Argument typename="QXmlEntityResolver" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlReader.hasProperty" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlReader.setProperty" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="sip.voidptr" name="value"/>
+    </Function>
+    <Function name="QXmlReader.property" abstract="1" virtual="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QXmlReader.hasFeature" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlReader.setFeature" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="value"/>
+    </Function>
+    <Function name="QXmlReader.feature" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlSimpleReader" inherits="QXmlReader">
+    <Function name="QXmlSimpleReader.__init__"/>
+    <Function name="QXmlSimpleReader.parseContinue" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.parse" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="input"/>
+    </Function>
+    <Function name="QXmlSimpleReader.parse" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="input"/>
+      <Argument typename="bool" name="incremental"/>
+    </Function>
+    <Function name="QXmlSimpleReader.declHandler" virtual="1">
+      <Argument typename="QXmlDeclHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setDeclHandler" virtual="1">
+      <Argument typename="QXmlDeclHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.lexicalHandler" virtual="1">
+      <Argument typename="QXmlLexicalHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setLexicalHandler" virtual="1">
+      <Argument typename="QXmlLexicalHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.errorHandler" virtual="1">
+      <Argument typename="QXmlErrorHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setErrorHandler" virtual="1">
+      <Argument typename="QXmlErrorHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.contentHandler" virtual="1">
+      <Argument typename="QXmlContentHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setContentHandler" virtual="1">
+      <Argument typename="QXmlContentHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.DTDHandler" virtual="1">
+      <Argument typename="QXmlDTDHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setDTDHandler" virtual="1">
+      <Argument typename="QXmlDTDHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.entityResolver" virtual="1">
+      <Argument typename="QXmlEntityResolver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setEntityResolver" virtual="1">
+      <Argument typename="QXmlEntityResolver" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSimpleReader.hasProperty" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setProperty" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="sip.voidptr" name="value"/>
+    </Function>
+    <Function name="QXmlSimpleReader.property" virtual="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QXmlSimpleReader.hasFeature" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlSimpleReader.setFeature" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="value"/>
+    </Function>
+    <Function name="QXmlSimpleReader.feature" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlLocator">
+    <Function name="QXmlLocator.__init__"/>
+    <Function name="QXmlLocator.__init__">
+      <Argument typename="QXmlLocator" typetype="class"/>
+    </Function>
+    <Function name="QXmlLocator.lineNumber" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlLocator.columnNumber" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlContentHandler">
+    <Function name="QXmlContentHandler.__init__"/>
+    <Function name="QXmlContentHandler.__init__">
+      <Argument typename="QXmlContentHandler" typetype="class"/>
+    </Function>
+    <Function name="QXmlContentHandler.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlContentHandler.skippedEntity" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlContentHandler.processingInstruction" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="target"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QXmlContentHandler.ignorableWhitespace" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlContentHandler.characters" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlContentHandler.endElement" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QXmlContentHandler.startElement" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QXmlAttributes" typetype="class" name="atts"/>
+    </Function>
+    <Function name="QXmlContentHandler.endPrefixMapping" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="prefix"/>
+    </Function>
+    <Function name="QXmlContentHandler.startPrefixMapping" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="prefix"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+    </Function>
+    <Function name="QXmlContentHandler.endDocument" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlContentHandler.startDocument" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlContentHandler.setDocumentLocator" abstract="1" virtual="1">
+      <Argument typename="QXmlLocator" typetype="class" name="locator"/>
+    </Function>
+  </Class>
+  <Class name="QXmlErrorHandler">
+    <Function name="QXmlErrorHandler.__init__"/>
+    <Function name="QXmlErrorHandler.__init__">
+      <Argument typename="QXmlErrorHandler" typetype="class"/>
+    </Function>
+    <Function name="QXmlErrorHandler.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlErrorHandler.fatalError" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+    <Function name="QXmlErrorHandler.error" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+    <Function name="QXmlErrorHandler.warning" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+  </Class>
+  <Class name="QXmlDTDHandler">
+    <Function name="QXmlDTDHandler.__init__"/>
+    <Function name="QXmlDTDHandler.__init__">
+      <Argument typename="QXmlDTDHandler" typetype="class"/>
+    </Function>
+    <Function name="QXmlDTDHandler.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlDTDHandler.unparsedEntityDecl" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+      <Argument typename="QString" typetype="mappedtype" name="notationName"/>
+    </Function>
+    <Function name="QXmlDTDHandler.notationDecl" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+  </Class>
+  <Class name="QXmlEntityResolver">
+    <Function name="QXmlEntityResolver.__init__"/>
+    <Function name="QXmlEntityResolver.__init__">
+      <Argument typename="QXmlEntityResolver" typetype="class"/>
+    </Function>
+    <Function name="QXmlEntityResolver.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlEntityResolver.resolveEntity" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="ret" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlLexicalHandler">
+    <Function name="QXmlLexicalHandler.__init__"/>
+    <Function name="QXmlLexicalHandler.__init__">
+      <Argument typename="QXmlLexicalHandler" typetype="class"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.comment" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.endCDATA" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.startCDATA" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.endEntity" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.startEntity" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.endDTD" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlLexicalHandler.startDTD" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+  </Class>
+  <Class name="QXmlDeclHandler">
+    <Function name="QXmlDeclHandler.__init__"/>
+    <Function name="QXmlDeclHandler.__init__">
+      <Argument typename="QXmlDeclHandler" typetype="class"/>
+    </Function>
+    <Function name="QXmlDeclHandler.errorString" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlDeclHandler.externalEntityDecl" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+    <Function name="QXmlDeclHandler.internalEntityDecl" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlDeclHandler.attributeDecl" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="eName"/>
+      <Argument typename="QString" typetype="mappedtype" name="aName"/>
+      <Argument typename="QString" typetype="mappedtype" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="valueDefault"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+  </Class>
+  <Class name="QXmlDefaultHandler" inherits="QXmlContentHandler QXmlErrorHandler QXmlDTDHandler QXmlEntityResolver QXmlLexicalHandler QXmlDeclHandler">
+    <Function name="QXmlDefaultHandler.__init__"/>
+    <Function name="QXmlDefaultHandler.errorString" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.externalEntityDecl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.internalEntityDecl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.attributeDecl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="eName"/>
+      <Argument typename="QString" typetype="mappedtype" name="aName"/>
+      <Argument typename="QString" typetype="mappedtype" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="valueDefault"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.comment" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endCDATA" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startCDATA" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endEntity" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startEntity" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endDTD" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startDTD" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.resolveEntity" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="ret" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.unparsedEntityDecl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+      <Argument typename="QString" typetype="mappedtype" name="notationName"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.notationDecl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.fatalError" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.error" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.warning" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlParseException" typetype="class" name="exception"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.skippedEntity" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.processingInstruction" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="target"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.ignorableWhitespace" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.characters" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="ch"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endElement" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startElement" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QXmlAttributes" typetype="class" name="atts"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endPrefixMapping" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="prefix"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startPrefixMapping" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="prefix"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.endDocument" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.startDocument" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlDefaultHandler.setDocumentLocator" virtual="1">
+      <Argument typename="QXmlLocator" typetype="class" name="locator"/>
+    </Function>
+  </Class>
+  <Class name="QDomImplementation">
+    <Function name="QDomImplementation.__init__"/>
+    <Function name="QDomImplementation.__init__">
+      <Argument typename="QDomImplementation" typetype="class"/>
+    </Function>
+    <Enum name="QDomImplementation.InvalidDataPolicy">
+      <EnumMember name="QDomImplementation.AcceptInvalidChars"/>
+      <EnumMember name="QDomImplementation.DropInvalidChars"/>
+      <EnumMember name="QDomImplementation.ReturnNullNode"/>
+    </Enum>
+    <Function name="QDomImplementation.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomImplementation.setInvalidDataPolicy" static="1">
+      <Argument typename="QDomImplementation.InvalidDataPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QDomImplementation.invalidDataPolicy" static="1">
+      <Argument typename="QDomImplementation.InvalidDataPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomImplementation.createDocument">
+      <Argument typename="QDomDocument" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QDomDocumentType" typetype="class" name="doctype"/>
+    </Function>
+    <Function name="QDomImplementation.createDocumentType">
+      <Argument typename="QDomDocumentType" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QString" typetype="mappedtype" name="publicId"/>
+      <Argument typename="QString" typetype="mappedtype" name="systemId"/>
+    </Function>
+    <Function name="QDomImplementation.hasFeature">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="feature"/>
+      <Argument typename="QString" typetype="mappedtype" name="version"/>
+    </Function>
+    <Function name="QDomImplementation.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomImplementation" typetype="class"/>
+    </Function>
+    <Function name="QDomImplementation.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomImplementation" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QDomNode">
+    <Function name="QDomNode.__init__"/>
+    <Function name="QDomNode.__init__">
+      <Argument typename="QDomNode" typetype="class"/>
+    </Function>
+    <Enum name="QDomNode.EncodingPolicy">
+      <EnumMember name="QDomNode.EncodingFromDocument"/>
+      <EnumMember name="QDomNode.EncodingFromTextStream"/>
+    </Enum>
+    <Enum name="QDomNode.NodeType">
+      <EnumMember name="QDomNode.ElementNode"/>
+      <EnumMember name="QDomNode.AttributeNode"/>
+      <EnumMember name="QDomNode.TextNode"/>
+      <EnumMember name="QDomNode.CDATASectionNode"/>
+      <EnumMember name="QDomNode.EntityReferenceNode"/>
+      <EnumMember name="QDomNode.EntityNode"/>
+      <EnumMember name="QDomNode.ProcessingInstructionNode"/>
+      <EnumMember name="QDomNode.CommentNode"/>
+      <EnumMember name="QDomNode.DocumentNode"/>
+      <EnumMember name="QDomNode.DocumentTypeNode"/>
+      <EnumMember name="QDomNode.DocumentFragmentNode"/>
+      <EnumMember name="QDomNode.NotationNode"/>
+      <EnumMember name="QDomNode.BaseNode"/>
+      <EnumMember name="QDomNode.CharacterDataNode"/>
+    </Enum>
+    <Function name="QDomNode.columnNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNode.lineNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNode.nextSiblingElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="taName" default="''"/>
+    </Function>
+    <Function name="QDomNode.previousSiblingElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagName" default="''"/>
+    </Function>
+    <Function name="QDomNode.lastChildElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagName" default="''"/>
+    </Function>
+    <Function name="QDomNode.firstChildElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagName" default="''"/>
+    </Function>
+    <Function name="QDomNode.save">
+      <Argument typename="QTextStream" typetype="class"/>
+      <Argument typename="int"/>
+      <Argument typename="QDomNode.EncodingPolicy" typetype="enum" default="QDomNode.EncodingFromDocument"/>
+    </Function>
+    <Function name="QDomNode.toComment">
+      <Argument typename="QDomComment" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toCharacterData">
+      <Argument typename="QDomCharacterData" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toProcessingInstruction">
+      <Argument typename="QDomProcessingInstruction" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toNotation">
+      <Argument typename="QDomNotation" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toEntity">
+      <Argument typename="QDomEntity" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toText">
+      <Argument typename="QDomText" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toEntityReference">
+      <Argument typename="QDomEntityReference" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toDocumentType">
+      <Argument typename="QDomDocumentType" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toDocument">
+      <Argument typename="QDomDocument" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toDocumentFragment">
+      <Argument typename="QDomDocumentFragment" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toCDATASection">
+      <Argument typename="QDomCDATASection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.toAttr">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.clear"/>
+    <Function name="QDomNode.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.namedItem">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomNode.isComment">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isCharacterData">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isProcessingInstruction">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isNotation">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isEntity">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isText">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isEntityReference">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isElement">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isDocumentType">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isDocument">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isDocumentFragment">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isCDATASection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isAttr">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.setPrefix">
+      <Argument typename="QString" typetype="mappedtype" name="pre"/>
+    </Function>
+    <Function name="QDomNode.prefix">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNode.setNodeValue">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QDomNode.nodeValue">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNode.hasAttributes">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.localName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNode.namespaceURI">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNode.ownerDocument">
+      <Argument typename="QDomDocument" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.attributes">
+      <Argument typename="QDomNamedNodeMap" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.nextSibling">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.previousSibling">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.lastChild">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.firstChild">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.childNodes">
+      <Argument typename="QDomNodeList" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.parentNode">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomNode.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomNode.nodeName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNode.isSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="feature"/>
+      <Argument typename="QString" typetype="mappedtype" name="version"/>
+    </Function>
+    <Function name="QDomNode.normalize"/>
+    <Function name="QDomNode.cloneNode">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="bool" name="deep" default="True"/>
+    </Function>
+    <Function name="QDomNode.hasChildNodes">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNode.appendChild">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newChild"/>
+    </Function>
+    <Function name="QDomNode.removeChild">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="oldChild"/>
+    </Function>
+    <Function name="QDomNode.replaceChild">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newChild"/>
+      <Argument typename="QDomNode" typetype="class" name="oldChild"/>
+    </Function>
+    <Function name="QDomNode.insertAfter">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newChild"/>
+      <Argument typename="QDomNode" typetype="class" name="refChild"/>
+    </Function>
+    <Function name="QDomNode.insertBefore">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newChild"/>
+      <Argument typename="QDomNode" typetype="class" name="refChild"/>
+    </Function>
+    <Function name="QDomNode.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNode" typetype="class"/>
+    </Function>
+    <Function name="QDomNode.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNode" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QDomNodeList">
+    <Function name="QDomNodeList.__init__"/>
+    <Function name="QDomNodeList.__init__">
+      <Argument typename="QDomNodeList" typetype="class"/>
+    </Function>
+    <Function name="QDomNodeList.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNodeList.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNodeList.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNodeList.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNodeList.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNodeList.at">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDomNodeList.item">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDomNodeList.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNodeList" typetype="class"/>
+    </Function>
+    <Function name="QDomNodeList.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNodeList" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QDomDocumentType" inherits="QDomNode">
+    <Function name="QDomDocumentType.__init__"/>
+    <Function name="QDomDocumentType.__init__">
+      <Argument typename="QDomDocumentType" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomDocumentType.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.internalSubset">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.systemId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.publicId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.notations">
+      <Argument typename="QDomNamedNodeMap" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.entities">
+      <Argument typename="QDomNamedNodeMap" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocumentType.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomDocument" inherits="QDomNode">
+    <Function name="QDomDocument.__init__"/>
+    <Function name="QDomDocument.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomDocument.__init__">
+      <Argument typename="QDomDocumentType" typetype="class" name="doctype"/>
+    </Function>
+    <Function name="QDomDocument.__init__">
+      <Argument typename="QDomDocument" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomDocument.toByteArray">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="int" name="indent" default="1"/>
+    </Function>
+    <Function name="QDomDocument.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="indent" default="1"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="text"/>
+      <Argument typename="bool" name="namespaceProcessing"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+      <Argument typename="bool" name="namespaceProcessing"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="dev"/>
+      <Argument typename="bool" name="namespaceProcessing"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="source"/>
+      <Argument typename="bool" name="namespaceProcessing"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="text"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="dev"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.setContent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlInputSource" typetype="class" name="source"/>
+      <Argument typename="QXmlReader" typetype="class" name="reader"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMsg" dir="out"/>
+      <Argument typename="int" name="errorLine" dir="out"/>
+      <Argument typename="int" name="errorColumn" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.documentElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.implementation">
+      <Argument typename="QDomImplementation" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.doctype">
+      <Argument typename="QDomDocumentType" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.elementById">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="elementId"/>
+    </Function>
+    <Function name="QDomDocument.elementsByTagNameNS">
+      <Argument typename="QDomNodeList" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomDocument.createAttributeNS">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QDomDocument.createElementNS">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+    </Function>
+    <Function name="QDomDocument.importNode">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="importedNode"/>
+      <Argument typename="bool" name="deep"/>
+    </Function>
+    <Function name="QDomDocument.elementsByTagName">
+      <Argument typename="QDomNodeList" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagname"/>
+    </Function>
+    <Function name="QDomDocument.createEntityReference">
+      <Argument typename="QDomEntityReference" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomDocument.createAttribute">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomDocument.createProcessingInstruction">
+      <Argument typename="QDomProcessingInstruction" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="target"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QDomDocument.createCDATASection">
+      <Argument typename="QDomCDATASection" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QDomDocument.createComment">
+      <Argument typename="QDomComment" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QDomDocument.createTextNode">
+      <Argument typename="QDomText" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QDomDocument.createDocumentFragment">
+      <Argument typename="QDomDocumentFragment" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomDocument.createElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagName"/>
+    </Function>
+  </Class>
+  <Class name="QDomNamedNodeMap">
+    <Function name="QDomNamedNodeMap.__init__"/>
+    <Function name="QDomNamedNodeMap.__init__">
+      <Argument typename="QDomNamedNodeMap" typetype="class"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.removeNamedItemNS">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.setNamedItemNS">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newNode"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.namedItemNS">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.item">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.removeNamedItem">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.setNamedItem">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QDomNode" typetype="class" name="newNode"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.namedItem">
+      <Argument typename="QDomNode" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNamedNodeMap" typetype="class"/>
+    </Function>
+    <Function name="QDomNamedNodeMap.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDomNamedNodeMap" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QDomDocumentFragment" inherits="QDomNode">
+    <Function name="QDomDocumentFragment.__init__"/>
+    <Function name="QDomDocumentFragment.__init__">
+      <Argument typename="QDomDocumentFragment" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomDocumentFragment.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomCharacterData" inherits="QDomNode">
+    <Function name="QDomCharacterData.__init__"/>
+    <Function name="QDomCharacterData.__init__">
+      <Argument typename="QDomCharacterData" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomCharacterData.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomCharacterData.setData">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QDomCharacterData.data">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomCharacterData.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDomCharacterData.replaceData">
+      <Argument typename="int" name="offset"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QString" typetype="mappedtype" name="arg"/>
+    </Function>
+    <Function name="QDomCharacterData.deleteData">
+      <Argument typename="int" name="offset"/>
+      <Argument typename="int" name="count"/>
+    </Function>
+    <Function name="QDomCharacterData.insertData">
+      <Argument typename="int" name="offset"/>
+      <Argument typename="QString" typetype="mappedtype" name="arg"/>
+    </Function>
+    <Function name="QDomCharacterData.appendData">
+      <Argument typename="QString" typetype="mappedtype" name="arg"/>
+    </Function>
+    <Function name="QDomCharacterData.substringData">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="offset"/>
+      <Argument typename="int" name="count"/>
+    </Function>
+  </Class>
+  <Class name="QDomAttr" inherits="QDomNode">
+    <Function name="QDomAttr.__init__"/>
+    <Function name="QDomAttr.__init__">
+      <Argument typename="QDomAttr" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomAttr.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomAttr.setValue">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QDomAttr.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomAttr.ownerElement">
+      <Argument typename="QDomElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomAttr.specified">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDomAttr.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomElement" inherits="QDomNode">
+    <Function name="QDomElement.__init__"/>
+    <Function name="QDomElement.__init__">
+      <Argument typename="QDomElement" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomElement.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomElement.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomElement.attributes">
+      <Argument typename="QDomNamedNodeMap" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDomElement.setTagName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomElement.tagName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomElement.hasAttributeNS">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomElement.elementsByTagNameNS">
+      <Argument typename="QDomNodeList" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNodeNS">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QDomAttr" typetype="class" name="newAttr"/>
+    </Function>
+    <Function name="QDomElement.attributeNodeNS">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomElement.removeAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNS">
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="qName"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.attributeNS">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="nsURI"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue" default="''"/>
+    </Function>
+    <Function name="QDomElement.hasAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomElement.elementsByTagName">
+      <Argument typename="QDomNodeList" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tagname"/>
+    </Function>
+    <Function name="QDomElement.removeAttributeNode">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QDomAttr" typetype="class" name="oldAttr"/>
+    </Function>
+    <Function name="QDomElement.setAttributeNode">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QDomAttr" typetype="class" name="newAttr"/>
+    </Function>
+    <Function name="QDomElement.attributeNode">
+      <Argument typename="QDomAttr" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomElement.removeAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDomElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QDomElement.setAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QDomElement.attribute">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue" default="''"/>
+    </Function>
+  </Class>
+  <Class name="QDomText" inherits="QDomCharacterData">
+    <Function name="QDomText.__init__"/>
+    <Function name="QDomText.__init__">
+      <Argument typename="QDomText" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomText.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomText.splitText">
+      <Argument typename="QDomText" typetype="class" dir="out"/>
+      <Argument typename="int" name="offset"/>
+    </Function>
+  </Class>
+  <Class name="QDomComment" inherits="QDomCharacterData">
+    <Function name="QDomComment.__init__"/>
+    <Function name="QDomComment.__init__">
+      <Argument typename="QDomComment" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomComment.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomCDATASection" inherits="QDomText">
+    <Function name="QDomCDATASection.__init__"/>
+    <Function name="QDomCDATASection.__init__">
+      <Argument typename="QDomCDATASection" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomCDATASection.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomNotation" inherits="QDomNode">
+    <Function name="QDomNotation.__init__"/>
+    <Function name="QDomNotation.__init__">
+      <Argument typename="QDomNotation" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomNotation.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomNotation.systemId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomNotation.publicId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomEntity" inherits="QDomNode">
+    <Function name="QDomEntity.__init__"/>
+    <Function name="QDomEntity.__init__">
+      <Argument typename="QDomEntity" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomEntity.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomEntity.notationName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomEntity.systemId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomEntity.publicId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomEntityReference" inherits="QDomNode">
+    <Function name="QDomEntityReference.__init__"/>
+    <Function name="QDomEntityReference.__init__">
+      <Argument typename="QDomEntityReference" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomEntityReference.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDomProcessingInstruction" inherits="QDomNode">
+    <Function name="QDomProcessingInstruction.__init__"/>
+    <Function name="QDomProcessingInstruction.__init__">
+      <Argument typename="QDomProcessingInstruction" typetype="class" name="x"/>
+    </Function>
+    <Function name="QDomProcessingInstruction.nodeType">
+      <Argument typename="QDomNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDomProcessingInstruction.setData">
+      <Argument typename="QString" typetype="mappedtype" name="d"/>
+    </Function>
+    <Function name="QDomProcessingInstruction.data">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDomProcessingInstruction.target">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="__lshift__" extends="QTextStream">
+    <Argument typename="QTextStream" typetype="class" dir="out"/>
+    <Argument typename="QDomNode" typetype="class"/>
+  </Function>
+</Module>

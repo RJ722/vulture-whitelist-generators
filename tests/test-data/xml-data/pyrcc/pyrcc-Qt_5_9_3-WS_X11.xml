@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<Module version="0" name="pyrcc">
+  <Class name="RCCResourceLibrary">
+    <Function name="RCCResourceLibrary.__init__"/>
+    <Function name="RCCResourceLibrary.__init__">
+      <Argument typename="RCCResourceLibrary" typetype="class"/>
+    </Function>
+    <Function name="RCCResourceLibrary.setResourceRoot">
+      <Argument typename="QString" typetype="mappedtype" name="str"/>
+    </Function>
+    <Function name="RCCResourceLibrary.setCompressThreshold">
+      <Argument typename="int" name="t"/>
+    </Function>
+    <Function name="RCCResourceLibrary.setCompressLevel">
+      <Argument typename="int" name="c"/>
+    </Function>
+    <Function name="RCCResourceLibrary.setVerbose">
+      <Argument typename="bool" name="b"/>
+    </Function>
+    <Function name="RCCResourceLibrary.dataFiles">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="RCCResourceLibrary.setInputFiles">
+      <Argument typename="QStringList" typetype="mappedtype" name="files"/>
+    </Function>
+    <Function name="RCCResourceLibrary.readFiles">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="RCCResourceLibrary.output">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="out_name"/>
+    </Function>
+  </Class>
+  <Member name="CONSTANT_COMPRESSLEVEL_DEFAULT" const="1" typename="int"/>
+  <Member name="CONSTANT_COMPRESSTHRESHOLD_DEFAULT" const="1" typename="int"/>
+</Module>

@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<Module version="0" name="Enginio">
+  <Class name="Enginio">
+    <Enum name="Enginio.ErrorType">
+      <EnumMember name="Enginio.NoError"/>
+      <EnumMember name="Enginio.NetworkError"/>
+      <EnumMember name="Enginio.BackendError"/>
+    </Enum>
+    <Enum name="Enginio.Role">
+      <EnumMember name="Enginio.SyncedRole"/>
+      <EnumMember name="Enginio.CreatedAtRole"/>
+      <EnumMember name="Enginio.UpdatedAtRole"/>
+      <EnumMember name="Enginio.IdRole"/>
+      <EnumMember name="Enginio.ObjectTypeRole"/>
+      <EnumMember name="Enginio.CustomPropertyRole"/>
+    </Enum>
+    <Enum name="Enginio.Operation">
+      <EnumMember name="Enginio.ObjectOperation"/>
+      <EnumMember name="Enginio.AccessControlOperation"/>
+      <EnumMember name="Enginio.UserOperation"/>
+      <EnumMember name="Enginio.UsergroupOperation"/>
+      <EnumMember name="Enginio.UsergroupMembersOperation"/>
+      <EnumMember name="Enginio.FileOperation"/>
+    </Enum>
+    <Enum name="Enginio.AuthenticationState">
+      <EnumMember name="Enginio.NotAuthenticated"/>
+      <EnumMember name="Enginio.Authenticating"/>
+      <EnumMember name="Enginio.Authenticated"/>
+      <EnumMember name="Enginio.AuthenticationFailure"/>
+    </Enum>
+  </Class>
+  <Class name="EnginioClientConnection" inherits="QObject">
+    <Signal default="1" name="EnginioClientConnection.identityChanged" sig="void identityChanged( ::EnginioIdentity*)"/>
+    <Signal default="1" name="EnginioClientConnection.authenticationStateChanged" sig="void authenticationStateChanged( ::Enginio::AuthenticationState)"/>
+    <Signal default="1" name="EnginioClientConnection.serviceUrlChanged" sig="void serviceUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="EnginioClientConnection.backendIdChanged" sig="void backendIdChanged(const  ::QByteArray&amp;)"/>
+    <Function name="EnginioClientConnection.networkManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="EnginioClientConnection.setServiceUrl">
+      <Argument typename="QUrl" typetype="class" name="serviceUrl"/>
+    </Function>
+    <Function name="EnginioClientConnection.serviceUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="EnginioClientConnection.authenticationState">
+      <Argument typename="Enginio.AuthenticationState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="EnginioClientConnection.setIdentity">
+      <Argument typename="EnginioIdentity" typetype="class" name="identity"/>
+    </Function>
+    <Function name="EnginioClientConnection.identity">
+      <Argument typename="EnginioIdentity" typetype="class" dir="out"/>
+    </Function>
+    <Function name="EnginioClientConnection.setBackendId">
+      <Argument typename="QByteArray" typetype="class" name="backendId"/>
+    </Function>
+    <Function name="EnginioClientConnection.backendId">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="EnginioClient" inherits="EnginioClientConnection">
+    <Function name="EnginioClient.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="EnginioClient.error" sig="void error( ::EnginioReply*)"/>
+    <Signal default="1" name="EnginioClient.finished" sig="void finished( ::EnginioReply*)"/>
+    <Signal default="1" name="EnginioClient.sessionTerminated" sig="void sessionTerminated() const"/>
+    <Signal default="1" name="EnginioClient.sessionAuthenticationError" sig="void sessionAuthenticationError( ::EnginioReply*) const"/>
+    <Signal default="1" name="EnginioClient.sessionAuthenticated" sig="void sessionAuthenticated( ::EnginioReply*) const"/>
+    <Function name="EnginioClient.downloadUrl">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="object"/>
+    </Function>
+    <Function name="EnginioClient.uploadFile">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="associatedObject"/>
+      <Argument typename="QUrl" typetype="class" name="file"/>
+    </Function>
+    <Function name="EnginioClient.remove">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="object"/>
+      <Argument typename="Enginio.Operation" typetype="enum" name="operation" default="Enginio.ObjectOperation"/>
+    </Function>
+    <Function name="EnginioClient.update">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="object"/>
+      <Argument typename="Enginio.Operation" typetype="enum" name="operation" default="Enginio.ObjectOperation"/>
+    </Function>
+    <Function name="EnginioClient.create">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="object"/>
+      <Argument typename="Enginio.Operation" typetype="enum" name="operation" default="Enginio.ObjectOperation"/>
+    </Function>
+    <Function name="EnginioClient.query">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="query"/>
+      <Argument typename="Enginio.Operation" typetype="enum" name="operation" default="Enginio.ObjectOperation"/>
+    </Function>
+    <Function name="EnginioClient.fullTextSearch">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="query"/>
+    </Function>
+  </Class>
+  <Class name="EnginioIdentity" inherits="QObject">
+  </Class>
+  <Class name="EnginioModel" inherits="QAbstractListModel">
+    <Function name="EnginioModel.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="EnginioModel.operationChanged" sig="void operationChanged( ::Enginio::Operation)"/>
+    <Signal default="1" name="EnginioModel.clientChanged" sig="void clientChanged( ::EnginioClient*)"/>
+    <Signal default="1" name="EnginioModel.queryChanged" sig="void queryChanged(const QJsonObject&amp;)"/>
+    <Function name="EnginioModel.setData">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+      <Argument typename="QString" typetype="mappedtype" name="role"/>
+    </Function>
+    <Function name="EnginioModel.remove">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="EnginioModel.append">
+      <Argument typename="EnginioReply" typetype="class" dir="out"/>
+      <Argument typename="QJsonObject" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="EnginioModel.setOperation">
+      <Argument typename="Enginio.Operation" typetype="enum" name="operation"/>
+    </Function>
+    <Function name="EnginioModel.operation">
+      <Argument typename="Enginio.Operation" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="EnginioModel.setQuery">
+      <Argument typename="QJsonObject" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="EnginioModel.query">
+      <Argument typename="QJsonObject" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="EnginioModel.setClient">
+      <Argument typename="EnginioClient" typetype="class" name="client"/>
+    </Function>
+    <Function name="EnginioModel.client">
+      <Argument typename="EnginioClient" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="EnginioOAuth2Authentication" inherits="EnginioIdentity">
+    <Function name="EnginioOAuth2Authentication.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="EnginioOAuth2Authentication.passwordChanged" sig="void passwordChanged(const QString&amp;)"/>
+    <Signal default="1" name="EnginioOAuth2Authentication.userChanged" sig="void userChanged(const QString&amp;)"/>
+    <Function name="EnginioOAuth2Authentication.setPassword">
+      <Argument typename="QString" typetype="mappedtype" name="password"/>
+    </Function>
+    <Function name="EnginioOAuth2Authentication.setUser">
+      <Argument typename="QString" typetype="mappedtype" name="user"/>
+    </Function>
+    <Function name="EnginioOAuth2Authentication.password">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="EnginioOAuth2Authentication.user">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="EnginioReply" inherits="QObject">
+    <Signal default="1" name="EnginioReply.dataChanged" sig="void dataChanged()"/>
+    <Signal default="1" name="EnginioReply.finished" sig="void finished( ::EnginioReply*)"/>
+    <Function name="EnginioReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="EnginioReply.isError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="EnginioReply.backendStatus">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="EnginioReply.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="EnginioReply.networkError">
+      <Argument typename="QNetworkReply.NetworkError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="EnginioReply.errorType">
+      <Argument typename="Enginio.ErrorType" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="EnginioReply.progress" sig="void progress( ::qint64, ::qint64)"/>
+    <Function name="EnginioReply.data">
+      <Argument typename="QJsonObject" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+</Module>

@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebEngine">
+  <Class name="QQuickWebEngineProfile" inherits="QObject">
+    <Function name="QQuickWebEngineProfile.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickWebEngineProfile.PersistentCookiesPolicy">
+      <EnumMember name="QQuickWebEngineProfile.NoPersistentCookies"/>
+      <EnumMember name="QQuickWebEngineProfile.AllowPersistentCookies"/>
+      <EnumMember name="QQuickWebEngineProfile.ForcePersistentCookies"/>
+    </Enum>
+    <Enum name="QQuickWebEngineProfile.HttpCacheType">
+      <EnumMember name="QQuickWebEngineProfile.MemoryHttpCache"/>
+      <EnumMember name="QQuickWebEngineProfile.DiskHttpCache"/>
+    </Enum>
+    <Signal default="1" name="QQuickWebEngineProfile.httpAcceptLanguageChanged" sig="void httpAcceptLanguageChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.httpCacheMaximumSizeChanged" sig="void httpCacheMaximumSizeChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.persistentCookiesPolicyChanged" sig="void persistentCookiesPolicyChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.httpCacheTypeChanged" sig="void httpCacheTypeChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.httpUserAgentChanged" sig="void httpUserAgentChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.cachePathChanged" sig="void cachePathChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.persistentStoragePathChanged" sig="void persistentStoragePathChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.offTheRecordChanged" sig="void offTheRecordChanged()"/>
+    <Signal default="1" name="QQuickWebEngineProfile.storageNameChanged" sig="void storageNameChanged()"/>
+    <Function name="QQuickWebEngineProfile.defaultProfile" static="1">
+      <Argument typename="QQuickWebEngineProfile" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.removeAllUrlSchemeHandlers"/>
+    <Function name="QQuickWebEngineProfile.removeUrlSchemeHandler">
+      <Argument typename="QWebEngineUrlSchemeHandler" typetype="class"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.removeUrlScheme">
+      <Argument typename="QByteArray" typetype="class" name="scheme"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.installUrlSchemeHandler">
+      <Argument typename="QByteArray" typetype="class" name="scheme"/>
+      <Argument typename="QWebEngineUrlSchemeHandler" typetype="class"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.urlSchemeHandler">
+      <Argument typename="QWebEngineUrlSchemeHandler" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setRequestInterceptor">
+      <Argument typename="QWebEngineUrlRequestInterceptor" typetype="class" name="interceptor"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.cookieStore">
+      <Argument typename="QWebEngineCookieStore" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setHttpAcceptLanguage">
+      <Argument typename="QString" typetype="mappedtype" name="httpAcceptLanguage"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.httpAcceptLanguage">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setHttpCacheMaximumSize">
+      <Argument typename="int" name="maxSize"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.httpCacheMaximumSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setPersistentCookiesPolicy">
+      <Argument typename="QQuickWebEngineProfile.PersistentCookiesPolicy" typetype="enum"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.persistentCookiesPolicy">
+      <Argument typename="QQuickWebEngineProfile.PersistentCookiesPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setHttpCacheType">
+      <Argument typename="QQuickWebEngineProfile.HttpCacheType" typetype="enum"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.httpCacheType">
+      <Argument typename="QQuickWebEngineProfile.HttpCacheType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setHttpUserAgent">
+      <Argument typename="QString" typetype="mappedtype" name="userAgent"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.httpUserAgent">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setCachePath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.cachePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setPersistentStoragePath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.persistentStoragePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setOffTheRecord">
+      <Argument typename="bool" name="offTheRecord"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.isOffTheRecord">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.setStorageName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QQuickWebEngineProfile.storageName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QtWebEngine">
+    <Function name="QtWebEngine.initialize" static="1"/>
+  </Class>
+</Module>

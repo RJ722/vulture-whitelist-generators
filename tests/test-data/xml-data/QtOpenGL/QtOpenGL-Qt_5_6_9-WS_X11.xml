@@ -1,0 +1,680 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtOpenGL">
+  <Class name="QGL">
+    <Enum name="QGL.FormatOption">
+      <EnumMember name="QGL.DoubleBuffer"/>
+      <EnumMember name="QGL.DepthBuffer"/>
+      <EnumMember name="QGL.Rgba"/>
+      <EnumMember name="QGL.AlphaChannel"/>
+      <EnumMember name="QGL.AccumBuffer"/>
+      <EnumMember name="QGL.StencilBuffer"/>
+      <EnumMember name="QGL.StereoBuffers"/>
+      <EnumMember name="QGL.DirectRendering"/>
+      <EnumMember name="QGL.HasOverlay"/>
+      <EnumMember name="QGL.SampleBuffers"/>
+      <EnumMember name="QGL.SingleBuffer"/>
+      <EnumMember name="QGL.NoDepthBuffer"/>
+      <EnumMember name="QGL.ColorIndex"/>
+      <EnumMember name="QGL.NoAlphaChannel"/>
+      <EnumMember name="QGL.NoAccumBuffer"/>
+      <EnumMember name="QGL.NoStencilBuffer"/>
+      <EnumMember name="QGL.NoStereoBuffers"/>
+      <EnumMember name="QGL.IndirectRendering"/>
+      <EnumMember name="QGL.NoOverlay"/>
+      <EnumMember name="QGL.NoSampleBuffers"/>
+      <EnumMember name="QGL.DeprecatedFunctions"/>
+      <EnumMember name="QGL.NoDeprecatedFunctions"/>
+    </Enum>
+  </Class>
+  <Class name="QGL.FormatOptions" convert="1">
+    <Function name="QGL.FormatOptions.__init__"/>
+    <Function name="QGL.FormatOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__init__">
+      <Argument typename="QGL.FormatOptions" typetype="class"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGL.FormatOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGL.FormatOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__ixor__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__xor__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__ior__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__or__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__iand__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__and__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__invert__">
+      <Argument typename="QGL.FormatOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGL.FormatOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGLFormat">
+    <Function name="QGLFormat.__init__"/>
+    <Function name="QGLFormat.__init__">
+      <Argument typename="QGL.FormatOptions" typetype="class" name="options"/>
+      <Argument typename="int" name="plane" default="0"/>
+    </Function>
+    <Function name="QGLFormat.__init__">
+      <Argument typename="QGLFormat" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGLFormat.OpenGLContextProfile">
+      <EnumMember name="QGLFormat.NoProfile"/>
+      <EnumMember name="QGLFormat.CoreProfile"/>
+      <EnumMember name="QGLFormat.CompatibilityProfile"/>
+    </Enum>
+    <Enum name="QGLFormat.OpenGLVersionFlag">
+      <EnumMember name="QGLFormat.OpenGL_Version_None"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_1_1"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_1_2"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_1_3"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_1_4"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_1_5"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_2_0"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_2_1"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_3_0"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_3_1"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_3_2"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_3_3"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_4_0"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_4_1"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_4_2"/>
+      <EnumMember name="QGLFormat.OpenGL_Version_4_3"/>
+      <EnumMember name="QGLFormat.OpenGL_ES_Common_Version_1_0"/>
+      <EnumMember name="QGLFormat.OpenGL_ES_CommonLite_Version_1_0"/>
+      <EnumMember name="QGLFormat.OpenGL_ES_Common_Version_1_1"/>
+      <EnumMember name="QGLFormat.OpenGL_ES_CommonLite_Version_1_1"/>
+      <EnumMember name="QGLFormat.OpenGL_ES_Version_2_0"/>
+    </Enum>
+    <Function name="QGLFormat.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLFormat" typetype="class"/>
+    </Function>
+    <Function name="QGLFormat.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLFormat" typetype="class"/>
+    </Function>
+    <Function name="QGLFormat.profile">
+      <Argument typename="QGLFormat.OpenGLContextProfile" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setProfile">
+      <Argument typename="QGLFormat.OpenGLContextProfile" typetype="enum" name="profile"/>
+    </Function>
+    <Function name="QGLFormat.minorVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.majorVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setVersion">
+      <Argument typename="int" name="major"/>
+      <Argument typename="int" name="minor"/>
+    </Function>
+    <Function name="QGLFormat.openGLVersionFlags" static="1">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.swapInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setSwapInterval">
+      <Argument typename="int" name="interval"/>
+    </Function>
+    <Function name="QGLFormat.blueBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setBlueBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.greenBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setGreenBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.redBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setRedBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.sampleBuffers">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.hasOverlay">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.directRendering">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.stereo">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.stencil">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.accum">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.alpha">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.rgba">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.depth">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.doubleBuffer">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.hasOpenGLOverlays" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.hasOpenGL" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setDefaultOverlayFormat" static="1">
+      <Argument typename="QGLFormat" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLFormat.defaultOverlayFormat" static="1">
+      <Argument typename="QGLFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setDefaultFormat" static="1">
+      <Argument typename="QGLFormat" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLFormat.defaultFormat" static="1">
+      <Argument typename="QGLFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.testOption">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGL.FormatOptions" typetype="class" name="opt"/>
+    </Function>
+    <Function name="QGLFormat.setOption">
+      <Argument typename="QGL.FormatOptions" typetype="class" name="opt"/>
+    </Function>
+    <Function name="QGLFormat.setPlane">
+      <Argument typename="int" name="plane"/>
+    </Function>
+    <Function name="QGLFormat.plane">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setOverlay">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setDirectRendering">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setStereo">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setStencil">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setAccum">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setAlpha">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setRgba">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setDepth">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.setDoubleBuffer">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.samples">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setSamples">
+      <Argument typename="int" name="numSamples"/>
+    </Function>
+    <Function name="QGLFormat.setSampleBuffers">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QGLFormat.stencilBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setStencilBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.alphaBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setAlphaBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.accumBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setAccumBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLFormat.depthBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.setDepthBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+  </Class>
+  <Class name="QGLFormat.OpenGLVersionFlags" convert="1">
+    <Function name="QGLFormat.OpenGLVersionFlags.__init__"/>
+    <Function name="QGLFormat.OpenGLVersionFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__init__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__ixor__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__xor__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__ior__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__or__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__iand__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__and__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__invert__">
+      <Argument typename="QGLFormat.OpenGLVersionFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLFormat.OpenGLVersionFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGLContext">
+    <Function name="QGLContext.__init__">
+      <Argument typename="QGLFormat" typetype="class" name="format"/>
+    </Function>
+    <Enum name="QGLContext.BindOption">
+      <EnumMember name="QGLContext.NoBindOption"/>
+      <EnumMember name="QGLContext.InvertedYBindOption"/>
+      <EnumMember name="QGLContext.MipmapBindOption"/>
+      <EnumMember name="QGLContext.PremultipliedAlphaBindOption"/>
+      <EnumMember name="QGLContext.LinearFilteringBindOption"/>
+      <EnumMember name="QGLContext.DefaultBindOption"/>
+    </Enum>
+    <Function name="QGLContext.moveToThread">
+      <Argument typename="QThread" typetype="class" name="thread"/>
+    </Function>
+    <Function name="QGLContext.areSharing" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLContext" typetype="class" name="context1"/>
+      <Argument typename="QGLContext" typetype="class" name="context2"/>
+    </Function>
+    <Function name="QGLContext.setInitialized">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QGLContext.initialized">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLContext.setWindowCreated">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QGLContext.windowCreated">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLContext.deviceIsPixmap">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLContext.chooseContext" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLContext" typetype="class" name="shareContext" default="None"/>
+    </Function>
+    <Function name="QGLContext.currentContext" static="1">
+      <Argument typename="QGLContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.overlayTransparentColor">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.device">
+      <Argument typename="QPaintDevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.getProcAddress">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="proc"/>
+    </Function>
+    <Function name="QGLContext.textureCacheLimit" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLContext.setTextureCacheLimit" static="1">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QGLContext.deleteTexture">
+      <Argument typename="int" name="tx_id"/>
+    </Function>
+    <Function name="QGLContext.drawTexture">
+      <Argument typename="QRectF" typetype="class" name="target"/>
+      <Argument typename="int" name="textureId"/>
+      <Argument typename="int" name="textureTarget" default="GL_TEXTURE_2D"/>
+    </Function>
+    <Function name="QGLContext.drawTexture">
+      <Argument typename="QPointF" typetype="class" name="point"/>
+      <Argument typename="int" name="textureId"/>
+      <Argument typename="int" name="textureTarget" default="GL_TEXTURE_2D"/>
+    </Function>
+    <Function name="QGLContext.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="int" name="target" default="GL_TEXTURE_2D"/>
+      <Argument typename="int" name="format" default="GL_RGBA"/>
+    </Function>
+    <Function name="QGLContext.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="pixmap"/>
+      <Argument typename="int" name="target" default="GL_TEXTURE_2D"/>
+      <Argument typename="int" name="format" default="GL_RGBA"/>
+    </Function>
+    <Function name="QGLContext.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QGLContext.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QGLContext.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="pixmap"/>
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QGLContext.swapBuffers" virtual="1"/>
+    <Function name="QGLContext.doneCurrent" virtual="1"/>
+    <Function name="QGLContext.makeCurrent" virtual="1"/>
+    <Function name="QGLContext.setFormat">
+      <Argument typename="QGLFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QGLContext.requestedFormat">
+      <Argument typename="QGLFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.format">
+      <Argument typename="QGLFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.reset"/>
+    <Function name="QGLContext.isSharing">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLContext.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLContext.create" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLContext" typetype="class" name="shareContext" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QGLContext.BindOptions" convert="1">
+    <Function name="QGLContext.BindOptions.__init__"/>
+    <Function name="QGLContext.BindOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__init__">
+      <Argument typename="QGLContext.BindOptions" typetype="class"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__ixor__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__xor__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__ior__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__or__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__iand__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__and__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__invert__">
+      <Argument typename="QGLContext.BindOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLContext.BindOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGLWidget" inherits="QWidget">
+    <Function name="QGLWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QGLWidget" typetype="class" name="shareWidget" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Function name="QGLWidget.__init__">
+      <Argument typename="QGLContext" typetype="class" name="context" transfer="to"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QGLWidget" typetype="class" name="shareWidget" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Function name="QGLWidget.__init__">
+      <Argument typename="QGLFormat" typetype="class" name="format"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QGLWidget" typetype="class" name="shareWidget" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Function name="QGLWidget.glDraw" virtual="1"/>
+    <Function name="QGLWidget.glInit" virtual="1"/>
+    <Function name="QGLWidget.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class"/>
+    </Function>
+    <Function name="QGLWidget.paintEvent" virtual="1">
+      <Argument typename="QPaintEvent" typetype="class"/>
+    </Function>
+    <Function name="QGLWidget.autoBufferSwap">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.setAutoBufferSwap">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QGLWidget.paintOverlayGL" virtual="1"/>
+    <Function name="QGLWidget.resizeOverlayGL" virtual="1">
+      <Argument typename="int" name="w"/>
+      <Argument typename="int" name="h"/>
+    </Function>
+    <Function name="QGLWidget.initializeOverlayGL" virtual="1"/>
+    <Function name="QGLWidget.paintGL" virtual="1"/>
+    <Function name="QGLWidget.resizeGL" virtual="1">
+      <Argument typename="int" name="w"/>
+      <Argument typename="int" name="h"/>
+    </Function>
+    <Function name="QGLWidget.initializeGL" virtual="1"/>
+    <Function name="QGLWidget.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QGLWidget.updateOverlayGL" slot="void updateOverlayGL()" virtual="1"/>
+    <Function name="QGLWidget.updateGL" slot="void updateGL()" virtual="1"/>
+    <Function name="QGLWidget.deleteTexture">
+      <Argument typename="int" name="tx_id"/>
+    </Function>
+    <Function name="QGLWidget.drawTexture">
+      <Argument typename="QRectF" typetype="class" name="target"/>
+      <Argument typename="int" name="textureId"/>
+      <Argument typename="int" name="textureTarget" default="GL_TEXTURE_2D"/>
+    </Function>
+    <Function name="QGLWidget.drawTexture">
+      <Argument typename="QPointF" typetype="class" name="point"/>
+      <Argument typename="int" name="textureId"/>
+      <Argument typename="int" name="textureTarget" default="GL_TEXTURE_2D"/>
+    </Function>
+    <Function name="QGLWidget.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="int" name="target" default="GL_TEXTURE_2D"/>
+      <Argument typename="int" name="format" default="GL_RGBA"/>
+    </Function>
+    <Function name="QGLWidget.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="pixmap"/>
+      <Argument typename="int" name="target" default="GL_TEXTURE_2D"/>
+      <Argument typename="int" name="format" default="GL_RGBA"/>
+    </Function>
+    <Function name="QGLWidget.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QGLWidget.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QGLWidget.bindTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="pixmap"/>
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="QGLContext.BindOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QGLWidget.paintEngine" virtual="1">
+      <Argument typename="QPaintEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.renderText">
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="QString" typetype="mappedtype" name="str"/>
+      <Argument typename="QFont" typetype="class" name="font" default="QFont()"/>
+    </Function>
+    <Function name="QGLWidget.renderText">
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+      <Argument typename="QString" typetype="mappedtype" name="str"/>
+      <Argument typename="QFont" typetype="class" name="font" default="QFont()"/>
+    </Function>
+    <Function name="QGLWidget.convertToGLFormat" static="1">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="img"/>
+    </Function>
+    <Function name="QGLWidget.overlayContext">
+      <Argument typename="QGLContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.makeOverlayCurrent"/>
+    <Function name="QGLWidget.grabFrameBuffer">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+      <Argument typename="bool" name="withAlpha" default="False"/>
+    </Function>
+    <Function name="QGLWidget.renderPixmap">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+      <Argument typename="int" name="width" default="0"/>
+      <Argument typename="int" name="height" default="0"/>
+      <Argument typename="bool" name="useContext" default="False"/>
+    </Function>
+    <Function name="QGLWidget.setContext">
+      <Argument typename="QGLContext" typetype="class" name="context" transfer="to"/>
+      <Argument typename="QGLContext" typetype="class" name="shareContext" default="None"/>
+      <Argument typename="bool" name="deleteOldContext" default="True"/>
+    </Function>
+    <Function name="QGLWidget.context">
+      <Argument typename="QGLContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.format">
+      <Argument typename="QGLFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.swapBuffers"/>
+    <Function name="QGLWidget.doubleBuffer">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.doneCurrent"/>
+    <Function name="QGLWidget.makeCurrent"/>
+    <Function name="QGLWidget.isSharing">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGLWidget.qglClearColor">
+      <Argument typename="QColor" typetype="class" name="c"/>
+    </Function>
+    <Function name="QGLWidget.qglColor">
+      <Argument typename="QColor" typetype="class" name="c"/>
+    </Function>
+  </Class>
+</Module>

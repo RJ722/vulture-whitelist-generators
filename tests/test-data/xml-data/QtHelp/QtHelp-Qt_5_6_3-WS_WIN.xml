@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtHelp">
+  <Class name="QHelpContentItem">
+    <Function name="QHelpContentItem.childPosition">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QHelpContentItem" typetype="class" name="child"/>
+    </Function>
+    <Function name="QHelpContentItem.parent">
+      <Argument typename="QHelpContentItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpContentItem.row">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHelpContentItem.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpContentItem.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpContentItem.childCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHelpContentItem.child">
+      <Argument typename="QHelpContentItem" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+  </Class>
+  <Class name="QHelpContentModel" inherits="QAbstractItemModel">
+    <Signal default="1" name="QHelpContentModel.contentsCreated" sig="void contentsCreated()"/>
+    <Signal default="1" name="QHelpContentModel.contentsCreationStarted" sig="void contentsCreationStarted()"/>
+    <Function name="QHelpContentModel.isCreatingContents">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QHelpContentModel.columnCount" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QHelpContentModel.rowCount" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QHelpContentModel.parent" virtual="1">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QHelpContentModel.index" virtual="1">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="int" name="column"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QHelpContentModel.data" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+      <Argument typename="int" name="role"/>
+    </Function>
+    <Function name="QHelpContentModel.contentItemAt">
+      <Argument typename="QHelpContentItem" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QHelpContentModel.createContents">
+      <Argument typename="QString" typetype="mappedtype" name="customFilterName"/>
+    </Function>
+  </Class>
+  <Class name="QHelpContentWidget" inherits="QTreeView">
+    <Signal default="1" name="QHelpContentWidget.linkActivated" sig="void linkActivated(const  ::QUrl&amp;)"/>
+    <Function name="QHelpContentWidget.indexOf">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="link"/>
+    </Function>
+  </Class>
+  <Class name="QHelpEngineCore" inherits="QObject">
+    <Function name="QHelpEngineCore.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="collectionFile"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QHelpEngineCore.readersAboutToBeInvalidated" sig="void readersAboutToBeInvalidated()"/>
+    <Signal default="1" name="QHelpEngineCore.warning" sig="void warning(const QString&amp;)"/>
+    <Signal default="1" name="QHelpEngineCore.currentFilterChanged" sig="void currentFilterChanged(const QString&amp;)"/>
+    <Signal default="1" name="QHelpEngineCore.setupFinished" sig="void setupFinished()"/>
+    <Signal default="1" name="QHelpEngineCore.setupStarted" sig="void setupStarted()"/>
+    <Function name="QHelpEngineCore.setAutoSaveFilter">
+      <Argument typename="bool" name="save"/>
+    </Function>
+    <Function name="QHelpEngineCore.autoSaveFilter">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.error">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.metaData" static="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="documentationFileName"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QHelpEngineCore.setCustomValue">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QHelpEngineCore.customValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="defaultValue" default="None"/>
+    </Function>
+    <Function name="QHelpEngineCore.removeCustomValue">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QHelpEngineCore.linksForIdentifier">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QHelpEngineCore.fileData">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QHelpEngineCore.findFile">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QHelpEngineCore.files">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceName"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="filterAttributes"/>
+      <Argument typename="QString" typetype="mappedtype" name="extensionFilter" default="''"/>
+    </Function>
+    <Function name="QHelpEngineCore.filterAttributeSets">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceName"/>
+    </Function>
+    <Function name="QHelpEngineCore.registeredDocumentations">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.setCurrentFilter">
+      <Argument typename="QString" typetype="mappedtype" name="filterName"/>
+    </Function>
+    <Function name="QHelpEngineCore.currentFilter">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.filterAttributes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.filterAttributes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filterName"/>
+    </Function>
+    <Function name="QHelpEngineCore.addCustomFilter">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filterName"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="attributes"/>
+    </Function>
+    <Function name="QHelpEngineCore.removeCustomFilter">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filterName"/>
+    </Function>
+    <Function name="QHelpEngineCore.customFilters">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.documentationFileName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceName"/>
+    </Function>
+    <Function name="QHelpEngineCore.unregisterDocumentation">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceName"/>
+    </Function>
+    <Function name="QHelpEngineCore.registerDocumentation">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="documentationFileName"/>
+    </Function>
+    <Function name="QHelpEngineCore.namespaceName" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="documentationFileName"/>
+    </Function>
+    <Function name="QHelpEngineCore.copyCollectionFile">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QHelpEngineCore.setCollectionFile">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QHelpEngineCore.collectionFile">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHelpEngineCore.setupData">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHelpEngine" inherits="QHelpEngineCore">
+    <Function name="QHelpEngine.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="collectionFile"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QHelpEngine.searchEngine">
+      <Argument typename="QHelpSearchEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpEngine.indexWidget">
+      <Argument typename="QHelpIndexWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpEngine.contentWidget">
+      <Argument typename="QHelpContentWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpEngine.indexModel">
+      <Argument typename="QHelpIndexModel" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpEngine.contentModel">
+      <Argument typename="QHelpContentModel" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHelpIndexModel" inherits="QStringListModel">
+    <Signal default="1" name="QHelpIndexModel.indexCreated" sig="void indexCreated()"/>
+    <Signal default="1" name="QHelpIndexModel.indexCreationStarted" sig="void indexCreationStarted()"/>
+    <Function name="QHelpIndexModel.isCreatingIndex">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QHelpIndexModel.linksForKeyword">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="keyword"/>
+    </Function>
+    <Function name="QHelpIndexModel.filter">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filter"/>
+      <Argument typename="QString" typetype="mappedtype" name="wildcard" default="''"/>
+    </Function>
+    <Function name="QHelpIndexModel.createIndex">
+      <Argument typename="QString" typetype="mappedtype" name="customFilterName"/>
+    </Function>
+  </Class>
+  <Class name="QHelpIndexWidget" inherits="QListView">
+    <Function name="QHelpIndexWidget.activateCurrentItem" slot="void activateCurrentItem()"/>
+    <Function name="QHelpIndexWidget.filterIndices" slot="void filterIndices(const QString&amp;,const QString&amp; = QString())">
+      <Argument typename="QString" typetype="mappedtype" name="filter"/>
+      <Argument typename="QString" typetype="mappedtype" name="wildcard" default="''"/>
+    </Function>
+    <Signal default="1" name="QHelpIndexWidget.linksActivated" sig="void linksActivated(const QMap&lt;QString,QUrl&gt;&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QHelpIndexWidget.linkActivated" sig="void linkActivated(const  ::QUrl&amp;,const QString&amp;)"/>
+  </Class>
+  <Class name="QHelpSearchQuery">
+    <Function name="QHelpSearchQuery.__init__"/>
+    <Function name="QHelpSearchQuery.__init__">
+      <Argument typename="QHelpSearchQuery.FieldName" typetype="enum" name="field"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="wordList"/>
+    </Function>
+    <Function name="QHelpSearchQuery.__init__">
+      <Argument typename="QHelpSearchQuery" typetype="class"/>
+    </Function>
+    <Enum name="QHelpSearchQuery.FieldName">
+      <EnumMember name="QHelpSearchQuery.DEFAULT"/>
+      <EnumMember name="QHelpSearchQuery.FUZZY"/>
+      <EnumMember name="QHelpSearchQuery.WITHOUT"/>
+      <EnumMember name="QHelpSearchQuery.PHRASE"/>
+      <EnumMember name="QHelpSearchQuery.ALL"/>
+      <EnumMember name="QHelpSearchQuery.ATLEAST"/>
+    </Enum>
+  </Class>
+  <Class name="QHelpSearchEngine" inherits="QObject">
+    <Function name="QHelpSearchEngine.__init__">
+      <Argument typename="QHelpEngineCore" typetype="class" name="helpEngine"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QHelpSearchEngine.searchingFinished" sig="void searchingFinished(int)"/>
+    <Signal default="1" name="QHelpSearchEngine.searchingStarted" sig="void searchingStarted()"/>
+    <Signal default="1" name="QHelpSearchEngine.indexingFinished" sig="void indexingFinished()"/>
+    <Signal default="1" name="QHelpSearchEngine.indexingStarted" sig="void indexingStarted()"/>
+    <Function name="QHelpSearchEngine.cancelSearching" slot="void cancelSearching()"/>
+    <Function name="QHelpSearchEngine.search" slot="void search(const QList&lt;QHelpSearchQuery&gt;&amp;)">
+      <Argument typename="unknown-type" typetype="mappedtype" name="queryList"/>
+    </Function>
+    <Function name="QHelpSearchEngine.cancelIndexing" slot="void cancelIndexing()"/>
+    <Function name="QHelpSearchEngine.reindexDocumentation" slot="void reindexDocumentation()"/>
+    <Function name="QHelpSearchEngine.hits">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QHelpSearchEngine.hitCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHelpSearchEngine.resultWidget">
+      <Argument typename="QHelpSearchResultWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpSearchEngine.queryWidget">
+      <Argument typename="QHelpSearchQueryWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHelpSearchEngine.query">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHelpSearchQueryWidget" inherits="QWidget">
+    <Function name="QHelpSearchQueryWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QHelpSearchQueryWidget.setCompactMode">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QHelpSearchQueryWidget.isCompactMode">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Signal default="1" name="QHelpSearchQueryWidget.search" sig="void search()"/>
+    <Function name="QHelpSearchQueryWidget.collapseExtendedSearch"/>
+    <Function name="QHelpSearchQueryWidget.expandExtendedSearch"/>
+    <Function name="QHelpSearchQueryWidget.setQuery">
+      <Argument typename="unknown-type" typetype="mappedtype" name="queryList"/>
+    </Function>
+    <Function name="QHelpSearchQueryWidget.query">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHelpSearchResultWidget" inherits="QWidget">
+    <Signal default="1" name="QHelpSearchResultWidget.requestShowLink" sig="void requestShowLink(const  ::QUrl&amp;)"/>
+    <Function name="QHelpSearchResultWidget.linkAt">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QPoint" typetype="class" name="point"/>
+    </Function>
+  </Class>
+</Module>

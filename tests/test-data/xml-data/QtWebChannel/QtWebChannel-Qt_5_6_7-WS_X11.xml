@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebChannel">
+  <Class name="QWebChannel" inherits="QObject">
+    <Function name="QWebChannel.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebChannel.disconnectFrom" slot="void disconnectFrom( ::QWebChannelAbstractTransport*)">
+      <Argument typename="QWebChannelAbstractTransport" typetype="class" name="transport"/>
+    </Function>
+    <Function name="QWebChannel.connectTo" slot="void connectTo( ::QWebChannelAbstractTransport*)">
+      <Argument typename="QWebChannelAbstractTransport" typetype="class" name="transport"/>
+    </Function>
+    <Signal default="1" name="QWebChannel.blockUpdatesChanged" sig="void blockUpdatesChanged(bool)"/>
+    <Function name="QWebChannel.setBlockUpdates">
+      <Argument typename="bool" name="block"/>
+    </Function>
+    <Function name="QWebChannel.blockUpdates">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebChannel.deregisterObject">
+      <Argument typename="QObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QWebChannel.registerObject">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QWebChannel.registeredObjects">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebChannel.registerObjects">
+      <Argument typename="unknown-type" typetype="mappedtype" name="objects"/>
+    </Function>
+  </Class>
+  <Class name="QWebChannelAbstractTransport" inherits="QObject">
+    <Function name="QWebChannelAbstractTransport.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QWebChannelAbstractTransport.messageReceived" sig="void messageReceived(const QJsonObject&amp;, ::QWebChannelAbstractTransport*)"/>
+    <Function name="QWebChannelAbstractTransport.sendMessage" abstract="1" slot="void sendMessage(const QJsonObject&amp;)" virtual="1">
+      <Argument typename="QJsonObject" typetype="mappedtype" name="message"/>
+    </Function>
+  </Class>
+</Module>

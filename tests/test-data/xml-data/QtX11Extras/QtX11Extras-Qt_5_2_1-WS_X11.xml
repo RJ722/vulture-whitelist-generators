@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtX11Extras">
+  <OpaqueClass name="Display"/>
+  <OpaqueClass name="xcb_connection_t"/>
+  <Class name="QX11Info">
+    <Function name="QX11Info.__init__">
+      <Argument typename="QX11Info" typetype="class"/>
+    </Function>
+    <Function name="QX11Info.connection" static="1">
+      <Argument typename="xcb_connection_t" typetype="opaque" dir="out"/>
+    </Function>
+    <Function name="QX11Info.display" static="1">
+      <Argument typename="Display" typetype="opaque" dir="out"/>
+    </Function>
+    <Function name="QX11Info.getTimestamp" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QX11Info.setAppUserTime" static="1">
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QX11Info.setAppTime" static="1">
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QX11Info.appUserTime" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QX11Info.appTime" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QX11Info.appScreen" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QX11Info.appRootWindow" static="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="screen" default="-1"/>
+    </Function>
+    <Function name="QX11Info.appDpiY" static="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="screen" default="-1"/>
+    </Function>
+    <Function name="QX11Info.appDpiX" static="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="screen" default="-1"/>
+    </Function>
+    <Function name="QX11Info.isPlatformX11" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+</Module>

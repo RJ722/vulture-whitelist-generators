@@ -1,0 +1,755 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtSensors">
+  <Class name="QSensorReading" inherits="QObject">
+    <Function name="QSensorReading.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QSensorReading.valueCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensorReading.setTimestamp">
+      <Argument typename="int" name="timestamp"/>
+    </Function>
+    <Function name="QSensorReading.timestamp">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAccelerometerReading" inherits="QSensorReading">
+    <Function name="QAccelerometerReading.setZ">
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QAccelerometerReading.z">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QAccelerometerReading.setY">
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QAccelerometerReading.y">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QAccelerometerReading.setX">
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QAccelerometerReading.x">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSensorFilter">
+    <Function name="QSensorFilter.__init__"/>
+    <Function name="QSensorFilter.__init__">
+      <Argument typename="QSensorFilter" typetype="class"/>
+    </Function>
+    <Function name="QSensorFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSensorReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QAccelerometerFilter" inherits="QSensorFilter">
+    <Function name="QAccelerometerFilter.__init__"/>
+    <Function name="QAccelerometerFilter.__init__">
+      <Argument typename="QAccelerometerFilter" typetype="class"/>
+    </Function>
+    <Function name="QAccelerometerFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAccelerometerReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QSensor" inherits="QObject">
+    <Function name="QSensor.__init__">
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSensor.AxesOrientationMode">
+      <EnumMember name="QSensor.FixedOrientation"/>
+      <EnumMember name="QSensor.AutomaticOrientation"/>
+      <EnumMember name="QSensor.UserOrientation"/>
+    </Enum>
+    <Enum name="QSensor.Feature">
+      <EnumMember name="QSensor.Buffering"/>
+      <EnumMember name="QSensor.AlwaysOn"/>
+      <EnumMember name="QSensor.GeoValues"/>
+      <EnumMember name="QSensor.FieldOfView"/>
+      <EnumMember name="QSensor.AccelerationMode"/>
+      <EnumMember name="QSensor.SkipDuplicates"/>
+      <EnumMember name="QSensor.AxesOrientation"/>
+    </Enum>
+    <Signal default="1" name="QSensor.bufferSizeChanged" sig="void bufferSizeChanged(int)"/>
+    <Signal default="1" name="QSensor.efficientBufferSizeChanged" sig="void efficientBufferSizeChanged(int)"/>
+    <Signal default="1" name="QSensor.maxBufferSizeChanged" sig="void maxBufferSizeChanged(int)"/>
+    <Signal default="1" name="QSensor.userOrientationChanged" sig="void userOrientationChanged(int)"/>
+    <Signal default="1" name="QSensor.currentOrientationChanged" sig="void currentOrientationChanged(int)"/>
+    <Signal default="1" name="QSensor.axesOrientationModeChanged" sig="void axesOrientationModeChanged( ::QSensor::AxesOrientationMode)"/>
+    <Signal default="1" name="QSensor.skipDuplicatesChanged" sig="void skipDuplicatesChanged(bool)"/>
+    <Signal default="1" name="QSensor.dataRateChanged" sig="void dataRateChanged()"/>
+    <Signal default="1" name="QSensor.alwaysOnChanged" sig="void alwaysOnChanged()"/>
+    <Signal default="1" name="QSensor.availableSensorsChanged" sig="void availableSensorsChanged()"/>
+    <Signal default="1" name="QSensor.sensorError" sig="void sensorError(int)"/>
+    <Signal default="1" name="QSensor.readingChanged" sig="void readingChanged()"/>
+    <Signal default="1" name="QSensor.activeChanged" sig="void activeChanged()"/>
+    <Signal default="1" name="QSensor.busyChanged" sig="void busyChanged()"/>
+    <Function name="QSensor.stop" slot="void stop()"/>
+    <Function name="QSensor.start" slot="bool start()">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.setBufferSize">
+      <Argument typename="int" name="bufferSize"/>
+    </Function>
+    <Function name="QSensor.bufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.setEfficientBufferSize">
+      <Argument typename="int" name="efficientBufferSize"/>
+    </Function>
+    <Function name="QSensor.efficientBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.setMaxBufferSize">
+      <Argument typename="int" name="maxBufferSize"/>
+    </Function>
+    <Function name="QSensor.maxBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.setUserOrientation">
+      <Argument typename="int" name="userOrientation"/>
+    </Function>
+    <Function name="QSensor.userOrientation">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.setCurrentOrientation">
+      <Argument typename="int" name="currentOrientation"/>
+    </Function>
+    <Function name="QSensor.currentOrientation">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.setAxesOrientationMode">
+      <Argument typename="QSensor.AxesOrientationMode" typetype="enum" name="axesOrientationMode"/>
+    </Function>
+    <Function name="QSensor.axesOrientationMode">
+      <Argument typename="QSensor.AxesOrientationMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSensor.isFeatureSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSensor.Feature" typetype="enum" name="feature"/>
+    </Function>
+    <Function name="QSensor.defaultSensorForType" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+    </Function>
+    <Function name="QSensor.sensorsForType" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+    </Function>
+    <Function name="QSensor.sensorTypes" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSensor.reading">
+      <Argument typename="QSensorReading" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSensor.filters">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSensor.removeFilter">
+      <Argument typename="QSensorFilter" typetype="class" name="filter"/>
+    </Function>
+    <Function name="QSensor.addFilter">
+      <Argument typename="QSensorFilter" typetype="class" name="filter"/>
+    </Function>
+    <Function name="QSensor.error">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSensor.setOutputRange">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QSensor.outputRange">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.outputRanges">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSensor.setDataRate">
+      <Argument typename="int" name="rate"/>
+    </Function>
+    <Function name="QSensor.dataRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSensor.availableDataRates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSensor.setSkipDuplicates">
+      <Argument typename="bool" name="skipDuplicates"/>
+    </Function>
+    <Function name="QSensor.skipDuplicates">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.setAlwaysOn">
+      <Argument typename="bool" name="alwaysOn"/>
+    </Function>
+    <Function name="QSensor.isAlwaysOn">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.setActive">
+      <Argument typename="bool" name="active"/>
+    </Function>
+    <Function name="QSensor.isBusy">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.isConnectedToBackend">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.connectToBackend">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSensor.type">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSensor.setIdentifier">
+      <Argument typename="QByteArray" typetype="class" name="identifier"/>
+    </Function>
+    <Function name="QSensor.identifier">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAccelerometer" inherits="QSensor">
+    <Function name="QAccelerometer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QAccelerometer.AccelerationMode">
+      <EnumMember name="QAccelerometer.Combined"/>
+      <EnumMember name="QAccelerometer.Gravity"/>
+      <EnumMember name="QAccelerometer.User"/>
+    </Enum>
+    <Signal default="1" name="QAccelerometer.accelerationModeChanged" sig="void accelerationModeChanged( ::QAccelerometer::AccelerationMode)"/>
+    <Function name="QAccelerometer.reading">
+      <Argument typename="QAccelerometerReading" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAccelerometer.setAccelerationMode">
+      <Argument typename="QAccelerometer.AccelerationMode" typetype="enum" name="accelerationMode"/>
+    </Function>
+    <Function name="QAccelerometer.accelerationMode">
+      <Argument typename="QAccelerometer.AccelerationMode" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAltimeterReading" inherits="QSensorReading">
+    <Function name="QAltimeterReading.setAltitude">
+      <Argument typename="float" name="altitude"/>
+    </Function>
+    <Function name="QAltimeterReading.altitude">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAltimeterFilter" inherits="QSensorFilter">
+    <Function name="QAltimeterFilter.__init__"/>
+    <Function name="QAltimeterFilter.__init__">
+      <Argument typename="QAltimeterFilter" typetype="class"/>
+    </Function>
+    <Function name="QAltimeterFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAltimeterReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QAltimeter" inherits="QSensor">
+    <Function name="QAltimeter.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAltimeter.reading">
+      <Argument typename="QAltimeterReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientLightReading" inherits="QSensorReading">
+    <Enum name="QAmbientLightReading.LightLevel">
+      <EnumMember name="QAmbientLightReading.Undefined"/>
+      <EnumMember name="QAmbientLightReading.Dark"/>
+      <EnumMember name="QAmbientLightReading.Twilight"/>
+      <EnumMember name="QAmbientLightReading.Light"/>
+      <EnumMember name="QAmbientLightReading.Bright"/>
+      <EnumMember name="QAmbientLightReading.Sunny"/>
+    </Enum>
+    <Function name="QAmbientLightReading.setLightLevel">
+      <Argument typename="QAmbientLightReading.LightLevel" typetype="enum" name="lightLevel"/>
+    </Function>
+    <Function name="QAmbientLightReading.lightLevel">
+      <Argument typename="QAmbientLightReading.LightLevel" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientLightFilter" inherits="QSensorFilter">
+    <Function name="QAmbientLightFilter.__init__"/>
+    <Function name="QAmbientLightFilter.__init__">
+      <Argument typename="QAmbientLightFilter" typetype="class"/>
+    </Function>
+    <Function name="QAmbientLightFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAmbientLightReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientLightSensor" inherits="QSensor">
+    <Function name="QAmbientLightSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAmbientLightSensor.reading">
+      <Argument typename="QAmbientLightReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientTemperatureReading" inherits="QSensorReading">
+    <Function name="QAmbientTemperatureReading.setTemperature">
+      <Argument typename="float" name="temperature"/>
+    </Function>
+    <Function name="QAmbientTemperatureReading.temperature">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientTemperatureFilter" inherits="QSensorFilter">
+    <Function name="QAmbientTemperatureFilter.__init__"/>
+    <Function name="QAmbientTemperatureFilter.__init__">
+      <Argument typename="QAmbientTemperatureFilter" typetype="class"/>
+    </Function>
+    <Function name="QAmbientTemperatureFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAmbientTemperatureReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QAmbientTemperatureSensor" inherits="QSensor">
+    <Function name="QAmbientTemperatureSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAmbientTemperatureSensor.reading">
+      <Argument typename="QAmbientTemperatureReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCompassReading" inherits="QSensorReading">
+    <Function name="QCompassReading.setCalibrationLevel">
+      <Argument typename="float" name="calibrationLevel"/>
+    </Function>
+    <Function name="QCompassReading.calibrationLevel">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCompassReading.setAzimuth">
+      <Argument typename="float" name="azimuth"/>
+    </Function>
+    <Function name="QCompassReading.azimuth">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCompassFilter" inherits="QSensorFilter">
+    <Function name="QCompassFilter.__init__"/>
+    <Function name="QCompassFilter.__init__">
+      <Argument typename="QCompassFilter" typetype="class"/>
+    </Function>
+    <Function name="QCompassFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCompassReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QCompass" inherits="QSensor">
+    <Function name="QCompass.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QCompass.reading">
+      <Argument typename="QCompassReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGyroscopeReading" inherits="QSensorReading">
+    <Function name="QGyroscopeReading.setZ">
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QGyroscopeReading.z">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGyroscopeReading.setY">
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QGyroscopeReading.y">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGyroscopeReading.setX">
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QGyroscopeReading.x">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGyroscopeFilter" inherits="QSensorFilter">
+    <Function name="QGyroscopeFilter.__init__"/>
+    <Function name="QGyroscopeFilter.__init__">
+      <Argument typename="QGyroscopeFilter" typetype="class"/>
+    </Function>
+    <Function name="QGyroscopeFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGyroscopeReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QGyroscope" inherits="QSensor">
+    <Function name="QGyroscope.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGyroscope.reading">
+      <Argument typename="QGyroscopeReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHolsterReading" inherits="QSensorReading">
+    <Function name="QHolsterReading.setHolstered">
+      <Argument typename="bool" name="holstered"/>
+    </Function>
+    <Function name="QHolsterReading.holstered">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHolsterFilter" inherits="QSensorFilter">
+    <Function name="QHolsterFilter.__init__"/>
+    <Function name="QHolsterFilter.__init__">
+      <Argument typename="QHolsterFilter" typetype="class"/>
+    </Function>
+    <Function name="QHolsterFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHolsterReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QHolsterSensor" inherits="QSensor">
+    <Function name="QHolsterSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QHolsterSensor.reading">
+      <Argument typename="QHolsterReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QIRProximityReading" inherits="QSensorReading">
+    <Function name="QIRProximityReading.setReflectance">
+      <Argument typename="float" name="reflectance"/>
+    </Function>
+    <Function name="QIRProximityReading.reflectance">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QIRProximityFilter" inherits="QSensorFilter">
+    <Function name="QIRProximityFilter.__init__"/>
+    <Function name="QIRProximityFilter.__init__">
+      <Argument typename="QIRProximityFilter" typetype="class"/>
+    </Function>
+    <Function name="QIRProximityFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIRProximityReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QIRProximitySensor" inherits="QSensor">
+    <Function name="QIRProximitySensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QIRProximitySensor.reading">
+      <Argument typename="QIRProximityReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLightReading" inherits="QSensorReading">
+    <Function name="QLightReading.setLux">
+      <Argument typename="float" name="lux"/>
+    </Function>
+    <Function name="QLightReading.lux">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLightFilter" inherits="QSensorFilter">
+    <Function name="QLightFilter.__init__"/>
+    <Function name="QLightFilter.__init__">
+      <Argument typename="QLightFilter" typetype="class"/>
+    </Function>
+    <Function name="QLightFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLightReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QLightSensor" inherits="QSensor">
+    <Function name="QLightSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QLightSensor.fieldOfViewChanged" sig="void fieldOfViewChanged( ::qreal)"/>
+    <Function name="QLightSensor.setFieldOfView">
+      <Argument typename="float" name="fieldOfView"/>
+    </Function>
+    <Function name="QLightSensor.fieldOfView">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QLightSensor.reading">
+      <Argument typename="QLightReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMagnetometerReading" inherits="QSensorReading">
+    <Function name="QMagnetometerReading.setCalibrationLevel">
+      <Argument typename="float" name="calibrationLevel"/>
+    </Function>
+    <Function name="QMagnetometerReading.calibrationLevel">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QMagnetometerReading.setZ">
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QMagnetometerReading.z">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QMagnetometerReading.setY">
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QMagnetometerReading.y">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QMagnetometerReading.setX">
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QMagnetometerReading.x">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMagnetometerFilter" inherits="QSensorFilter">
+    <Function name="QMagnetometerFilter.__init__"/>
+    <Function name="QMagnetometerFilter.__init__">
+      <Argument typename="QMagnetometerFilter" typetype="class"/>
+    </Function>
+    <Function name="QMagnetometerFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMagnetometerReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QMagnetometer" inherits="QSensor">
+    <Function name="QMagnetometer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QMagnetometer.returnGeoValuesChanged" sig="void returnGeoValuesChanged(bool)"/>
+    <Function name="QMagnetometer.setReturnGeoValues">
+      <Argument typename="bool" name="returnGeoValues"/>
+    </Function>
+    <Function name="QMagnetometer.returnGeoValues">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMagnetometer.reading">
+      <Argument typename="QMagnetometerReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOrientationReading" inherits="QSensorReading">
+    <Enum name="QOrientationReading.Orientation">
+      <EnumMember name="QOrientationReading.Undefined"/>
+      <EnumMember name="QOrientationReading.TopUp"/>
+      <EnumMember name="QOrientationReading.TopDown"/>
+      <EnumMember name="QOrientationReading.LeftUp"/>
+      <EnumMember name="QOrientationReading.RightUp"/>
+      <EnumMember name="QOrientationReading.FaceUp"/>
+      <EnumMember name="QOrientationReading.FaceDown"/>
+    </Enum>
+    <Function name="QOrientationReading.setOrientation">
+      <Argument typename="QOrientationReading.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QOrientationReading.orientation">
+      <Argument typename="QOrientationReading.Orientation" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOrientationFilter" inherits="QSensorFilter">
+    <Function name="QOrientationFilter.__init__"/>
+    <Function name="QOrientationFilter.__init__">
+      <Argument typename="QOrientationFilter" typetype="class"/>
+    </Function>
+    <Function name="QOrientationFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QOrientationReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QOrientationSensor" inherits="QSensor">
+    <Function name="QOrientationSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOrientationSensor.reading">
+      <Argument typename="QOrientationReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPressureReading" inherits="QSensorReading">
+    <Function name="QPressureReading.setPressure">
+      <Argument typename="float" name="pressure"/>
+    </Function>
+    <Function name="QPressureReading.pressure">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPressureFilter" inherits="QSensorFilter">
+    <Function name="QPressureFilter.__init__"/>
+    <Function name="QPressureFilter.__init__">
+      <Argument typename="QPressureFilter" typetype="class"/>
+    </Function>
+    <Function name="QPressureFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPressureReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QPressureSensor" inherits="QSensor">
+    <Function name="QPressureSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPressureSensor.reading">
+      <Argument typename="QPressureReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QProximityReading" inherits="QSensorReading">
+    <Function name="QProximityReading.setClose">
+      <Argument typename="bool" name="close"/>
+    </Function>
+    <Function name="QProximityReading.close">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QProximityFilter" inherits="QSensorFilter">
+    <Function name="QProximityFilter.__init__"/>
+    <Function name="QProximityFilter.__init__">
+      <Argument typename="QProximityFilter" typetype="class"/>
+    </Function>
+    <Function name="QProximityFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QProximityReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QProximitySensor" inherits="QSensor">
+    <Function name="QProximitySensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QProximitySensor.reading">
+      <Argument typename="QProximityReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="qoutputrange">
+    <Function name="qoutputrange.__init__"/>
+    <Function name="qoutputrange.__init__">
+      <Argument typename="qoutputrange" typetype="class"/>
+    </Function>
+    <Member name="qoutputrange.accuracy" typename="float"/>
+    <Member name="qoutputrange.maximum" typename="float"/>
+    <Member name="qoutputrange.minimum" typename="float"/>
+  </Class>
+  <Class name="QTapReading" inherits="QSensorReading">
+    <Enum name="QTapReading.TapDirection">
+      <EnumMember name="QTapReading.Undefined"/>
+      <EnumMember name="QTapReading.X"/>
+      <EnumMember name="QTapReading.Y"/>
+      <EnumMember name="QTapReading.Z"/>
+      <EnumMember name="QTapReading.X_Pos"/>
+      <EnumMember name="QTapReading.Y_Pos"/>
+      <EnumMember name="QTapReading.Z_Pos"/>
+      <EnumMember name="QTapReading.X_Neg"/>
+      <EnumMember name="QTapReading.Y_Neg"/>
+      <EnumMember name="QTapReading.Z_Neg"/>
+      <EnumMember name="QTapReading.X_Both"/>
+      <EnumMember name="QTapReading.Y_Both"/>
+      <EnumMember name="QTapReading.Z_Both"/>
+    </Enum>
+    <Function name="QTapReading.setDoubleTap">
+      <Argument typename="bool" name="doubleTap"/>
+    </Function>
+    <Function name="QTapReading.isDoubleTap">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QTapReading.setTapDirection">
+      <Argument typename="QTapReading.TapDirection" typetype="enum" name="tapDirection"/>
+    </Function>
+    <Function name="QTapReading.tapDirection">
+      <Argument typename="QTapReading.TapDirection" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QTapFilter" inherits="QSensorFilter">
+    <Function name="QTapFilter.__init__"/>
+    <Function name="QTapFilter.__init__">
+      <Argument typename="QTapFilter" typetype="class"/>
+    </Function>
+    <Function name="QTapFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QTapReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QTapSensor" inherits="QSensor">
+    <Function name="QTapSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QTapSensor.returnDoubleTapEventsChanged" sig="void returnDoubleTapEventsChanged(bool)"/>
+    <Function name="QTapSensor.setReturnDoubleTapEvents">
+      <Argument typename="bool" name="returnDoubleTapEvents"/>
+    </Function>
+    <Function name="QTapSensor.returnDoubleTapEvents">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QTapSensor.reading">
+      <Argument typename="QTapReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QTiltReading" inherits="QSensorReading">
+    <Function name="QTiltReading.setXRotation">
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QTiltReading.xRotation">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QTiltReading.setYRotation">
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QTiltReading.yRotation">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QTiltFilter" inherits="QSensorFilter">
+    <Function name="QTiltFilter.__init__"/>
+    <Function name="QTiltFilter.__init__">
+      <Argument typename="QTiltFilter" typetype="class"/>
+    </Function>
+    <Function name="QTiltFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QTiltReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QTiltSensor" inherits="QSensor">
+    <Function name="QTiltSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QTiltSensor.calibrate"/>
+    <Function name="QTiltSensor.reading">
+      <Argument typename="QTiltReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QRotationReading" inherits="QSensorReading">
+    <Function name="QRotationReading.setFromEuler">
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QRotationReading.z">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QRotationReading.y">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QRotationReading.x">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QRotationFilter" inherits="QSensorFilter">
+    <Function name="QRotationFilter.__init__"/>
+    <Function name="QRotationFilter.__init__">
+      <Argument typename="QRotationFilter" typetype="class"/>
+    </Function>
+    <Function name="QRotationFilter.filter" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QRotationReading" typetype="class" name="reading"/>
+    </Function>
+  </Class>
+  <Class name="QRotationSensor" inherits="QSensor">
+    <Function name="QRotationSensor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QRotationSensor.hasZChanged" sig="void hasZChanged(bool)"/>
+    <Function name="QRotationSensor.setHasZ">
+      <Argument typename="bool" name="hasZ"/>
+    </Function>
+    <Function name="QRotationSensor.hasZ">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRotationSensor.reading">
+      <Argument typename="QRotationReading" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

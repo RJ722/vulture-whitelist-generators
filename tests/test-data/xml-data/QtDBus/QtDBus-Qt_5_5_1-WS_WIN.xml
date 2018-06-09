@@ -1,0 +1,980 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtDBus">
+  <Class name="QDBusAbstractAdaptor" inherits="QObject">
+    <Function name="QDBusAbstractAdaptor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QDBusAbstractAdaptor.autoRelaySignals">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractAdaptor.setAutoRelaySignals">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+  </Class>
+  <Class name="QDBusAbstractInterface" inherits="QObject">
+    <Function name="QDBusAbstractInterface.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="str" name="interface"/>
+      <Argument typename="QDBusConnection" typetype="class" name="connection"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.disconnectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class" name="signal"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.connectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class" name="signal"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.asyncCallWithArgumentList">
+      <Argument typename="QDBusPendingCall" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.asyncCall">
+      <Argument typename="QDBusPendingCall" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="QVariant" typetype="class" name="arg1" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg2" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg3" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg4" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg5" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg6" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg7" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg8" default="None"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.callWithCallback">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args"/>
+      <Argument typename="object" name="returnMethod"/>
+      <Argument typename="object" name="errorMethod"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.callWithCallback">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.callWithArgumentList">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBus.CallMode" typetype="enum" name="mode"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.call">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="QVariant" typetype="class" name="arg1" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg2" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg3" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg4" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg5" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg6" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg7" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg8" default="None"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.call">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBus.CallMode" typetype="enum" name="mode"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+      <Argument typename="QVariant" typetype="class" name="arg1" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg2" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg3" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg4" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg5" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg6" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg7" default="None"/>
+      <Argument typename="QVariant" typetype="class" name="arg8" default="None"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.timeout">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.setTimeout">
+      <Argument typename="int" name="timeout"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.lastError">
+      <Argument typename="QDBusError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.interface">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.path">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.service">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.connection">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusAbstractInterface.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusArgument">
+    <Function name="QDBusArgument.__init__"/>
+    <Function name="QDBusArgument.__init__">
+      <Argument typename="QDBusArgument" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusArgument.__init__">
+      <Argument typename="object" name="arg"/>
+      <Argument typename="int" name="id" default="QMetaType.Int"/>
+    </Function>
+    <Function name="QDBusArgument.endMapEntry"/>
+    <Function name="QDBusArgument.beginMapEntry"/>
+    <Function name="QDBusArgument.endMap"/>
+    <Function name="QDBusArgument.beginMap">
+      <Argument typename="int" name="kid"/>
+      <Argument typename="int" name="vid"/>
+    </Function>
+    <Function name="QDBusArgument.endArray"/>
+    <Function name="QDBusArgument.beginArray">
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QDBusArgument.endStructure"/>
+    <Function name="QDBusArgument.beginStructure"/>
+    <Function name="QDBusArgument.add">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="object" name="arg"/>
+      <Argument typename="int" name="id" default="QMetaType.Int"/>
+    </Function>
+  </Class>
+  <Class name="QDBus">
+    <Enum name="QDBus.CallMode">
+      <EnumMember name="QDBus.NoBlock"/>
+      <EnumMember name="QDBus.Block"/>
+      <EnumMember name="QDBus.BlockWithGui"/>
+      <EnumMember name="QDBus.AutoDetect"/>
+    </Enum>
+  </Class>
+  <Class name="QDBusConnection">
+    <Function name="QDBusConnection.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.__init__">
+      <Argument typename="QDBusConnection" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QDBusConnection.ConnectionCapability">
+      <EnumMember name="QDBusConnection.UnixFileDescriptorPassing"/>
+    </Enum>
+    <Enum name="QDBusConnection.UnregisterMode">
+      <EnumMember name="QDBusConnection.UnregisterNode"/>
+      <EnumMember name="QDBusConnection.UnregisterTree"/>
+    </Enum>
+    <Enum name="QDBusConnection.RegisterOption">
+      <EnumMember name="QDBusConnection.ExportAdaptors"/>
+      <EnumMember name="QDBusConnection.ExportScriptableSlots"/>
+      <EnumMember name="QDBusConnection.ExportScriptableSignals"/>
+      <EnumMember name="QDBusConnection.ExportScriptableProperties"/>
+      <EnumMember name="QDBusConnection.ExportScriptableInvokables"/>
+      <EnumMember name="QDBusConnection.ExportScriptableContents"/>
+      <EnumMember name="QDBusConnection.ExportNonScriptableSlots"/>
+      <EnumMember name="QDBusConnection.ExportNonScriptableSignals"/>
+      <EnumMember name="QDBusConnection.ExportNonScriptableProperties"/>
+      <EnumMember name="QDBusConnection.ExportNonScriptableInvokables"/>
+      <EnumMember name="QDBusConnection.ExportNonScriptableContents"/>
+      <EnumMember name="QDBusConnection.ExportAllSlots"/>
+      <EnumMember name="QDBusConnection.ExportAllSignals"/>
+      <EnumMember name="QDBusConnection.ExportAllProperties"/>
+      <EnumMember name="QDBusConnection.ExportAllInvokables"/>
+      <EnumMember name="QDBusConnection.ExportAllContents"/>
+      <EnumMember name="QDBusConnection.ExportAllSignal"/>
+      <EnumMember name="QDBusConnection.ExportChildObjects"/>
+    </Enum>
+    <Enum name="QDBusConnection.BusType">
+      <EnumMember name="QDBusConnection.SessionBus"/>
+      <EnumMember name="QDBusConnection.SystemBus"/>
+      <EnumMember name="QDBusConnection.ActivationBus"/>
+    </Enum>
+    <Function name="QDBusConnection.sender" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.systemBus" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.sessionBus" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.localMachineId" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.disconnectFromPeer" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.disconnectFromBus" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.connectToPeer" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.connectToBus" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+      <Argument typename="QDBusConnection.BusType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.connectToBus" static="1">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnection.interface">
+      <Argument typename="QDBusConnectionInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.unregisterService">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnection.registerService">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnection.objectRegisteredAt">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QDBusConnection.unregisterObject">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QDBusConnection.UnregisterMode" typetype="enum" name="mode" default="QDBusConnection.UnregisterNode"/>
+    </Function>
+    <Function name="QDBusConnection.registerObject">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" name="options" default="QDBusConnection.ExportAdaptors"/>
+    </Function>
+    <Function name="QDBusConnection.registerObject">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" name="options" default="QDBusConnection.ExportAdaptors"/>
+    </Function>
+    <Function name="QDBusConnection.disconnect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.disconnect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="signature"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.disconnect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="argumentMatch"/>
+      <Argument typename="QString" typetype="mappedtype" name="signature"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.connect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.connect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="signature"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.connect">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="argumentMatch"/>
+      <Argument typename="QString" typetype="mappedtype" name="signature"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QDBusConnection.asyncCall">
+      <Argument typename="QDBusPendingCall" typetype="class" dir="out"/>
+      <Argument typename="QDBusMessage" typetype="class" name="message"/>
+      <Argument typename="int" name="timeout" default="-1"/>
+    </Function>
+    <Function name="QDBusConnection.call">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBusMessage" typetype="class" name="message"/>
+      <Argument typename="QDBus.CallMode" typetype="enum" name="mode" default="QDBus.Block"/>
+      <Argument typename="int" name="timeout" default="-1"/>
+    </Function>
+    <Function name="QDBusConnection.callWithCallback">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusMessage" typetype="class" name="message"/>
+      <Argument typename="object" name="returnMethod"/>
+      <Argument typename="object" name="errorMethod"/>
+      <Argument typename="int" name="timeout" default="-1"/>
+    </Function>
+    <Function name="QDBusConnection.send">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusMessage" typetype="class" name="message"/>
+    </Function>
+    <Function name="QDBusConnection.connectionCapabilities">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.lastError">
+      <Argument typename="QDBusError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.baseService">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.isConnected">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusConnection.RegisterOptions" convert="1">
+    <Function name="QDBusConnection.RegisterOptions.__init__"/>
+    <Function name="QDBusConnection.RegisterOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__init__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__ixor__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__xor__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__ior__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__or__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__iand__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__and__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__invert__">
+      <Argument typename="QDBusConnection.RegisterOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.RegisterOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusConnection.ConnectionCapabilities" convert="1">
+    <Function name="QDBusConnection.ConnectionCapabilities.__init__"/>
+    <Function name="QDBusConnection.ConnectionCapabilities.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__init__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__ixor__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__xor__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__ior__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__or__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__iand__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__and__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__invert__">
+      <Argument typename="QDBusConnection.ConnectionCapabilities" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusConnection.ConnectionCapabilities.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusConnectionInterface" inherits="QDBusAbstractInterface">
+    <Enum name="QDBusConnectionInterface.RegisterServiceReply">
+      <EnumMember name="QDBusConnectionInterface.ServiceNotRegistered"/>
+      <EnumMember name="QDBusConnectionInterface.ServiceRegistered"/>
+      <EnumMember name="QDBusConnectionInterface.ServiceQueued"/>
+    </Enum>
+    <Enum name="QDBusConnectionInterface.ServiceReplacementOptions">
+      <EnumMember name="QDBusConnectionInterface.DontAllowReplacement"/>
+      <EnumMember name="QDBusConnectionInterface.AllowReplacement"/>
+    </Enum>
+    <Enum name="QDBusConnectionInterface.ServiceQueueOptions">
+      <EnumMember name="QDBusConnectionInterface.DontQueueService"/>
+      <EnumMember name="QDBusConnectionInterface.QueueService"/>
+      <EnumMember name="QDBusConnectionInterface.ReplaceExistingService"/>
+    </Enum>
+    <Function name="QDBusConnectionInterface.disconnectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.connectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QDBusConnectionInterface.callWithCallbackFailed" sig="void callWithCallbackFailed(const  ::QDBusError&amp;,const  ::QDBusMessage&amp;)"/>
+    <Signal default="1" name="QDBusConnectionInterface.serviceUnregistered" sig="void serviceUnregistered(const QString&amp;)"/>
+    <Signal default="1" name="QDBusConnectionInterface.serviceRegistered" sig="void serviceRegistered(const QString&amp;)"/>
+    <Function name="QDBusConnectionInterface.startService">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.serviceUid">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.servicePid">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.registerService">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+      <Argument typename="QDBusConnectionInterface.ServiceQueueOptions" typetype="enum" name="qoption" default="QDBusConnectionInterface.DontQueueService"/>
+      <Argument typename="QDBusConnectionInterface.ServiceReplacementOptions" typetype="enum" name="roption" default="QDBusConnectionInterface.DontAllowReplacement"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.unregisterService">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.serviceOwner">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.isServiceRegistered">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="serviceName"/>
+    </Function>
+    <Function name="QDBusConnectionInterface.registeredServiceNames">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusError">
+    <Function name="QDBusError.__init__">
+      <Argument typename="QDBusError" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QDBusError.ErrorType">
+      <EnumMember name="QDBusError.NoError"/>
+      <EnumMember name="QDBusError.Other"/>
+      <EnumMember name="QDBusError.Failed"/>
+      <EnumMember name="QDBusError.NoMemory"/>
+      <EnumMember name="QDBusError.ServiceUnknown"/>
+      <EnumMember name="QDBusError.NoReply"/>
+      <EnumMember name="QDBusError.BadAddress"/>
+      <EnumMember name="QDBusError.NotSupported"/>
+      <EnumMember name="QDBusError.LimitsExceeded"/>
+      <EnumMember name="QDBusError.AccessDenied"/>
+      <EnumMember name="QDBusError.NoServer"/>
+      <EnumMember name="QDBusError.Timeout"/>
+      <EnumMember name="QDBusError.NoNetwork"/>
+      <EnumMember name="QDBusError.AddressInUse"/>
+      <EnumMember name="QDBusError.Disconnected"/>
+      <EnumMember name="QDBusError.InvalidArgs"/>
+      <EnumMember name="QDBusError.UnknownMethod"/>
+      <EnumMember name="QDBusError.TimedOut"/>
+      <EnumMember name="QDBusError.InvalidSignature"/>
+      <EnumMember name="QDBusError.UnknownInterface"/>
+      <EnumMember name="QDBusError.InternalError"/>
+      <EnumMember name="QDBusError.UnknownObject"/>
+      <EnumMember name="QDBusError.InvalidService"/>
+      <EnumMember name="QDBusError.InvalidObjectPath"/>
+      <EnumMember name="QDBusError.InvalidInterface"/>
+      <EnumMember name="QDBusError.InvalidMember"/>
+      <EnumMember name="QDBusError.UnknownProperty"/>
+      <EnumMember name="QDBusError.PropertyReadOnly"/>
+    </Enum>
+    <Function name="QDBusError.errorString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QDBusError.ErrorType" typetype="enum" name="error"/>
+    </Function>
+    <Function name="QDBusError.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusError.message">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusError.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusError.type">
+      <Argument typename="QDBusError.ErrorType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusObjectPath">
+    <Function name="QDBusObjectPath.__init__"/>
+    <Function name="QDBusObjectPath.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="objectPath"/>
+    </Function>
+    <Function name="QDBusObjectPath.__init__">
+      <Argument typename="QDBusObjectPath" typetype="class"/>
+    </Function>
+    <Function name="QDBusObjectPath.__ge__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusObjectPath" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusObjectPath.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusObjectPath" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusObjectPath.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusObjectPath" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusObjectPath.__lt__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusObjectPath" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusObjectPath.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusObjectPath.setPath">
+      <Argument typename="QString" typetype="mappedtype" name="objectPath"/>
+    </Function>
+    <Function name="QDBusObjectPath.path">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusSignature">
+    <Function name="QDBusSignature.__init__"/>
+    <Function name="QDBusSignature.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="dBusSignature"/>
+    </Function>
+    <Function name="QDBusSignature.__init__">
+      <Argument typename="QDBusSignature" typetype="class"/>
+    </Function>
+    <Function name="QDBusSignature.__ge__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusSignature" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusSignature.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusSignature" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusSignature.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusSignature" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusSignature.__lt__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusSignature" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QDBusSignature.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusSignature.setSignature">
+      <Argument typename="QString" typetype="mappedtype" name="dBusSignature"/>
+    </Function>
+    <Function name="QDBusSignature.signature">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusVariant">
+    <Function name="QDBusVariant.__init__"/>
+    <Function name="QDBusVariant.__init__">
+      <Argument typename="QVariant" typetype="class" name="dBusVariant"/>
+    </Function>
+    <Function name="QDBusVariant.__init__">
+      <Argument typename="QDBusVariant" typetype="class"/>
+    </Function>
+    <Function name="QDBusVariant.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusVariant" typetype="class" name="v2"/>
+    </Function>
+    <Function name="QDBusVariant.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusVariant" typetype="class" name="v2"/>
+    </Function>
+    <Function name="QDBusVariant.setVariant">
+      <Argument typename="QVariant" typetype="class" name="dBusVariant"/>
+    </Function>
+    <Function name="QDBusVariant.variant">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusInterface" inherits="QDBusAbstractInterface">
+    <Function name="QDBusInterface.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface" default="''"/>
+      <Argument typename="QDBusConnection" typetype="class" name="connection" default="QDBusConnection.sessionBus()"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QDBusMessage">
+    <Function name="QDBusMessage.__init__"/>
+    <Function name="QDBusMessage.__init__">
+      <Argument typename="QDBusMessage" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QDBusMessage.MessageType">
+      <EnumMember name="QDBusMessage.InvalidMessage"/>
+      <EnumMember name="QDBusMessage.MethodCallMessage"/>
+      <EnumMember name="QDBusMessage.ReplyMessage"/>
+      <EnumMember name="QDBusMessage.ErrorMessage"/>
+      <EnumMember name="QDBusMessage.SignalMessage"/>
+    </Enum>
+    <Function name="QDBusMessage.__lshift__">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QVariant" typetype="class" name="arg"/>
+    </Function>
+    <Function name="QDBusMessage.arguments">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.setArguments">
+      <Argument typename="unknown-type" typetype="mappedtype" name="arguments"/>
+    </Function>
+    <Function name="QDBusMessage.autoStartService">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.setAutoStartService">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QDBusMessage.isDelayedReply">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.setDelayedReply">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QDBusMessage.isReplyRequired">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.signature">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.type">
+      <Argument typename="QDBusMessage.MessageType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.errorMessage">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.errorName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.member">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.interface">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.path">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.service">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDBusMessage.createErrorReply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QDBusMessage.createErrorReply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBusError" typetype="class" name="error"/>
+    </Function>
+    <Function name="QDBusMessage.createErrorReply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBusError.ErrorType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QDBusMessage.createReply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="arguments" default="[]"/>
+    </Function>
+    <Function name="QDBusMessage.createReply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QVariant" typetype="class" name="argument"/>
+    </Function>
+    <Function name="QDBusMessage.createError" static="1">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QDBusMessage.createError" static="1">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBusError" typetype="class" name="error"/>
+    </Function>
+    <Function name="QDBusMessage.createError" static="1">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QDBusError.ErrorType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QDBusMessage.createMethodCall" static="1">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="method"/>
+    </Function>
+    <Function name="QDBusMessage.createSignal" static="1">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QString" typetype="mappedtype" name="interface"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+  </Class>
+  <Class name="QDBusPendingCall">
+    <Function name="QDBusPendingCall.__init__">
+      <Argument typename="QDBusPendingCall" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusPendingCall.swap">
+      <Argument typename="QDBusPendingCall" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusPendingCall.fromCompletedCall" static="1">
+      <Argument typename="QDBusPendingCall" typetype="class" dir="out"/>
+      <Argument typename="QDBusMessage" typetype="class" name="message"/>
+    </Function>
+    <Function name="QDBusPendingCall.fromError" static="1">
+      <Argument typename="QDBusPendingCall" typetype="class" dir="out"/>
+      <Argument typename="QDBusError" typetype="class" name="error"/>
+    </Function>
+  </Class>
+  <Class name="QDBusPendingCallWatcher" inherits="QObject QDBusPendingCall">
+    <Function name="QDBusPendingCallWatcher.__init__">
+      <Argument typename="QDBusPendingCall" typetype="class" name="call"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QDBusPendingCallWatcher.finished" sig="void finished( ::QDBusPendingCallWatcher*)"/>
+    <Function name="QDBusPendingCallWatcher.waitForFinished"/>
+    <Function name="QDBusPendingCallWatcher.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusServiceWatcher" inherits="QObject">
+    <Function name="QDBusServiceWatcher.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+      <Argument typename="QDBusConnection" typetype="class" name="connection"/>
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" name="watchMode" default="QDBusServiceWatcher.WatchForOwnerChange"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QDBusServiceWatcher.WatchModeFlag">
+      <EnumMember name="QDBusServiceWatcher.WatchForRegistration"/>
+      <EnumMember name="QDBusServiceWatcher.WatchForUnregistration"/>
+      <EnumMember name="QDBusServiceWatcher.WatchForOwnerChange"/>
+    </Enum>
+    <Signal default="1" name="QDBusServiceWatcher.serviceOwnerChanged" sig="void serviceOwnerChanged(const QString&amp;,const QString&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QDBusServiceWatcher.serviceUnregistered" sig="void serviceUnregistered(const QString&amp;)"/>
+    <Signal default="1" name="QDBusServiceWatcher.serviceRegistered" sig="void serviceRegistered(const QString&amp;)"/>
+    <Function name="QDBusServiceWatcher.setConnection">
+      <Argument typename="QDBusConnection" typetype="class" name="connection"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.connection">
+      <Argument typename="QDBusConnection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.setWatchMode">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.watchMode">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.removeWatchedService">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="service"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.addWatchedService">
+      <Argument typename="QString" typetype="mappedtype" name="newService"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.setWatchedServices">
+      <Argument typename="QStringList" typetype="mappedtype" name="services"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.watchedServices">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusServiceWatcher.WatchMode" convert="1">
+    <Function name="QDBusServiceWatcher.WatchMode.__init__"/>
+    <Function name="QDBusServiceWatcher.WatchMode.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__init__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__ixor__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__xor__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__ior__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__or__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__iand__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__and__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__invert__">
+      <Argument typename="QDBusServiceWatcher.WatchMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusServiceWatcher.WatchMode.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusUnixFileDescriptor">
+    <Function name="QDBusUnixFileDescriptor.__init__"/>
+    <Function name="QDBusUnixFileDescriptor.__init__">
+      <Argument typename="int" name="fileDescriptor"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.__init__">
+      <Argument typename="QDBusUnixFileDescriptor" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.swap">
+      <Argument typename="QDBusUnixFileDescriptor" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.isSupported" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.setFileDescriptor">
+      <Argument typename="int" name="fileDescriptor"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.fileDescriptor">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDBusUnixFileDescriptor.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDBusPendingReply" inherits="QDBusPendingCall">
+    <Function name="QDBusPendingReply.__init__"/>
+    <Function name="QDBusPendingReply.__init__">
+      <Argument typename="QDBusPendingReply" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusPendingReply.__init__">
+      <Argument typename="QDBusPendingCall" typetype="class" name="call"/>
+    </Function>
+    <Function name="QDBusPendingReply.__init__">
+      <Argument typename="QDBusMessage" typetype="class" name="reply"/>
+    </Function>
+    <Function name="QDBusPendingReply.value">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="object" name="type" default="None"/>
+    </Function>
+    <Function name="QDBusPendingReply.waitForFinished"/>
+    <Function name="QDBusPendingReply.reply">
+      <Argument typename="QDBusMessage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusPendingReply.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusPendingReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusPendingReply.isError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusPendingReply.error">
+      <Argument typename="QDBusError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDBusPendingReply.argumentAt">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+  </Class>
+  <Class name="QDBusReply">
+    <Function name="QDBusReply.__init__">
+      <Argument typename="QDBusMessage" typetype="class" name="reply"/>
+    </Function>
+    <Function name="QDBusReply.__init__">
+      <Argument typename="QDBusPendingCall" typetype="class" name="call"/>
+    </Function>
+    <Function name="QDBusReply.__init__">
+      <Argument typename="QDBusError" typetype="class" name="error"/>
+    </Function>
+    <Function name="QDBusReply.__init__">
+      <Argument typename="QDBusReply" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDBusReply.value">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="object" name="type" default="None"/>
+    </Function>
+    <Function name="QDBusReply.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDBusReply.error">
+      <Argument typename="QDBusError" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

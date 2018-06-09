@@ -1,0 +1,746 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtNfc">
+  <Class name="QNdefFilter">
+    <Function name="QNdefFilter.__init__"/>
+    <Function name="QNdefFilter.__init__">
+      <Argument typename="QNdefFilter" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefFilter.recordAt">
+      <Argument typename="QNdefFilter.Record" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QNdefFilter.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefFilter.recordCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefFilter.appendRecord">
+      <Argument typename="QNdefRecord.TypeNameFormat" typetype="enum" name="typeNameFormat"/>
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+      <Argument typename="int" name="min" default="1"/>
+      <Argument typename="int" name="max" default="1"/>
+    </Function>
+    <Function name="QNdefFilter.appendRecord">
+      <Argument typename="QNdefFilter.Record" typetype="class" name="record"/>
+    </Function>
+    <Function name="QNdefFilter.orderMatch">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNdefFilter.setOrderMatch">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QNdefFilter.clear"/>
+  </Class>
+  <Class name="QNdefFilter.Record">
+    <Function name="QNdefFilter.Record.__init__"/>
+    <Function name="QNdefFilter.Record.__init__">
+      <Argument typename="QNdefFilter.Record" typetype="class"/>
+    </Function>
+    <Member name="QNdefFilter.Record.maximum" typename="int"/>
+    <Member name="QNdefFilter.Record.minimum" typename="int"/>
+    <Member name="QNdefFilter.Record.type" typename="QByteArray" typetype="class"/>
+    <Member name="QNdefFilter.Record.typeNameFormat" typename="QNdefRecord.TypeNameFormat" typetype="enum"/>
+  </Class>
+  <Class name="QNdefMessage">
+    <Function name="QNdefMessage.__init__"/>
+    <Function name="QNdefMessage.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="record"/>
+    </Function>
+    <Function name="QNdefMessage.__init__">
+      <Argument typename="QNdefMessage" typetype="class" name="message"/>
+    </Function>
+    <Function name="QNdefMessage.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="records"/>
+    </Function>
+    <Function name="QNdefMessage.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefMessage" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefMessage.fromByteArray" static="1">
+      <Argument typename="QNdefMessage" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="message"/>
+    </Function>
+    <Function name="QNdefMessage.__delitem__">
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QNdefMessage.__setitem__">
+      <Argument typename="int" name="i"/>
+      <Argument typename="QNdefRecord" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNdefMessage.__getitem__">
+      <Argument typename="QNdefRecord" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QNdefMessage.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefMessage.toByteArray">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefMessage.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefMessage" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QNdefRecord">
+    <Function name="QNdefRecord.__init__"/>
+    <Function name="QNdefRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNdefRecord.TypeNameFormat">
+      <EnumMember name="QNdefRecord.Empty"/>
+      <EnumMember name="QNdefRecord.NfcRtd"/>
+      <EnumMember name="QNdefRecord.Mime"/>
+      <EnumMember name="QNdefRecord.Uri"/>
+      <EnumMember name="QNdefRecord.ExternalRtd"/>
+      <EnumMember name="QNdefRecord.Unknown"/>
+    </Enum>
+    <Function name="QNdefRecord.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefRecord.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefRecord.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.payload">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.setPayload">
+      <Argument typename="QByteArray" typetype="class" name="payload"/>
+    </Function>
+    <Function name="QNdefRecord.id">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.setId">
+      <Argument typename="QByteArray" typetype="class" name="id"/>
+    </Function>
+    <Function name="QNdefRecord.type">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.setType">
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+    </Function>
+    <Function name="QNdefRecord.typeNameFormat">
+      <Argument typename="QNdefRecord.TypeNameFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNdefRecord.setTypeNameFormat">
+      <Argument typename="QNdefRecord.TypeNameFormat" typetype="enum" name="typeNameFormat"/>
+    </Function>
+  </Class>
+  <Class name="QNdefNfcIconRecord" inherits="QNdefRecord">
+    <Function name="QNdefNfcIconRecord.__init__"/>
+    <Function name="QNdefNfcIconRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefNfcIconRecord.__init__">
+      <Argument typename="QNdefNfcIconRecord" typetype="class"/>
+    </Function>
+    <Function name="QNdefNfcIconRecord.data">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcIconRecord.setData">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+    </Function>
+  </Class>
+  <Class name="QNdefNfcSmartPosterRecord" inherits="QNdefRecord">
+    <Function name="QNdefNfcSmartPosterRecord.__init__"/>
+    <Function name="QNdefNfcSmartPosterRecord.__init__">
+      <Argument typename="QNdefNfcSmartPosterRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNdefNfcSmartPosterRecord.Action">
+      <EnumMember name="QNdefNfcSmartPosterRecord.UnspecifiedAction"/>
+      <EnumMember name="QNdefNfcSmartPosterRecord.DoAction"/>
+      <EnumMember name="QNdefNfcSmartPosterRecord.SaveAction"/>
+      <EnumMember name="QNdefNfcSmartPosterRecord.EditAction"/>
+    </Enum>
+    <Function name="QNdefNfcSmartPosterRecord.setTypeInfo">
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.typeInfo">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setIcons">
+      <Argument typename="unknown-type" typetype="mappedtype" name="icons"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.removeIcon">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefNfcIconRecord" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.removeIcon">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.addIcon">
+      <Argument typename="QNdefNfcIconRecord" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.addIcon">
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.iconRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.iconRecord">
+      <Argument typename="QNdefNfcIconRecord" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.icon">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="mimetype" default="QByteArray()"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.iconCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setAction">
+      <Argument typename="QNdefNfcSmartPosterRecord.Action" typetype="enum" name="act"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.action">
+      <Argument typename="QNdefNfcSmartPosterRecord.Action" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setUri">
+      <Argument typename="QNdefNfcUriRecord" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setUri">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.uriRecord">
+      <Argument typename="QNdefNfcUriRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.uri">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setTitles">
+      <Argument typename="unknown-type" typetype="mappedtype" name="titles"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.removeTitle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefNfcTextRecord" typetype="class" name="text"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.removeTitle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="locale"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.addTitle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefNfcTextRecord" typetype="class" name="text"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.addTitle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+      <Argument typename="QString" typetype="mappedtype" name="locale"/>
+      <Argument typename="QNdefNfcTextRecord.Encoding" typetype="enum" name="encoding"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.titleRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.titleRecord">
+      <Argument typename="QNdefNfcTextRecord" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="locale" default="''"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.titleCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.hasTypeInfo">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.hasSize">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.hasIcon">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="mimetype" default="QByteArray()"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.hasAction">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.hasTitle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="locale" default="''"/>
+    </Function>
+    <Function name="QNdefNfcSmartPosterRecord.setPayload">
+      <Argument typename="QByteArray" typetype="class" name="payload"/>
+    </Function>
+  </Class>
+  <Class name="QNdefNfcTextRecord" inherits="QNdefRecord">
+    <Function name="QNdefNfcTextRecord.__init__"/>
+    <Function name="QNdefNfcTextRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.__init__">
+      <Argument typename="QNdefNfcTextRecord" typetype="class"/>
+    </Function>
+    <Enum name="QNdefNfcTextRecord.Encoding">
+      <EnumMember name="QNdefNfcTextRecord.Utf8"/>
+      <EnumMember name="QNdefNfcTextRecord.Utf16"/>
+    </Enum>
+    <Function name="QNdefNfcTextRecord.setEncoding">
+      <Argument typename="QNdefNfcTextRecord.Encoding" typetype="enum" name="encoding"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.encoding">
+      <Argument typename="QNdefNfcTextRecord.Encoding" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.setLocale">
+      <Argument typename="QString" typetype="mappedtype" name="locale"/>
+    </Function>
+    <Function name="QNdefNfcTextRecord.locale">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNdefNfcUriRecord" inherits="QNdefRecord">
+    <Function name="QNdefNfcUriRecord.__init__"/>
+    <Function name="QNdefNfcUriRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNdefNfcUriRecord.__init__">
+      <Argument typename="QNdefNfcUriRecord" typetype="class"/>
+    </Function>
+    <Function name="QNdefNfcUriRecord.setUri">
+      <Argument typename="QUrl" typetype="class" name="uri"/>
+    </Function>
+    <Function name="QNdefNfcUriRecord.uri">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldManager" inherits="QObject">
+    <Function name="QNearFieldManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNearFieldManager.TargetAccessMode">
+      <EnumMember name="QNearFieldManager.NoTargetAccess"/>
+      <EnumMember name="QNearFieldManager.NdefReadTargetAccess"/>
+      <EnumMember name="QNearFieldManager.NdefWriteTargetAccess"/>
+      <EnumMember name="QNearFieldManager.TagTypeSpecificTargetAccess"/>
+    </Enum>
+    <Signal default="1" name="QNearFieldManager.targetLost" sig="void targetLost( ::QNearFieldTarget*)"/>
+    <Signal default="1" name="QNearFieldManager.targetDetected" sig="void targetDetected( ::QNearFieldTarget*)"/>
+    <Function name="QNearFieldManager.unregisterNdefMessageHandler">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="handlerId"/>
+    </Function>
+    <Function name="QNearFieldManager.registerNdefMessageHandler">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QNearFieldManager.registerNdefMessageHandler">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QNdefRecord.TypeNameFormat" typetype="enum" name="typeNameFormat"/>
+      <Argument typename="QByteArray" typetype="class" name="type"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QNearFieldManager.registerNdefMessageHandler">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QNdefFilter" typetype="class" name="filter"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QNearFieldManager.stopTargetDetection"/>
+    <Function name="QNearFieldManager.startTargetDetection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNearFieldManager.targetAccessModes">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldManager.setTargetAccessModes">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" name="accessModes"/>
+    </Function>
+    <Function name="QNearFieldManager.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldManager.TargetAccessModes" convert="1">
+    <Function name="QNearFieldManager.TargetAccessModes.__init__"/>
+    <Function name="QNearFieldManager.TargetAccessModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__init__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__ixor__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__xor__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__ior__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__or__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__iand__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__and__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__invert__">
+      <Argument typename="QNearFieldManager.TargetAccessModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldManager.TargetAccessModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldShareManager" inherits="QObject">
+    <Function name="QNearFieldShareManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNearFieldShareManager.ShareMode">
+      <EnumMember name="QNearFieldShareManager.NoShare"/>
+      <EnumMember name="QNearFieldShareManager.NdefShare"/>
+      <EnumMember name="QNearFieldShareManager.FileShare"/>
+    </Enum>
+    <Enum name="QNearFieldShareManager.ShareError">
+      <EnumMember name="QNearFieldShareManager.NoError"/>
+      <EnumMember name="QNearFieldShareManager.UnknownError"/>
+      <EnumMember name="QNearFieldShareManager.InvalidShareContentError"/>
+      <EnumMember name="QNearFieldShareManager.ShareCanceledError"/>
+      <EnumMember name="QNearFieldShareManager.ShareInterruptedError"/>
+      <EnumMember name="QNearFieldShareManager.ShareRejectedError"/>
+      <EnumMember name="QNearFieldShareManager.UnsupportedShareModeError"/>
+      <EnumMember name="QNearFieldShareManager.ShareAlreadyInProgressError"/>
+      <EnumMember name="QNearFieldShareManager.SharePermissionDeniedError"/>
+    </Enum>
+    <Signal default="1" name="QNearFieldShareManager.error" sig="void error( ::QNearFieldShareManager::ShareError)"/>
+    <Signal default="1" name="QNearFieldShareManager.shareModesChanged" sig="void shareModesChanged( ::QNearFieldShareManager::ShareModes)"/>
+    <Signal default="1" name="QNearFieldShareManager.targetDetected" sig="void targetDetected( ::QNearFieldShareTarget*)"/>
+    <Function name="QNearFieldShareManager.shareError">
+      <Argument typename="QNearFieldShareManager.ShareError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareManager.shareModes">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareManager.setShareModes">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" name="modes"/>
+    </Function>
+    <Function name="QNearFieldShareManager.supportedShareModes" static="1">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldShareManager.ShareModes" convert="1">
+    <Function name="QNearFieldShareManager.ShareModes.__init__"/>
+    <Function name="QNearFieldShareManager.ShareModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__init__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__ixor__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__xor__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__ior__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__or__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__iand__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__and__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__invert__">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareManager.ShareModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldShareTarget" inherits="QObject">
+    <Signal default="1" name="QNearFieldShareTarget.shareFinished" sig="void shareFinished()"/>
+    <Signal default="1" name="QNearFieldShareTarget.error" sig="void error( ::QNearFieldShareManager::ShareError)"/>
+    <Function name="QNearFieldShareTarget.shareError">
+      <Argument typename="QNearFieldShareManager.ShareError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareTarget.isShareInProgress">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNearFieldShareTarget.cancel"/>
+    <Function name="QNearFieldShareTarget.share">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNdefMessage" typetype="class" name="message"/>
+    </Function>
+    <Function name="QNearFieldShareTarget.share">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="files"/>
+    </Function>
+    <Function name="QNearFieldShareTarget.shareModes">
+      <Argument typename="QNearFieldShareManager.ShareModes" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldTarget" inherits="QObject">
+    <Function name="QNearFieldTarget.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNearFieldTarget.Error">
+      <EnumMember name="QNearFieldTarget.NoError"/>
+      <EnumMember name="QNearFieldTarget.UnknownError"/>
+      <EnumMember name="QNearFieldTarget.UnsupportedError"/>
+      <EnumMember name="QNearFieldTarget.TargetOutOfRangeError"/>
+      <EnumMember name="QNearFieldTarget.NoResponseError"/>
+      <EnumMember name="QNearFieldTarget.ChecksumMismatchError"/>
+      <EnumMember name="QNearFieldTarget.InvalidParametersError"/>
+      <EnumMember name="QNearFieldTarget.NdefReadError"/>
+      <EnumMember name="QNearFieldTarget.NdefWriteError"/>
+    </Enum>
+    <Enum name="QNearFieldTarget.AccessMethod">
+      <EnumMember name="QNearFieldTarget.UnknownAccess"/>
+      <EnumMember name="QNearFieldTarget.NdefAccess"/>
+      <EnumMember name="QNearFieldTarget.TagTypeSpecificAccess"/>
+      <EnumMember name="QNearFieldTarget.LlcpAccess"/>
+    </Enum>
+    <Enum name="QNearFieldTarget.Type">
+      <EnumMember name="QNearFieldTarget.ProprietaryTag"/>
+      <EnumMember name="QNearFieldTarget.NfcTagType1"/>
+      <EnumMember name="QNearFieldTarget.NfcTagType2"/>
+      <EnumMember name="QNearFieldTarget.NfcTagType3"/>
+      <EnumMember name="QNearFieldTarget.NfcTagType4"/>
+      <EnumMember name="QNearFieldTarget.MifareTag"/>
+    </Enum>
+    <Signal default="1" name="QNearFieldTarget.error" sig="void error( ::QNearFieldTarget::Error,const  ::QNearFieldTarget::RequestId&amp;)"/>
+    <Signal default="1" name="QNearFieldTarget.requestCompleted" sig="void requestCompleted(const  ::QNearFieldTarget::RequestId&amp;)"/>
+    <Signal default="1" name="QNearFieldTarget.ndefMessagesWritten" sig="void ndefMessagesWritten()"/>
+    <Signal default="1" name="QNearFieldTarget.ndefMessageRead" sig="void ndefMessageRead(const  ::QNdefMessage&amp;)"/>
+    <Signal default="1" name="QNearFieldTarget.disconnected" sig="void disconnected()"/>
+    <Function name="QNearFieldTarget.handleResponse" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="id"/>
+      <Argument typename="QByteArray" typetype="class" name="response"/>
+    </Function>
+    <Function name="QNearFieldTarget.setResponseForRequest">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="id"/>
+      <Argument typename="QVariant" typetype="class" name="response"/>
+      <Argument typename="bool" name="emitRequestCompleted" default="True"/>
+    </Function>
+    <Function name="QNearFieldTarget.requestResponse">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="id"/>
+    </Function>
+    <Function name="QNearFieldTarget.waitForRequestCompleted" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="id"/>
+      <Argument typename="int" name="msecs" default="5000"/>
+    </Function>
+    <Function name="QNearFieldTarget.sendCommands" virtual="1">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="commands"/>
+    </Function>
+    <Function name="QNearFieldTarget.sendCommand" virtual="1">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="command"/>
+    </Function>
+    <Function name="QNearFieldTarget.writeNdefMessages" virtual="1">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="messages"/>
+    </Function>
+    <Function name="QNearFieldTarget.readNdefMessages" virtual="1">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.hasNdefMessage" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.isProcessingCommand">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.accessMethods" abstract="1" virtual="1">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.type" abstract="1" virtual="1">
+      <Argument typename="QNearFieldTarget.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.url" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.uid" abstract="1" virtual="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldTarget.AccessMethods" convert="1">
+    <Function name="QNearFieldTarget.AccessMethods.__init__"/>
+    <Function name="QNearFieldTarget.AccessMethods.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__init__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__ixor__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__xor__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__ior__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__or__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__iand__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__and__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__invert__">
+      <Argument typename="QNearFieldTarget.AccessMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.AccessMethods.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNearFieldTarget.RequestId">
+    <Function name="QNearFieldTarget.RequestId.__init__"/>
+    <Function name="QNearFieldTarget.RequestId.__init__">
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.__ge__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.__lt__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNearFieldTarget.RequestId" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.refCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNearFieldTarget.RequestId.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlNdefRecord" inherits="QObject">
+    <Function name="QQmlNdefRecord.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlNdefRecord.__init__">
+      <Argument typename="QNdefRecord" typetype="class" name="record"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQmlNdefRecord.TypeNameFormat">
+      <EnumMember name="QQmlNdefRecord.Empty"/>
+      <EnumMember name="QQmlNdefRecord.NfcRtd"/>
+      <EnumMember name="QQmlNdefRecord.Mime"/>
+      <EnumMember name="QQmlNdefRecord.Uri"/>
+      <EnumMember name="QQmlNdefRecord.ExternalRtd"/>
+      <EnumMember name="QQmlNdefRecord.Unknown"/>
+    </Enum>
+    <Signal default="1" name="QQmlNdefRecord.recordChanged" sig="void recordChanged()"/>
+    <Signal default="1" name="QQmlNdefRecord.typeNameFormatChanged" sig="void typeNameFormatChanged()"/>
+    <Signal default="1" name="QQmlNdefRecord.typeChanged" sig="void typeChanged()"/>
+    <Function name="QQmlNdefRecord.setRecord">
+      <Argument typename="QNdefRecord" typetype="class" name="record"/>
+    </Function>
+    <Function name="QQmlNdefRecord.record">
+      <Argument typename="QNdefRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlNdefRecord.typeNameFormat">
+      <Argument typename="QQmlNdefRecord.TypeNameFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQmlNdefRecord.setTypeNameFormat">
+      <Argument typename="QQmlNdefRecord.TypeNameFormat" typetype="enum" name="typeNameFormat"/>
+    </Function>
+    <Function name="QQmlNdefRecord.setType">
+      <Argument typename="QString" typetype="mappedtype" name="t"/>
+    </Function>
+    <Function name="QQmlNdefRecord.type">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+</Module>

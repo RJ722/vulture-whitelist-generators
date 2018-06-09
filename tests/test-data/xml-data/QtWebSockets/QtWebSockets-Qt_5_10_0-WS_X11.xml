@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebSockets">
+  <Class name="QMaskGenerator" inherits="QObject">
+    <Function name="QMaskGenerator.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QMaskGenerator.nextMask" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMaskGenerator.seed" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebSocket" inherits="QObject">
+    <Function name="QWebSocket.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="origin" default="''"/>
+      <Argument typename="QWebSocketProtocol.Version" typetype="enum" name="version" default="QWebSocketProtocol.VersionLatest"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QWebSocket.preSharedKeyAuthenticationRequired" sig="void preSharedKeyAuthenticationRequired( ::QSslPreSharedKeyAuthenticator*)"/>
+    <Signal default="1" name="QWebSocket.sslErrors" sig="void sslErrors(const QList&lt;QSslError&gt;&amp;)"/>
+    <Signal default="1" name="QWebSocket.bytesWritten" sig="void bytesWritten( ::qint64)"/>
+    <Signal default="1" name="QWebSocket.pong" sig="void pong( ::quint64,const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QWebSocket.binaryMessageReceived" sig="void binaryMessageReceived(const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QWebSocket.textMessageReceived" sig="void textMessageReceived(const QString&amp;)"/>
+    <Signal default="1" name="QWebSocket.binaryFrameReceived" sig="void binaryFrameReceived(const  ::QByteArray&amp;,bool)"/>
+    <Signal default="1" name="QWebSocket.textFrameReceived" sig="void textFrameReceived(const QString&amp;,bool)"/>
+    <Signal default="1" name="QWebSocket.readChannelFinished" sig="void readChannelFinished()"/>
+    <Signal default="1" name="QWebSocket.proxyAuthenticationRequired" sig="void proxyAuthenticationRequired(const  ::QNetworkProxy&amp;, ::QAuthenticator*)"/>
+    <Signal default="1" name="QWebSocket.stateChanged" sig="void stateChanged( ::QAbstractSocket::SocketState)"/>
+    <Signal default="1" name="QWebSocket.disconnected" sig="void disconnected()"/>
+    <Signal default="1" name="QWebSocket.connected" sig="void connected()"/>
+    <Signal default="1" name="QWebSocket.aboutToClose" sig="void aboutToClose()"/>
+    <Function name="QWebSocket.ping" slot="void ping(const  ::QByteArray&amp; = QByteArray())">
+      <Argument typename="QByteArray" typetype="class" name="payload" default="QByteArray()"/>
+    </Function>
+    <Function name="QWebSocket.open" slot="void open(const  ::QUrl&amp;)">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebSocket.open" slot="void open(const  ::QNetworkRequest&amp;)">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QWebSocket.close" slot="void close( ::QWebSocketProtocol::CloseCode = QWebSocketProtocol.CloseCodeNormal,const QString&amp; = QString())">
+      <Argument typename="QWebSocketProtocol.CloseCode" typetype="enum" name="closeCode" default="QWebSocketProtocol.CloseCodeNormal"/>
+      <Argument typename="QString" typetype="mappedtype" name="reason" default="''"/>
+    </Function>
+    <Function name="QWebSocket.request">
+      <Argument typename="QNetworkRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.sslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.setSslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" name="sslConfiguration"/>
+    </Function>
+    <Function name="QWebSocket.ignoreSslErrors">
+      <Argument typename="unknown-type" typetype="mappedtype" name="errors"/>
+    </Function>
+    <Function name="QWebSocket.ignoreSslErrors" slot="void ignoreSslErrors()"/>
+    <Function name="QWebSocket.sendBinaryMessage">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+    </Function>
+    <Function name="QWebSocket.sendTextMessage">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="message"/>
+    </Function>
+    <Function name="QWebSocket.closeReason">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.closeCode">
+      <Argument typename="QWebSocketProtocol.CloseCode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.origin">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.requestUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.resourceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.version">
+      <Argument typename="QWebSocketProtocol.Version" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.state">
+      <Argument typename="QAbstractSocket.SocketState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.setPauseMode">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" name="pauseMode"/>
+    </Function>
+    <Function name="QWebSocket.resume"/>
+    <Function name="QWebSocket.setReadBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QWebSocket.readBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.maskGenerator">
+      <Argument typename="QMaskGenerator" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.setMaskGenerator">
+      <Argument typename="QMaskGenerator" typetype="class" name="maskGenerator"/>
+    </Function>
+    <Function name="QWebSocket.setProxy">
+      <Argument typename="QNetworkProxy" typetype="class" name="networkProxy"/>
+    </Function>
+    <Function name="QWebSocket.proxy">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.peerPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.peerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.peerAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.pauseMode">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.localPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.localAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.flush">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocket.error">
+      <Argument typename="QAbstractSocket.SocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QWebSocket.error" sig="void error( ::QAbstractSocket::SocketError)"/>
+    <Function name="QWebSocket.abort"/>
+  </Class>
+  <Class name="QWebSocketCorsAuthenticator">
+    <Function name="QWebSocketCorsAuthenticator.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="origin"/>
+    </Function>
+    <Function name="QWebSocketCorsAuthenticator.__init__">
+      <Argument typename="QWebSocketCorsAuthenticator" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebSocketCorsAuthenticator.allowed">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebSocketCorsAuthenticator.setAllowed">
+      <Argument typename="bool" name="allowed"/>
+    </Function>
+    <Function name="QWebSocketCorsAuthenticator.origin">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocketCorsAuthenticator.swap">
+      <Argument typename="QWebSocketCorsAuthenticator" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QWebSocketProtocol">
+    <Enum name="QWebSocketProtocol.CloseCode">
+      <EnumMember name="QWebSocketProtocol.CloseCodeNormal"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeGoingAway"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeProtocolError"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeDatatypeNotSupported"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeReserved1004"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeMissingStatusCode"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeAbnormalDisconnection"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeWrongDatatype"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodePolicyViolated"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeTooMuchData"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeMissingExtension"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeBadOperation"/>
+      <EnumMember name="QWebSocketProtocol.CloseCodeTlsHandshakeFailed"/>
+    </Enum>
+    <Enum name="QWebSocketProtocol.Version">
+      <EnumMember name="QWebSocketProtocol.VersionUnknown"/>
+      <EnumMember name="QWebSocketProtocol.Version0"/>
+      <EnumMember name="QWebSocketProtocol.Version4"/>
+      <EnumMember name="QWebSocketProtocol.Version5"/>
+      <EnumMember name="QWebSocketProtocol.Version6"/>
+      <EnumMember name="QWebSocketProtocol.Version7"/>
+      <EnumMember name="QWebSocketProtocol.Version8"/>
+      <EnumMember name="QWebSocketProtocol.Version13"/>
+      <EnumMember name="QWebSocketProtocol.VersionLatest"/>
+    </Enum>
+  </Class>
+  <Class name="QWebSocketServer" inherits="QObject">
+    <Function name="QWebSocketServer.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="serverName"/>
+      <Argument typename="QWebSocketServer.SslMode" typetype="enum" name="secureMode"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QWebSocketServer.SslMode">
+      <EnumMember name="QWebSocketServer.SecureMode"/>
+      <EnumMember name="QWebSocketServer.NonSecureMode"/>
+    </Enum>
+    <Signal default="1" name="QWebSocketServer.preSharedKeyAuthenticationRequired" sig="void preSharedKeyAuthenticationRequired( ::QSslPreSharedKeyAuthenticator*)"/>
+    <Signal default="1" name="QWebSocketServer.closed" sig="void closed()"/>
+    <Signal default="1" name="QWebSocketServer.sslErrors" sig="void sslErrors(const QList&lt;QSslError&gt;&amp;)"/>
+    <Signal default="1" name="QWebSocketServer.peerVerifyError" sig="void peerVerifyError(const  ::QSslError&amp;)"/>
+    <Signal default="1" name="QWebSocketServer.newConnection" sig="void newConnection()"/>
+    <Signal default="1" name="QWebSocketServer.originAuthenticationRequired" sig="void originAuthenticationRequired( ::QWebSocketCorsAuthenticator*)"/>
+    <Signal default="1" name="QWebSocketServer.serverError" sig="void serverError( ::QWebSocketProtocol::CloseCode)"/>
+    <Signal default="1" name="QWebSocketServer.acceptError" sig="void acceptError( ::QAbstractSocket::SocketError)"/>
+    <Function name="QWebSocketServer.handleConnection">
+      <Argument typename="QTcpSocket" typetype="class" name="socket"/>
+    </Function>
+    <Function name="QWebSocketServer.serverUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.supportedVersions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.sslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.setSslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" name="sslConfiguration"/>
+    </Function>
+    <Function name="QWebSocketServer.proxy">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.setProxy">
+      <Argument typename="QNetworkProxy" typetype="class" name="networkProxy"/>
+    </Function>
+    <Function name="QWebSocketServer.serverName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.setServerName">
+      <Argument typename="QString" typetype="mappedtype" name="serverName"/>
+    </Function>
+    <Function name="QWebSocketServer.resumeAccepting"/>
+    <Function name="QWebSocketServer.pauseAccepting"/>
+    <Function name="QWebSocketServer.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.error">
+      <Argument typename="QWebSocketProtocol.CloseCode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.nextPendingConnection" virtual="1">
+      <Argument typename="QWebSocket" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.hasPendingConnections">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.socketDescriptor">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.setSocketDescriptor">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="socketDescriptor"/>
+    </Function>
+    <Function name="QWebSocketServer.secureMode">
+      <Argument typename="QWebSocketServer.SslMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.serverAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.serverPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.maxPendingConnections">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.setMaxPendingConnections">
+      <Argument typename="int" name="numConnections"/>
+    </Function>
+    <Function name="QWebSocketServer.isListening">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebSocketServer.close"/>
+    <Function name="QWebSocketServer.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address" default="QHostAddress.Any"/>
+      <Argument typename="int" name="port" default="0"/>
+    </Function>
+  </Class>
+</Module>

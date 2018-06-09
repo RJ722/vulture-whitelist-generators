@@ -12,11 +12,16 @@ FEATURES = ['PyQt_Accessibility', 'PyQt_SessionManager', 'PyQt_SSL',
             'PyQt_qreal_double', 'Py_v3', 'PyQt_PrintDialog', 'PyQt_Printer',
             'PyQt_PrintPreviewWidget', 'PyQt_PrintPreviewDialog',
             'PyQt_RawFont', 'PyQt_OpenGL', 'PyQt_Desktop_OpenGL',
-            'PyQt_NotBootstrapped']
+            'PyQt_NotBootstrapped', 'PyQt_Process', 'PyQt_MacOSXOnly']
 PLATFORMS = ['WS_X11', 'WS_WIN', 'WS_MACX']
 TIMELINE = ['Qt_5_0_0', 'Qt_5_0_1', 'Qt_5_0_2', 'Qt_5_1_0', 'Qt_5_1_1',
             'Qt_5_2_0', 'Qt_5_2_1', 'Qt_5_3_0', 'Qt_5_3_1', 'Qt_5_3_2',
-            'Qt_5_4_0', 'Qt_5_4_1', 'Qt_5_4_2', 'Qt_5_5_0']
+            'Qt_5_4_0', 'Qt_5_4_1', 'Qt_5_4_2', 'Qt_5_5_0', 'Qt_5_5_1',
+            'Qt_5_6_0', 'Qt_5_6_1', 'Qt_5_6_2', 'Qt_5_6_3', 'Qt_5_6_4',
+            'Qt_5_6_5', 'Qt_5_6_6', 'Qt_5_6_7', 'Qt_5_6_8', 'Qt_5_6_9',
+            'Qt_5_7_0', 'Qt_5_7_1', 'Qt_5_8_0', 'Qt_5_8_1', 'Qt_5_9_0',
+            'Qt_5_9_1', 'Qt_5_9_2', 'Qt_5_9_3', 'Qt_5_9_99', 'Qt_5_10_0',
+            'Qt_5_10_1']
 
 
 class QtWhitelistCreator(Creator):

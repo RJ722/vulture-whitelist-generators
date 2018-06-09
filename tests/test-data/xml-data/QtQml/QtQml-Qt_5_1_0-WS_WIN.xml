@@ -1,0 +1,1093 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtQml">
+  <Class name="QJSEngine" inherits="QObject">
+    <Function name="QJSEngine.__init__"/>
+    <Function name="QJSEngine.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QJSEngine.collectGarbage"/>
+    <Function name="QJSEngine.newQObject">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object" transfer="to"/>
+    </Function>
+    <Function name="QJSEngine.newArray">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="int" name="length" default="0"/>
+    </Function>
+    <Function name="QJSEngine.newObject">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSEngine.evaluate">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="program"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName" default="''"/>
+      <Argument typename="int" name="lineNumber" default="1"/>
+    </Function>
+    <Function name="QJSEngine.globalObject">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QJSValue" convert="1">
+    <Function name="QJSValue.__init__">
+      <Argument typename="QJSValue.SpecialValue" typetype="enum" name="value" default="QJSValue.UndefinedValue"/>
+    </Function>
+    <Function name="QJSValue.__init__">
+      <Argument typename="QJSValue" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QJSValue.SpecialValue">
+      <EnumMember name="QJSValue.NullValue"/>
+      <EnumMember name="QJSValue.UndefinedValue"/>
+    </Enum>
+    <Function name="QJSValue.callAsConstructor">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args" default="QJSValueList()"/>
+    </Function>
+    <Function name="QJSValue.callWithInstance">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="QJSValue" typetype="class" name="instance"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args" default="QJSValueList()"/>
+    </Function>
+    <Function name="QJSValue.call">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="args" default="QJSValueList()"/>
+    </Function>
+    <Function name="QJSValue.isCallable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.deleteProperty">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QJSValue.hasOwnProperty">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QJSValue.hasProperty">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QJSValue.setProperty">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QJSValue" typetype="class" name="value"/>
+    </Function>
+    <Function name="QJSValue.setProperty">
+      <Argument typename="int" name="arrayIndex"/>
+      <Argument typename="QJSValue" typetype="class" name="value"/>
+    </Function>
+    <Function name="QJSValue.property">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QJSValue.property">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+      <Argument typename="int" name="arrayIndex"/>
+    </Function>
+    <Function name="QJSValue.setPrototype">
+      <Argument typename="QJSValue" typetype="class" name="prototype"/>
+    </Function>
+    <Function name="QJSValue.prototype">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSValue.strictlyEquals">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QJSValue" typetype="class" name="other"/>
+    </Function>
+    <Function name="QJSValue.equals">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QJSValue" typetype="class" name="other"/>
+    </Function>
+    <Function name="QJSValue.toDateTime">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toQObject">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toVariant">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toBool">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toUInt">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toInt">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toNumber">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QJSValue.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isArray">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isRegExp">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isDate">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isObject">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isQObject">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isVariant">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isUndefined">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isString">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isNumber">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValue.isBool">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QJSValueIterator">
+    <Function name="QJSValueIterator.__init__">
+      <Argument typename="QJSValue" typetype="class" name="value"/>
+    </Function>
+    <Function name="QJSValueIterator.value">
+      <Argument typename="QJSValue" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QJSValueIterator.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QJSValueIterator.next">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QJSValueIterator.hasNext">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlEngine" inherits="QJSEngine">
+    <Function name="QQmlEngine.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQmlEngine.ObjectOwnership">
+      <EnumMember name="QQmlEngine.CppOwnership"/>
+      <EnumMember name="QQmlEngine.JavaScriptOwnership"/>
+    </Enum>
+    <Signal default="1" name="QQmlEngine.warnings" sig="void warnings(const QList&lt;QQmlError&gt;&amp;)"/>
+    <Signal default="1" name="QQmlEngine.quit" sig="void quit()"/>
+    <Function name="QQmlEngine.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.objectOwnership" static="1">
+      <Argument typename="QQmlEngine.ObjectOwnership" typetype="enum" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.setObjectOwnership" static="1">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QQmlEngine.ObjectOwnership" typetype="enum"/>
+    </Function>
+    <Function name="QQmlEngine.setContextForObject" static="1">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.contextForObject" static="1">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.setOutputWarningsToStandardError">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQmlEngine.outputWarningsToStandardError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.setBaseUrl">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.baseUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.offlineStoragePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.setOfflineStoragePath">
+      <Argument typename="QString" typetype="mappedtype" name="dir"/>
+    </Function>
+    <Function name="QQmlEngine.incubationController">
+      <Argument typename="QQmlIncubationController" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.setIncubationController">
+      <Argument typename="QQmlIncubationController" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.removeImageProvider">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QQmlEngine.imageProvider">
+      <Argument typename="QQmlImageProviderBase" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QQmlEngine.addImageProvider">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QQmlImageProviderBase" typetype="class" transfer="to"/>
+    </Function>
+    <Function name="QQmlEngine.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.networkAccessManagerFactory">
+      <Argument typename="QQmlNetworkAccessManagerFactory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.setNetworkAccessManagerFactory">
+      <Argument typename="QQmlNetworkAccessManagerFactory" typetype="class"/>
+    </Function>
+    <Function name="QQmlEngine.importPlugin">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filePath"/>
+      <Argument typename="QString" typetype="mappedtype" name="uri"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="errors"/>
+    </Function>
+    <Function name="QQmlEngine.addNamedBundle">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QQmlEngine.addPluginPath">
+      <Argument typename="QString" typetype="mappedtype" name="dir"/>
+    </Function>
+    <Function name="QQmlEngine.setPluginPathList">
+      <Argument typename="QStringList" typetype="mappedtype" name="paths"/>
+    </Function>
+    <Function name="QQmlEngine.pluginPathList">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.addImportPath">
+      <Argument typename="QString" typetype="mappedtype" name="dir"/>
+    </Function>
+    <Function name="QQmlEngine.setImportPathList">
+      <Argument typename="QStringList" typetype="mappedtype" name="paths"/>
+    </Function>
+    <Function name="QQmlEngine.importPathList">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlEngine.trimComponentCache"/>
+    <Function name="QQmlEngine.clearComponentCache"/>
+    <Function name="QQmlEngine.rootContext">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlApplicationEngine" inherits="QQmlEngine">
+    <Function name="QQmlApplicationEngine.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlApplicationEngine.__init__">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlApplicationEngine.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="filePath"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QQmlApplicationEngine.objectCreated" sig="void objectCreated( ::QObject*,const  ::QUrl&amp;)"/>
+    <Function name="QQmlApplicationEngine.loadData" slot="void loadData(const  ::QByteArray&amp;,const  ::QUrl&amp; = QUrl())">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QUrl" typetype="class" name="url" default="QUrl()"/>
+    </Function>
+    <Function name="QQmlApplicationEngine.load" slot="void load(const  ::QUrl&amp;)">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QQmlApplicationEngine.load" slot="void load(const QString&amp;)">
+      <Argument typename="QString" typetype="mappedtype" name="filePath"/>
+    </Function>
+    <Function name="QQmlApplicationEngine.rootObjects">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlComponent" inherits="QObject">
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QQmlEngine" typetype="class"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QQmlEngine" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QQmlEngine" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+      <Argument typename="QQmlComponent.CompilationMode" typetype="enum" name="mode"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QQmlEngine" typetype="class"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QQmlEngine" typetype="class"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QQmlComponent.CompilationMode" typetype="enum" name="mode"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQmlComponent.Status">
+      <EnumMember name="QQmlComponent.Null"/>
+      <EnumMember name="QQmlComponent.Ready"/>
+      <EnumMember name="QQmlComponent.Loading"/>
+      <EnumMember name="QQmlComponent.Error"/>
+    </Enum>
+    <Enum name="QQmlComponent.CompilationMode">
+      <EnumMember name="QQmlComponent.PreferSynchronous"/>
+      <EnumMember name="QQmlComponent.Asynchronous"/>
+    </Enum>
+    <Signal default="1" name="QQmlComponent.progressChanged" sig="void progressChanged( ::qreal)"/>
+    <Signal default="1" name="QQmlComponent.statusChanged" sig="void statusChanged( ::QQmlComponent::Status)"/>
+    <Function name="QQmlComponent.setData" slot="void setData(const  ::QByteArray&amp;,const  ::QUrl&amp;)">
+      <Argument typename="QByteArray" typetype="class"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl"/>
+    </Function>
+    <Function name="QQmlComponent.loadUrl" slot="void loadUrl(const  ::QUrl&amp;)">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QQmlComponent.loadUrl" slot="void loadUrl(const  ::QUrl&amp;, ::QQmlComponent::CompilationMode)">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QQmlComponent.CompilationMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QQmlComponent.creationContext">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.completeCreate" virtual="1"/>
+    <Function name="QQmlComponent.beginCreate" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out" transfer="back"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlComponent.create" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out" transfer="back"/>
+      <Argument typename="QQmlContext" typetype="class" name="context" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.create">
+      <Argument typename="QQmlIncubator" typetype="class"/>
+      <Argument typename="QQmlContext" typetype="class" name="context" default="None"/>
+      <Argument typename="QQmlContext" typetype="class" name="forContext" default="None"/>
+    </Function>
+    <Function name="QQmlComponent.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.progress">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.errors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.isLoading">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.isError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.isReady">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlComponent.status">
+      <Argument typename="QQmlComponent.Status" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlContext" inherits="QObject">
+    <Function name="QQmlContext.__init__">
+      <Argument typename="QQmlEngine" typetype="class" name="engine"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlContext.__init__">
+      <Argument typename="QQmlContext" typetype="class" name="parentContext"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlContext.baseUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlContext.setBaseUrl">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.resolvedUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.nameForObject">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.setContextProperty">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.setContextProperty">
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QVariant" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.contextProperty">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQmlContext.setContextObject">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlContext.contextObject">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlContext.parentContext">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlContext.engine">
+      <Argument typename="QQmlEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlContext.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlImageProviderBase">
+    <Function name="QQmlImageProviderBase.__init__">
+      <Argument typename="QQmlImageProviderBase" typetype="class"/>
+    </Function>
+    <Enum name="QQmlImageProviderBase.Flag">
+      <EnumMember name="QQmlImageProviderBase.ForceAsynchronousImageLoading"/>
+    </Enum>
+    <Enum name="QQmlImageProviderBase.ImageType">
+      <EnumMember name="QQmlImageProviderBase.Image"/>
+      <EnumMember name="QQmlImageProviderBase.Pixmap"/>
+      <EnumMember name="QQmlImageProviderBase.Texture"/>
+    </Enum>
+    <Function name="QQmlImageProviderBase.flags" abstract="1" virtual="1">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.imageType" abstract="1" virtual="1">
+      <Argument typename="QQmlImageProviderBase.ImageType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlImageProviderBase.Flags" convert="1">
+    <Function name="QQmlImageProviderBase.Flags.__init__"/>
+    <Function name="QQmlImageProviderBase.Flags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__init__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__ixor__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__xor__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__ior__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__or__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__iand__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__and__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__invert__">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlImageProviderBase.Flags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlError">
+    <Function name="QQmlError.__init__"/>
+    <Function name="QQmlError.__init__">
+      <Argument typename="QQmlError" typetype="class"/>
+    </Function>
+    <Function name="QQmlError.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlError.setColumn">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QQmlError.column">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlError.setLine">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QQmlError.line">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlError.setDescription">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQmlError.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlError.setUrl">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQmlError.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlError.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlExpression" inherits="QObject">
+    <Function name="QQmlExpression.__init__"/>
+    <Function name="QQmlExpression.__init__">
+      <Argument typename="QQmlContext" typetype="class"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlExpression.__init__">
+      <Argument typename="QQmlScriptString" typetype="class"/>
+      <Argument typename="QQmlContext" typetype="class" name="context" default="None"/>
+      <Argument typename="QObject" typetype="class" name="scope" default="None"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QQmlExpression.valueChanged" sig="void valueChanged()"/>
+    <Function name="QQmlExpression.evaluate">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="bool" name="valueIsUndefined" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.error">
+      <Argument typename="QQmlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.clearError"/>
+    <Function name="QQmlExpression.hasError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.scopeObject">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.setSourceLocation">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+      <Argument typename="int" name="line"/>
+      <Argument typename="int" name="column" default="0"/>
+    </Function>
+    <Function name="QQmlExpression.columnNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.lineNumber">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.sourceFile">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.setNotifyOnValueChanged">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQmlExpression.notifyOnValueChanged">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.setExpression">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQmlExpression.expression">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.context">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlExpression.engine">
+      <Argument typename="QQmlEngine" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlExtensionPlugin" inherits="QObject">
+    <Function name="QQmlExtensionPlugin.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlExtensionPlugin.baseUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlExtensionPlugin.initializeEngine" virtual="1">
+      <Argument typename="QQmlEngine" typetype="class" name="engine"/>
+      <Argument typename="str" name="uri"/>
+    </Function>
+    <Function name="QQmlExtensionPlugin.registerTypes" abstract="1" virtual="1">
+      <Argument typename="str" name="uri"/>
+    </Function>
+  </Class>
+  <Class name="QQmlIncubator">
+    <Function name="QQmlIncubator.__init__">
+      <Argument typename="QQmlIncubator.IncubationMode" typetype="enum" name="mode" default="QQmlIncubator.Asynchronous"/>
+    </Function>
+    <Enum name="QQmlIncubator.Status">
+      <EnumMember name="QQmlIncubator.Null"/>
+      <EnumMember name="QQmlIncubator.Ready"/>
+      <EnumMember name="QQmlIncubator.Loading"/>
+      <EnumMember name="QQmlIncubator.Error"/>
+    </Enum>
+    <Enum name="QQmlIncubator.IncubationMode">
+      <EnumMember name="QQmlIncubator.Asynchronous"/>
+      <EnumMember name="QQmlIncubator.AsynchronousIfNested"/>
+      <EnumMember name="QQmlIncubator.Synchronous"/>
+    </Enum>
+    <Function name="QQmlIncubator.setInitialState" virtual="1">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlIncubator.statusChanged" virtual="1">
+      <Argument typename="QQmlIncubator.Status" typetype="enum"/>
+    </Function>
+    <Function name="QQmlIncubator.object">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.status">
+      <Argument typename="QQmlIncubator.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.incubationMode">
+      <Argument typename="QQmlIncubator.IncubationMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.errors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.isLoading">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.isError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.isReady">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubator.forceCompletion"/>
+    <Function name="QQmlIncubator.clear"/>
+  </Class>
+  <Class name="QQmlIncubationController">
+    <Function name="QQmlIncubationController.__init__"/>
+    <Function name="QQmlIncubationController.incubatingObjectCountChanged" virtual="1">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QQmlIncubationController.incubateFor">
+      <Argument typename="int" name="msecs"/>
+    </Function>
+    <Function name="QQmlIncubationController.incubatingObjectCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlIncubationController.engine">
+      <Argument typename="QQmlEngine" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlListReference">
+    <Function name="QQmlListReference.__init__"/>
+    <Function name="QQmlListReference.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="str" name="property"/>
+      <Argument typename="QQmlEngine" typetype="class" name="engine" default="None"/>
+    </Function>
+    <Function name="QQmlListReference.__init__">
+      <Argument typename="QQmlListReference" typetype="class"/>
+    </Function>
+    <Function name="QQmlListReference.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.clear">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.at">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QQmlListReference.append">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlListReference.isReadable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.isManipulable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.canCount">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.canClear">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.canAt">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.canAppend">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.listElementType">
+      <Argument typename="QMetaObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.object">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlListReference.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlNetworkAccessManagerFactory">
+    <Function name="QQmlNetworkAccessManagerFactory.__init__"/>
+    <Function name="QQmlNetworkAccessManagerFactory.__init__">
+      <Argument typename="QQmlNetworkAccessManagerFactory" typetype="class"/>
+    </Function>
+    <Function name="QQmlNetworkAccessManagerFactory.create" abstract="1" virtual="1">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="parent"/>
+    </Function>
+  </Class>
+  <Class name="QQmlParserStatus">
+    <Function name="QQmlParserStatus.__init__"/>
+    <Function name="QQmlParserStatus.__init__">
+      <Argument typename="QQmlParserStatus" typetype="class"/>
+    </Function>
+    <Function name="QQmlParserStatus.componentComplete" abstract="1" virtual="1"/>
+    <Function name="QQmlParserStatus.classBegin" abstract="1" virtual="1"/>
+  </Class>
+  <Class name="QQmlProperty">
+    <Function name="QQmlProperty.__init__"/>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QQmlEngine" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QQmlEngine" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__init__">
+      <Argument typename="QQmlProperty" typetype="class"/>
+    </Function>
+    <Enum name="QQmlProperty.Type">
+      <EnumMember name="QQmlProperty.Invalid"/>
+      <EnumMember name="QQmlProperty.Property"/>
+      <EnumMember name="QQmlProperty.SignalProperty"/>
+    </Enum>
+    <Enum name="QQmlProperty.PropertyTypeCategory">
+      <EnumMember name="QQmlProperty.InvalidCategory"/>
+      <EnumMember name="QQmlProperty.List"/>
+      <EnumMember name="QQmlProperty.Object"/>
+      <EnumMember name="QQmlProperty.Normal"/>
+    </Enum>
+    <Function name="QQmlProperty.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQmlProperty" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.method">
+      <Argument typename="QMetaMethod" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.property">
+      <Argument typename="QMetaProperty" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.index">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.object">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isResettable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isDesignable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isWritable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.connectNotifySignal">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QQmlProperty.connectNotifySignal">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="dest"/>
+      <Argument typename="int" name="method"/>
+    </Function>
+    <Function name="QQmlProperty.needsNotifySignal">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.hasNotifySignal">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.reset">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.write">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVariant" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.write" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QVariant" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.write" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QVariant" typetype="class"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.write" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QVariant" typetype="class"/>
+      <Argument typename="QQmlEngine" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.read">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.read" static="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQmlProperty.read" static="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QQmlContext" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.read" static="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QString" typetype="mappedtype"/>
+      <Argument typename="QQmlEngine" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.propertyTypeName">
+      <Argument typename="str" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.propertyTypeCategory">
+      <Argument typename="QQmlProperty.PropertyTypeCategory" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.propertyType">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isSignalProperty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isProperty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.type">
+      <Argument typename="QQmlProperty.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQmlProperty.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQmlProperty" typetype="class"/>
+    </Function>
+    <Function name="QQmlProperty.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQmlPropertyMap" inherits="QObject">
+    <Function name="QQmlPropertyMap.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQmlPropertyMap.updateValue" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="input"/>
+    </Function>
+    <Signal default="1" name="QQmlPropertyMap.valueChanged" sig="void valueChanged(const QString&amp;,const  ::QVariant&amp;)"/>
+    <Function name="QQmlPropertyMap.__getitem__">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QQmlPropertyMap.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QQmlPropertyMap.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlPropertyMap.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlPropertyMap.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlPropertyMap.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQmlPropertyMap.keys">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlPropertyMap.clear">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QQmlPropertyMap.insert">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QQmlPropertyMap.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+  </Class>
+  <Class name="QQmlPropertyValueSource">
+    <Function name="QQmlPropertyValueSource.__init__"/>
+    <Function name="QQmlPropertyValueSource.__init__">
+      <Argument typename="QQmlPropertyValueSource" typetype="class"/>
+    </Function>
+    <Function name="QQmlPropertyValueSource.setTarget" abstract="1" virtual="1">
+      <Argument typename="QQmlProperty" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QQmlScriptString">
+    <Function name="QQmlScriptString.__init__"/>
+    <Function name="QQmlScriptString.__init__">
+      <Argument typename="QQmlScriptString" typetype="class"/>
+    </Function>
+    <Function name="QQmlScriptString.booleanLiteral">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QQmlScriptString.numberLiteral">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="bool" name="ok" dir="out"/>
+    </Function>
+    <Function name="QQmlScriptString.stringLiteral">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQmlScriptString.isNullLiteral">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlScriptString.isUndefinedLiteral">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQmlScriptString.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="qmlRegisterUncreatableType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="qmlName"/>
+    <Argument typename="QString" typetype="mappedtype" name="reason"/>
+  </Function>
+  <Function name="qmlRegisterUncreatableType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="int" name="revision"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="qmlName"/>
+    <Argument typename="QString" typetype="mappedtype" name="reason"/>
+  </Function>
+  <Function name="qmlRegisterType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="QUrl" typetype="class" name="url"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="qmlName"/>
+  </Function>
+  <Function name="qmlRegisterType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="type" name="attachedProperties" default="0"/>
+  </Function>
+  <Function name="qmlRegisterType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="qmlName"/>
+    <Argument typename="type" name="attachedProperties" default="0"/>
+  </Function>
+  <Function name="qmlRegisterType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="int" name="revision"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="qmlName"/>
+    <Argument typename="type" name="attachedProperties" default="0"/>
+  </Function>
+  <Function name="qmlRegisterSingletonType" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="str" name="typeName"/>
+    <Argument typename="callable" name="factory"/>
+  </Function>
+  <Function name="qmlRegisterRevision" static="1">
+    <Argument typename="int" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="int" name="revision"/>
+    <Argument typename="str" name="uri"/>
+    <Argument typename="int" name="major"/>
+    <Argument typename="int" name="minor"/>
+    <Argument typename="type" name="attachedProperties" default="0"/>
+  </Function>
+  <Function name="qmlAttachedPropertiesObject" static="1">
+    <Argument typename="QObject" typetype="class" dir="out"/>
+    <Argument typename="type"/>
+    <Argument typename="QObject" typetype="class" name="object"/>
+    <Argument typename="bool" name="create" default="True"/>
+  </Function>
+  <Function name="qmlClearTypeRegistrations" static="1"/>
+</Module>

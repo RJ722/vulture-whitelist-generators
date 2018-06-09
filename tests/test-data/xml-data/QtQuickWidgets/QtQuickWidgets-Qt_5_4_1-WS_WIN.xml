@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtQuickWidgets">
+  <Class name="QQuickWidget" inherits="QWidget">
+    <Function name="QQuickWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQuickWidget.__init__">
+      <Argument typename="QQmlEngine" typetype="class" name="engine"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QQuickWidget.__init__">
+      <Argument typename="QUrl" typetype="class" name="source"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickWidget.Status">
+      <EnumMember name="QQuickWidget.Null"/>
+      <EnumMember name="QQuickWidget.Ready"/>
+      <EnumMember name="QQuickWidget.Loading"/>
+      <EnumMember name="QQuickWidget.Error"/>
+    </Enum>
+    <Enum name="QQuickWidget.ResizeMode">
+      <EnumMember name="QQuickWidget.SizeViewToRootObject"/>
+      <EnumMember name="QQuickWidget.SizeRootObjectToView"/>
+    </Enum>
+    <Function name="QQuickWidget.setClearColor">
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QQuickWidget.grabFramebuffer">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.focusOutEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickWidget.focusInEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickWidget.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.wheelEvent" virtual="1">
+      <Argument typename="QWheelEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.hideEvent" virtual="1">
+      <Argument typename="QHideEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.showEvent" virtual="1">
+      <Argument typename="QShowEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.mouseDoubleClickEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.mouseMoveEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.mouseReleaseEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.mousePressEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.timerEvent" virtual="1">
+      <Argument typename="QTimerEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QQuickWidget.sceneGraphError" sig="void sceneGraphError( ::QQuickWindow::SceneGraphError,const QString&amp;)"/>
+    <Signal default="1" name="QQuickWidget.statusChanged" sig="void statusChanged( ::QQuickWidget::Status)"/>
+    <Function name="QQuickWidget.setSource" slot="void setSource(const  ::QUrl&amp;)">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQuickWidget.format">
+      <Argument typename="QSurfaceFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.setFormat">
+      <Argument typename="QSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QQuickWidget.initialSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.errors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.status">
+      <Argument typename="QQuickWidget.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.setResizeMode">
+      <Argument typename="QQuickWidget.ResizeMode" typetype="enum"/>
+    </Function>
+    <Function name="QQuickWidget.resizeMode">
+      <Argument typename="QQuickWidget.ResizeMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.rootObject">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.rootContext">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.engine">
+      <Argument typename="QQmlEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWidget.source">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

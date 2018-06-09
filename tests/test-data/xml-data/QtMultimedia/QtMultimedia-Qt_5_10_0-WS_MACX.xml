@@ -1,0 +1,3423 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtMultimedia">
+  <Class name="QAbstractVideoBuffer">
+    <Function name="QAbstractVideoBuffer.__init__">
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" name="type"/>
+    </Function>
+    <Enum name="QAbstractVideoBuffer.MapMode">
+      <EnumMember name="QAbstractVideoBuffer.NotMapped"/>
+      <EnumMember name="QAbstractVideoBuffer.ReadOnly"/>
+      <EnumMember name="QAbstractVideoBuffer.WriteOnly"/>
+      <EnumMember name="QAbstractVideoBuffer.ReadWrite"/>
+    </Enum>
+    <Enum name="QAbstractVideoBuffer.HandleType">
+      <EnumMember name="QAbstractVideoBuffer.NoHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.GLTextureHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.XvShmImageHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.CoreImageHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.QPixmapHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.EGLImageHandle"/>
+      <EnumMember name="QAbstractVideoBuffer.UserHandle"/>
+    </Enum>
+    <Function name="QAbstractVideoBuffer.release" virtual="1"/>
+    <Function name="QAbstractVideoBuffer.handle" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoBuffer.unmap" abstract="1" virtual="1"/>
+    <Function name="QAbstractVideoBuffer.map" abstract="1" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="QAbstractVideoBuffer.MapMode" typetype="enum" name="mode"/>
+      <Argument typename="int" name="numBytes" dir="out"/>
+      <Argument typename="int" name="bytesPerLine" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoBuffer.mapMode" abstract="1" virtual="1">
+      <Argument typename="QAbstractVideoBuffer.MapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoBuffer.handleType">
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QVideoFilterRunnable">
+    <Function name="QVideoFilterRunnable.__init__"/>
+    <Function name="QVideoFilterRunnable.__init__">
+      <Argument typename="QVideoFilterRunnable" typetype="class"/>
+    </Function>
+    <Enum name="QVideoFilterRunnable.RunFlag">
+      <EnumMember name="QVideoFilterRunnable.LastInChain"/>
+    </Enum>
+    <Function name="QVideoFilterRunnable.run" abstract="1" virtual="1">
+      <Argument typename="QVideoFrame" typetype="class" dir="out"/>
+      <Argument typename="QVideoFrame" typetype="class" name="input"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="surfaceFormat"/>
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" name="flags"/>
+    </Function>
+  </Class>
+  <Class name="QVideoFilterRunnable.RunFlags" convert="1">
+    <Function name="QVideoFilterRunnable.RunFlags.__init__"/>
+    <Function name="QVideoFilterRunnable.RunFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__init__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__ixor__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__xor__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__ior__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__or__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__iand__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__and__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__invert__">
+      <Argument typename="QVideoFilterRunnable.RunFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoFilterRunnable.RunFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractVideoFilter" inherits="QObject">
+    <Function name="QAbstractVideoFilter.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QAbstractVideoFilter.activeChanged" sig="void activeChanged()"/>
+    <Function name="QAbstractVideoFilter.createFilterRunnable" abstract="1" virtual="1">
+      <Argument typename="QVideoFilterRunnable" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoFilter.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractVideoSurface" inherits="QObject">
+    <Function name="QAbstractVideoSurface.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QAbstractVideoSurface.Error">
+      <EnumMember name="QAbstractVideoSurface.NoError"/>
+      <EnumMember name="QAbstractVideoSurface.UnsupportedFormatError"/>
+      <EnumMember name="QAbstractVideoSurface.IncorrectFormatError"/>
+      <EnumMember name="QAbstractVideoSurface.StoppedError"/>
+      <EnumMember name="QAbstractVideoSurface.ResourceError"/>
+    </Enum>
+    <Signal default="1" name="QAbstractVideoSurface.nativeResolutionChanged" sig="void nativeResolutionChanged(const  ::QSize&amp;)"/>
+    <Function name="QAbstractVideoSurface.setNativeResolution">
+      <Argument typename="QSize" typetype="class" name="resolution"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.nativeResolution">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.setError">
+      <Argument typename="QAbstractVideoSurface.Error" typetype="enum" name="error"/>
+    </Function>
+    <Signal default="1" name="QAbstractVideoSurface.supportedFormatsChanged" sig="void supportedFormatsChanged()"/>
+    <Signal default="1" name="QAbstractVideoSurface.surfaceFormatChanged" sig="void surfaceFormatChanged(const  ::QVideoSurfaceFormat&amp;)"/>
+    <Signal default="1" name="QAbstractVideoSurface.activeChanged" sig="void activeChanged(bool)"/>
+    <Function name="QAbstractVideoSurface.error">
+      <Argument typename="QAbstractVideoSurface.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.present" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoFrame" typetype="class" name="frame"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.stop" virtual="1"/>
+    <Function name="QAbstractVideoSurface.start" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.surfaceFormat">
+      <Argument typename="QVideoSurfaceFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.nearestFormat" virtual="1">
+      <Argument typename="QVideoSurfaceFormat" typetype="class" dir="out"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.isFormatSupported" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAbstractVideoSurface.supportedPixelFormats" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" name="type" default="QAbstractVideoBuffer.NoHandle"/>
+    </Function>
+  </Class>
+  <Class name="QAudio">
+    <Enum name="QAudio.VolumeScale">
+      <EnumMember name="QAudio.LinearVolumeScale"/>
+      <EnumMember name="QAudio.CubicVolumeScale"/>
+      <EnumMember name="QAudio.LogarithmicVolumeScale"/>
+      <EnumMember name="QAudio.DecibelVolumeScale"/>
+    </Enum>
+    <Enum name="QAudio.Role">
+      <EnumMember name="QAudio.UnknownRole"/>
+      <EnumMember name="QAudio.MusicRole"/>
+      <EnumMember name="QAudio.VideoRole"/>
+      <EnumMember name="QAudio.VoiceCommunicationRole"/>
+      <EnumMember name="QAudio.AlarmRole"/>
+      <EnumMember name="QAudio.NotificationRole"/>
+      <EnumMember name="QAudio.RingtoneRole"/>
+      <EnumMember name="QAudio.AccessibilityRole"/>
+      <EnumMember name="QAudio.SonificationRole"/>
+      <EnumMember name="QAudio.GameRole"/>
+    </Enum>
+    <Enum name="QAudio.Mode">
+      <EnumMember name="QAudio.AudioInput"/>
+      <EnumMember name="QAudio.AudioOutput"/>
+    </Enum>
+    <Enum name="QAudio.State">
+      <EnumMember name="QAudio.ActiveState"/>
+      <EnumMember name="QAudio.SuspendedState"/>
+      <EnumMember name="QAudio.StoppedState"/>
+      <EnumMember name="QAudio.IdleState"/>
+      <EnumMember name="QAudio.InterruptedState"/>
+    </Enum>
+    <Enum name="QAudio.Error">
+      <EnumMember name="QAudio.NoError"/>
+      <EnumMember name="QAudio.OpenError"/>
+      <EnumMember name="QAudio.IOError"/>
+      <EnumMember name="QAudio.UnderrunError"/>
+      <EnumMember name="QAudio.FatalError"/>
+    </Enum>
+    <Function name="QAudio.convertVolume" static="1">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="float" name="volume"/>
+      <Argument typename="QAudio.VolumeScale" typetype="enum" name="from"/>
+      <Argument typename="QAudio.VolumeScale" typetype="enum" name="to"/>
+    </Function>
+  </Class>
+  <Class name="QAudioBuffer">
+    <Function name="QAudioBuffer.__init__"/>
+    <Function name="QAudioBuffer.__init__">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format"/>
+      <Argument typename="int" name="startTime" default="-1"/>
+    </Function>
+    <Function name="QAudioBuffer.__init__">
+      <Argument typename="int" name="numFrames"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format"/>
+      <Argument typename="int" name="startTime" default="-1"/>
+    </Function>
+    <Function name="QAudioBuffer.__init__">
+      <Argument typename="QAudioBuffer" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioBuffer.data">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.constData">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.startTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.duration">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.byteCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.sampleCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.frameCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.format">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioBuffer.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaObject" inherits="QObject">
+    <Function name="QMediaObject.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+      <Argument typename="QMediaService" typetype="class" name="service"/>
+    </Function>
+    <Function name="QMediaObject.removePropertyWatch">
+      <Argument typename="QByteArray" typetype="class" name="name"/>
+    </Function>
+    <Function name="QMediaObject.addPropertyWatch">
+      <Argument typename="QByteArray" typetype="class" name="name"/>
+    </Function>
+    <Signal default="1" name="QMediaObject.availabilityChanged" sig="void availabilityChanged( ::QMultimedia::AvailabilityStatus)"/>
+    <Signal default="1" name="QMediaObject.metaDataChanged" sig="void metaDataChanged()"/>
+    <Signal name="QMediaObject.metaDataChanged" sig="void metaDataChanged(const QString&amp;,const  ::QVariant&amp;)"/>
+    <Signal default="1" name="QMediaObject.metaDataAvailableChanged" sig="void metaDataAvailableChanged(bool)"/>
+    <Signal default="1" name="QMediaObject.notifyIntervalChanged" sig="void notifyIntervalChanged(int)"/>
+    <Function name="QMediaObject.availableMetaData">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaObject.metaData">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QMediaObject.isMetaDataAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaObject.unbind" virtual="1">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QMediaObject.bind" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QMediaObject.setNotifyInterval">
+      <Argument typename="int" name="milliSeconds"/>
+    </Function>
+    <Function name="QMediaObject.notifyInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaObject.service" virtual="1">
+      <Argument typename="QMediaService" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaObject.availability" virtual="1">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaObject.isAvailable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAudioDecoder" inherits="QMediaObject">
+    <Function name="QAudioDecoder.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QAudioDecoder.Error">
+      <EnumMember name="QAudioDecoder.NoError"/>
+      <EnumMember name="QAudioDecoder.ResourceError"/>
+      <EnumMember name="QAudioDecoder.FormatError"/>
+      <EnumMember name="QAudioDecoder.AccessDeniedError"/>
+      <EnumMember name="QAudioDecoder.ServiceMissingError"/>
+    </Enum>
+    <Enum name="QAudioDecoder.State">
+      <EnumMember name="QAudioDecoder.StoppedState"/>
+      <EnumMember name="QAudioDecoder.DecodingState"/>
+    </Enum>
+    <Function name="QAudioDecoder.unbind" virtual="1">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QAudioDecoder.bind" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QAudioDecoder.durationChanged" sig="void durationChanged( ::qint64)"/>
+    <Signal default="1" name="QAudioDecoder.positionChanged" sig="void positionChanged( ::qint64)"/>
+    <Signal default="1" name="QAudioDecoder.sourceChanged" sig="void sourceChanged()"/>
+    <Signal default="1" name="QAudioDecoder.formatChanged" sig="void formatChanged(const  ::QAudioFormat&amp;)"/>
+    <Signal default="1" name="QAudioDecoder.stateChanged" sig="void stateChanged( ::QAudioDecoder::State)"/>
+    <Signal default="1" name="QAudioDecoder.finished" sig="void finished()"/>
+    <Signal default="1" name="QAudioDecoder.bufferReady" sig="void bufferReady()"/>
+    <Signal default="1" name="QAudioDecoder.bufferAvailableChanged" sig="void bufferAvailableChanged(bool)"/>
+    <Function name="QAudioDecoder.stop" slot="void stop()"/>
+    <Function name="QAudioDecoder.start" slot="void start()"/>
+    <Function name="QAudioDecoder.duration">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.position">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.bufferAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.read">
+      <Argument typename="QAudioBuffer" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.error">
+      <Argument typename="QAudioDecoder.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QAudioDecoder.error" sig="void error( ::QAudioDecoder::Error)"/>
+    <Function name="QAudioDecoder.setAudioFormat">
+      <Argument typename="QAudioFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAudioDecoder.audioFormat">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.setSourceDevice">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QAudioDecoder.sourceDevice">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.setSourceFilename">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QAudioDecoder.sourceFilename">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.state">
+      <Argument typename="QAudioDecoder.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioDecoder.hasSupport" static="1">
+      <Argument typename="QMultimedia.SupportEstimate" typetype="enum" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="codecs" default="[]"/>
+    </Function>
+  </Class>
+  <Class name="QAudioDeviceInfo">
+    <Function name="QAudioDeviceInfo.__init__"/>
+    <Function name="QAudioDeviceInfo.__init__">
+      <Argument typename="QAudioDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioDeviceInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedChannelCounts">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedSampleRates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.availableDevices" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QAudio.Mode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.defaultOutputDevice" static="1">
+      <Argument typename="QAudioDeviceInfo" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.defaultInputDevice" static="1">
+      <Argument typename="QAudioDeviceInfo" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedSampleTypes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedByteOrders">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedSampleSizes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.supportedCodecs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.nearestFormat">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.preferredFormat">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.isFormatSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.deviceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioDeviceInfo.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAudioFormat">
+    <Function name="QAudioFormat.__init__"/>
+    <Function name="QAudioFormat.__init__">
+      <Argument typename="QAudioFormat" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QAudioFormat.Endian">
+      <EnumMember name="QAudioFormat.BigEndian"/>
+      <EnumMember name="QAudioFormat.LittleEndian"/>
+    </Enum>
+    <Enum name="QAudioFormat.SampleType">
+      <EnumMember name="QAudioFormat.Unknown"/>
+      <EnumMember name="QAudioFormat.SignedInt"/>
+      <EnumMember name="QAudioFormat.UnSignedInt"/>
+      <EnumMember name="QAudioFormat.Float"/>
+    </Enum>
+    <Function name="QAudioFormat.bytesPerFrame">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.durationForFrames">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="frameCount"/>
+    </Function>
+    <Function name="QAudioFormat.framesForDuration">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="duration"/>
+    </Function>
+    <Function name="QAudioFormat.framesForBytes">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="byteCount"/>
+    </Function>
+    <Function name="QAudioFormat.bytesForFrames">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="frameCount"/>
+    </Function>
+    <Function name="QAudioFormat.durationForBytes">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="byteCount"/>
+    </Function>
+    <Function name="QAudioFormat.bytesForDuration">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="duration"/>
+    </Function>
+    <Function name="QAudioFormat.channelCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setChannelCount">
+      <Argument typename="int" name="channelCount"/>
+    </Function>
+    <Function name="QAudioFormat.sampleRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setSampleRate">
+      <Argument typename="int" name="sampleRate"/>
+    </Function>
+    <Function name="QAudioFormat.sampleType">
+      <Argument typename="QAudioFormat.SampleType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setSampleType">
+      <Argument typename="QAudioFormat.SampleType" typetype="enum" name="sampleType"/>
+    </Function>
+    <Function name="QAudioFormat.byteOrder">
+      <Argument typename="QAudioFormat.Endian" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setByteOrder">
+      <Argument typename="QAudioFormat.Endian" typetype="enum" name="byteOrder"/>
+    </Function>
+    <Function name="QAudioFormat.codec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setCodec">
+      <Argument typename="QString" typetype="mappedtype" name="codec"/>
+    </Function>
+    <Function name="QAudioFormat.sampleSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.setSampleSize">
+      <Argument typename="int" name="sampleSize"/>
+    </Function>
+    <Function name="QAudioFormat.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAudioFormat.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioFormat" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioFormat.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioFormat" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QAudioInput" inherits="QObject">
+    <Function name="QAudioInput.__init__">
+      <Argument typename="QAudioFormat" typetype="class" name="format" default="QAudioFormat()"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAudioInput.__init__">
+      <Argument typename="QAudioDeviceInfo" typetype="class" name="audioDevice"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format" default="QAudioFormat()"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAudioInput.volume">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.setVolume">
+      <Argument typename="float" name="volume"/>
+    </Function>
+    <Signal default="1" name="QAudioInput.notify" sig="void notify()"/>
+    <Signal default="1" name="QAudioInput.stateChanged" sig="void stateChanged( ::QAudio::State)"/>
+    <Function name="QAudioInput.state">
+      <Argument typename="QAudio.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.error">
+      <Argument typename="QAudio.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.elapsedUSecs">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.processedUSecs">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.notifyInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.setNotifyInterval">
+      <Argument typename="int" name="milliSeconds"/>
+    </Function>
+    <Function name="QAudioInput.periodSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.bytesReady">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.bufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.setBufferSize">
+      <Argument typename="int" name="bytes"/>
+    </Function>
+    <Function name="QAudioInput.resume"/>
+    <Function name="QAudioInput.suspend"/>
+    <Function name="QAudioInput.reset"/>
+    <Function name="QAudioInput.stop"/>
+    <Function name="QAudioInput.start">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QAudioInput.start">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioInput.format">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAudioOutput" inherits="QObject">
+    <Function name="QAudioOutput.__init__">
+      <Argument typename="QAudioFormat" typetype="class" name="format" default="QAudioFormat()"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAudioOutput.__init__">
+      <Argument typename="QAudioDeviceInfo" typetype="class" name="audioDevice"/>
+      <Argument typename="QAudioFormat" typetype="class" name="format" default="QAudioFormat()"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAudioOutput.setCategory">
+      <Argument typename="QString" typetype="mappedtype" name="category"/>
+    </Function>
+    <Function name="QAudioOutput.category">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.volume">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.setVolume">
+      <Argument typename="float"/>
+    </Function>
+    <Signal default="1" name="QAudioOutput.notify" sig="void notify()"/>
+    <Signal default="1" name="QAudioOutput.stateChanged" sig="void stateChanged( ::QAudio::State)"/>
+    <Function name="QAudioOutput.state">
+      <Argument typename="QAudio.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.error">
+      <Argument typename="QAudio.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.elapsedUSecs">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.processedUSecs">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.notifyInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.setNotifyInterval">
+      <Argument typename="int" name="milliSeconds"/>
+    </Function>
+    <Function name="QAudioOutput.periodSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.bytesFree">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.bufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.setBufferSize">
+      <Argument typename="int" name="bytes"/>
+    </Function>
+    <Function name="QAudioOutput.resume"/>
+    <Function name="QAudioOutput.suspend"/>
+    <Function name="QAudioOutput.reset"/>
+    <Function name="QAudioOutput.stop"/>
+    <Function name="QAudioOutput.start">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QAudioOutput.start">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAudioOutput.format">
+      <Argument typename="QAudioFormat" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAudioProbe" inherits="QObject">
+    <Function name="QAudioProbe.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QAudioProbe.flush" sig="void flush()"/>
+    <Signal default="1" name="QAudioProbe.audioBufferProbed" sig="void audioBufferProbed(const  ::QAudioBuffer&amp;)"/>
+    <Function name="QAudioProbe.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAudioProbe.setSource">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="source"/>
+    </Function>
+    <Function name="QAudioProbe.setSource">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaRecorder" typetype="class" name="source"/>
+    </Function>
+  </Class>
+  <Class name="QMediaBindableInterface">
+    <Function name="QMediaBindableInterface.__init__"/>
+    <Function name="QMediaBindableInterface.__init__">
+      <Argument typename="QMediaBindableInterface" typetype="class"/>
+    </Function>
+    <Function name="QMediaBindableInterface.setMediaObject" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QMediaBindableInterface.mediaObject" abstract="1" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaRecorder" inherits="QObject QMediaBindableInterface">
+    <Function name="QMediaRecorder.__init__">
+      <Argument typename="QMediaObject" typetype="class" name="mediaObject"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QMediaRecorder.Error">
+      <EnumMember name="QMediaRecorder.NoError"/>
+      <EnumMember name="QMediaRecorder.ResourceError"/>
+      <EnumMember name="QMediaRecorder.FormatError"/>
+      <EnumMember name="QMediaRecorder.OutOfSpaceError"/>
+    </Enum>
+    <Enum name="QMediaRecorder.Status">
+      <EnumMember name="QMediaRecorder.UnavailableStatus"/>
+      <EnumMember name="QMediaRecorder.UnloadedStatus"/>
+      <EnumMember name="QMediaRecorder.LoadingStatus"/>
+      <EnumMember name="QMediaRecorder.LoadedStatus"/>
+      <EnumMember name="QMediaRecorder.StartingStatus"/>
+      <EnumMember name="QMediaRecorder.RecordingStatus"/>
+      <EnumMember name="QMediaRecorder.PausedStatus"/>
+      <EnumMember name="QMediaRecorder.FinalizingStatus"/>
+    </Enum>
+    <Enum name="QMediaRecorder.State">
+      <EnumMember name="QMediaRecorder.StoppedState"/>
+      <EnumMember name="QMediaRecorder.RecordingState"/>
+      <EnumMember name="QMediaRecorder.PausedState"/>
+    </Enum>
+    <Function name="QMediaRecorder.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Signal default="1" name="QMediaRecorder.availabilityChanged" sig="void availabilityChanged( ::QMultimedia::AvailabilityStatus)"/>
+    <Signal default="1" name="QMediaRecorder.metaDataChanged" sig="void metaDataChanged(const QString&amp;,const  ::QVariant&amp;)"/>
+    <Signal default="1" name="QMediaRecorder.metaDataWritableChanged" sig="void metaDataWritableChanged(bool)"/>
+    <Signal default="1" name="QMediaRecorder.metaDataAvailableChanged" sig="void metaDataAvailableChanged(bool)"/>
+    <Signal default="1" name="QMediaRecorder.actualLocationChanged" sig="void actualLocationChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QMediaRecorder.volumeChanged" sig="void volumeChanged( ::qreal)"/>
+    <Signal default="1" name="QMediaRecorder.mutedChanged" sig="void mutedChanged(bool)"/>
+    <Signal default="1" name="QMediaRecorder.durationChanged" sig="void durationChanged( ::qint64)"/>
+    <Signal default="1" name="QMediaRecorder.statusChanged" sig="void statusChanged( ::QMediaRecorder::Status)"/>
+    <Signal default="1" name="QMediaRecorder.stateChanged" sig="void stateChanged( ::QMediaRecorder::State)"/>
+    <Function name="QMediaRecorder.setVolume" slot="void setVolume( ::qreal)">
+      <Argument typename="float" name="volume"/>
+    </Function>
+    <Function name="QMediaRecorder.setMuted" slot="void setMuted(bool)">
+      <Argument typename="bool" name="muted"/>
+    </Function>
+    <Function name="QMediaRecorder.stop" slot="void stop()"/>
+    <Function name="QMediaRecorder.pause" slot="void pause()"/>
+    <Function name="QMediaRecorder.record" slot="void record()"/>
+    <Function name="QMediaRecorder.availableMetaData">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.setMetaData">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QMediaRecorder.metaData">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QMediaRecorder.isMetaDataWritable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.isMetaDataAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.setEncodingSettings">
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="audio"/>
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="video" default="QVideoEncoderSettings()"/>
+      <Argument typename="QString" typetype="mappedtype" name="container" default="''"/>
+    </Function>
+    <Function name="QMediaRecorder.setContainerFormat">
+      <Argument typename="QString" typetype="mappedtype" name="container"/>
+    </Function>
+    <Function name="QMediaRecorder.setVideoSettings">
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="videoSettings"/>
+    </Function>
+    <Function name="QMediaRecorder.setAudioSettings">
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="audioSettings"/>
+    </Function>
+    <Function name="QMediaRecorder.containerFormat">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.videoSettings">
+      <Argument typename="QVideoEncoderSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.audioSettings">
+      <Argument typename="QAudioEncoderSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedFrameRates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="settings" default="QVideoEncoderSettings()"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedResolutions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="settings" default="QVideoEncoderSettings()"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.videoCodecDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="codecName"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedVideoCodecs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedAudioSampleRates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="settings" default="QAudioEncoderSettings()"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.audioCodecDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="codecName"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedAudioCodecs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.containerDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="format"/>
+    </Function>
+    <Function name="QMediaRecorder.supportedContainers">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.volume">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.isMuted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.duration">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.error">
+      <Argument typename="QMediaRecorder.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QMediaRecorder.error" sig="void error( ::QMediaRecorder::Error)"/>
+    <Function name="QMediaRecorder.status">
+      <Argument typename="QMediaRecorder.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.state">
+      <Argument typename="QMediaRecorder.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.actualLocation">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.setOutputLocation">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="location"/>
+    </Function>
+    <Function name="QMediaRecorder.outputLocation">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.availability">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaRecorder.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAudioRecorder" inherits="QMediaRecorder">
+    <Function name="QAudioRecorder.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QAudioRecorder.availableAudioInputsChanged" sig="void availableAudioInputsChanged()"/>
+    <Signal default="1" name="QAudioRecorder.audioInputChanged" sig="void audioInputChanged(const QString&amp;)"/>
+    <Function name="QAudioRecorder.setAudioInput" slot="void setAudioInput(const QString&amp;)">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QAudioRecorder.audioInput">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioRecorder.audioInputDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QAudioRecorder.defaultAudioInput">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioRecorder.audioInputs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCamera" inherits="QMediaObject">
+    <Function name="QCamera.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QCamera.__init__">
+      <Argument typename="QByteArray" typetype="class" name="device"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QCamera.__init__">
+      <Argument typename="QCameraInfo" typetype="class" name="cameraInfo"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QCamera.__init__">
+      <Argument typename="QCamera.Position" typetype="enum" name="position"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QCamera.Position">
+      <EnumMember name="QCamera.UnspecifiedPosition"/>
+      <EnumMember name="QCamera.BackFace"/>
+      <EnumMember name="QCamera.FrontFace"/>
+    </Enum>
+    <Enum name="QCamera.LockType">
+      <EnumMember name="QCamera.NoLock"/>
+      <EnumMember name="QCamera.LockExposure"/>
+      <EnumMember name="QCamera.LockWhiteBalance"/>
+      <EnumMember name="QCamera.LockFocus"/>
+    </Enum>
+    <Enum name="QCamera.LockChangeReason">
+      <EnumMember name="QCamera.UserRequest"/>
+      <EnumMember name="QCamera.LockAcquired"/>
+      <EnumMember name="QCamera.LockFailed"/>
+      <EnumMember name="QCamera.LockLost"/>
+      <EnumMember name="QCamera.LockTemporaryLost"/>
+    </Enum>
+    <Enum name="QCamera.LockStatus">
+      <EnumMember name="QCamera.Unlocked"/>
+      <EnumMember name="QCamera.Searching"/>
+      <EnumMember name="QCamera.Locked"/>
+    </Enum>
+    <Enum name="QCamera.Error">
+      <EnumMember name="QCamera.NoError"/>
+      <EnumMember name="QCamera.CameraError"/>
+      <EnumMember name="QCamera.InvalidRequestError"/>
+      <EnumMember name="QCamera.ServiceMissingError"/>
+      <EnumMember name="QCamera.NotSupportedFeatureError"/>
+    </Enum>
+    <Enum name="QCamera.CaptureMode">
+      <EnumMember name="QCamera.CaptureViewfinder"/>
+      <EnumMember name="QCamera.CaptureStillImage"/>
+      <EnumMember name="QCamera.CaptureVideo"/>
+    </Enum>
+    <Enum name="QCamera.State">
+      <EnumMember name="QCamera.UnloadedState"/>
+      <EnumMember name="QCamera.LoadedState"/>
+      <EnumMember name="QCamera.ActiveState"/>
+    </Enum>
+    <Enum name="QCamera.Status">
+      <EnumMember name="QCamera.UnavailableStatus"/>
+      <EnumMember name="QCamera.UnloadedStatus"/>
+      <EnumMember name="QCamera.LoadingStatus"/>
+      <EnumMember name="QCamera.UnloadingStatus"/>
+      <EnumMember name="QCamera.LoadedStatus"/>
+      <EnumMember name="QCamera.StandbyStatus"/>
+      <EnumMember name="QCamera.StartingStatus"/>
+      <EnumMember name="QCamera.StoppingStatus"/>
+      <EnumMember name="QCamera.ActiveStatus"/>
+    </Enum>
+    <Function name="QCamera.supportedViewfinderPixelFormats">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="settings" default="QCameraViewfinderSettings()"/>
+    </Function>
+    <Function name="QCamera.supportedViewfinderFrameRateRanges">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="settings" default="QCameraViewfinderSettings()"/>
+    </Function>
+    <Function name="QCamera.supportedViewfinderResolutions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="settings" default="QCameraViewfinderSettings()"/>
+    </Function>
+    <Function name="QCamera.supportedViewfinderSettings">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="settings" default="QCameraViewfinderSettings()"/>
+    </Function>
+    <Function name="QCamera.setViewfinderSettings">
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="settings"/>
+    </Function>
+    <Function name="QCamera.viewfinderSettings">
+      <Argument typename="QCameraViewfinderSettings" typetype="class" dir="out"/>
+    </Function>
+    <Signal default="1" name="QCamera.lockStatusChanged" sig="void lockStatusChanged( ::QCamera::LockStatus, ::QCamera::LockChangeReason)"/>
+    <Signal name="QCamera.lockStatusChanged" sig="void lockStatusChanged( ::QCamera::LockType, ::QCamera::LockStatus, ::QCamera::LockChangeReason)"/>
+    <Signal default="1" name="QCamera.lockFailed" sig="void lockFailed()"/>
+    <Signal default="1" name="QCamera.locked" sig="void locked()"/>
+    <Signal default="1" name="QCamera.statusChanged" sig="void statusChanged( ::QCamera::Status)"/>
+    <Signal default="1" name="QCamera.captureModeChanged" sig="void captureModeChanged( ::QCamera::CaptureModes)"/>
+    <Signal default="1" name="QCamera.stateChanged" sig="void stateChanged( ::QCamera::State)"/>
+    <Function name="QCamera.unlock" slot="void unlock()"/>
+    <Function name="QCamera.unlock" slot="void unlock( ::QCamera::LockTypes)">
+      <Argument typename="QCamera.LockTypes" typetype="class" name="locks"/>
+    </Function>
+    <Function name="QCamera.searchAndLock" slot="void searchAndLock()"/>
+    <Function name="QCamera.searchAndLock" slot="void searchAndLock( ::QCamera::LockTypes)">
+      <Argument typename="QCamera.LockTypes" typetype="class" name="locks"/>
+    </Function>
+    <Function name="QCamera.stop" slot="void stop()"/>
+    <Function name="QCamera.start" slot="void start()"/>
+    <Function name="QCamera.unload" slot="void unload()"/>
+    <Function name="QCamera.load" slot="void load()"/>
+    <Function name="QCamera.setCaptureMode" slot="void setCaptureMode( ::QCamera::CaptureModes)">
+      <Argument typename="QCamera.CaptureModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCamera.lockStatus">
+      <Argument typename="QCamera.LockStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCamera.lockStatus">
+      <Argument typename="QCamera.LockStatus" typetype="enum" dir="out"/>
+      <Argument typename="QCamera.LockType" typetype="enum" name="lock"/>
+    </Function>
+    <Function name="QCamera.requestedLocks">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.supportedLocks">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCamera.error">
+      <Argument typename="QCamera.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QCamera.error" sig="void error( ::QCamera::Error)"/>
+    <Function name="QCamera.setViewfinder">
+      <Argument typename="QVideoWidget" typetype="opaque" name="viewfinder"/>
+    </Function>
+    <Function name="QCamera.setViewfinder">
+      <Argument typename="QGraphicsVideoItem" typetype="opaque" name="viewfinder"/>
+    </Function>
+    <Function name="QCamera.setViewfinder">
+      <Argument typename="QAbstractVideoSurface" typetype="class" name="surface"/>
+    </Function>
+    <Function name="QCamera.imageProcessing">
+      <Argument typename="QCameraImageProcessing" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.focus">
+      <Argument typename="QCameraFocus" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.exposure">
+      <Argument typename="QCameraExposure" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.isCaptureModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.CaptureModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCamera.captureMode">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.status">
+      <Argument typename="QCamera.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCamera.state">
+      <Argument typename="QCamera.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCamera.availability" virtual="1">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCamera.deviceDescription" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="device"/>
+    </Function>
+    <Function name="QCamera.availableDevices" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCamera.CaptureModes" convert="1">
+    <Function name="QCamera.CaptureModes.__init__"/>
+    <Function name="QCamera.CaptureModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__init__">
+      <Argument typename="QCamera.CaptureModes" typetype="class"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.CaptureModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.CaptureModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__ixor__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__xor__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__ior__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__or__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__iand__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__and__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__invert__">
+      <Argument typename="QCamera.CaptureModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.CaptureModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCamera.LockTypes" convert="1">
+    <Function name="QCamera.LockTypes.__init__"/>
+    <Function name="QCamera.LockTypes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__init__">
+      <Argument typename="QCamera.LockTypes" typetype="class"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.LockTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.LockTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__ixor__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__xor__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__ior__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__or__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__iand__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__and__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__invert__">
+      <Argument typename="QCamera.LockTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCamera.LockTypes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCamera.FrameRateRange">
+    <Function name="QCamera.FrameRateRange.__init__">
+      <Argument typename="float" name="minimum"/>
+      <Argument typename="float" name="maximum"/>
+    </Function>
+    <Function name="QCamera.FrameRateRange.__init__"/>
+    <Function name="QCamera.FrameRateRange.__init__">
+      <Argument typename="QCamera.FrameRateRange" typetype="class"/>
+    </Function>
+    <Member name="QCamera.FrameRateRange.maximumFrameRate" typename="float"/>
+    <Member name="QCamera.FrameRateRange.minimumFrameRate" typename="float"/>
+    <Function name="QCamera.FrameRateRange.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.FrameRateRange" typetype="class" name="r2"/>
+    </Function>
+    <Function name="QCamera.FrameRateRange.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCamera.FrameRateRange" typetype="class" name="r2"/>
+    </Function>
+  </Class>
+  <Class name="QCameraExposure" inherits="QObject">
+    <Enum name="QCameraExposure.MeteringMode">
+      <EnumMember name="QCameraExposure.MeteringMatrix"/>
+      <EnumMember name="QCameraExposure.MeteringAverage"/>
+      <EnumMember name="QCameraExposure.MeteringSpot"/>
+    </Enum>
+    <Enum name="QCameraExposure.ExposureMode">
+      <EnumMember name="QCameraExposure.ExposureAuto"/>
+      <EnumMember name="QCameraExposure.ExposureManual"/>
+      <EnumMember name="QCameraExposure.ExposurePortrait"/>
+      <EnumMember name="QCameraExposure.ExposureNight"/>
+      <EnumMember name="QCameraExposure.ExposureBacklight"/>
+      <EnumMember name="QCameraExposure.ExposureSpotlight"/>
+      <EnumMember name="QCameraExposure.ExposureSports"/>
+      <EnumMember name="QCameraExposure.ExposureSnow"/>
+      <EnumMember name="QCameraExposure.ExposureBeach"/>
+      <EnumMember name="QCameraExposure.ExposureLargeAperture"/>
+      <EnumMember name="QCameraExposure.ExposureSmallAperture"/>
+      <EnumMember name="QCameraExposure.ExposureAction"/>
+      <EnumMember name="QCameraExposure.ExposureLandscape"/>
+      <EnumMember name="QCameraExposure.ExposureNightPortrait"/>
+      <EnumMember name="QCameraExposure.ExposureTheatre"/>
+      <EnumMember name="QCameraExposure.ExposureSunset"/>
+      <EnumMember name="QCameraExposure.ExposureSteadyPhoto"/>
+      <EnumMember name="QCameraExposure.ExposureFireworks"/>
+      <EnumMember name="QCameraExposure.ExposureParty"/>
+      <EnumMember name="QCameraExposure.ExposureCandlelight"/>
+      <EnumMember name="QCameraExposure.ExposureBarcode"/>
+      <EnumMember name="QCameraExposure.ExposureModeVendor"/>
+    </Enum>
+    <Enum name="QCameraExposure.FlashMode">
+      <EnumMember name="QCameraExposure.FlashAuto"/>
+      <EnumMember name="QCameraExposure.FlashOff"/>
+      <EnumMember name="QCameraExposure.FlashOn"/>
+      <EnumMember name="QCameraExposure.FlashRedEyeReduction"/>
+      <EnumMember name="QCameraExposure.FlashFill"/>
+      <EnumMember name="QCameraExposure.FlashTorch"/>
+      <EnumMember name="QCameraExposure.FlashVideoLight"/>
+      <EnumMember name="QCameraExposure.FlashSlowSyncFrontCurtain"/>
+      <EnumMember name="QCameraExposure.FlashSlowSyncRearCurtain"/>
+      <EnumMember name="QCameraExposure.FlashManual"/>
+    </Enum>
+    <Signal default="1" name="QCameraExposure.exposureCompensationChanged" sig="void exposureCompensationChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraExposure.isoSensitivityChanged" sig="void isoSensitivityChanged(int)"/>
+    <Signal default="1" name="QCameraExposure.shutterSpeedRangeChanged" sig="void shutterSpeedRangeChanged()"/>
+    <Signal default="1" name="QCameraExposure.shutterSpeedChanged" sig="void shutterSpeedChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraExposure.apertureRangeChanged" sig="void apertureRangeChanged()"/>
+    <Signal default="1" name="QCameraExposure.apertureChanged" sig="void apertureChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraExposure.flashReady" sig="void flashReady(bool)"/>
+    <Function name="QCameraExposure.setAutoShutterSpeed" slot="void setAutoShutterSpeed()"/>
+    <Function name="QCameraExposure.setManualShutterSpeed" slot="void setManualShutterSpeed( ::qreal)">
+      <Argument typename="float" name="seconds"/>
+    </Function>
+    <Function name="QCameraExposure.setAutoAperture" slot="void setAutoAperture()"/>
+    <Function name="QCameraExposure.setManualAperture" slot="void setManualAperture( ::qreal)">
+      <Argument typename="float" name="aperture"/>
+    </Function>
+    <Function name="QCameraExposure.setAutoIsoSensitivity" slot="void setAutoIsoSensitivity()"/>
+    <Function name="QCameraExposure.setManualIsoSensitivity" slot="void setManualIsoSensitivity(int)">
+      <Argument typename="int" name="iso"/>
+    </Function>
+    <Function name="QCameraExposure.setExposureCompensation" slot="void setExposureCompensation( ::qreal)">
+      <Argument typename="float" name="ev"/>
+    </Function>
+    <Function name="QCameraExposure.setMeteringMode" slot="void setMeteringMode( ::QCameraExposure::MeteringMode)">
+      <Argument typename="QCameraExposure.MeteringMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.setExposureMode" slot="void setExposureMode( ::QCameraExposure::ExposureMode)">
+      <Argument typename="QCameraExposure.ExposureMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.setFlashMode" slot="void setFlashMode( ::QCameraExposure::FlashModes)">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.supportedShutterSpeeds">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.supportedApertures">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.supportedIsoSensitivities">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.requestedShutterSpeed">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.requestedAperture">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.requestedIsoSensitivity">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.shutterSpeed">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.aperture">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isoSensitivity">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.setSpotMeteringPoint">
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QCameraExposure.spotMeteringPoint">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isMeteringModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraExposure.MeteringMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.meteringMode">
+      <Argument typename="QCameraExposure.MeteringMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.exposureCompensation">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isExposureModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraExposure.ExposureMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.exposureMode">
+      <Argument typename="QCameraExposure.ExposureMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isFlashReady">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isFlashModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCameraExposure.flashMode">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraExposure.FlashModes" convert="1">
+    <Function name="QCameraExposure.FlashModes.__init__"/>
+    <Function name="QCameraExposure.FlashModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__init__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__ixor__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__xor__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__ior__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__or__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__iand__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__and__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__invert__">
+      <Argument typename="QCameraExposure.FlashModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraExposure.FlashModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraFocusZone">
+    <Function name="QCameraFocusZone.__init__">
+      <Argument typename="QCameraFocusZone" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QCameraFocusZone.FocusZoneStatus">
+      <EnumMember name="QCameraFocusZone.Invalid"/>
+      <EnumMember name="QCameraFocusZone.Unused"/>
+      <EnumMember name="QCameraFocusZone.Selected"/>
+      <EnumMember name="QCameraFocusZone.Focused"/>
+    </Enum>
+    <Function name="QCameraFocusZone.status">
+      <Argument typename="QCameraFocusZone.FocusZoneStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraFocusZone.area">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraFocusZone.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QCameraFocusZone.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocusZone" typetype="class" name="other"/>
+    </Function>
+    <Function name="QCameraFocusZone.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocusZone" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QCameraFocus" inherits="QObject">
+    <Enum name="QCameraFocus.FocusPointMode">
+      <EnumMember name="QCameraFocus.FocusPointAuto"/>
+      <EnumMember name="QCameraFocus.FocusPointCenter"/>
+      <EnumMember name="QCameraFocus.FocusPointFaceDetection"/>
+      <EnumMember name="QCameraFocus.FocusPointCustom"/>
+    </Enum>
+    <Enum name="QCameraFocus.FocusMode">
+      <EnumMember name="QCameraFocus.ManualFocus"/>
+      <EnumMember name="QCameraFocus.HyperfocalFocus"/>
+      <EnumMember name="QCameraFocus.InfinityFocus"/>
+      <EnumMember name="QCameraFocus.AutoFocus"/>
+      <EnumMember name="QCameraFocus.ContinuousFocus"/>
+      <EnumMember name="QCameraFocus.MacroFocus"/>
+    </Enum>
+    <Signal default="1" name="QCameraFocus.maximumDigitalZoomChanged" sig="void maximumDigitalZoomChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraFocus.maximumOpticalZoomChanged" sig="void maximumOpticalZoomChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraFocus.focusZonesChanged" sig="void focusZonesChanged()"/>
+    <Signal default="1" name="QCameraFocus.digitalZoomChanged" sig="void digitalZoomChanged( ::qreal)"/>
+    <Signal default="1" name="QCameraFocus.opticalZoomChanged" sig="void opticalZoomChanged( ::qreal)"/>
+    <Function name="QCameraFocus.zoomTo">
+      <Argument typename="float" name="opticalZoom"/>
+      <Argument typename="float" name="digitalZoom"/>
+    </Function>
+    <Function name="QCameraFocus.digitalZoom">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.opticalZoom">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.maximumDigitalZoom">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.maximumOpticalZoom">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.focusZones">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.setCustomFocusPoint">
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QCameraFocus.customFocusPoint">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.isFocusPointModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocus.FocusPointMode" typetype="enum"/>
+    </Function>
+    <Function name="QCameraFocus.setFocusPointMode">
+      <Argument typename="QCameraFocus.FocusPointMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraFocus.focusPointMode">
+      <Argument typename="QCameraFocus.FocusPointMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.isFocusModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCameraFocus.setFocusMode">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QCameraFocus.focusMode">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraFocus.FocusModes" convert="1">
+    <Function name="QCameraFocus.FocusModes.__init__"/>
+    <Function name="QCameraFocus.FocusModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__init__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__ixor__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__xor__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__ior__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__or__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__iand__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__and__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__invert__">
+      <Argument typename="QCameraFocus.FocusModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraFocus.FocusModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraImageCapture" inherits="QObject QMediaBindableInterface">
+    <Function name="QCameraImageCapture.__init__">
+      <Argument typename="QMediaObject" typetype="class" name="mediaObject"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QCameraImageCapture.CaptureDestination">
+      <EnumMember name="QCameraImageCapture.CaptureToFile"/>
+      <EnumMember name="QCameraImageCapture.CaptureToBuffer"/>
+    </Enum>
+    <Enum name="QCameraImageCapture.DriveMode">
+      <EnumMember name="QCameraImageCapture.SingleImageCapture"/>
+    </Enum>
+    <Enum name="QCameraImageCapture.Error">
+      <EnumMember name="QCameraImageCapture.NoError"/>
+      <EnumMember name="QCameraImageCapture.NotReadyError"/>
+      <EnumMember name="QCameraImageCapture.ResourceError"/>
+      <EnumMember name="QCameraImageCapture.OutOfSpaceError"/>
+      <EnumMember name="QCameraImageCapture.NotSupportedFeatureError"/>
+      <EnumMember name="QCameraImageCapture.FormatError"/>
+    </Enum>
+    <Function name="QCameraImageCapture.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QCameraImageCapture.imageSaved" sig="void imageSaved(int,const QString&amp;)"/>
+    <Signal default="1" name="QCameraImageCapture.imageAvailable" sig="void imageAvailable(int,const  ::QVideoFrame&amp;)"/>
+    <Signal default="1" name="QCameraImageCapture.imageMetadataAvailable" sig="void imageMetadataAvailable(int,const QString&amp;,const  ::QVariant&amp;)"/>
+    <Signal default="1" name="QCameraImageCapture.imageCaptured" sig="void imageCaptured(int,const  ::QImage&amp;)"/>
+    <Signal default="1" name="QCameraImageCapture.imageExposed" sig="void imageExposed(int)"/>
+    <Signal default="1" name="QCameraImageCapture.captureDestinationChanged" sig="void captureDestinationChanged( ::QCameraImageCapture::CaptureDestinations)"/>
+    <Signal default="1" name="QCameraImageCapture.bufferFormatChanged" sig="void bufferFormatChanged( ::QVideoFrame::PixelFormat)"/>
+    <Signal default="1" name="QCameraImageCapture.readyForCaptureChanged" sig="void readyForCaptureChanged(bool)"/>
+    <Function name="QCameraImageCapture.cancelCapture" slot="void cancelCapture()"/>
+    <Function name="QCameraImageCapture.capture" slot="int capture(const QString&amp; = QString())">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="file" default="''"/>
+    </Function>
+    <Function name="QCameraImageCapture.setCaptureDestination">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" name="destination"/>
+    </Function>
+    <Function name="QCameraImageCapture.captureDestination">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.isCaptureDestinationSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" name="destination"/>
+    </Function>
+    <Function name="QCameraImageCapture.setBufferFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QCameraImageCapture.bufferFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.supportedBufferFormats">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.setEncodingSettings">
+      <Argument typename="QImageEncoderSettings" typetype="class" name="settings"/>
+    </Function>
+    <Function name="QCameraImageCapture.encodingSettings">
+      <Argument typename="QImageEncoderSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.supportedResolutions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QImageEncoderSettings" typetype="class" name="settings" default="QImageEncoderSettings()"/>
+      <Argument typename="bool" name="continuous" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.imageCodecDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="codecName"/>
+    </Function>
+    <Function name="QCameraImageCapture.supportedImageCodecs">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.isReadyForCapture">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.error">
+      <Argument typename="QCameraImageCapture.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QCameraImageCapture.error" sig="void error(int, ::QCameraImageCapture::Error,const QString&amp;)"/>
+    <Function name="QCameraImageCapture.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.availability">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraImageCapture.CaptureDestinations" convert="1">
+    <Function name="QCameraImageCapture.CaptureDestinations.__init__"/>
+    <Function name="QCameraImageCapture.CaptureDestinations.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__init__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__ixor__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__xor__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__ior__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__or__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__iand__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__and__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__invert__">
+      <Argument typename="QCameraImageCapture.CaptureDestinations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraImageCapture.CaptureDestinations.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraImageProcessing" inherits="QObject">
+    <Enum name="QCameraImageProcessing.ColorFilter">
+      <EnumMember name="QCameraImageProcessing.ColorFilterNone"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterGrayscale"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterNegative"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterSolarize"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterSepia"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterPosterize"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterWhiteboard"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterBlackboard"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterAqua"/>
+      <EnumMember name="QCameraImageProcessing.ColorFilterVendor"/>
+    </Enum>
+    <Enum name="QCameraImageProcessing.WhiteBalanceMode">
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceAuto"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceManual"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceSunlight"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceCloudy"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceShade"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceTungsten"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceFluorescent"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceFlash"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceSunset"/>
+      <EnumMember name="QCameraImageProcessing.WhiteBalanceVendor"/>
+    </Enum>
+    <Function name="QCameraImageProcessing.setBrightness">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QCameraImageProcessing.brightness">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.isColorFilterSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraImageProcessing.ColorFilter" typetype="enum" name="filter"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setColorFilter">
+      <Argument typename="QCameraImageProcessing.ColorFilter" typetype="enum" name="filter"/>
+    </Function>
+    <Function name="QCameraImageProcessing.colorFilter">
+      <Argument typename="QCameraImageProcessing.ColorFilter" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setDenoisingLevel">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QCameraImageProcessing.denoisingLevel">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setSharpeningLevel">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QCameraImageProcessing.sharpeningLevel">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setSaturation">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QCameraImageProcessing.saturation">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setContrast">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QCameraImageProcessing.contrast">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setManualWhiteBalance">
+      <Argument typename="float" name="colorTemperature"/>
+    </Function>
+    <Function name="QCameraImageProcessing.manualWhiteBalance">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.isWhiteBalanceModeSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraImageProcessing.WhiteBalanceMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraImageProcessing.setWhiteBalanceMode">
+      <Argument typename="QCameraImageProcessing.WhiteBalanceMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QCameraImageProcessing.whiteBalanceMode">
+      <Argument typename="QCameraImageProcessing.WhiteBalanceMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraImageProcessing.isAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraInfo">
+    <Function name="QCameraInfo.__init__">
+      <Argument typename="QByteArray" typetype="class" name="name" default="QByteArray()"/>
+    </Function>
+    <Function name="QCameraInfo.__init__">
+      <Argument typename="QCamera" typetype="class" name="camera"/>
+    </Function>
+    <Function name="QCameraInfo.__init__">
+      <Argument typename="QCameraInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QCameraInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QCameraInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QCameraInfo.availableCameras" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QCamera.Position" typetype="enum" name="position" default="QCamera.UnspecifiedPosition"/>
+    </Function>
+    <Function name="QCameraInfo.defaultCamera" static="1">
+      <Argument typename="QCameraInfo" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraInfo.orientation">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QCameraInfo.position">
+      <Argument typename="QCamera.Position" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraInfo.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraInfo.deviceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QCameraInfo.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QCameraViewfinderSettings">
+    <Function name="QCameraViewfinderSettings.__init__"/>
+    <Function name="QCameraViewfinderSettings.__init__">
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="rhs"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setPixelAspectRatio">
+      <Argument typename="QSize" typetype="class" name="ratio"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setPixelAspectRatio">
+      <Argument typename="int" name="horizontal"/>
+      <Argument typename="int" name="vertical"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.pixelAspectRatio">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setPixelFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.pixelFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setMaximumFrameRate">
+      <Argument typename="float" name="rate"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.maximumFrameRate">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setMinimumFrameRate">
+      <Argument typename="float" name="rate"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.minimumFrameRate">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setResolution">
+      <Argument typename="QSize" typetype="class"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.setResolution">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.resolution">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QCameraViewfinderSettings.swap">
+      <Argument typename="QCameraViewfinderSettings" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QMediaContent">
+    <Function name="QMediaContent.__init__"/>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="QUrl" typetype="class" name="contentUrl"/>
+    </Function>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="QNetworkRequest" typetype="class" name="contentRequest"/>
+    </Function>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="QMediaResource" typetype="class" name="contentResource"/>
+    </Function>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="resources"/>
+    </Function>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="QMediaContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QMediaContent.__init__">
+      <Argument typename="QMediaPlaylist" typetype="class" name="playlist"/>
+      <Argument typename="QUrl" typetype="class" name="contentUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QMediaContent.playlist">
+      <Argument typename="QMediaPlaylist" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.resources">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.canonicalResource">
+      <Argument typename="QMediaResource" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.canonicalRequest">
+      <Argument typename="QNetworkRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.canonicalUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaContent.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QMediaContent.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaContent" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QMediaControl" inherits="QObject">
+    <Function name="QMediaControl.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QAudioEncoderSettings">
+    <Function name="QAudioEncoderSettings.__init__"/>
+    <Function name="QAudioEncoderSettings.__init__">
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setEncodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" name="options"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setEncodingOption">
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.encodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.encodingOption">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setQuality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" name="quality"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.quality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setSampleRate">
+      <Argument typename="int" name="rate"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.sampleRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setChannelCount">
+      <Argument typename="int" name="channels"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.channelCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setBitRate">
+      <Argument typename="int" name="bitrate"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.bitRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setCodec">
+      <Argument typename="QString" typetype="mappedtype" name="codec"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.codec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.setEncodingMode">
+      <Argument typename="QMultimedia.EncodingMode" typetype="enum"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.encodingMode">
+      <Argument typename="QMultimedia.EncodingMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAudioEncoderSettings.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAudioEncoderSettings" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QVideoEncoderSettings">
+    <Function name="QVideoEncoderSettings.__init__"/>
+    <Function name="QVideoEncoderSettings.__init__">
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setEncodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" name="options"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setEncodingOption">
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.encodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.encodingOption">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setQuality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" name="quality"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.quality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setBitRate">
+      <Argument typename="int" name="bitrate"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.bitRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setFrameRate">
+      <Argument typename="float" name="rate"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.frameRate">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setResolution">
+      <Argument typename="QSize" typetype="class"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setResolution">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.resolution">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setCodec">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.codec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.setEncodingMode">
+      <Argument typename="QMultimedia.EncodingMode" typetype="enum"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.encodingMode">
+      <Argument typename="QMultimedia.EncodingMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QVideoEncoderSettings.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoEncoderSettings" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QImageEncoderSettings">
+    <Function name="QImageEncoderSettings.__init__"/>
+    <Function name="QImageEncoderSettings.__init__">
+      <Argument typename="QImageEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setEncodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" name="options"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setEncodingOption">
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QImageEncoderSettings.encodingOptions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QImageEncoderSettings.encodingOption">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="option"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setQuality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" name="quality"/>
+    </Function>
+    <Function name="QImageEncoderSettings.quality">
+      <Argument typename="QMultimedia.EncodingQuality" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setResolution">
+      <Argument typename="QSize" typetype="class"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setResolution">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QImageEncoderSettings.resolution">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QImageEncoderSettings.setCodec">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QImageEncoderSettings.codec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QImageEncoderSettings.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QImageEncoderSettings.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QImageEncoderSettings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QImageEncoderSettings.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QImageEncoderSettings" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QMediaMetaData">
+    <Member name="QMediaMetaData.AlbumArtist" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.AlbumTitle" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.AudioBitRate" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.AudioCodec" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Author" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.AverageLevel" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.CameraManufacturer" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.CameraModel" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Category" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ChannelCount" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ChapterNumber" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Comment" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Composer" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Conductor" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Contrast" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ContributingArtist" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Copyright" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.CoverArtImage" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.CoverArtUrlLarge" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.CoverArtUrlSmall" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Date" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.DateTimeDigitized" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.DateTimeOriginal" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Description" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.DeviceSettingDescription" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.DigitalZoomRatio" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Director" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Duration" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Event" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ExposureBiasValue" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ExposureMode" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ExposureProgram" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ExposureTime" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.FNumber" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Flash" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.FocalLength" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.FocalLengthIn35mmFilm" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSAltitude" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSAreaInformation" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSDOP" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSImgDirection" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSImgDirectionRef" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSLatitude" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSLongitude" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSMapDatum" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSProcessingMethod" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSSatellites" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSSpeed" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSStatus" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSTimeStamp" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSTrack" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GPSTrackRef" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.GainControl" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Genre" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ISOSpeedRatings" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Keywords" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Language" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.LeadPerformer" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.LightSource" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Lyrics" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.MediaType" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.MeteringMode" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Mood" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Orientation" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ParentalRating" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.PeakValue" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.PixelAspectRatio" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.PosterImage" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.PosterUrl" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Publisher" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.RatingOrganization" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Resolution" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.SampleRate" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Saturation" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.SceneCaptureType" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Sharpness" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Size" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.SubTitle" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Subject" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.SubjectDistance" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.ThumbnailImage" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Title" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.TrackCount" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.TrackNumber" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.UserRating" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.VideoBitRate" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.VideoCodec" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.VideoFrameRate" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.WhiteBalance" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Writer" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QMediaMetaData.Year" const="1" static="1" typename="QString" typetype="mappedtype"/>
+  </Class>
+  <Class name="QMediaPlayer" inherits="QMediaObject">
+    <Function name="QMediaPlayer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QMediaPlayer.Flags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Enum name="QMediaPlayer.Error">
+      <EnumMember name="QMediaPlayer.NoError"/>
+      <EnumMember name="QMediaPlayer.ResourceError"/>
+      <EnumMember name="QMediaPlayer.FormatError"/>
+      <EnumMember name="QMediaPlayer.NetworkError"/>
+      <EnumMember name="QMediaPlayer.AccessDeniedError"/>
+      <EnumMember name="QMediaPlayer.ServiceMissingError"/>
+    </Enum>
+    <Enum name="QMediaPlayer.Flag">
+      <EnumMember name="QMediaPlayer.LowLatency"/>
+      <EnumMember name="QMediaPlayer.StreamPlayback"/>
+      <EnumMember name="QMediaPlayer.VideoSurface"/>
+    </Enum>
+    <Enum name="QMediaPlayer.MediaStatus">
+      <EnumMember name="QMediaPlayer.UnknownMediaStatus"/>
+      <EnumMember name="QMediaPlayer.NoMedia"/>
+      <EnumMember name="QMediaPlayer.LoadingMedia"/>
+      <EnumMember name="QMediaPlayer.LoadedMedia"/>
+      <EnumMember name="QMediaPlayer.StalledMedia"/>
+      <EnumMember name="QMediaPlayer.BufferingMedia"/>
+      <EnumMember name="QMediaPlayer.BufferedMedia"/>
+      <EnumMember name="QMediaPlayer.EndOfMedia"/>
+      <EnumMember name="QMediaPlayer.InvalidMedia"/>
+    </Enum>
+    <Enum name="QMediaPlayer.State">
+      <EnumMember name="QMediaPlayer.StoppedState"/>
+      <EnumMember name="QMediaPlayer.PlayingState"/>
+      <EnumMember name="QMediaPlayer.PausedState"/>
+    </Enum>
+    <Signal default="1" name="QMediaPlayer.audioRoleChanged" sig="void audioRoleChanged( ::QAudio::Role)"/>
+    <Function name="QMediaPlayer.supportedAudioRoles">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.setAudioRole">
+      <Argument typename="QAudio.Role" typetype="enum" name="audioRole"/>
+    </Function>
+    <Function name="QMediaPlayer.audioRole">
+      <Argument typename="QAudio.Role" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.unbind" virtual="1">
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Function name="QMediaPlayer.bind" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QMediaPlayer.networkConfigurationChanged" sig="void networkConfigurationChanged(const  ::QNetworkConfiguration&amp;)"/>
+    <Signal default="1" name="QMediaPlayer.playbackRateChanged" sig="void playbackRateChanged( ::qreal)"/>
+    <Signal default="1" name="QMediaPlayer.seekableChanged" sig="void seekableChanged(bool)"/>
+    <Signal default="1" name="QMediaPlayer.bufferStatusChanged" sig="void bufferStatusChanged(int)"/>
+    <Signal default="1" name="QMediaPlayer.videoAvailableChanged" sig="void videoAvailableChanged(bool)"/>
+    <Signal default="1" name="QMediaPlayer.audioAvailableChanged" sig="void audioAvailableChanged(bool)"/>
+    <Signal default="1" name="QMediaPlayer.mutedChanged" sig="void mutedChanged(bool)"/>
+    <Signal default="1" name="QMediaPlayer.volumeChanged" sig="void volumeChanged(int)"/>
+    <Signal default="1" name="QMediaPlayer.positionChanged" sig="void positionChanged( ::qint64)"/>
+    <Signal default="1" name="QMediaPlayer.durationChanged" sig="void durationChanged( ::qint64)"/>
+    <Signal default="1" name="QMediaPlayer.mediaStatusChanged" sig="void mediaStatusChanged( ::QMediaPlayer::MediaStatus)"/>
+    <Signal default="1" name="QMediaPlayer.stateChanged" sig="void stateChanged( ::QMediaPlayer::State)"/>
+    <Signal default="1" name="QMediaPlayer.currentMediaChanged" sig="void currentMediaChanged(const  ::QMediaContent&amp;)"/>
+    <Signal default="1" name="QMediaPlayer.mediaChanged" sig="void mediaChanged(const  ::QMediaContent&amp;)"/>
+    <Function name="QMediaPlayer.setNetworkConfigurations" slot="void setNetworkConfigurations(const QList&lt;QNetworkConfiguration&gt;&amp;)">
+      <Argument typename="unknown-type" typetype="mappedtype" name="configurations"/>
+    </Function>
+    <Function name="QMediaPlayer.setPlaylist" slot="void setPlaylist( ::QMediaPlaylist*)">
+      <Argument typename="QMediaPlaylist" typetype="class" name="playlist"/>
+    </Function>
+    <Function name="QMediaPlayer.setMedia" slot="void setMedia(const  ::QMediaContent&amp;, ::QIODevice* = 0)">
+      <Argument typename="QMediaContent" typetype="class" name="media"/>
+      <Argument typename="QIODevice" typetype="class" name="stream" default="None"/>
+    </Function>
+    <Function name="QMediaPlayer.setPlaybackRate" slot="void setPlaybackRate( ::qreal)">
+      <Argument typename="float" name="rate"/>
+    </Function>
+    <Function name="QMediaPlayer.setMuted" slot="void setMuted(bool)">
+      <Argument typename="bool" name="muted"/>
+    </Function>
+    <Function name="QMediaPlayer.setVolume" slot="void setVolume(int)">
+      <Argument typename="int" name="volume"/>
+    </Function>
+    <Function name="QMediaPlayer.setPosition" slot="void setPosition( ::qint64)">
+      <Argument typename="int" name="position"/>
+    </Function>
+    <Function name="QMediaPlayer.stop" slot="void stop()"/>
+    <Function name="QMediaPlayer.pause" slot="void pause()"/>
+    <Function name="QMediaPlayer.play" slot="void play()"/>
+    <Function name="QMediaPlayer.availability" virtual="1">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.currentNetworkConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.error">
+      <Argument typename="QMediaPlayer.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QMediaPlayer.error" sig="void error( ::QMediaPlayer::Error)"/>
+    <Function name="QMediaPlayer.playbackRate">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.isSeekable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.bufferStatus">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.isVideoAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.isAudioAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.isMuted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.volume">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.position">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.duration">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.mediaStatus">
+      <Argument typename="QMediaPlayer.MediaStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.state">
+      <Argument typename="QMediaPlayer.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.currentMedia">
+      <Argument typename="QMediaContent" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.playlist">
+      <Argument typename="QMediaPlaylist" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.mediaStream">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.media">
+      <Argument typename="QMediaContent" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.setVideoOutput">
+      <Argument typename="QVideoWidget" typetype="opaque"/>
+    </Function>
+    <Function name="QMediaPlayer.setVideoOutput">
+      <Argument typename="QGraphicsVideoItem" typetype="opaque"/>
+    </Function>
+    <Function name="QMediaPlayer.setVideoOutput">
+      <Argument typename="QAbstractVideoSurface" typetype="class" name="surface"/>
+    </Function>
+    <Function name="QMediaPlayer.supportedMimeTypes" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QMediaPlayer.Flags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QMediaPlayer.hasSupport" static="1">
+      <Argument typename="QMultimedia.SupportEstimate" typetype="enum" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="codecs" default="[]"/>
+      <Argument typename="QMediaPlayer.Flags" typetype="class" name="flags" default="0"/>
+    </Function>
+  </Class>
+  <Class name="QMediaPlayer.Flags" convert="1">
+    <Function name="QMediaPlayer.Flags.__init__"/>
+    <Function name="QMediaPlayer.Flags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__init__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaPlayer.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaPlayer.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__ixor__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__xor__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__ior__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__or__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__iand__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__and__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__invert__">
+      <Argument typename="QMediaPlayer.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlayer.Flags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaPlaylist" inherits="QObject QMediaBindableInterface">
+    <Function name="QMediaPlaylist.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QMediaPlaylist.Error">
+      <EnumMember name="QMediaPlaylist.NoError"/>
+      <EnumMember name="QMediaPlaylist.FormatError"/>
+      <EnumMember name="QMediaPlaylist.FormatNotSupportedError"/>
+      <EnumMember name="QMediaPlaylist.NetworkError"/>
+      <EnumMember name="QMediaPlaylist.AccessDeniedError"/>
+    </Enum>
+    <Enum name="QMediaPlaylist.PlaybackMode">
+      <EnumMember name="QMediaPlaylist.CurrentItemOnce"/>
+      <EnumMember name="QMediaPlaylist.CurrentItemInLoop"/>
+      <EnumMember name="QMediaPlaylist.Sequential"/>
+      <EnumMember name="QMediaPlaylist.Loop"/>
+      <EnumMember name="QMediaPlaylist.Random"/>
+    </Enum>
+    <Function name="QMediaPlaylist.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="object"/>
+    </Function>
+    <Signal default="1" name="QMediaPlaylist.loadFailed" sig="void loadFailed()"/>
+    <Signal default="1" name="QMediaPlaylist.loaded" sig="void loaded()"/>
+    <Signal default="1" name="QMediaPlaylist.mediaChanged" sig="void mediaChanged(int,int)"/>
+    <Signal default="1" name="QMediaPlaylist.mediaRemoved" sig="void mediaRemoved(int,int)"/>
+    <Signal default="1" name="QMediaPlaylist.mediaAboutToBeRemoved" sig="void mediaAboutToBeRemoved(int,int)"/>
+    <Signal default="1" name="QMediaPlaylist.mediaInserted" sig="void mediaInserted(int,int)"/>
+    <Signal default="1" name="QMediaPlaylist.mediaAboutToBeInserted" sig="void mediaAboutToBeInserted(int,int)"/>
+    <Signal default="1" name="QMediaPlaylist.currentMediaChanged" sig="void currentMediaChanged(const  ::QMediaContent&amp;)"/>
+    <Signal default="1" name="QMediaPlaylist.playbackModeChanged" sig="void playbackModeChanged( ::QMediaPlaylist::PlaybackMode)"/>
+    <Signal default="1" name="QMediaPlaylist.currentIndexChanged" sig="void currentIndexChanged(int)"/>
+    <Function name="QMediaPlaylist.setCurrentIndex" slot="void setCurrentIndex(int)">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QMediaPlaylist.previous" slot="void previous()"/>
+    <Function name="QMediaPlaylist.next" slot="void next()"/>
+    <Function name="QMediaPlaylist.shuffle" slot="void shuffle()"/>
+    <Function name="QMediaPlaylist.moveMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="from"/>
+      <Argument typename="int" name="to"/>
+    </Function>
+    <Function name="QMediaPlaylist.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.error">
+      <Argument typename="QMediaPlaylist.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.save">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="location"/>
+      <Argument typename="str" name="format" default="None"/>
+    </Function>
+    <Function name="QMediaPlaylist.save">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="str" name="format"/>
+    </Function>
+    <Function name="QMediaPlaylist.load">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="str" name="format" default="None"/>
+    </Function>
+    <Function name="QMediaPlaylist.load">
+      <Argument typename="QUrl" typetype="class" name="location"/>
+      <Argument typename="str" name="format" default="None"/>
+    </Function>
+    <Function name="QMediaPlaylist.load">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="str" name="format" default="None"/>
+    </Function>
+    <Function name="QMediaPlaylist.clear">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.removeMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QMediaPlaylist.removeMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QMediaPlaylist.insertMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="QMediaContent" typetype="class" name="content"/>
+    </Function>
+    <Function name="QMediaPlaylist.insertMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="items"/>
+    </Function>
+    <Function name="QMediaPlaylist.addMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaContent" typetype="class" name="content"/>
+    </Function>
+    <Function name="QMediaPlaylist.addMedia">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="items"/>
+    </Function>
+    <Function name="QMediaPlaylist.isReadOnly">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.mediaCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.media">
+      <Argument typename="QMediaContent" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QMediaPlaylist.previousIndex">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="steps" default="1"/>
+    </Function>
+    <Function name="QMediaPlaylist.nextIndex">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="steps" default="1"/>
+    </Function>
+    <Function name="QMediaPlaylist.currentMedia">
+      <Argument typename="QMediaContent" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.currentIndex">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.setPlaybackMode">
+      <Argument typename="QMediaPlaylist.PlaybackMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QMediaPlaylist.playbackMode">
+      <Argument typename="QMediaPlaylist.PlaybackMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QMediaPlaylist.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaResource">
+    <Function name="QMediaResource.__init__"/>
+    <Function name="QMediaResource.__init__">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+    </Function>
+    <Function name="QMediaResource.__init__">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+    </Function>
+    <Function name="QMediaResource.__init__">
+      <Argument typename="QMediaResource" typetype="class" name="other"/>
+    </Function>
+    <Function name="QMediaResource.setResolution">
+      <Argument typename="QSize" typetype="class" name="resolution"/>
+    </Function>
+    <Function name="QMediaResource.setResolution">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QMediaResource.resolution">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setVideoBitRate">
+      <Argument typename="int" name="rate"/>
+    </Function>
+    <Function name="QMediaResource.videoBitRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setChannelCount">
+      <Argument typename="int" name="channels"/>
+    </Function>
+    <Function name="QMediaResource.channelCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setSampleRate">
+      <Argument typename="int" name="frequency"/>
+    </Function>
+    <Function name="QMediaResource.sampleRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setAudioBitRate">
+      <Argument typename="int" name="rate"/>
+    </Function>
+    <Function name="QMediaResource.audioBitRate">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setDataSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QMediaResource.dataSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setVideoCodec">
+      <Argument typename="QString" typetype="mappedtype" name="codec"/>
+    </Function>
+    <Function name="QMediaResource.videoCodec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setAudioCodec">
+      <Argument typename="QString" typetype="mappedtype" name="codec"/>
+    </Function>
+    <Function name="QMediaResource.audioCodec">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.setLanguage">
+      <Argument typename="QString" typetype="mappedtype" name="language"/>
+    </Function>
+    <Function name="QMediaResource.language">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.mimeType">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.request">
+      <Argument typename="QNetworkRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaResource.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaResource" typetype="class" name="other"/>
+    </Function>
+    <Function name="QMediaResource.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaResource" typetype="class" name="other"/>
+    </Function>
+    <Function name="QMediaResource.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaService" inherits="QObject">
+    <Function name="QMediaService.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QMediaService.releaseControl" abstract="1" virtual="1">
+      <Argument typename="QMediaControl" typetype="class" name="control"/>
+    </Function>
+    <Function name="QMediaService.requestControl" abstract="1" virtual="1">
+      <Argument typename="QMediaControl" typetype="class" dir="out"/>
+      <Argument typename="str" name="name"/>
+    </Function>
+  </Class>
+  <Class name="QMediaTimeInterval">
+    <Function name="QMediaTimeInterval.__init__"/>
+    <Function name="QMediaTimeInterval.__init__">
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QMediaTimeInterval.__init__">
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeInterval.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeInterval.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeInterval.translated">
+      <Argument typename="QMediaTimeInterval" typetype="class" dir="out"/>
+      <Argument typename="int" name="offset"/>
+    </Function>
+    <Function name="QMediaTimeInterval.normalized">
+      <Argument typename="QMediaTimeInterval" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeInterval.isNormal">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeInterval.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QMediaTimeInterval.end">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeInterval.start">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMediaTimeRange">
+    <Function name="QMediaTimeRange.__init__"/>
+    <Function name="QMediaTimeRange.__init__">
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QMediaTimeRange.__init__">
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__init__">
+      <Argument typename="QMediaTimeRange" typetype="class" name="range"/>
+    </Function>
+    <Function name="QMediaTimeRange.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__add__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__sub__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.clear"/>
+    <Function name="QMediaTimeRange.__isub__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__isub__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__iadd__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.__iadd__">
+      <Argument typename="QMediaTimeRange" typetype="class" dir="out"/>
+      <Argument typename="QMediaTimeInterval" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.removeTimeRange">
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.removeInterval">
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QMediaTimeRange.removeInterval">
+      <Argument typename="QMediaTimeInterval" typetype="class" name="interval"/>
+    </Function>
+    <Function name="QMediaTimeRange.addTimeRange">
+      <Argument typename="QMediaTimeRange" typetype="class"/>
+    </Function>
+    <Function name="QMediaTimeRange.addInterval">
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+    </Function>
+    <Function name="QMediaTimeRange.addInterval">
+      <Argument typename="QMediaTimeInterval" typetype="class" name="interval"/>
+    </Function>
+    <Function name="QMediaTimeRange.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QMediaTimeRange.isContinuous">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeRange.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeRange.intervals">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeRange.latestTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QMediaTimeRange.earliestTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QMultimedia">
+    <Enum name="QMultimedia.AvailabilityStatus">
+      <EnumMember name="QMultimedia.Available"/>
+      <EnumMember name="QMultimedia.ServiceMissing"/>
+      <EnumMember name="QMultimedia.Busy"/>
+      <EnumMember name="QMultimedia.ResourceError"/>
+    </Enum>
+    <Enum name="QMultimedia.EncodingMode">
+      <EnumMember name="QMultimedia.ConstantQualityEncoding"/>
+      <EnumMember name="QMultimedia.ConstantBitRateEncoding"/>
+      <EnumMember name="QMultimedia.AverageBitRateEncoding"/>
+      <EnumMember name="QMultimedia.TwoPassEncoding"/>
+    </Enum>
+    <Enum name="QMultimedia.EncodingQuality">
+      <EnumMember name="QMultimedia.VeryLowQuality"/>
+      <EnumMember name="QMultimedia.LowQuality"/>
+      <EnumMember name="QMultimedia.NormalQuality"/>
+      <EnumMember name="QMultimedia.HighQuality"/>
+      <EnumMember name="QMultimedia.VeryHighQuality"/>
+    </Enum>
+    <Enum name="QMultimedia.SupportEstimate">
+      <EnumMember name="QMultimedia.NotSupported"/>
+      <EnumMember name="QMultimedia.MaybeSupported"/>
+      <EnumMember name="QMultimedia.ProbablySupported"/>
+      <EnumMember name="QMultimedia.PreferredService"/>
+    </Enum>
+  </Class>
+  <Class name="QRadioData" inherits="QObject QMediaBindableInterface">
+    <Function name="QRadioData.__init__">
+      <Argument typename="QMediaObject" typetype="class" name="mediaObject"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QRadioData.ProgramType">
+      <EnumMember name="QRadioData.Undefined"/>
+      <EnumMember name="QRadioData.News"/>
+      <EnumMember name="QRadioData.CurrentAffairs"/>
+      <EnumMember name="QRadioData.Information"/>
+      <EnumMember name="QRadioData.Sport"/>
+      <EnumMember name="QRadioData.Education"/>
+      <EnumMember name="QRadioData.Drama"/>
+      <EnumMember name="QRadioData.Culture"/>
+      <EnumMember name="QRadioData.Science"/>
+      <EnumMember name="QRadioData.Varied"/>
+      <EnumMember name="QRadioData.PopMusic"/>
+      <EnumMember name="QRadioData.RockMusic"/>
+      <EnumMember name="QRadioData.EasyListening"/>
+      <EnumMember name="QRadioData.LightClassical"/>
+      <EnumMember name="QRadioData.SeriousClassical"/>
+      <EnumMember name="QRadioData.OtherMusic"/>
+      <EnumMember name="QRadioData.Weather"/>
+      <EnumMember name="QRadioData.Finance"/>
+      <EnumMember name="QRadioData.ChildrensProgrammes"/>
+      <EnumMember name="QRadioData.SocialAffairs"/>
+      <EnumMember name="QRadioData.Religion"/>
+      <EnumMember name="QRadioData.PhoneIn"/>
+      <EnumMember name="QRadioData.Travel"/>
+      <EnumMember name="QRadioData.Leisure"/>
+      <EnumMember name="QRadioData.JazzMusic"/>
+      <EnumMember name="QRadioData.CountryMusic"/>
+      <EnumMember name="QRadioData.NationalMusic"/>
+      <EnumMember name="QRadioData.OldiesMusic"/>
+      <EnumMember name="QRadioData.FolkMusic"/>
+      <EnumMember name="QRadioData.Documentary"/>
+      <EnumMember name="QRadioData.AlarmTest"/>
+      <EnumMember name="QRadioData.Alarm"/>
+      <EnumMember name="QRadioData.Talk"/>
+      <EnumMember name="QRadioData.ClassicRock"/>
+      <EnumMember name="QRadioData.AdultHits"/>
+      <EnumMember name="QRadioData.SoftRock"/>
+      <EnumMember name="QRadioData.Top40"/>
+      <EnumMember name="QRadioData.Soft"/>
+      <EnumMember name="QRadioData.Nostalgia"/>
+      <EnumMember name="QRadioData.Classical"/>
+      <EnumMember name="QRadioData.RhythmAndBlues"/>
+      <EnumMember name="QRadioData.SoftRhythmAndBlues"/>
+      <EnumMember name="QRadioData.Language"/>
+      <EnumMember name="QRadioData.ReligiousMusic"/>
+      <EnumMember name="QRadioData.ReligiousTalk"/>
+      <EnumMember name="QRadioData.Personality"/>
+      <EnumMember name="QRadioData.Public"/>
+      <EnumMember name="QRadioData.College"/>
+    </Enum>
+    <Enum name="QRadioData.Error">
+      <EnumMember name="QRadioData.NoError"/>
+      <EnumMember name="QRadioData.ResourceError"/>
+      <EnumMember name="QRadioData.OpenError"/>
+      <EnumMember name="QRadioData.OutOfRangeError"/>
+    </Enum>
+    <Function name="QRadioData.setMediaObject" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QRadioData.alternativeFrequenciesEnabledChanged" sig="void alternativeFrequenciesEnabledChanged(bool)"/>
+    <Signal default="1" name="QRadioData.radioTextChanged" sig="void radioTextChanged(QString)"/>
+    <Signal default="1" name="QRadioData.stationNameChanged" sig="void stationNameChanged(QString)"/>
+    <Signal default="1" name="QRadioData.programTypeNameChanged" sig="void programTypeNameChanged(QString)"/>
+    <Signal default="1" name="QRadioData.programTypeChanged" sig="void programTypeChanged( ::QRadioData::ProgramType)"/>
+    <Signal default="1" name="QRadioData.stationIdChanged" sig="void stationIdChanged(QString)"/>
+    <Function name="QRadioData.setAlternativeFrequenciesEnabled" slot="void setAlternativeFrequenciesEnabled(bool)">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QRadioData.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioData.error">
+      <Argument typename="QRadioData.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QRadioData.error" sig="void error( ::QRadioData::Error)"/>
+    <Function name="QRadioData.isAlternativeFrequenciesEnabled">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRadioData.radioText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioData.stationName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioData.programTypeName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioData.programType">
+      <Argument typename="QRadioData.ProgramType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QRadioData.stationId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioData.availability">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QRadioData.mediaObject" virtual="1">
+      <Argument typename="QMediaObject" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QRadioTuner" inherits="QMediaObject">
+    <Function name="QRadioTuner.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QRadioTuner.SearchMode">
+      <EnumMember name="QRadioTuner.SearchFast"/>
+      <EnumMember name="QRadioTuner.SearchGetStationId"/>
+    </Enum>
+    <Enum name="QRadioTuner.StereoMode">
+      <EnumMember name="QRadioTuner.ForceStereo"/>
+      <EnumMember name="QRadioTuner.ForceMono"/>
+      <EnumMember name="QRadioTuner.Auto"/>
+    </Enum>
+    <Enum name="QRadioTuner.Error">
+      <EnumMember name="QRadioTuner.NoError"/>
+      <EnumMember name="QRadioTuner.ResourceError"/>
+      <EnumMember name="QRadioTuner.OpenError"/>
+      <EnumMember name="QRadioTuner.OutOfRangeError"/>
+    </Enum>
+    <Enum name="QRadioTuner.Band">
+      <EnumMember name="QRadioTuner.AM"/>
+      <EnumMember name="QRadioTuner.FM"/>
+      <EnumMember name="QRadioTuner.SW"/>
+      <EnumMember name="QRadioTuner.LW"/>
+      <EnumMember name="QRadioTuner.FM2"/>
+    </Enum>
+    <Enum name="QRadioTuner.State">
+      <EnumMember name="QRadioTuner.ActiveState"/>
+      <EnumMember name="QRadioTuner.StoppedState"/>
+    </Enum>
+    <Signal default="1" name="QRadioTuner.antennaConnectedChanged" sig="void antennaConnectedChanged(bool)"/>
+    <Signal default="1" name="QRadioTuner.stationFound" sig="void stationFound(int,QString)"/>
+    <Signal default="1" name="QRadioTuner.mutedChanged" sig="void mutedChanged(bool)"/>
+    <Signal default="1" name="QRadioTuner.volumeChanged" sig="void volumeChanged(int)"/>
+    <Signal default="1" name="QRadioTuner.signalStrengthChanged" sig="void signalStrengthChanged(int)"/>
+    <Signal default="1" name="QRadioTuner.searchingChanged" sig="void searchingChanged(bool)"/>
+    <Signal default="1" name="QRadioTuner.stereoStatusChanged" sig="void stereoStatusChanged(bool)"/>
+    <Signal default="1" name="QRadioTuner.frequencyChanged" sig="void frequencyChanged(int)"/>
+    <Signal default="1" name="QRadioTuner.bandChanged" sig="void bandChanged( ::QRadioTuner::Band)"/>
+    <Signal default="1" name="QRadioTuner.stateChanged" sig="void stateChanged( ::QRadioTuner::State)"/>
+    <Function name="QRadioTuner.stop" slot="void stop()"/>
+    <Function name="QRadioTuner.start" slot="void start()"/>
+    <Function name="QRadioTuner.setMuted" slot="void setMuted(bool)">
+      <Argument typename="bool" name="muted"/>
+    </Function>
+    <Function name="QRadioTuner.setVolume" slot="void setVolume(int)">
+      <Argument typename="int" name="volume"/>
+    </Function>
+    <Function name="QRadioTuner.setFrequency" slot="void setFrequency(int)">
+      <Argument typename="int" name="frequency"/>
+    </Function>
+    <Function name="QRadioTuner.setBand" slot="void setBand( ::QRadioTuner::Band)">
+      <Argument typename="QRadioTuner.Band" typetype="enum" name="band"/>
+    </Function>
+    <Function name="QRadioTuner.cancelSearch" slot="void cancelSearch()"/>
+    <Function name="QRadioTuner.searchAllStations" slot="void searchAllStations( ::QRadioTuner::SearchMode = QRadioTuner.SearchFast)">
+      <Argument typename="QRadioTuner.SearchMode" typetype="enum" name="searchMode" default="QRadioTuner.SearchFast"/>
+    </Function>
+    <Function name="QRadioTuner.searchBackward" slot="void searchBackward()"/>
+    <Function name="QRadioTuner.searchForward" slot="void searchForward()"/>
+    <Function name="QRadioTuner.radioData">
+      <Argument typename="QRadioData" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.error">
+      <Argument typename="QRadioTuner.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QRadioTuner.error" sig="void error( ::QRadioTuner::Error)"/>
+    <Function name="QRadioTuner.isAntennaConnected">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.isSearching">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.isMuted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.volume">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.signalStrength">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.stereoMode">
+      <Argument typename="QRadioTuner.StereoMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.setStereoMode">
+      <Argument typename="QRadioTuner.StereoMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QRadioTuner.isStereo">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.frequencyRange">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QRadioTuner.Band" typetype="enum" name="band"/>
+    </Function>
+    <Function name="QRadioTuner.frequencyStep">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QRadioTuner.Band" typetype="enum" name="band"/>
+    </Function>
+    <Function name="QRadioTuner.frequency">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.isBandSupported">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QRadioTuner.Band" typetype="enum" name="b"/>
+    </Function>
+    <Function name="QRadioTuner.band">
+      <Argument typename="QRadioTuner.Band" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.state">
+      <Argument typename="QRadioTuner.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QRadioTuner.availability" virtual="1">
+      <Argument typename="QMultimedia.AvailabilityStatus" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSound" inherits="QObject">
+    <Function name="QSound.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSound.Loop">
+      <EnumMember name="QSound.Infinite"/>
+    </Enum>
+    <Function name="QSound.stop" slot="void stop()"/>
+    <Function name="QSound.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSound.fileName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSound.setLoops">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QSound.loopsRemaining">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSound.loops">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSound.play" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+    </Function>
+    <Function name="QSound.play" slot="void play()"/>
+  </Class>
+  <Class name="QSoundEffect" inherits="QObject">
+    <Function name="QSoundEffect.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSoundEffect.Status">
+      <EnumMember name="QSoundEffect.Null"/>
+      <EnumMember name="QSoundEffect.Loading"/>
+      <EnumMember name="QSoundEffect.Ready"/>
+      <EnumMember name="QSoundEffect.Error"/>
+    </Enum>
+    <Enum name="QSoundEffect.Loop">
+      <EnumMember name="QSoundEffect.Infinite"/>
+    </Enum>
+    <Function name="QSoundEffect.stop" slot="void stop()"/>
+    <Function name="QSoundEffect.play" slot="void play()"/>
+    <Signal default="1" name="QSoundEffect.categoryChanged" sig="void categoryChanged()"/>
+    <Signal default="1" name="QSoundEffect.statusChanged" sig="void statusChanged()"/>
+    <Signal default="1" name="QSoundEffect.playingChanged" sig="void playingChanged()"/>
+    <Signal default="1" name="QSoundEffect.loadedChanged" sig="void loadedChanged()"/>
+    <Signal default="1" name="QSoundEffect.mutedChanged" sig="void mutedChanged()"/>
+    <Signal default="1" name="QSoundEffect.volumeChanged" sig="void volumeChanged()"/>
+    <Signal default="1" name="QSoundEffect.loopsRemainingChanged" sig="void loopsRemainingChanged()"/>
+    <Signal default="1" name="QSoundEffect.loopCountChanged" sig="void loopCountChanged()"/>
+    <Signal default="1" name="QSoundEffect.sourceChanged" sig="void sourceChanged()"/>
+    <Function name="QSoundEffect.setCategory">
+      <Argument typename="QString" typetype="mappedtype" name="category"/>
+    </Function>
+    <Function name="QSoundEffect.category">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.status">
+      <Argument typename="QSoundEffect.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.isPlaying">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.isLoaded">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.setMuted">
+      <Argument typename="bool" name="muted"/>
+    </Function>
+    <Function name="QSoundEffect.isMuted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.setVolume">
+      <Argument typename="float" name="volume"/>
+    </Function>
+    <Function name="QSoundEffect.volume">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.setLoopCount">
+      <Argument typename="int" name="loopCount"/>
+    </Function>
+    <Function name="QSoundEffect.loopsRemaining">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.loopCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.setSource">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QSoundEffect.source">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSoundEffect.supportedMimeTypes" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QVideoFrame">
+    <Function name="QVideoFrame.__init__"/>
+    <Function name="QVideoFrame.__init__">
+      <Argument typename="QAbstractVideoBuffer" typetype="class" name="buffer"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QVideoFrame.__init__">
+      <Argument typename="int" name="bytes"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+      <Argument typename="int" name="bytesPerLine"/>
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QVideoFrame.__init__">
+      <Argument typename="QImage" typetype="class" name="image"/>
+    </Function>
+    <Function name="QVideoFrame.__init__">
+      <Argument typename="QVideoFrame" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QVideoFrame.PixelFormat">
+      <EnumMember name="QVideoFrame.Format_Invalid"/>
+      <EnumMember name="QVideoFrame.Format_ARGB32"/>
+      <EnumMember name="QVideoFrame.Format_ARGB32_Premultiplied"/>
+      <EnumMember name="QVideoFrame.Format_RGB32"/>
+      <EnumMember name="QVideoFrame.Format_RGB24"/>
+      <EnumMember name="QVideoFrame.Format_RGB565"/>
+      <EnumMember name="QVideoFrame.Format_RGB555"/>
+      <EnumMember name="QVideoFrame.Format_ARGB8565_Premultiplied"/>
+      <EnumMember name="QVideoFrame.Format_BGRA32"/>
+      <EnumMember name="QVideoFrame.Format_BGRA32_Premultiplied"/>
+      <EnumMember name="QVideoFrame.Format_BGR32"/>
+      <EnumMember name="QVideoFrame.Format_BGR24"/>
+      <EnumMember name="QVideoFrame.Format_BGR565"/>
+      <EnumMember name="QVideoFrame.Format_BGR555"/>
+      <EnumMember name="QVideoFrame.Format_BGRA5658_Premultiplied"/>
+      <EnumMember name="QVideoFrame.Format_AYUV444"/>
+      <EnumMember name="QVideoFrame.Format_AYUV444_Premultiplied"/>
+      <EnumMember name="QVideoFrame.Format_YUV444"/>
+      <EnumMember name="QVideoFrame.Format_YUV420P"/>
+      <EnumMember name="QVideoFrame.Format_YV12"/>
+      <EnumMember name="QVideoFrame.Format_UYVY"/>
+      <EnumMember name="QVideoFrame.Format_YUYV"/>
+      <EnumMember name="QVideoFrame.Format_NV12"/>
+      <EnumMember name="QVideoFrame.Format_NV21"/>
+      <EnumMember name="QVideoFrame.Format_IMC1"/>
+      <EnumMember name="QVideoFrame.Format_IMC2"/>
+      <EnumMember name="QVideoFrame.Format_IMC3"/>
+      <EnumMember name="QVideoFrame.Format_IMC4"/>
+      <EnumMember name="QVideoFrame.Format_Y8"/>
+      <EnumMember name="QVideoFrame.Format_Y16"/>
+      <EnumMember name="QVideoFrame.Format_Jpeg"/>
+      <EnumMember name="QVideoFrame.Format_CameraRaw"/>
+      <EnumMember name="QVideoFrame.Format_AdobeDng"/>
+      <EnumMember name="QVideoFrame.Format_User"/>
+    </Enum>
+    <Enum name="QVideoFrame.FieldType">
+      <EnumMember name="QVideoFrame.ProgressiveFrame"/>
+      <EnumMember name="QVideoFrame.TopField"/>
+      <EnumMember name="QVideoFrame.BottomField"/>
+      <EnumMember name="QVideoFrame.InterlacedFrame"/>
+    </Enum>
+    <Function name="QVideoFrame.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoFrame" typetype="class" name="other"/>
+    </Function>
+    <Function name="QVideoFrame.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoFrame" typetype="class" name="other"/>
+    </Function>
+    <Function name="QVideoFrame.planeCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.setMetaData">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QVideoFrame.metaData">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QVideoFrame.availableMetaData">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.imageFormatFromPixelFormat" static="1">
+      <Argument typename="QImage.Format" typetype="enum" dir="out"/>
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QVideoFrame.pixelFormatFromImageFormat" static="1">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" dir="out"/>
+      <Argument typename="QImage.Format" typetype="enum" name="format"/>
+    </Function>
+    <Function name="QVideoFrame.setEndTime">
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QVideoFrame.endTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.setStartTime">
+      <Argument typename="int" name="time"/>
+    </Function>
+    <Function name="QVideoFrame.startTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.handle">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.mappedBytes">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.bits">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.bits">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="int" name="plane"/>
+    </Function>
+    <Function name="QVideoFrame.bytesPerLine">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.bytesPerLine">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="plane"/>
+    </Function>
+    <Function name="QVideoFrame.unmap"/>
+    <Function name="QVideoFrame.map">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractVideoBuffer.MapMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QVideoFrame.mapMode">
+      <Argument typename="QAbstractVideoBuffer.MapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.isWritable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.isReadable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.isMapped">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.setFieldType">
+      <Argument typename="QVideoFrame.FieldType" typetype="enum"/>
+    </Function>
+    <Function name="QVideoFrame.fieldType">
+      <Argument typename="QVideoFrame.FieldType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.height">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.width">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.size">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.handleType">
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.pixelFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoFrame.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QVideoProbe" inherits="QObject">
+    <Function name="QVideoProbe.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QVideoProbe.flush" sig="void flush()"/>
+    <Signal default="1" name="QVideoProbe.videoFrameProbed" sig="void videoFrameProbed(const  ::QVideoFrame&amp;)"/>
+    <Function name="QVideoProbe.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoProbe.setSource">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaObject" typetype="class" name="source"/>
+    </Function>
+    <Function name="QVideoProbe.setSource">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QMediaRecorder" typetype="class" name="source"/>
+    </Function>
+  </Class>
+  <Class name="QVideoSurfaceFormat">
+    <Function name="QVideoSurfaceFormat.__init__"/>
+    <Function name="QVideoSurfaceFormat.__init__">
+      <Argument typename="QSize" typetype="class" name="size"/>
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" name="format"/>
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" name="type" default="QAbstractVideoBuffer.NoHandle"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.__init__">
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Enum name="QVideoSurfaceFormat.YCbCrColorSpace">
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_Undefined"/>
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_BT601"/>
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_BT709"/>
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_xvYCC601"/>
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_xvYCC709"/>
+      <EnumMember name="QVideoSurfaceFormat.YCbCr_JPEG"/>
+    </Enum>
+    <Enum name="QVideoSurfaceFormat.Direction">
+      <EnumMember name="QVideoSurfaceFormat.TopToBottom"/>
+      <EnumMember name="QVideoSurfaceFormat.BottomToTop"/>
+    </Enum>
+    <Function name="QVideoSurfaceFormat.setProperty">
+      <Argument typename="str" name="name"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.property">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="str" name="name"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.propertyNames">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.sizeHint">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setYCbCrColorSpace">
+      <Argument typename="QVideoSurfaceFormat.YCbCrColorSpace" typetype="enum" name="colorSpace"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.yCbCrColorSpace">
+      <Argument typename="QVideoSurfaceFormat.YCbCrColorSpace" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setPixelAspectRatio">
+      <Argument typename="QSize" typetype="class" name="ratio"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setPixelAspectRatio">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.pixelAspectRatio">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setFrameRate">
+      <Argument typename="float" name="rate"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.frameRate">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setScanLineDirection">
+      <Argument typename="QVideoSurfaceFormat.Direction" typetype="enum" name="direction"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.scanLineDirection">
+      <Argument typename="QVideoSurfaceFormat.Direction" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setViewport">
+      <Argument typename="QRect" typetype="class" name="viewport"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.viewport">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.frameHeight">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.frameWidth">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setFrameSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.setFrameSize">
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.frameSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.handleType">
+      <Argument typename="QAbstractVideoBuffer.HandleType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.pixelFormat">
+      <Argument typename="QVideoFrame.PixelFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+    <Function name="QVideoSurfaceFormat.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QVideoSurfaceFormat" typetype="class" name="format"/>
+    </Function>
+  </Class>
+</Module>
