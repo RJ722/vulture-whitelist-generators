@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtPrintSupport">
+  <Class name="QAbstractPrintDialog" inherits="QDialog">
+    <Function name="QAbstractPrintDialog.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QAbstractPrintDialog.PrintDialogOption">
+      <EnumMember name="QAbstractPrintDialog.None_"/>
+      <EnumMember name="QAbstractPrintDialog.PrintToFile"/>
+      <EnumMember name="QAbstractPrintDialog.PrintSelection"/>
+      <EnumMember name="QAbstractPrintDialog.PrintPageRange"/>
+      <EnumMember name="QAbstractPrintDialog.PrintCollateCopies"/>
+      <EnumMember name="QAbstractPrintDialog.PrintShowPageSize"/>
+      <EnumMember name="QAbstractPrintDialog.PrintCurrentPage"/>
+    </Enum>
+    <Enum name="QAbstractPrintDialog.PrintRange">
+      <EnumMember name="QAbstractPrintDialog.AllPages"/>
+      <EnumMember name="QAbstractPrintDialog.Selection"/>
+      <EnumMember name="QAbstractPrintDialog.PageRange"/>
+      <EnumMember name="QAbstractPrintDialog.CurrentPage"/>
+    </Enum>
+    <Function name="QAbstractPrintDialog.enabledOptions">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.setEnabledOptions">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.setOptionTabs">
+      <Argument typename="unknown-type" typetype="mappedtype" name="tabs"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.printer">
+      <Argument typename="QPrinter" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.toPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.fromPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.setFromTo">
+      <Argument typename="int" name="fromPage"/>
+      <Argument typename="int" name="toPage"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.maxPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.minPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.setMinMax">
+      <Argument typename="int" name="min"/>
+      <Argument typename="int" name="max"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.printRange">
+      <Argument typename="QAbstractPrintDialog.PrintRange" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.setPrintRange">
+      <Argument typename="QAbstractPrintDialog.PrintRange" typetype="enum" name="range"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.exec" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.exec_" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractPrintDialog.PrintDialogOptions" convert="1">
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__init__"/>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__init__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__ixor__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__xor__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__ior__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__or__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__iand__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__and__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__invert__">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractPrintDialog.PrintDialogOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPageSetupDialog" inherits="QDialog">
+    <Function name="QPageSetupDialog.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPageSetupDialog.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPageSetupDialog.printer">
+      <Argument typename="QPrinter" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPageSetupDialog.done" virtual="1">
+      <Argument typename="int" name="result"/>
+    </Function>
+    <Function name="QPageSetupDialog.open" virtual="1"/>
+    <Function name="QPageSetupDialog.open">
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QPageSetupDialog.exec" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPageSetupDialog.exec_" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPageSetupDialog.setVisible" virtual="1">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+  </Class>
+  <Class name="QPrintDialog" inherits="QAbstractPrintDialog">
+    <Function name="QPrintDialog.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPrintDialog.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QPrintDialog.accepted" sig="void accepted()"/>
+    <Signal name="QPrintDialog.accepted" sig="void accepted( ::QPrinter*)"/>
+    <Function name="QPrintDialog.open" virtual="1"/>
+    <Function name="QPrintDialog.open">
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QPrintDialog.setVisible" virtual="1">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+    <Function name="QPrintDialog.options">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrintDialog.setOptions">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QPrintDialog.testOption">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractPrintDialog.PrintDialogOption" typetype="enum" name="option"/>
+    </Function>
+    <Function name="QPrintDialog.setOption">
+      <Argument typename="QAbstractPrintDialog.PrintDialogOption" typetype="enum" name="option"/>
+      <Argument typename="bool" name="on" default="True"/>
+    </Function>
+    <Function name="QPrintDialog.done" virtual="1">
+      <Argument typename="int" name="result"/>
+    </Function>
+    <Function name="QPrintDialog.accept" virtual="1"/>
+    <Function name="QPrintDialog.exec" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrintDialog.exec_" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPrintEngine">
+    <Function name="QPrintEngine.__init__"/>
+    <Function name="QPrintEngine.__init__">
+      <Argument typename="QPrintEngine" typetype="class"/>
+    </Function>
+    <Enum name="QPrintEngine.PrintEnginePropertyKey">
+      <EnumMember name="QPrintEngine.PPK_CollateCopies"/>
+      <EnumMember name="QPrintEngine.PPK_ColorMode"/>
+      <EnumMember name="QPrintEngine.PPK_Creator"/>
+      <EnumMember name="QPrintEngine.PPK_DocumentName"/>
+      <EnumMember name="QPrintEngine.PPK_FullPage"/>
+      <EnumMember name="QPrintEngine.PPK_NumberOfCopies"/>
+      <EnumMember name="QPrintEngine.PPK_Orientation"/>
+      <EnumMember name="QPrintEngine.PPK_OutputFileName"/>
+      <EnumMember name="QPrintEngine.PPK_PageOrder"/>
+      <EnumMember name="QPrintEngine.PPK_PageRect"/>
+      <EnumMember name="QPrintEngine.PPK_PageSize"/>
+      <EnumMember name="QPrintEngine.PPK_PaperRect"/>
+      <EnumMember name="QPrintEngine.PPK_PaperSource"/>
+      <EnumMember name="QPrintEngine.PPK_PrinterName"/>
+      <EnumMember name="QPrintEngine.PPK_PrinterProgram"/>
+      <EnumMember name="QPrintEngine.PPK_Resolution"/>
+      <EnumMember name="QPrintEngine.PPK_SelectionOption"/>
+      <EnumMember name="QPrintEngine.PPK_SupportedResolutions"/>
+      <EnumMember name="QPrintEngine.PPK_WindowsPageSize"/>
+      <EnumMember name="QPrintEngine.PPK_FontEmbedding"/>
+      <EnumMember name="QPrintEngine.PPK_Duplex"/>
+      <EnumMember name="QPrintEngine.PPK_PaperSources"/>
+      <EnumMember name="QPrintEngine.PPK_CustomPaperSize"/>
+      <EnumMember name="QPrintEngine.PPK_PageMargins"/>
+      <EnumMember name="QPrintEngine.PPK_PaperSize"/>
+      <EnumMember name="QPrintEngine.PPK_CopyCount"/>
+      <EnumMember name="QPrintEngine.PPK_SupportsMultipleCopies"/>
+      <EnumMember name="QPrintEngine.PPK_PaperName"/>
+      <EnumMember name="QPrintEngine.PPK_QPageSize"/>
+      <EnumMember name="QPrintEngine.PPK_QPageMargins"/>
+      <EnumMember name="QPrintEngine.PPK_QPageLayout"/>
+      <EnumMember name="QPrintEngine.PPK_CustomBase"/>
+    </Enum>
+    <Function name="QPrintEngine.printerState" abstract="1" virtual="1">
+      <Argument typename="QPrinter.PrinterState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrintEngine.metric" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPaintDevice.PaintDeviceMetric" typetype="enum"/>
+    </Function>
+    <Function name="QPrintEngine.abort" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrintEngine.newPage" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrintEngine.property" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QPrintEngine.PrintEnginePropertyKey" typetype="enum" name="key"/>
+    </Function>
+    <Function name="QPrintEngine.setProperty" abstract="1" virtual="1">
+      <Argument typename="QPrintEngine.PrintEnginePropertyKey" typetype="enum" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+  </Class>
+  <Class name="QPrinter" inherits="QPagedPaintDevice">
+    <Function name="QPrinter.__init__">
+      <Argument typename="QPrinter.PrinterMode" typetype="enum" name="mode" default="QPrinter.ScreenResolution"/>
+    </Function>
+    <Function name="QPrinter.__init__">
+      <Argument typename="QPrinterInfo" typetype="class" name="printer"/>
+      <Argument typename="QPrinter.PrinterMode" typetype="enum" name="mode" default="QPrinter.ScreenResolution"/>
+    </Function>
+    <Enum name="QPrinter.DuplexMode">
+      <EnumMember name="QPrinter.DuplexNone"/>
+      <EnumMember name="QPrinter.DuplexAuto"/>
+      <EnumMember name="QPrinter.DuplexLongSide"/>
+      <EnumMember name="QPrinter.DuplexShortSide"/>
+    </Enum>
+    <Enum name="QPrinter.Unit">
+      <EnumMember name="QPrinter.Millimeter"/>
+      <EnumMember name="QPrinter.Point"/>
+      <EnumMember name="QPrinter.Inch"/>
+      <EnumMember name="QPrinter.Pica"/>
+      <EnumMember name="QPrinter.Didot"/>
+      <EnumMember name="QPrinter.Cicero"/>
+      <EnumMember name="QPrinter.DevicePixel"/>
+    </Enum>
+    <Enum name="QPrinter.PrintRange">
+      <EnumMember name="QPrinter.AllPages"/>
+      <EnumMember name="QPrinter.Selection"/>
+      <EnumMember name="QPrinter.PageRange"/>
+      <EnumMember name="QPrinter.CurrentPage"/>
+    </Enum>
+    <Enum name="QPrinter.OutputFormat">
+      <EnumMember name="QPrinter.NativeFormat"/>
+      <EnumMember name="QPrinter.PdfFormat"/>
+    </Enum>
+    <Enum name="QPrinter.PrinterState">
+      <EnumMember name="QPrinter.Idle"/>
+      <EnumMember name="QPrinter.Active"/>
+      <EnumMember name="QPrinter.Aborted"/>
+      <EnumMember name="QPrinter.Error"/>
+    </Enum>
+    <Enum name="QPrinter.PaperSource">
+      <EnumMember name="QPrinter.OnlyOne"/>
+      <EnumMember name="QPrinter.Lower"/>
+      <EnumMember name="QPrinter.Middle"/>
+      <EnumMember name="QPrinter.Manual"/>
+      <EnumMember name="QPrinter.Envelope"/>
+      <EnumMember name="QPrinter.EnvelopeManual"/>
+      <EnumMember name="QPrinter.Auto"/>
+      <EnumMember name="QPrinter.Tractor"/>
+      <EnumMember name="QPrinter.SmallFormat"/>
+      <EnumMember name="QPrinter.LargeFormat"/>
+      <EnumMember name="QPrinter.LargeCapacity"/>
+      <EnumMember name="QPrinter.Cassette"/>
+      <EnumMember name="QPrinter.FormSource"/>
+      <EnumMember name="QPrinter.MaxPageSource"/>
+      <EnumMember name="QPrinter.Upper"/>
+      <EnumMember name="QPrinter.CustomSource"/>
+      <EnumMember name="QPrinter.LastPaperSource"/>
+    </Enum>
+    <Enum name="QPrinter.ColorMode">
+      <EnumMember name="QPrinter.GrayScale"/>
+      <EnumMember name="QPrinter.Color"/>
+    </Enum>
+    <Enum name="QPrinter.PageOrder">
+      <EnumMember name="QPrinter.FirstPageFirst"/>
+      <EnumMember name="QPrinter.LastPageFirst"/>
+    </Enum>
+    <Enum name="QPrinter.Orientation">
+      <EnumMember name="QPrinter.Portrait"/>
+      <EnumMember name="QPrinter.Landscape"/>
+    </Enum>
+    <Enum name="QPrinter.PrinterMode">
+      <EnumMember name="QPrinter.ScreenResolution"/>
+      <EnumMember name="QPrinter.PrinterResolution"/>
+      <EnumMember name="QPrinter.HighResolution"/>
+    </Enum>
+    <Function name="QPrinter.paperName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPaperName">
+      <Argument typename="QString" typetype="mappedtype" name="paperName"/>
+    </Function>
+    <Function name="QPrinter.setEngines">
+      <Argument typename="QPrintEngine" typetype="class" name="printEngine"/>
+      <Argument typename="QPaintEngine" typetype="class" name="paintEngine"/>
+    </Function>
+    <Function name="QPrinter.metric" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPaintDevice.PaintDeviceMetric" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.getPageMargins">
+      <Argument typename="float" name="left" dir="out"/>
+      <Argument typename="float" name="top" dir="out"/>
+      <Argument typename="float" name="right" dir="out"/>
+      <Argument typename="float" name="bottom" dir="out"/>
+      <Argument typename="QPrinter.Unit" typetype="enum" name="unit"/>
+    </Function>
+    <Function name="QPrinter.setPageMargins">
+      <Argument typename="float" name="left"/>
+      <Argument typename="float" name="top"/>
+      <Argument typename="float" name="right"/>
+      <Argument typename="float" name="bottom"/>
+      <Argument typename="QPrinter.Unit" typetype="enum" name="unit"/>
+    </Function>
+    <Function name="QPrinter.setMargins" virtual="1">
+      <Argument typename="QPagedPaintDevice.Margins" typetype="class" name="m"/>
+    </Function>
+    <Function name="QPrinter.printRange">
+      <Argument typename="QPrinter.PrintRange" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPrintRange">
+      <Argument typename="QPrinter.PrintRange" typetype="enum" name="range"/>
+    </Function>
+    <Function name="QPrinter.toPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrinter.fromPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setFromTo">
+      <Argument typename="int" name="fromPage"/>
+      <Argument typename="int" name="toPage"/>
+    </Function>
+    <Function name="QPrinter.printEngine">
+      <Argument typename="QPrintEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinter.paintEngine" virtual="1">
+      <Argument typename="QPaintEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinter.printerState">
+      <Argument typename="QPrinter.PrinterState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.abort">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.newPage" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPrinterSelectionOption">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.printerSelectionOption">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.pageRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinter.pageRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QPrinter.Unit" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.paperRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinter.paperRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QPrinter.Unit" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.doubleSidedPrinting">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setDoubleSidedPrinting">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QPrinter.fontEmbeddingEnabled">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setFontEmbeddingEnabled">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QPrinter.supportedResolutions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.duplex">
+      <Argument typename="QPrinter.DuplexMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setDuplex">
+      <Argument typename="QPrinter.DuplexMode" typetype="enum" name="duplex"/>
+    </Function>
+    <Function name="QPrinter.paperSource">
+      <Argument typename="QPrinter.PaperSource" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPaperSource">
+      <Argument typename="QPrinter.PaperSource" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.supportsMultipleCopies">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.copyCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setCopyCount">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QPrinter.fullPage">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setFullPage">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QPrinter.collateCopies">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setCollateCopies">
+      <Argument typename="bool" name="collate"/>
+    </Function>
+    <Function name="QPrinter.colorMode">
+      <Argument typename="QPrinter.ColorMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setColorMode">
+      <Argument typename="QPrinter.ColorMode" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.resolution">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setResolution">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QPrinter.pageOrder">
+      <Argument typename="QPrinter.PageOrder" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPageOrder">
+      <Argument typename="QPrinter.PageOrder" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.paperSize">
+      <Argument typename="QPagedPaintDevice.PageSize" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.paperSize">
+      <Argument typename="QSizeF" typetype="class" dir="out"/>
+      <Argument typename="QPrinter.Unit" typetype="enum" name="unit"/>
+    </Function>
+    <Function name="QPrinter.setPaperSize">
+      <Argument typename="QPagedPaintDevice.PageSize" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.setPaperSize">
+      <Argument typename="QSizeF" typetype="class" name="paperSize"/>
+      <Argument typename="QPrinter.Unit" typetype="enum" name="unit"/>
+    </Function>
+    <Function name="QPrinter.setPageSizeMM" virtual="1">
+      <Argument typename="QSizeF" typetype="class" name="size"/>
+    </Function>
+    <Function name="QPrinter.orientation">
+      <Argument typename="QPrinter.Orientation" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setOrientation">
+      <Argument typename="QPrinter.Orientation" typetype="enum"/>
+    </Function>
+    <Function name="QPrinter.creator">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setCreator">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.docName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setDocName">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.printProgram">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPrintProgram">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.outputFileName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setOutputFileName">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinter.printerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setPrinterName">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QPrinter.outputFormat">
+      <Argument typename="QPrinter.OutputFormat" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinter.setOutputFormat">
+      <Argument typename="QPrinter.OutputFormat" typetype="enum" name="format"/>
+    </Function>
+  </Class>
+  <Class name="QPrinterInfo">
+    <Function name="QPrinterInfo.__init__"/>
+    <Function name="QPrinterInfo.__init__">
+      <Argument typename="QPrinterInfo" typetype="class" name="src"/>
+    </Function>
+    <Function name="QPrinterInfo.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+    </Function>
+    <Function name="QPrinterInfo.supportedDuplexModes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.defaultDuplexMode">
+      <Argument typename="QPrinter.DuplexMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.defaultPrinterName" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.availablePrinterNames" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.supportedResolutions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.maximumPhysicalPageSize">
+      <Argument typename="QPageSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.minimumPhysicalPageSize">
+      <Argument typename="QPageSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.supportsCustomPageSizes">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.defaultPageSize">
+      <Argument typename="QPageSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.supportedPageSizes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.state">
+      <Argument typename="QPrinter.PrinterState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.isRemote">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.printerInfo" static="1">
+      <Argument typename="QPrinterInfo" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="printerName"/>
+    </Function>
+    <Function name="QPrinterInfo.makeAndModel">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.location">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.defaultPrinter" static="1">
+      <Argument typename="QPrinterInfo" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.availablePrinters" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.supportedSizesWithNames">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.supportedPaperSizes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.isDefault">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPrinterInfo.printerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPrintPreviewDialog" inherits="QDialog">
+    <Function name="QPrintPreviewDialog.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Function name="QPrintPreviewDialog.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Signal default="1" name="QPrintPreviewDialog.paintRequested" sig="void paintRequested( ::QPrinter*)"/>
+    <Function name="QPrintPreviewDialog.done" virtual="1">
+      <Argument typename="int" name="result"/>
+    </Function>
+    <Function name="QPrintPreviewDialog.printer">
+      <Argument typename="QPrinter" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPrintPreviewDialog.open" virtual="1"/>
+    <Function name="QPrintPreviewDialog.open">
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QPrintPreviewDialog.setVisible" virtual="1">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+  </Class>
+  <Class name="QPrintPreviewWidget" inherits="QWidget">
+    <Function name="QPrintPreviewWidget.__init__">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="Qt.WindowFlags()"/>
+    </Function>
+    <Enum name="QPrintPreviewWidget.ZoomMode">
+      <EnumMember name="QPrintPreviewWidget.CustomZoom"/>
+      <EnumMember name="QPrintPreviewWidget.FitToWidth"/>
+      <EnumMember name="QPrintPreviewWidget.FitInView"/>
+    </Enum>
+    <Enum name="QPrintPreviewWidget.ViewMode">
+      <EnumMember name="QPrintPreviewWidget.SinglePageView"/>
+      <EnumMember name="QPrintPreviewWidget.FacingPagesView"/>
+      <EnumMember name="QPrintPreviewWidget.AllPagesView"/>
+    </Enum>
+    <Function name="QPrintPreviewWidget.pageCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Signal default="1" name="QPrintPreviewWidget.previewChanged" sig="void previewChanged()"/>
+    <Signal default="1" name="QPrintPreviewWidget.paintRequested" sig="void paintRequested( ::QPrinter*)"/>
+    <Function name="QPrintPreviewWidget.updatePreview" slot="void updatePreview()"/>
+    <Function name="QPrintPreviewWidget.setAllPagesViewMode" slot="void setAllPagesViewMode()"/>
+    <Function name="QPrintPreviewWidget.setFacingPagesViewMode" slot="void setFacingPagesViewMode()"/>
+    <Function name="QPrintPreviewWidget.setSinglePageViewMode" slot="void setSinglePageViewMode()"/>
+    <Function name="QPrintPreviewWidget.setPortraitOrientation" slot="void setPortraitOrientation()"/>
+    <Function name="QPrintPreviewWidget.setLandscapeOrientation" slot="void setLandscapeOrientation()"/>
+    <Function name="QPrintPreviewWidget.fitInView" slot="void fitInView()"/>
+    <Function name="QPrintPreviewWidget.fitToWidth" slot="void fitToWidth()"/>
+    <Function name="QPrintPreviewWidget.setCurrentPage" slot="void setCurrentPage(int)">
+      <Argument typename="int" name="pageNumber"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.setZoomMode" slot="void setZoomMode( ::QPrintPreviewWidget::ZoomMode)">
+      <Argument typename="QPrintPreviewWidget.ZoomMode" typetype="enum" name="zoomMode"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.setViewMode" slot="void setViewMode( ::QPrintPreviewWidget::ViewMode)">
+      <Argument typename="QPrintPreviewWidget.ViewMode" typetype="enum" name="viewMode"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.setOrientation" slot="void setOrientation( ::QPrinter::Orientation)">
+      <Argument typename="QPrinter.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.setZoomFactor" slot="void setZoomFactor( ::qreal)">
+      <Argument typename="float" name="zoomFactor"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.zoomOut" slot="void zoomOut( ::qreal = 1.1)">
+      <Argument typename="float" name="factor" default="1.1"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.zoomIn" slot="void zoomIn( ::qreal = 1.1)">
+      <Argument typename="float" name="factor" default="1.1"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.print" slot="void print()"/>
+    <Function name="QPrintPreviewWidget.print_" slot="void print()"/>
+    <Function name="QPrintPreviewWidget.setVisible" slot="void setVisible(bool)" virtual="1">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.currentPage">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.zoomMode">
+      <Argument typename="QPrintPreviewWidget.ZoomMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.viewMode">
+      <Argument typename="QPrintPreviewWidget.ViewMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.orientation">
+      <Argument typename="QPrinter.Orientation" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPrintPreviewWidget.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+</Module>

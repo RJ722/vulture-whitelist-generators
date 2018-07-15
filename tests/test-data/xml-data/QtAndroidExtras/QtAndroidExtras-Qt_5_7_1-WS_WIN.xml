@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtAndroidExtras">
+  <Class name="QtAndroid">
+    <Function name="QtAndroid.hideSplashScreen" static="1"/>
+    <Function name="QtAndroid.androidService" static="1">
+      <Argument typename="QAndroidJniObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QtAndroid.androidActivity" static="1">
+      <Argument typename="QAndroidJniObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QtAndroid.androidSdkVersion" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAndroidJniObject">
+    <Function name="QAndroidJniObject.__init__"/>
+    <Function name="QAndroidJniObject.__init__">
+      <Argument typename="str" name="className"/>
+    </Function>
+    <Function name="QAndroidJniObject.__init__">
+      <Argument typename="QAndroidJniObject" typetype="class"/>
+    </Function>
+    <Function name="QAndroidJniObject.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAndroidJniObject" typetype="class"/>
+    </Function>
+    <Function name="QAndroidJniObject.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAndroidJniObject" typetype="class"/>
+    </Function>
+    <Function name="QAndroidJniObject.isClassAvailable" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="str" name="className"/>
+    </Function>
+    <Function name="QAndroidJniObject.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAndroidJniObject.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAndroidJniObject.callStaticMethod" static="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="str" name="className"/>
+      <Argument typename="str" name="methodName"/>
+    </Function>
+    <Function name="QAndroidJniObject.callMethod">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="str" name="methodName"/>
+    </Function>
+  </Class>
+</Module>

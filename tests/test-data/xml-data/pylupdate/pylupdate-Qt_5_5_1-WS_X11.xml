@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<Module version="0" name="pylupdate">
+  <Class name="MetaTranslator">
+    <Function name="MetaTranslator.__init__"/>
+    <Function name="MetaTranslator.__init__">
+      <Argument typename="MetaTranslator" typetype="class" name="tor"/>
+    </Function>
+    <Function name="MetaTranslator.setCodec">
+      <Argument typename="str" name="name"/>
+    </Function>
+    <Function name="MetaTranslator.stripEmptyContexts"/>
+    <Function name="MetaTranslator.stripObsoleteMessages"/>
+    <Function name="MetaTranslator.save">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+    </Function>
+    <Function name="MetaTranslator.load">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+    </Function>
+  </Class>
+  <Function name="proFileTagMap" static="1">
+    <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    <Argument typename="QString" typetype="mappedtype" name="text"/>
+  </Function>
+  <Function name="merge" static="1">
+    <Argument typename="MetaTranslator" typetype="class" name="tor"/>
+    <Argument typename="MetaTranslator" typetype="class" name="virginTor"/>
+    <Argument typename="MetaTranslator" typetype="class" name="out"/>
+    <Argument typename="bool" name="noObsolete"/>
+    <Argument typename="bool" name="verbose"/>
+    <Argument typename="QString" typetype="mappedtype" name="filename"/>
+  </Function>
+  <Function name="fetchtr_ui" static="1">
+    <Argument typename="str" name="fileName"/>
+    <Argument typename="MetaTranslator" typetype="class" name="tor"/>
+    <Argument typename="str" name="defaultContext"/>
+    <Argument typename="bool" name="mustExist"/>
+  </Function>
+  <Function name="fetchtr_py" static="1">
+    <Argument typename="str" name="fileName"/>
+    <Argument typename="MetaTranslator" typetype="class" name="tor"/>
+    <Argument typename="str" name="defaultContext"/>
+    <Argument typename="bool" name="mustExist"/>
+    <Argument typename="str" name="codecForSource"/>
+    <Argument typename="str" name="tr_func"/>
+    <Argument typename="str" name="translate_func"/>
+  </Function>
+</Module>

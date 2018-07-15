@@ -1,0 +1,871 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtDesigner">
+  <Class name="QDesignerActionEditorInterface" inherits="QWidget">
+    <Function name="QDesignerActionEditorInterface.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QDesignerActionEditorInterface.setFormWindow" abstract="1" slot="void setFormWindow( ::QDesignerFormWindowInterface*)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" name="formWindow"/>
+    </Function>
+    <Function name="QDesignerActionEditorInterface.unmanageAction" abstract="1" virtual="1">
+      <Argument typename="QAction" typetype="class" name="action"/>
+    </Function>
+    <Function name="QDesignerActionEditorInterface.manageAction" abstract="1" virtual="1">
+      <Argument typename="QAction" typetype="class" name="action"/>
+    </Function>
+    <Function name="QDesignerActionEditorInterface.core" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractFormBuilder">
+    <Function name="QAbstractFormBuilder.__init__"/>
+    <Function name="QAbstractFormBuilder.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractFormBuilder.workingDirectory">
+      <Argument typename="QDir" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractFormBuilder.setWorkingDirectory">
+      <Argument typename="QDir" typetype="class" name="directory"/>
+    </Function>
+    <Function name="QAbstractFormBuilder.save" virtual="1">
+      <Argument typename="QIODevice" typetype="class" name="dev"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QAbstractFormBuilder.load" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerFormEditorInterface" inherits="QObject">
+    <Function name="QDesignerFormEditorInterface.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.setActionEditor">
+      <Argument typename="QDesignerActionEditorInterface" typetype="class" name="actionEditor"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.setObjectInspector">
+      <Argument typename="QDesignerObjectInspectorInterface" typetype="class" name="objectInspector"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.setPropertyEditor">
+      <Argument typename="QDesignerPropertyEditorInterface" typetype="class" name="propertyEditor"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.setWidgetBox">
+      <Argument typename="QDesignerWidgetBoxInterface" typetype="class" name="widgetBox"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.actionEditor">
+      <Argument typename="QDesignerActionEditorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.formWindowManager">
+      <Argument typename="QDesignerFormWindowManagerInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.objectInspector">
+      <Argument typename="QDesignerObjectInspectorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.propertyEditor">
+      <Argument typename="QDesignerPropertyEditorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.widgetBox">
+      <Argument typename="QDesignerWidgetBoxInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.topLevel">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormEditorInterface.extensionManager">
+      <Argument typename="QExtensionManager" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerFormWindowInterface" inherits="QWidget">
+    <Function name="QDesignerFormWindowInterface.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Enum name="QDesignerFormWindowInterface.FeatureFlag">
+      <EnumMember name="QDesignerFormWindowInterface.EditFeature"/>
+      <EnumMember name="QDesignerFormWindowInterface.GridFeature"/>
+      <EnumMember name="QDesignerFormWindowInterface.TabOrderFeature"/>
+      <EnumMember name="QDesignerFormWindowInterface.DefaultFeature"/>
+    </Enum>
+    <Function name="QDesignerFormWindowInterface.activateResourceFilePaths">
+      <Argument typename="QStringList" typetype="mappedtype" name="paths"/>
+      <Argument typename="int" name="errorCount" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMessages" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.formContainer" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.activeResourceFilePaths">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.checkContents" abstract="1" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Signal default="1" name="QDesignerFormWindowInterface.objectRemoved" sig="void objectRemoved( ::QObject*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.widgetRemoved" sig="void widgetRemoved( ::QWidget*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.changed" sig="void changed()"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.activated" sig="void activated( ::QWidget*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.aboutToUnmanageWidget" sig="void aboutToUnmanageWidget( ::QWidget*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.widgetUnmanaged" sig="void widgetUnmanaged( ::QWidget*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.widgetManaged" sig="void widgetManaged( ::QWidget*)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.resourceFilesChanged" sig="void resourceFilesChanged()"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.geometryChanged" sig="void geometryChanged()"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.selectionChanged" sig="void selectionChanged()"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.featureChanged" sig="void featureChanged( ::QDesignerFormWindowInterface::Feature)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.fileNameChanged" sig="void fileNameChanged(const QString&amp;)"/>
+    <Signal default="1" name="QDesignerFormWindowInterface.mainContainerChanged" sig="void mainContainerChanged( ::QWidget*)"/>
+    <Function name="QDesignerFormWindowInterface.setFileName" abstract="1" slot="void setFileName(const QString&amp;)" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setGrid" abstract="1" slot="void setGrid(const  ::QPoint&amp;)" virtual="1">
+      <Argument typename="QPoint" typetype="class" name="grid"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.selectWidget" abstract="1" slot="void selectWidget( ::QWidget*,bool = 1)" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="bool" name="select" default="True"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.clearSelection" abstract="1" slot="void clearSelection(bool = 1)" virtual="1">
+      <Argument typename="bool" name="update" default="True"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setDirty" abstract="1" slot="void setDirty(bool)" virtual="1">
+      <Argument typename="bool" name="dirty"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setFeatures" abstract="1" slot="void setFeatures( ::QDesignerFormWindowInterface::Feature)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.unmanageWidget" abstract="1" slot="void unmanageWidget( ::QWidget*)" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.manageWidget" abstract="1" slot="void manageWidget( ::QWidget*)" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.removeResourceFile" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.addResourceFile" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.resourceFiles" abstract="1" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.emitSelectionChanged" abstract="1" virtual="1"/>
+    <Function name="QDesignerFormWindowInterface.findFormWindow" static="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="w"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.findFormWindow" static="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="obj"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.isDirty" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.isManaged" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setMainContainer" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="mainContainer"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.mainContainer" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.grid" abstract="1" virtual="1">
+      <Argument typename="QPoint" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.cursor" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowCursorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.core" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setIncludeHints" abstract="1" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" name="includeHints"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.includeHints" abstract="1" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setExportMacro" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="exportMacro"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.exportMacro" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setPixmapFunction" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="pixmapFunction"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.pixmapFunction" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setLayoutFunction" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="margin"/>
+      <Argument typename="QString" typetype="mappedtype" name="spacing"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.layoutFunction" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="margin" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="spacing" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setLayoutDefault" abstract="1" virtual="1">
+      <Argument typename="int" name="margin"/>
+      <Argument typename="int" name="spacing"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.layoutDefault" abstract="1" virtual="1">
+      <Argument typename="int" name="margin" dir="out"/>
+      <Argument typename="int" name="spacing" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setComment" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="comment"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.comment" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setAuthor" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="author"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.author" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.hasFeature" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.features" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setContents" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="dev"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorMessage" default="''"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.setContents" abstract="1" slot="bool setContents(const QString&amp;)" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="contents"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.contents" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.absoluteDir" abstract="1" virtual="1">
+      <Argument typename="QDir" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.fileName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerFormWindowInterface.Feature" convert="1">
+    <Function name="QDesignerFormWindowInterface.Feature.__init__"/>
+    <Function name="QDesignerFormWindowInterface.Feature.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__init__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__ixor__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__xor__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__ior__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__or__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__iand__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__and__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__invert__">
+      <Argument typename="QDesignerFormWindowInterface.Feature" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowInterface.Feature.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerFormWindowCursorInterface">
+    <Function name="QDesignerFormWindowCursorInterface.__init__"/>
+    <Function name="QDesignerFormWindowCursorInterface.__init__">
+      <Argument typename="QDesignerFormWindowCursorInterface" typetype="class"/>
+    </Function>
+    <Enum name="QDesignerFormWindowCursorInterface.MoveMode">
+      <EnumMember name="QDesignerFormWindowCursorInterface.MoveAnchor"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.KeepAnchor"/>
+    </Enum>
+    <Enum name="QDesignerFormWindowCursorInterface.MoveOperation">
+      <EnumMember name="QDesignerFormWindowCursorInterface.NoMove"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Start"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.End"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Next"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Prev"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Left"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Right"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Up"/>
+      <EnumMember name="QDesignerFormWindowCursorInterface.Down"/>
+    </Enum>
+    <Function name="QDesignerFormWindowCursorInterface.isWidgetSelected">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.resetWidgetProperty" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.setWidgetProperty" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.setProperty" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.selectedWidget" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.selectedWidgetCount" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.hasSelection" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.widget" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.widgetCount" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.current" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.setPosition" abstract="1" virtual="1">
+      <Argument typename="int" name="pos"/>
+      <Argument typename="QDesignerFormWindowCursorInterface.MoveMode" typetype="enum" name="mode" default="QDesignerFormWindowCursorInterface.MoveAnchor"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.position" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.movePosition" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QDesignerFormWindowCursorInterface.MoveOperation" typetype="enum" name="op"/>
+      <Argument typename="QDesignerFormWindowCursorInterface.MoveMode" typetype="enum" name="mode" default="QDesignerFormWindowCursorInterface.MoveAnchor"/>
+    </Function>
+    <Function name="QDesignerFormWindowCursorInterface.formWindow" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerFormWindowManagerInterface" inherits="QObject">
+    <Function name="QDesignerFormWindowManagerInterface.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QDesignerFormWindowManagerInterface.ActionGroup">
+      <EnumMember name="QDesignerFormWindowManagerInterface.StyledPreviewActionGroup"/>
+    </Enum>
+    <Enum name="QDesignerFormWindowManagerInterface.Action">
+      <EnumMember name="QDesignerFormWindowManagerInterface.CutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.CopyAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.PasteAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.DeleteAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.SelectAllAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.LowerAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.RaiseAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.UndoAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.RedoAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.HorizontalLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.VerticalLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.SplitHorizontalAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.SplitVerticalAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.GridLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.FormLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.BreakLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.AdjustSizeAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.SimplifyLayoutAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.DefaultPreviewAction"/>
+      <EnumMember name="QDesignerFormWindowManagerInterface.FormWindowSettingsDialogAction"/>
+    </Enum>
+    <Function name="QDesignerFormWindowManagerInterface.showPluginDialog" abstract="1" slot="void showPluginDialog()" virtual="1"/>
+    <Function name="QDesignerFormWindowManagerInterface.closeAllPreviews" abstract="1" slot="void closeAllPreviews()" virtual="1"/>
+    <Function name="QDesignerFormWindowManagerInterface.showPreview" abstract="1" slot="void showPreview()" virtual="1"/>
+    <Function name="QDesignerFormWindowManagerInterface.actionGroup" abstract="1" virtual="1">
+      <Argument typename="QActionGroup" typetype="class" dir="out"/>
+      <Argument typename="QDesignerFormWindowManagerInterface.ActionGroup" typetype="enum" name="actionGroup"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.action" abstract="1" virtual="1">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QDesignerFormWindowManagerInterface.Action" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.setActiveFormWindow" abstract="1" slot="void setActiveFormWindow( ::QDesignerFormWindowInterface*)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" name="formWindow"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.removeFormWindow" abstract="1" slot="void removeFormWindow( ::QDesignerFormWindowInterface*)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" name="formWindow"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.addFormWindow" abstract="1" slot="void addFormWindow( ::QDesignerFormWindowInterface*)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" name="formWindow"/>
+    </Function>
+    <Signal default="1" name="QDesignerFormWindowManagerInterface.formWindowSettingsChanged" sig="void formWindowSettingsChanged( ::QDesignerFormWindowInterface*)"/>
+    <Signal default="1" name="QDesignerFormWindowManagerInterface.activeFormWindowChanged" sig="void activeFormWindowChanged( ::QDesignerFormWindowInterface*)"/>
+    <Signal default="1" name="QDesignerFormWindowManagerInterface.formWindowRemoved" sig="void formWindowRemoved( ::QDesignerFormWindowInterface*)"/>
+    <Signal default="1" name="QDesignerFormWindowManagerInterface.formWindowAdded" sig="void formWindowAdded( ::QDesignerFormWindowInterface*)"/>
+    <Function name="QDesignerFormWindowManagerInterface.core" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.createFormWindow" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.formWindow" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.formWindowCount" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.activeFormWindow" abstract="1" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.actionSimplifyLayout">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerFormWindowManagerInterface.actionFormLayout">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerObjectInspectorInterface" inherits="QWidget">
+    <Function name="QDesignerObjectInspectorInterface.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QDesignerObjectInspectorInterface.setFormWindow" abstract="1" slot="void setFormWindow( ::QDesignerFormWindowInterface*)" virtual="1">
+      <Argument typename="QDesignerFormWindowInterface" typetype="class" name="formWindow"/>
+    </Function>
+    <Function name="QDesignerObjectInspectorInterface.core" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerPropertyEditorInterface" inherits="QWidget">
+    <Function name="QDesignerPropertyEditorInterface.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.setReadOnly" abstract="1" slot="void setReadOnly(bool)" virtual="1">
+      <Argument typename="bool" name="readOnly"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.setPropertyValue" abstract="1" slot="void setPropertyValue(const QString&amp;,const  ::QVariant&amp;,bool = 1)" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+      <Argument typename="bool" name="changed" default="True"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.setObject" abstract="1" slot="void setObject( ::QObject*)" virtual="1">
+      <Argument typename="QObject" typetype="class" name="object"/>
+    </Function>
+    <Signal default="1" name="QDesignerPropertyEditorInterface.propertyChanged" sig="void propertyChanged(const QString&amp;,const  ::QVariant&amp;)"/>
+    <Function name="QDesignerPropertyEditorInterface.currentPropertyName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.object" abstract="1" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.isReadOnly" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerPropertyEditorInterface.core" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerWidgetBoxInterface" inherits="QWidget">
+    <Function name="QDesignerWidgetBoxInterface.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="Qt.WindowFlags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QDesignerWidgetBoxInterface.save" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerWidgetBoxInterface.load" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerWidgetBoxInterface.fileName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerWidgetBoxInterface.setFileName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="file_name"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerContainerExtension">
+    <Function name="QDesignerContainerExtension.__init__"/>
+    <Function name="QDesignerContainerExtension.__init__">
+      <Argument typename="QDesignerContainerExtension" typetype="class"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.canRemove" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.canAddWidget" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.remove" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.insertWidget" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.addWidget" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="widget"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.setCurrentIndex" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.currentIndex" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.widget" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerContainerExtension.count" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerCustomWidgetInterface">
+    <Function name="QDesignerCustomWidgetInterface.__init__"/>
+    <Function name="QDesignerCustomWidgetInterface.__init__">
+      <Argument typename="QDesignerCustomWidgetInterface" typetype="class"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.codeTemplate" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.domXml" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.initialize" virtual="1">
+      <Argument typename="QDesignerFormEditorInterface" typetype="class" name="core"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.isInitialized" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.createWidget" abstract="1" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.isContainer" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.icon" abstract="1" virtual="1">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.includeFile" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.whatsThis" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.toolTip" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.group" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetInterface.name" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerCustomWidgetCollectionInterface">
+    <Function name="QDesignerCustomWidgetCollectionInterface.__init__"/>
+    <Function name="QDesignerCustomWidgetCollectionInterface.__init__">
+      <Argument typename="QDesignerCustomWidgetCollectionInterface" typetype="class"/>
+    </Function>
+    <Function name="QDesignerCustomWidgetCollectionInterface.customWidgets" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractExtensionFactory">
+    <Function name="QAbstractExtensionFactory.__init__"/>
+    <Function name="QAbstractExtensionFactory.__init__">
+      <Argument typename="QAbstractExtensionFactory" typetype="class"/>
+    </Function>
+    <Function name="QAbstractExtensionFactory.extension" abstract="1" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+  </Class>
+  <Class name="QExtensionFactory" inherits="QObject QAbstractExtensionFactory">
+    <Function name="QExtensionFactory.__init__">
+      <Argument typename="QExtensionManager" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QExtensionFactory.createExtension" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QExtensionFactory.extensionManager">
+      <Argument typename="QExtensionManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QExtensionFactory.extension" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractExtensionManager">
+    <Function name="QAbstractExtensionManager.__init__"/>
+    <Function name="QAbstractExtensionManager.__init__">
+      <Argument typename="QAbstractExtensionManager" typetype="class"/>
+    </Function>
+    <Function name="QAbstractExtensionManager.extension" abstract="1" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+    <Function name="QAbstractExtensionManager.unregisterExtensions" abstract="1" virtual="1">
+      <Argument typename="QAbstractExtensionFactory" typetype="class" name="factory"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+    <Function name="QAbstractExtensionManager.registerExtensions" abstract="1" virtual="1">
+      <Argument typename="QAbstractExtensionFactory" typetype="class" name="factory"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+  </Class>
+  <Class name="QFormBuilder" inherits="QAbstractFormBuilder">
+    <Function name="QFormBuilder.__init__"/>
+    <Function name="QFormBuilder.customWidgets">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QFormBuilder.setPluginPath">
+      <Argument typename="QStringList" typetype="mappedtype" name="pluginPaths"/>
+    </Function>
+    <Function name="QFormBuilder.addPluginPath">
+      <Argument typename="QString" typetype="mappedtype" name="pluginPath"/>
+    </Function>
+    <Function name="QFormBuilder.clearPluginPaths"/>
+    <Function name="QFormBuilder.pluginPaths">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerMemberSheetExtension">
+    <Function name="QDesignerMemberSheetExtension.__init__"/>
+    <Function name="QDesignerMemberSheetExtension.__init__">
+      <Argument typename="QDesignerMemberSheetExtension" typetype="class"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.parameterNames" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.parameterTypes" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.signature" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.declaredInClass" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.inheritedFromWidget" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.isSlot" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.isSignal" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.setVisible" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="bool" name="b"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.isVisible" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.setMemberGroup" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QString" typetype="mappedtype" name="group"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.memberGroup" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.memberName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.indexOf" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerMemberSheetExtension.count" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerPropertySheetExtension">
+    <Function name="QDesignerPropertySheetExtension.__init__"/>
+    <Function name="QDesignerPropertySheetExtension.__init__">
+      <Argument typename="QDesignerPropertySheetExtension" typetype="class"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.isEnabled" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.setChanged" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="bool" name="changed"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.isChanged" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.setProperty" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.property" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.setAttribute" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="bool" name="b"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.isAttribute" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.setVisible" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="bool" name="b"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.isVisible" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.reset" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.hasReset" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.setPropertyGroup" abstract="1" virtual="1">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QString" typetype="mappedtype" name="group"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.propertyGroup" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.propertyName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.indexOf" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDesignerPropertySheetExtension.count" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QExtensionManager" inherits="QObject QAbstractExtensionManager">
+    <Function name="QExtensionManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QExtensionManager.extension" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid"/>
+    </Function>
+    <Function name="QExtensionManager.unregisterExtensions" virtual="1">
+      <Argument typename="QAbstractExtensionFactory" typetype="class" name="factory"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid" default="''"/>
+    </Function>
+    <Function name="QExtensionManager.registerExtensions" virtual="1">
+      <Argument typename="QAbstractExtensionFactory" typetype="class" name="factory"/>
+      <Argument typename="QString" typetype="mappedtype" name="iid" default="''"/>
+    </Function>
+  </Class>
+  <Class name="QDesignerTaskMenuExtension">
+    <Function name="QDesignerTaskMenuExtension.__init__"/>
+    <Function name="QDesignerTaskMenuExtension.__init__">
+      <Argument typename="QDesignerTaskMenuExtension" typetype="class"/>
+    </Function>
+    <Function name="QDesignerTaskMenuExtension.preferredEditAction" virtual="1">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDesignerTaskMenuExtension.taskActions" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerContainerExtension" inherits="QObject QDesignerContainerExtension">
+    <Function name="QPyDesignerContainerExtension.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerCustomWidgetCollectionPlugin" inherits="QObject QDesignerCustomWidgetCollectionInterface">
+    <Function name="QPyDesignerCustomWidgetCollectionPlugin.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerCustomWidgetPlugin" inherits="QObject QDesignerCustomWidgetInterface">
+    <Function name="QPyDesignerCustomWidgetPlugin.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerMemberSheetExtension" inherits="QObject QDesignerMemberSheetExtension">
+    <Function name="QPyDesignerMemberSheetExtension.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerPropertySheetExtension" inherits="QObject QDesignerPropertySheetExtension">
+    <Function name="QPyDesignerPropertySheetExtension.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+  <Class name="QPyDesignerTaskMenuExtension" inherits="QObject QDesignerTaskMenuExtension">
+    <Function name="QPyDesignerTaskMenuExtension.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+</Module>

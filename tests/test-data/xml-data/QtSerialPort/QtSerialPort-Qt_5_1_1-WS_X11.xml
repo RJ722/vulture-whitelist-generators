@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtSerialPort">
+  <Class name="QSerialPort" inherits="QIODevice">
+    <Function name="QSerialPort.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSerialPort.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSerialPort.__init__">
+      <Argument typename="QSerialPortInfo" typetype="class" name="info"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSerialPort.SerialPortError">
+      <EnumMember name="QSerialPort.NoError"/>
+      <EnumMember name="QSerialPort.DeviceNotFoundError"/>
+      <EnumMember name="QSerialPort.PermissionError"/>
+      <EnumMember name="QSerialPort.OpenError"/>
+      <EnumMember name="QSerialPort.ParityError"/>
+      <EnumMember name="QSerialPort.FramingError"/>
+      <EnumMember name="QSerialPort.BreakConditionError"/>
+      <EnumMember name="QSerialPort.WriteError"/>
+      <EnumMember name="QSerialPort.ReadError"/>
+      <EnumMember name="QSerialPort.ResourceError"/>
+      <EnumMember name="QSerialPort.UnsupportedOperationError"/>
+      <EnumMember name="QSerialPort.UnknownError"/>
+    </Enum>
+    <Enum name="QSerialPort.DataErrorPolicy">
+      <EnumMember name="QSerialPort.SkipPolicy"/>
+      <EnumMember name="QSerialPort.PassZeroPolicy"/>
+      <EnumMember name="QSerialPort.IgnorePolicy"/>
+      <EnumMember name="QSerialPort.StopReceivingPolicy"/>
+      <EnumMember name="QSerialPort.UnknownPolicy"/>
+    </Enum>
+    <Enum name="QSerialPort.PinoutSignal">
+      <EnumMember name="QSerialPort.NoSignal"/>
+      <EnumMember name="QSerialPort.TransmittedDataSignal"/>
+      <EnumMember name="QSerialPort.ReceivedDataSignal"/>
+      <EnumMember name="QSerialPort.DataTerminalReadySignal"/>
+      <EnumMember name="QSerialPort.DataCarrierDetectSignal"/>
+      <EnumMember name="QSerialPort.DataSetReadySignal"/>
+      <EnumMember name="QSerialPort.RingIndicatorSignal"/>
+      <EnumMember name="QSerialPort.RequestToSendSignal"/>
+      <EnumMember name="QSerialPort.ClearToSendSignal"/>
+      <EnumMember name="QSerialPort.SecondaryTransmittedDataSignal"/>
+      <EnumMember name="QSerialPort.SecondaryReceivedDataSignal"/>
+    </Enum>
+    <Enum name="QSerialPort.FlowControl">
+      <EnumMember name="QSerialPort.NoFlowControl"/>
+      <EnumMember name="QSerialPort.HardwareControl"/>
+      <EnumMember name="QSerialPort.SoftwareControl"/>
+      <EnumMember name="QSerialPort.UnknownFlowControl"/>
+    </Enum>
+    <Enum name="QSerialPort.StopBits">
+      <EnumMember name="QSerialPort.OneStop"/>
+      <EnumMember name="QSerialPort.OneAndHalfStop"/>
+      <EnumMember name="QSerialPort.TwoStop"/>
+      <EnumMember name="QSerialPort.UnknownStopBits"/>
+    </Enum>
+    <Enum name="QSerialPort.Parity">
+      <EnumMember name="QSerialPort.NoParity"/>
+      <EnumMember name="QSerialPort.EvenParity"/>
+      <EnumMember name="QSerialPort.OddParity"/>
+      <EnumMember name="QSerialPort.SpaceParity"/>
+      <EnumMember name="QSerialPort.MarkParity"/>
+      <EnumMember name="QSerialPort.UnknownParity"/>
+    </Enum>
+    <Enum name="QSerialPort.DataBits">
+      <EnumMember name="QSerialPort.Data5"/>
+      <EnumMember name="QSerialPort.Data6"/>
+      <EnumMember name="QSerialPort.Data7"/>
+      <EnumMember name="QSerialPort.Data8"/>
+      <EnumMember name="QSerialPort.UnknownDataBits"/>
+    </Enum>
+    <Enum name="QSerialPort.BaudRate">
+      <EnumMember name="QSerialPort.Baud1200"/>
+      <EnumMember name="QSerialPort.Baud2400"/>
+      <EnumMember name="QSerialPort.Baud4800"/>
+      <EnumMember name="QSerialPort.Baud9600"/>
+      <EnumMember name="QSerialPort.Baud19200"/>
+      <EnumMember name="QSerialPort.Baud38400"/>
+      <EnumMember name="QSerialPort.Baud57600"/>
+      <EnumMember name="QSerialPort.Baud115200"/>
+      <EnumMember name="QSerialPort.UnknownBaud"/>
+    </Enum>
+    <Enum name="QSerialPort.Direction">
+      <EnumMember name="QSerialPort.Input"/>
+      <EnumMember name="QSerialPort.Output"/>
+      <EnumMember name="QSerialPort.AllDirections"/>
+    </Enum>
+    <Function name="QSerialPort.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+    </Function>
+    <Function name="QSerialPort.readLineData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Function name="QSerialPort.readData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Signal default="1" name="QSerialPort.settingsRestoredOnCloseChanged" sig="void settingsRestoredOnCloseChanged(bool)"/>
+    <Signal default="1" name="QSerialPort.requestToSendChanged" sig="void requestToSendChanged(bool)"/>
+    <Signal default="1" name="QSerialPort.dataTerminalReadyChanged" sig="void dataTerminalReadyChanged(bool)"/>
+    <Signal default="1" name="QSerialPort.dataErrorPolicyChanged" sig="void dataErrorPolicyChanged( ::QSerialPort::DataErrorPolicy)"/>
+    <Signal default="1" name="QSerialPort.flowControlChanged" sig="void flowControlChanged( ::QSerialPort::FlowControl)"/>
+    <Signal default="1" name="QSerialPort.stopBitsChanged" sig="void stopBitsChanged( ::QSerialPort::StopBits)"/>
+    <Signal default="1" name="QSerialPort.parityChanged" sig="void parityChanged( ::QSerialPort::Parity)"/>
+    <Signal default="1" name="QSerialPort.dataBitsChanged" sig="void dataBitsChanged( ::QSerialPort::DataBits)"/>
+    <Signal default="1" name="QSerialPort.baudRateChanged" sig="void baudRateChanged( ::qint32, ::QSerialPort::Directions)"/>
+    <Function name="QSerialPort.setBreakEnabled">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QSerialPort.sendBreak">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="duration" default="0"/>
+    </Function>
+    <Function name="QSerialPort.waitForBytesWritten" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs"/>
+    </Function>
+    <Function name="QSerialPort.waitForReadyRead" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs"/>
+    </Function>
+    <Function name="QSerialPort.canReadLine" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.bytesToWrite" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.bytesAvailable" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.isSequential" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setReadBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QSerialPort.readBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.clearError"/>
+    <Function name="QSerialPort.error">
+      <Argument typename="QSerialPort.SerialPortError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QSerialPort.error" sig="void error( ::QSerialPort::SerialPortError)"/>
+    <Function name="QSerialPort.dataErrorPolicy">
+      <Argument typename="QSerialPort.DataErrorPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setDataErrorPolicy">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.DataErrorPolicy" typetype="enum" name="policy" default="QSerialPort.IgnorePolicy"/>
+    </Function>
+    <Function name="QSerialPort.atEnd" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.clear">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.Directions" typetype="class" name="dir" default="QSerialPort.AllDirections"/>
+    </Function>
+    <Function name="QSerialPort.flush">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.pinoutSignals">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.isRequestToSend">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setRequestToSend">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="set"/>
+    </Function>
+    <Function name="QSerialPort.isDataTerminalReady">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setDataTerminalReady">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="set"/>
+    </Function>
+    <Function name="QSerialPort.flowControl">
+      <Argument typename="QSerialPort.FlowControl" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setFlowControl">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.FlowControl" typetype="enum" name="flow"/>
+    </Function>
+    <Function name="QSerialPort.stopBits">
+      <Argument typename="QSerialPort.StopBits" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setStopBits">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.StopBits" typetype="enum" name="stopBits"/>
+    </Function>
+    <Function name="QSerialPort.parity">
+      <Argument typename="QSerialPort.Parity" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setParity">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.Parity" typetype="enum" name="parity"/>
+    </Function>
+    <Function name="QSerialPort.dataBits">
+      <Argument typename="QSerialPort.DataBits" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setDataBits">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.DataBits" typetype="enum" name="dataBits"/>
+    </Function>
+    <Function name="QSerialPort.baudRate">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QSerialPort.Directions" typetype="class" name="dir" default="QSerialPort.AllDirections"/>
+    </Function>
+    <Function name="QSerialPort.setBaudRate">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="baudRate"/>
+      <Argument typename="QSerialPort.Directions" typetype="class" name="dir" default="QSerialPort.AllDirections"/>
+    </Function>
+    <Function name="QSerialPort.settingsRestoredOnClose">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setSettingsRestoredOnClose">
+      <Argument typename="bool" name="restore"/>
+    </Function>
+    <Function name="QSerialPort.close" virtual="1"/>
+    <Function name="QSerialPort.open" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QSerialPort.setPort">
+      <Argument typename="QSerialPortInfo" typetype="class" name="info"/>
+    </Function>
+    <Function name="QSerialPort.portName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.setPortName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+  </Class>
+  <Class name="QSerialPort.Directions" convert="1">
+    <Function name="QSerialPort.Directions.__init__"/>
+    <Function name="QSerialPort.Directions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__init__">
+      <Argument typename="QSerialPort.Directions" typetype="class"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.Directions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.Directions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__ixor__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__xor__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__ior__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__or__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__iand__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__and__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__invert__">
+      <Argument typename="QSerialPort.Directions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.Directions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSerialPort.PinoutSignals" convert="1">
+    <Function name="QSerialPort.PinoutSignals.__init__"/>
+    <Function name="QSerialPort.PinoutSignals.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__init__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__ixor__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__xor__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__ior__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__or__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__iand__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__and__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__invert__">
+      <Argument typename="QSerialPort.PinoutSignals" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSerialPort.PinoutSignals.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSerialPortInfo">
+    <Function name="QSerialPortInfo.__init__"/>
+    <Function name="QSerialPortInfo.__init__">
+      <Argument typename="QSerialPort" typetype="class" name="port"/>
+    </Function>
+    <Function name="QSerialPortInfo.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSerialPortInfo.__init__">
+      <Argument typename="QSerialPortInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSerialPortInfo.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.availablePorts" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.standardBaudRates" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.isBusy">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.hasProductIdentifier">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.hasVendorIdentifier">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.productIdentifier">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.vendorIdentifier">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.manufacturer">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.systemLocation">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.portName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSerialPortInfo.swap">
+      <Argument typename="QSerialPortInfo" typetype="class" name="other"/>
+    </Function>
+  </Class>
+</Module>

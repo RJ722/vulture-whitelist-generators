@@ -1,0 +1,3366 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtNetwork">
+  <Class name="QNetworkCacheMetaData">
+    <Function name="QNetworkCacheMetaData.__init__"/>
+    <Function name="QNetworkCacheMetaData.__init__">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.swap">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setAttributes">
+      <Argument typename="unknown-type" typetype="mappedtype" name="attributes"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.attributes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setSaveToDisk">
+      <Argument typename="bool" name="allow"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.saveToDisk">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setExpirationDate">
+      <Argument typename="QDateTime" typetype="class" name="dateTime"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.expirationDate">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setLastModified">
+      <Argument typename="QDateTime" typetype="class" name="dateTime"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.lastModified">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setRawHeaders">
+      <Argument typename="unknown-type" typetype="mappedtype" name="headers"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.rawHeaders">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCacheMetaData.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractNetworkCache" inherits="QObject">
+    <Function name="QAbstractNetworkCache.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.clear" abstract="1" slot="void clear()" virtual="1"/>
+    <Function name="QAbstractNetworkCache.insert" abstract="1" virtual="1">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.prepare" abstract="1" virtual="1">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="metaData"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.cacheSize" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.remove" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.data" abstract="1" virtual="1">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.updateMetaData" abstract="1" virtual="1">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="metaData"/>
+    </Function>
+    <Function name="QAbstractNetworkCache.metaData" abstract="1" virtual="1">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractSocket" inherits="QIODevice">
+    <Function name="QAbstractSocket.__init__">
+      <Argument typename="QAbstractSocket.SocketType" typetype="enum" name="socketType"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Enum name="QAbstractSocket.PauseMode">
+      <EnumMember name="QAbstractSocket.PauseNever"/>
+      <EnumMember name="QAbstractSocket.PauseOnSslErrors"/>
+    </Enum>
+    <Enum name="QAbstractSocket.BindFlag">
+      <EnumMember name="QAbstractSocket.DefaultForPlatform"/>
+      <EnumMember name="QAbstractSocket.ShareAddress"/>
+      <EnumMember name="QAbstractSocket.DontShareAddress"/>
+      <EnumMember name="QAbstractSocket.ReuseAddressHint"/>
+    </Enum>
+    <Enum name="QAbstractSocket.SocketOption">
+      <EnumMember name="QAbstractSocket.LowDelayOption"/>
+      <EnumMember name="QAbstractSocket.KeepAliveOption"/>
+      <EnumMember name="QAbstractSocket.MulticastTtlOption"/>
+      <EnumMember name="QAbstractSocket.MulticastLoopbackOption"/>
+      <EnumMember name="QAbstractSocket.TypeOfServiceOption"/>
+    </Enum>
+    <Enum name="QAbstractSocket.SocketState">
+      <EnumMember name="QAbstractSocket.UnconnectedState"/>
+      <EnumMember name="QAbstractSocket.HostLookupState"/>
+      <EnumMember name="QAbstractSocket.ConnectingState"/>
+      <EnumMember name="QAbstractSocket.ConnectedState"/>
+      <EnumMember name="QAbstractSocket.BoundState"/>
+      <EnumMember name="QAbstractSocket.ListeningState"/>
+      <EnumMember name="QAbstractSocket.ClosingState"/>
+    </Enum>
+    <Enum name="QAbstractSocket.SocketError">
+      <EnumMember name="QAbstractSocket.ConnectionRefusedError"/>
+      <EnumMember name="QAbstractSocket.RemoteHostClosedError"/>
+      <EnumMember name="QAbstractSocket.HostNotFoundError"/>
+      <EnumMember name="QAbstractSocket.SocketAccessError"/>
+      <EnumMember name="QAbstractSocket.SocketResourceError"/>
+      <EnumMember name="QAbstractSocket.SocketTimeoutError"/>
+      <EnumMember name="QAbstractSocket.DatagramTooLargeError"/>
+      <EnumMember name="QAbstractSocket.NetworkError"/>
+      <EnumMember name="QAbstractSocket.AddressInUseError"/>
+      <EnumMember name="QAbstractSocket.SocketAddressNotAvailableError"/>
+      <EnumMember name="QAbstractSocket.UnsupportedSocketOperationError"/>
+      <EnumMember name="QAbstractSocket.UnfinishedSocketOperationError"/>
+      <EnumMember name="QAbstractSocket.ProxyAuthenticationRequiredError"/>
+      <EnumMember name="QAbstractSocket.SslHandshakeFailedError"/>
+      <EnumMember name="QAbstractSocket.ProxyConnectionRefusedError"/>
+      <EnumMember name="QAbstractSocket.ProxyConnectionClosedError"/>
+      <EnumMember name="QAbstractSocket.ProxyConnectionTimeoutError"/>
+      <EnumMember name="QAbstractSocket.ProxyNotFoundError"/>
+      <EnumMember name="QAbstractSocket.ProxyProtocolError"/>
+      <EnumMember name="QAbstractSocket.OperationError"/>
+      <EnumMember name="QAbstractSocket.SslInternalError"/>
+      <EnumMember name="QAbstractSocket.SslInvalidUserDataError"/>
+      <EnumMember name="QAbstractSocket.TemporaryError"/>
+      <EnumMember name="QAbstractSocket.UnknownSocketError"/>
+    </Enum>
+    <Enum name="QAbstractSocket.NetworkLayerProtocol">
+      <EnumMember name="QAbstractSocket.IPv4Protocol"/>
+      <EnumMember name="QAbstractSocket.IPv6Protocol"/>
+      <EnumMember name="QAbstractSocket.AnyIPProtocol"/>
+      <EnumMember name="QAbstractSocket.UnknownNetworkLayerProtocol"/>
+    </Enum>
+    <Enum name="QAbstractSocket.SocketType">
+      <EnumMember name="QAbstractSocket.TcpSocket"/>
+      <EnumMember name="QAbstractSocket.UdpSocket"/>
+      <EnumMember name="QAbstractSocket.UnknownSocketType"/>
+    </Enum>
+    <Function name="QAbstractSocket.bind">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+      <Argument typename="int" name="port" default="0"/>
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" name="mode" default="QAbstractSocket.DefaultForPlatform"/>
+    </Function>
+    <Function name="QAbstractSocket.bind">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="port" default="0"/>
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" name="mode" default="QAbstractSocket.DefaultForPlatform"/>
+    </Function>
+    <Function name="QAbstractSocket.setPauseMode">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" name="pauseMode"/>
+    </Function>
+    <Function name="QAbstractSocket.pauseMode">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.resume" virtual="1"/>
+    <Function name="QAbstractSocket.socketOption" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QAbstractSocket.SocketOption" typetype="enum" name="option"/>
+    </Function>
+    <Function name="QAbstractSocket.setSocketOption" virtual="1">
+      <Argument typename="QAbstractSocket.SocketOption" typetype="enum" name="option"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QAbstractSocket.setPeerName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QAbstractSocket.setPeerAddress">
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QAbstractSocket.setPeerPort">
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QAbstractSocket.setLocalAddress">
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QAbstractSocket.setLocalPort">
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QAbstractSocket.setSocketError">
+      <Argument typename="QAbstractSocket.SocketError" typetype="enum" name="socketError"/>
+    </Function>
+    <Function name="QAbstractSocket.setSocketState">
+      <Argument typename="QAbstractSocket.SocketState" typetype="enum" name="state"/>
+    </Function>
+    <Function name="QAbstractSocket.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+    </Function>
+    <Function name="QAbstractSocket.readLineData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Function name="QAbstractSocket.readData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Signal default="1" name="QAbstractSocket.proxyAuthenticationRequired" sig="void proxyAuthenticationRequired(const  ::QNetworkProxy&amp;, ::QAuthenticator*)"/>
+    <Signal default="1" name="QAbstractSocket.stateChanged" sig="void stateChanged( ::QAbstractSocket::SocketState)"/>
+    <Signal default="1" name="QAbstractSocket.disconnected" sig="void disconnected()"/>
+    <Signal default="1" name="QAbstractSocket.connected" sig="void connected()"/>
+    <Signal default="1" name="QAbstractSocket.hostFound" sig="void hostFound()"/>
+    <Function name="QAbstractSocket.proxy">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.setProxy">
+      <Argument typename="QNetworkProxy" typetype="class" name="networkProxy"/>
+    </Function>
+    <Function name="QAbstractSocket.waitForDisconnected" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QAbstractSocket.waitForBytesWritten" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QAbstractSocket.waitForReadyRead" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QAbstractSocket.waitForConnected" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QAbstractSocket.flush">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.atEnd" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.isSequential" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.close" virtual="1"/>
+    <Function name="QAbstractSocket.error">
+      <Argument typename="QAbstractSocket.SocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QAbstractSocket.error" sig="void error( ::QAbstractSocket::SocketError)"/>
+    <Function name="QAbstractSocket.state">
+      <Argument typename="QAbstractSocket.SocketState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.socketType">
+      <Argument typename="QAbstractSocket.SocketType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.socketDescriptor" virtual="1">
+      <Argument typename="qintptr" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.setSocketDescriptor" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="qintptr" typetype="mappedtype" name="socketDescriptor"/>
+      <Argument typename="QAbstractSocket.SocketState" typetype="enum" name="state" default="QAbstractSocket.ConnectedState"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QAbstractSocket.abort"/>
+    <Function name="QAbstractSocket.setReadBufferSize" virtual="1">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QAbstractSocket.readBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.peerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.peerAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.peerPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.localAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.localPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.canReadLine" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.bytesToWrite" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.bytesAvailable" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.disconnectFromHost" virtual="1"/>
+    <Function name="QAbstractSocket.connectToHost" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+      <Argument typename="QAbstractSocket.NetworkLayerProtocol" typetype="enum" name="protocol" default="QAbstractSocket.AnyIPProtocol"/>
+    </Function>
+    <Function name="QAbstractSocket.connectToHost" virtual="1">
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractSocket.BindMode" convert="1">
+    <Function name="QAbstractSocket.BindMode.__init__"/>
+    <Function name="QAbstractSocket.BindMode.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__init__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__ixor__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__xor__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__ior__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__or__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__iand__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__and__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__invert__">
+      <Argument typename="QAbstractSocket.BindMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.BindMode.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractSocket.PauseModes" convert="1">
+    <Function name="QAbstractSocket.PauseModes.__init__"/>
+    <Function name="QAbstractSocket.PauseModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__init__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__ixor__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__xor__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__ior__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__or__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__iand__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__and__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__invert__">
+      <Argument typename="QAbstractSocket.PauseModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractSocket.PauseModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAuthenticator">
+    <Function name="QAuthenticator.__init__"/>
+    <Function name="QAuthenticator.__init__">
+      <Argument typename="QAuthenticator" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAuthenticator.setOption">
+      <Argument typename="QString" typetype="mappedtype" name="opt"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QAuthenticator.options">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAuthenticator.option">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="opt"/>
+    </Function>
+    <Function name="QAuthenticator.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QAuthenticator.realm">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAuthenticator.setPassword">
+      <Argument typename="QString" typetype="mappedtype" name="password"/>
+    </Function>
+    <Function name="QAuthenticator.password">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAuthenticator.setUser">
+      <Argument typename="QString" typetype="mappedtype" name="user"/>
+    </Function>
+    <Function name="QAuthenticator.user">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAuthenticator.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAuthenticator" typetype="class" name="other"/>
+    </Function>
+    <Function name="QAuthenticator.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAuthenticator" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsDomainNameRecord">
+    <Function name="QDnsDomainNameRecord.__init__"/>
+    <Function name="QDnsDomainNameRecord.__init__">
+      <Argument typename="QDnsDomainNameRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDnsDomainNameRecord.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsDomainNameRecord.timeToLive">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsDomainNameRecord.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsDomainNameRecord.swap">
+      <Argument typename="QDnsDomainNameRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsHostAddressRecord">
+    <Function name="QDnsHostAddressRecord.__init__"/>
+    <Function name="QDnsHostAddressRecord.__init__">
+      <Argument typename="QDnsHostAddressRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDnsHostAddressRecord.value">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QDnsHostAddressRecord.timeToLive">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsHostAddressRecord.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsHostAddressRecord.swap">
+      <Argument typename="QDnsHostAddressRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsMailExchangeRecord">
+    <Function name="QDnsMailExchangeRecord.__init__"/>
+    <Function name="QDnsMailExchangeRecord.__init__">
+      <Argument typename="QDnsMailExchangeRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDnsMailExchangeRecord.timeToLive">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsMailExchangeRecord.preference">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsMailExchangeRecord.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsMailExchangeRecord.exchange">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsMailExchangeRecord.swap">
+      <Argument typename="QDnsMailExchangeRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsServiceRecord">
+    <Function name="QDnsServiceRecord.__init__"/>
+    <Function name="QDnsServiceRecord.__init__">
+      <Argument typename="QDnsServiceRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDnsServiceRecord.weight">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.timeToLive">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.target">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.priority">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.port">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsServiceRecord.swap">
+      <Argument typename="QDnsServiceRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsTextRecord">
+    <Function name="QDnsTextRecord.__init__"/>
+    <Function name="QDnsTextRecord.__init__">
+      <Argument typename="QDnsTextRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QDnsTextRecord.values">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsTextRecord.timeToLive">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QDnsTextRecord.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsTextRecord.swap">
+      <Argument typename="QDnsTextRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QDnsLookup" inherits="QObject">
+    <Function name="QDnsLookup.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QDnsLookup.__init__">
+      <Argument typename="QDnsLookup.Type" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QDnsLookup.Type">
+      <EnumMember name="QDnsLookup.A"/>
+      <EnumMember name="QDnsLookup.AAAA"/>
+      <EnumMember name="QDnsLookup.ANY"/>
+      <EnumMember name="QDnsLookup.CNAME"/>
+      <EnumMember name="QDnsLookup.MX"/>
+      <EnumMember name="QDnsLookup.NS"/>
+      <EnumMember name="QDnsLookup.PTR"/>
+      <EnumMember name="QDnsLookup.SRV"/>
+      <EnumMember name="QDnsLookup.TXT"/>
+    </Enum>
+    <Enum name="QDnsLookup.Error">
+      <EnumMember name="QDnsLookup.NoError"/>
+      <EnumMember name="QDnsLookup.ResolverError"/>
+      <EnumMember name="QDnsLookup.OperationCancelledError"/>
+      <EnumMember name="QDnsLookup.InvalidRequestError"/>
+      <EnumMember name="QDnsLookup.InvalidReplyError"/>
+      <EnumMember name="QDnsLookup.ServerFailureError"/>
+      <EnumMember name="QDnsLookup.ServerRefusedError"/>
+      <EnumMember name="QDnsLookup.NotFoundError"/>
+    </Enum>
+    <Signal default="1" name="QDnsLookup.typeChanged" sig="void typeChanged( ::QDnsLookup::Type)"/>
+    <Signal default="1" name="QDnsLookup.nameChanged" sig="void nameChanged(const QString&amp;)"/>
+    <Signal default="1" name="QDnsLookup.finished" sig="void finished()"/>
+    <Function name="QDnsLookup.lookup" slot="void lookup()"/>
+    <Function name="QDnsLookup.abort" slot="void abort()"/>
+    <Function name="QDnsLookup.textRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.serviceRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.pointerRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.nameServerRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.mailExchangeRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.hostAddressRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.canonicalNameRecords">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.setType">
+      <Argument typename="QDnsLookup.Type" typetype="enum"/>
+    </Function>
+    <Function name="QDnsLookup.type">
+      <Argument typename="QDnsLookup.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QDnsLookup.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QDnsLookup.error">
+      <Argument typename="QDnsLookup.Error" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHostAddress" convert="1">
+    <Function name="QHostAddress.__init__"/>
+    <Function name="QHostAddress.__init__">
+      <Argument typename="QHostAddress.SpecialAddress" typetype="enum" name="address"/>
+    </Function>
+    <Function name="QHostAddress.__init__">
+      <Argument typename="int" name="ip4Addr"/>
+    </Function>
+    <Function name="QHostAddress.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+    </Function>
+    <Function name="QHostAddress.__init__">
+      <Argument typename="Q_IPV6ADDR" typetype="mappedtype" name="ip6Addr"/>
+    </Function>
+    <Function name="QHostAddress.__init__">
+      <Argument typename="QHostAddress" typetype="class" name="copy"/>
+    </Function>
+    <Enum name="QHostAddress.SpecialAddress">
+      <EnumMember name="QHostAddress.Null"/>
+      <EnumMember name="QHostAddress.Broadcast"/>
+      <EnumMember name="QHostAddress.LocalHost"/>
+      <EnumMember name="QHostAddress.LocalHostIPv6"/>
+      <EnumMember name="QHostAddress.AnyIPv4"/>
+      <EnumMember name="QHostAddress.AnyIPv6"/>
+      <EnumMember name="QHostAddress.Any"/>
+    </Enum>
+    <Function name="QHostAddress.parseSubnet" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="subnet"/>
+    </Function>
+    <Function name="QHostAddress.isLoopback">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.isInSubnet">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="subnet"/>
+      <Argument typename="int" name="netmask"/>
+    </Function>
+    <Function name="QHostAddress.isInSubnet">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="subnet"/>
+    </Function>
+    <Function name="QHostAddress.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.clear"/>
+    <Function name="QHostAddress.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QHostAddress.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress.SpecialAddress" typetype="enum" name="address"/>
+    </Function>
+    <Function name="QHostAddress.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QHostAddress.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress.SpecialAddress" typetype="enum" name="address"/>
+    </Function>
+    <Function name="QHostAddress.setScopeId">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QHostAddress.scopeId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.toIPv6Address">
+      <Argument typename="Q_IPV6ADDR" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.toIPv4Address">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.protocol">
+      <Argument typename="QAbstractSocket.NetworkLayerProtocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QHostAddress.setAddress">
+      <Argument typename="int" name="ip4Addr"/>
+    </Function>
+    <Function name="QHostAddress.setAddress">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+    </Function>
+    <Function name="QHostAddress.setAddress">
+      <Argument typename="Q_IPV6ADDR" typetype="mappedtype" name="ip6Addr"/>
+    </Function>
+  </Class>
+  <Class name="QHostInfo">
+    <Function name="QHostInfo.__init__">
+      <Argument typename="int" name="id" default="-1"/>
+    </Function>
+    <Function name="QHostInfo.__init__">
+      <Argument typename="QHostInfo" typetype="class" name="d"/>
+    </Function>
+    <Enum name="QHostInfo.HostInfoError">
+      <EnumMember name="QHostInfo.NoError"/>
+      <EnumMember name="QHostInfo.HostNotFound"/>
+      <EnumMember name="QHostInfo.UnknownError"/>
+    </Enum>
+    <Function name="QHostInfo.localDomainName" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.localHostName" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.fromName" static="1">
+      <Argument typename="QHostInfo" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QHostInfo.abortHostLookup" static="1">
+      <Argument typename="int" name="lookupId"/>
+    </Function>
+    <Function name="QHostInfo.lookupHost" static="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="object" name="slot"/>
+    </Function>
+    <Function name="QHostInfo.lookupId">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.setLookupId">
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QHostInfo.setErrorString">
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+    </Function>
+    <Function name="QHostInfo.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.setError">
+      <Argument typename="QHostInfo.HostInfoError" typetype="enum" name="error"/>
+    </Function>
+    <Function name="QHostInfo.error">
+      <Argument typename="QHostInfo.HostInfoError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.setAddresses">
+      <Argument typename="unknown-type" typetype="mappedtype" name="addresses"/>
+    </Function>
+    <Function name="QHostInfo.addresses">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QHostInfo.setHostName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QHostInfo.hostName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QHttpPart">
+    <Function name="QHttpPart.__init__"/>
+    <Function name="QHttpPart.__init__">
+      <Argument typename="QHttpPart" typetype="class" name="other"/>
+    </Function>
+    <Function name="QHttpPart.swap">
+      <Argument typename="QHttpPart" typetype="class" name="other"/>
+    </Function>
+    <Function name="QHttpPart.setBodyDevice">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QHttpPart.setBody">
+      <Argument typename="QByteArray" typetype="class" name="body"/>
+    </Function>
+    <Function name="QHttpPart.setRawHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+      <Argument typename="QByteArray" typetype="class" name="headerValue"/>
+    </Function>
+    <Function name="QHttpPart.setHeader">
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QHttpPart.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHttpPart" typetype="class" name="other"/>
+    </Function>
+    <Function name="QHttpPart.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHttpPart" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QHttpMultiPart" inherits="QObject">
+    <Function name="QHttpMultiPart.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QHttpMultiPart.__init__">
+      <Argument typename="QHttpMultiPart.ContentType" typetype="enum" name="contentType"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QHttpMultiPart.ContentType">
+      <EnumMember name="QHttpMultiPart.MixedType"/>
+      <EnumMember name="QHttpMultiPart.RelatedType"/>
+      <EnumMember name="QHttpMultiPart.FormDataType"/>
+      <EnumMember name="QHttpMultiPart.AlternativeType"/>
+    </Enum>
+    <Function name="QHttpMultiPart.setBoundary">
+      <Argument typename="QByteArray" typetype="class" name="boundary"/>
+    </Function>
+    <Function name="QHttpMultiPart.boundary">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QHttpMultiPart.setContentType">
+      <Argument typename="QHttpMultiPart.ContentType" typetype="enum" name="contentType"/>
+    </Function>
+    <Function name="QHttpMultiPart.append">
+      <Argument typename="QHttpPart" typetype="class" name="httpPart"/>
+    </Function>
+  </Class>
+  <Class name="QLocalServer" inherits="QObject">
+    <Function name="QLocalServer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QLocalServer.SocketOption">
+      <EnumMember name="QLocalServer.UserAccessOption"/>
+      <EnumMember name="QLocalServer.GroupAccessOption"/>
+      <EnumMember name="QLocalServer.OtherAccessOption"/>
+      <EnumMember name="QLocalServer.WorldAccessOption"/>
+    </Enum>
+    <Function name="QLocalServer.socketOptions">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.setSocketOptions">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QLocalServer.incomingConnection" virtual="1">
+      <Argument typename="quintptr" typetype="mappedtype" name="socketDescriptor"/>
+    </Function>
+    <Signal default="1" name="QLocalServer.newConnection" sig="void newConnection()"/>
+    <Function name="QLocalServer.removeServer" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QLocalServer.waitForNewConnection">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="0"/>
+      <Argument typename="bool" name="timedOut" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.setMaxPendingConnections">
+      <Argument typename="int" name="numConnections"/>
+    </Function>
+    <Function name="QLocalServer.serverError">
+      <Argument typename="QAbstractSocket.SocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.fullServerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.serverName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.nextPendingConnection" virtual="1">
+      <Argument typename="QLocalSocket" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.maxPendingConnections">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QLocalServer.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="qintptr" typetype="mappedtype" name="socketDescriptor"/>
+    </Function>
+    <Function name="QLocalServer.isListening">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.hasPendingConnections" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.close"/>
+  </Class>
+  <Class name="QLocalServer.SocketOptions" convert="1">
+    <Function name="QLocalServer.SocketOptions.__init__"/>
+    <Function name="QLocalServer.SocketOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__init__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__ixor__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__xor__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__ior__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__or__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__iand__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__and__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__invert__">
+      <Argument typename="QLocalServer.SocketOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLocalServer.SocketOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLocalSocket" inherits="QIODevice">
+    <Function name="QLocalSocket.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QLocalSocket.LocalSocketState">
+      <EnumMember name="QLocalSocket.UnconnectedState"/>
+      <EnumMember name="QLocalSocket.ConnectingState"/>
+      <EnumMember name="QLocalSocket.ConnectedState"/>
+      <EnumMember name="QLocalSocket.ClosingState"/>
+    </Enum>
+    <Enum name="QLocalSocket.LocalSocketError">
+      <EnumMember name="QLocalSocket.ConnectionRefusedError"/>
+      <EnumMember name="QLocalSocket.PeerClosedError"/>
+      <EnumMember name="QLocalSocket.ServerNotFoundError"/>
+      <EnumMember name="QLocalSocket.SocketAccessError"/>
+      <EnumMember name="QLocalSocket.SocketResourceError"/>
+      <EnumMember name="QLocalSocket.SocketTimeoutError"/>
+      <EnumMember name="QLocalSocket.DatagramTooLargeError"/>
+      <EnumMember name="QLocalSocket.ConnectionError"/>
+      <EnumMember name="QLocalSocket.UnsupportedSocketOperationError"/>
+      <EnumMember name="QLocalSocket.OperationError"/>
+      <EnumMember name="QLocalSocket.UnknownSocketError"/>
+    </Enum>
+    <Function name="QLocalSocket.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes"/>
+    </Function>
+    <Function name="QLocalSocket.readData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Signal default="1" name="QLocalSocket.stateChanged" sig="void stateChanged( ::QLocalSocket::LocalSocketState)"/>
+    <Signal default="1" name="QLocalSocket.disconnected" sig="void disconnected()"/>
+    <Signal default="1" name="QLocalSocket.connected" sig="void connected()"/>
+    <Function name="QLocalSocket.waitForReadyRead" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QLocalSocket.waitForDisconnected">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QLocalSocket.waitForConnected">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QLocalSocket.waitForBytesWritten" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QLocalSocket.state">
+      <Argument typename="QLocalSocket.LocalSocketState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.socketDescriptor">
+      <Argument typename="qintptr" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.setSocketDescriptor">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="qintptr" typetype="mappedtype" name="socketDescriptor"/>
+      <Argument typename="QLocalSocket.LocalSocketState" typetype="enum" name="state" default="QLocalSocket.ConnectedState"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QLocalSocket.setReadBufferSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QLocalSocket.readBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.flush">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.error">
+      <Argument typename="QLocalSocket.LocalSocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QLocalSocket.error" sig="void error( ::QLocalSocket::LocalSocketError)"/>
+    <Function name="QLocalSocket.close" virtual="1"/>
+    <Function name="QLocalSocket.canReadLine" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.bytesToWrite" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.bytesAvailable" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.isSequential" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.abort"/>
+    <Function name="QLocalSocket.fullServerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.setServerName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QLocalSocket.serverName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QLocalSocket.open" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QLocalSocket.disconnectFromServer"/>
+    <Function name="QLocalSocket.connectToServer">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QLocalSocket.connectToServer">
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkAccessManager" inherits="QObject">
+    <Function name="QNetworkAccessManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNetworkAccessManager.NetworkAccessibility">
+      <EnumMember name="QNetworkAccessManager.UnknownAccessibility"/>
+      <EnumMember name="QNetworkAccessManager.NotAccessible"/>
+      <EnumMember name="QNetworkAccessManager.Accessible"/>
+    </Enum>
+    <Enum name="QNetworkAccessManager.Operation">
+      <EnumMember name="QNetworkAccessManager.HeadOperation"/>
+      <EnumMember name="QNetworkAccessManager.GetOperation"/>
+      <EnumMember name="QNetworkAccessManager.PutOperation"/>
+      <EnumMember name="QNetworkAccessManager.PostOperation"/>
+      <EnumMember name="QNetworkAccessManager.DeleteOperation"/>
+      <EnumMember name="QNetworkAccessManager.CustomOperation"/>
+    </Enum>
+    <Function name="QNetworkAccessManager.supportedSchemesImplementation" slot="QStringList supportedSchemesImplementation() const">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.connectToHost">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port" default="80"/>
+    </Function>
+    <Function name="QNetworkAccessManager.connectToHostEncrypted">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port" default="443"/>
+      <Argument typename="QSslConfiguration" typetype="class" name="sslConfiguration" default="QSslConfiguration.defaultConfiguration()"/>
+    </Function>
+    <Function name="QNetworkAccessManager.supportedSchemes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.clearAccessCache"/>
+    <Function name="QNetworkAccessManager.networkAccessible">
+      <Argument typename="QNetworkAccessManager.NetworkAccessibility" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setNetworkAccessible">
+      <Argument typename="QNetworkAccessManager.NetworkAccessibility" typetype="enum" name="accessible"/>
+    </Function>
+    <Function name="QNetworkAccessManager.activeConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.configuration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="config"/>
+    </Function>
+    <Function name="QNetworkAccessManager.sendCustomRequest">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QByteArray" typetype="class" name="verb"/>
+      <Argument typename="QIODevice" typetype="class" name="data" default="None"/>
+    </Function>
+    <Function name="QNetworkAccessManager.deleteResource">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setCache">
+      <Argument typename="QAbstractNetworkCache" typetype="class" name="cache" transfer="to"/>
+    </Function>
+    <Function name="QNetworkAccessManager.cache">
+      <Argument typename="QAbstractNetworkCache" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setProxyFactory">
+      <Argument typename="QNetworkProxyFactory" typetype="class" name="factory" transfer="to"/>
+    </Function>
+    <Function name="QNetworkAccessManager.proxyFactory">
+      <Argument typename="QNetworkProxyFactory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.createRequest" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out" disallownone="1"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="op"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QIODevice" typetype="class" name="device" default="None"/>
+    </Function>
+    <Signal default="1" name="QNetworkAccessManager.networkAccessibleChanged" sig="void networkAccessibleChanged( ::QNetworkAccessManager::NetworkAccessibility)"/>
+    <Signal default="1" name="QNetworkAccessManager.sslErrors" sig="void sslErrors( ::QNetworkReply*,const QList&lt;QSslError&gt;&amp;)"/>
+    <Signal default="1" name="QNetworkAccessManager.encrypted" sig="void encrypted( ::QNetworkReply*)"/>
+    <Signal default="1" name="QNetworkAccessManager.finished" sig="void finished( ::QNetworkReply*)"/>
+    <Signal default="1" name="QNetworkAccessManager.authenticationRequired" sig="void authenticationRequired( ::QNetworkReply*, ::QAuthenticator*)"/>
+    <Signal default="1" name="QNetworkAccessManager.proxyAuthenticationRequired" sig="void proxyAuthenticationRequired(const  ::QNetworkProxy&amp;, ::QAuthenticator*)"/>
+    <Function name="QNetworkAccessManager.put">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QIODevice" typetype="class" name="data"/>
+    </Function>
+    <Function name="QNetworkAccessManager.put">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+    </Function>
+    <Function name="QNetworkAccessManager.put">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QHttpMultiPart" typetype="class" name="multiPart"/>
+    </Function>
+    <Function name="QNetworkAccessManager.post">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QIODevice" typetype="class" name="data"/>
+    </Function>
+    <Function name="QNetworkAccessManager.post">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+    </Function>
+    <Function name="QNetworkAccessManager.post">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QHttpMultiPart" typetype="class" name="multiPart"/>
+    </Function>
+    <Function name="QNetworkAccessManager.get">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QNetworkAccessManager.head">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setCookieJar">
+      <Argument typename="QNetworkCookieJar" typetype="class" name="cookieJar" transfer="to"/>
+    </Function>
+    <Function name="QNetworkAccessManager.cookieJar">
+      <Argument typename="QNetworkCookieJar" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAccessManager.setProxy">
+      <Argument typename="QNetworkProxy" typetype="class" name="proxy"/>
+    </Function>
+    <Function name="QNetworkAccessManager.proxy">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkConfigurationManager" inherits="QObject">
+    <Function name="QNetworkConfigurationManager.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNetworkConfigurationManager.Capability">
+      <EnumMember name="QNetworkConfigurationManager.CanStartAndStopInterfaces"/>
+      <EnumMember name="QNetworkConfigurationManager.DirectConnectionRouting"/>
+      <EnumMember name="QNetworkConfigurationManager.SystemSessionSupport"/>
+      <EnumMember name="QNetworkConfigurationManager.ApplicationLevelRoaming"/>
+      <EnumMember name="QNetworkConfigurationManager.ForcedRoaming"/>
+      <EnumMember name="QNetworkConfigurationManager.DataStatistics"/>
+      <EnumMember name="QNetworkConfigurationManager.NetworkSessionRequired"/>
+    </Enum>
+    <Signal default="1" name="QNetworkConfigurationManager.updateCompleted" sig="void updateCompleted()"/>
+    <Signal default="1" name="QNetworkConfigurationManager.onlineStateChanged" sig="void onlineStateChanged(bool)"/>
+    <Signal default="1" name="QNetworkConfigurationManager.configurationChanged" sig="void configurationChanged(const  ::QNetworkConfiguration&amp;)"/>
+    <Signal default="1" name="QNetworkConfigurationManager.configurationRemoved" sig="void configurationRemoved(const  ::QNetworkConfiguration&amp;)"/>
+    <Signal default="1" name="QNetworkConfigurationManager.configurationAdded" sig="void configurationAdded(const  ::QNetworkConfiguration&amp;)"/>
+    <Function name="QNetworkConfigurationManager.isOnline">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.updateConfigurations"/>
+    <Function name="QNetworkConfigurationManager.configurationFromIdentifier">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.allConfigurations">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" name="flags" default="QNetworkConfiguration.StateFlags()"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.defaultConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.capabilities">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkConfigurationManager.Capabilities" convert="1">
+    <Function name="QNetworkConfigurationManager.Capabilities.__init__"/>
+    <Function name="QNetworkConfigurationManager.Capabilities.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__init__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__ixor__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__xor__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__ior__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__or__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__iand__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__and__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__invert__">
+      <Argument typename="QNetworkConfigurationManager.Capabilities" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfigurationManager.Capabilities.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkConfiguration">
+    <Function name="QNetworkConfiguration.__init__"/>
+    <Function name="QNetworkConfiguration.__init__">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkConfiguration.BearerType">
+      <EnumMember name="QNetworkConfiguration.BearerUnknown"/>
+      <EnumMember name="QNetworkConfiguration.BearerEthernet"/>
+      <EnumMember name="QNetworkConfiguration.BearerWLAN"/>
+      <EnumMember name="QNetworkConfiguration.Bearer2G"/>
+      <EnumMember name="QNetworkConfiguration.BearerCDMA2000"/>
+      <EnumMember name="QNetworkConfiguration.BearerWCDMA"/>
+      <EnumMember name="QNetworkConfiguration.BearerHSPA"/>
+      <EnumMember name="QNetworkConfiguration.BearerBluetooth"/>
+      <EnumMember name="QNetworkConfiguration.BearerWiMAX"/>
+      <EnumMember name="QNetworkConfiguration.BearerEVDO"/>
+      <EnumMember name="QNetworkConfiguration.BearerLTE"/>
+      <EnumMember name="QNetworkConfiguration.Bearer3G"/>
+      <EnumMember name="QNetworkConfiguration.Bearer4G"/>
+    </Enum>
+    <Enum name="QNetworkConfiguration.StateFlag">
+      <EnumMember name="QNetworkConfiguration.Undefined"/>
+      <EnumMember name="QNetworkConfiguration.Defined"/>
+      <EnumMember name="QNetworkConfiguration.Discovered"/>
+      <EnumMember name="QNetworkConfiguration.Active"/>
+    </Enum>
+    <Enum name="QNetworkConfiguration.Purpose">
+      <EnumMember name="QNetworkConfiguration.UnknownPurpose"/>
+      <EnumMember name="QNetworkConfiguration.PublicPurpose"/>
+      <EnumMember name="QNetworkConfiguration.PrivatePurpose"/>
+      <EnumMember name="QNetworkConfiguration.ServiceSpecificPurpose"/>
+    </Enum>
+    <Enum name="QNetworkConfiguration.Type">
+      <EnumMember name="QNetworkConfiguration.InternetAccessPoint"/>
+      <EnumMember name="QNetworkConfiguration.ServiceNetwork"/>
+      <EnumMember name="QNetworkConfiguration.UserChoice"/>
+      <EnumMember name="QNetworkConfiguration.Invalid"/>
+    </Enum>
+    <Function name="QNetworkConfiguration.swap">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkConfiguration.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.children">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.isRoamingAvailable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.identifier">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.bearerTypeFamily">
+      <Argument typename="QNetworkConfiguration.BearerType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.bearerTypeName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.bearerType">
+      <Argument typename="QNetworkConfiguration.BearerType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.purpose">
+      <Argument typename="QNetworkConfiguration.Purpose" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.type">
+      <Argument typename="QNetworkConfiguration.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.state">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfiguration" typetype="class" name="cp"/>
+    </Function>
+    <Function name="QNetworkConfiguration.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfiguration" typetype="class" name="cp"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkConfiguration.StateFlags" convert="1">
+    <Function name="QNetworkConfiguration.StateFlags.__init__"/>
+    <Function name="QNetworkConfiguration.StateFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__init__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__ixor__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__xor__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__ior__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__or__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__iand__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__and__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__invert__">
+      <Argument typename="QNetworkConfiguration.StateFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkConfiguration.StateFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkCookie">
+    <Function name="QNetworkCookie.__init__">
+      <Argument typename="QByteArray" typetype="class" name="name" default="QByteArray()"/>
+      <Argument typename="QByteArray" typetype="class" name="value" default="QByteArray()"/>
+    </Function>
+    <Function name="QNetworkCookie.__init__">
+      <Argument typename="QNetworkCookie" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkCookie.RawForm">
+      <EnumMember name="QNetworkCookie.NameAndValueOnly"/>
+      <EnumMember name="QNetworkCookie.Full"/>
+    </Enum>
+    <Function name="QNetworkCookie.normalize">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkCookie.hasSameIdentifier">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCookie.swap">
+      <Argument typename="QNetworkCookie" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCookie.setHttpOnly">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QNetworkCookie.isHttpOnly">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCookie.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkCookie.parseCookies" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="cookieString"/>
+    </Function>
+    <Function name="QNetworkCookie.toRawForm">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QNetworkCookie.RawForm" typetype="enum" name="form" default="QNetworkCookie.Full"/>
+    </Function>
+    <Function name="QNetworkCookie.setValue">
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkCookie.value">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.setName">
+      <Argument typename="QByteArray" typetype="class" name="cookieName"/>
+    </Function>
+    <Function name="QNetworkCookie.name">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.setPath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QNetworkCookie.path">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.setDomain">
+      <Argument typename="QString" typetype="mappedtype" name="domain"/>
+    </Function>
+    <Function name="QNetworkCookie.domain">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.setExpirationDate">
+      <Argument typename="QDateTime" typetype="class" name="date"/>
+    </Function>
+    <Function name="QNetworkCookie.expirationDate">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.isSessionCookie">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookie.setSecure">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QNetworkCookie.isSecure">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkCookieJar" inherits="QObject">
+    <Function name="QNetworkCookieJar.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QNetworkCookieJar.validateCookie" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkCookieJar.allCookies">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkCookieJar.setAllCookies">
+      <Argument typename="unknown-type" typetype="mappedtype" name="cookieList"/>
+    </Function>
+    <Function name="QNetworkCookieJar.deleteCookie" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+    </Function>
+    <Function name="QNetworkCookieJar.updateCookie" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+    </Function>
+    <Function name="QNetworkCookieJar.insertCookie" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+    </Function>
+    <Function name="QNetworkCookieJar.setCookiesFromUrl" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="cookieList"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkCookieJar.cookiesForUrl" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkDiskCache" inherits="QAbstractNetworkCache">
+    <Function name="QNetworkDiskCache.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QNetworkDiskCache.expire" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkDiskCache.clear" slot="void clear()" virtual="1"/>
+    <Function name="QNetworkDiskCache.fileMetaData">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QNetworkDiskCache.insert" virtual="1">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QNetworkDiskCache.prepare" virtual="1">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="metaData"/>
+    </Function>
+    <Function name="QNetworkDiskCache.remove" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkDiskCache.data" virtual="1">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkDiskCache.updateMetaData" virtual="1">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" name="metaData"/>
+    </Function>
+    <Function name="QNetworkDiskCache.metaData" virtual="1">
+      <Argument typename="QNetworkCacheMetaData" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkDiskCache.cacheSize" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkDiskCache.setMaximumCacheSize">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QNetworkDiskCache.maximumCacheSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkDiskCache.setCacheDirectory">
+      <Argument typename="QString" typetype="mappedtype" name="cacheDir"/>
+    </Function>
+    <Function name="QNetworkDiskCache.cacheDirectory">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkAddressEntry">
+    <Function name="QNetworkAddressEntry.__init__"/>
+    <Function name="QNetworkAddressEntry.__init__">
+      <Argument typename="QNetworkAddressEntry" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.swap">
+      <Argument typename="QNetworkAddressEntry" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.setPrefixLength">
+      <Argument typename="int" name="length"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.prefixLength">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkAddressEntry" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkAddressEntry" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.setBroadcast">
+      <Argument typename="QHostAddress" typetype="class" name="newBroadcast"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.broadcast">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.setNetmask">
+      <Argument typename="QHostAddress" typetype="class" name="newNetmask"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.netmask">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.setIp">
+      <Argument typename="QHostAddress" typetype="class" name="newIp"/>
+    </Function>
+    <Function name="QNetworkAddressEntry.ip">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkInterface">
+    <Function name="QNetworkInterface.__init__"/>
+    <Function name="QNetworkInterface.__init__">
+      <Argument typename="QNetworkInterface" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkInterface.InterfaceFlag">
+      <EnumMember name="QNetworkInterface.IsUp"/>
+      <EnumMember name="QNetworkInterface.IsRunning"/>
+      <EnumMember name="QNetworkInterface.CanBroadcast"/>
+      <EnumMember name="QNetworkInterface.IsLoopBack"/>
+      <EnumMember name="QNetworkInterface.IsPointToPoint"/>
+      <EnumMember name="QNetworkInterface.CanMulticast"/>
+    </Enum>
+    <Function name="QNetworkInterface.swap">
+      <Argument typename="QNetworkInterface" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkInterface.humanReadableName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.index">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.allAddresses" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.allInterfaces" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.interfaceFromIndex" static="1">
+      <Argument typename="QNetworkInterface" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QNetworkInterface.interfaceFromName" static="1">
+      <Argument typename="QNetworkInterface" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QNetworkInterface.addressEntries">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.hardwareAddress">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.flags">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkInterface.InterfaceFlags" convert="1">
+    <Function name="QNetworkInterface.InterfaceFlags.__init__"/>
+    <Function name="QNetworkInterface.InterfaceFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__init__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__ixor__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__xor__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__ior__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__or__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__iand__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__and__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__invert__">
+      <Argument typename="QNetworkInterface.InterfaceFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkInterface.InterfaceFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkProxy">
+    <Function name="QNetworkProxy.__init__"/>
+    <Function name="QNetworkProxy.__init__">
+      <Argument typename="QNetworkProxy.ProxyType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="hostName" default="''"/>
+      <Argument typename="int" name="port" default="0"/>
+      <Argument typename="QString" typetype="mappedtype" name="user" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="password" default="''"/>
+    </Function>
+    <Function name="QNetworkProxy.__init__">
+      <Argument typename="QNetworkProxy" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkProxy.Capability">
+      <EnumMember name="QNetworkProxy.TunnelingCapability"/>
+      <EnumMember name="QNetworkProxy.ListeningCapability"/>
+      <EnumMember name="QNetworkProxy.UdpTunnelingCapability"/>
+      <EnumMember name="QNetworkProxy.CachingCapability"/>
+      <EnumMember name="QNetworkProxy.HostNameLookupCapability"/>
+    </Enum>
+    <Enum name="QNetworkProxy.ProxyType">
+      <EnumMember name="QNetworkProxy.DefaultProxy"/>
+      <EnumMember name="QNetworkProxy.Socks5Proxy"/>
+      <EnumMember name="QNetworkProxy.NoProxy"/>
+      <EnumMember name="QNetworkProxy.HttpProxy"/>
+      <EnumMember name="QNetworkProxy.HttpCachingProxy"/>
+      <EnumMember name="QNetworkProxy.FtpCachingProxy"/>
+    </Enum>
+    <Function name="QNetworkProxy.setRawHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkProxy.rawHeader">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkProxy.rawHeaderList">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.hasRawHeader">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkProxy.setHeader">
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkProxy.header">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+    </Function>
+    <Function name="QNetworkProxy.swap">
+      <Argument typename="QNetworkProxy" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkProxy.capabilities">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setCapabilities">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" name="capab"/>
+    </Function>
+    <Function name="QNetworkProxy.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxy" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkProxy.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxy" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkProxy.isTransparentProxy">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.isCachingProxy">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.applicationProxy" static="1">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setApplicationProxy" static="1">
+      <Argument typename="QNetworkProxy" typetype="class" name="proxy"/>
+    </Function>
+    <Function name="QNetworkProxy.port">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setPort">
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QNetworkProxy.hostName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setHostName">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+    </Function>
+    <Function name="QNetworkProxy.password">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setPassword">
+      <Argument typename="QString" typetype="mappedtype" name="password"/>
+    </Function>
+    <Function name="QNetworkProxy.user">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setUser">
+      <Argument typename="QString" typetype="mappedtype" name="userName"/>
+    </Function>
+    <Function name="QNetworkProxy.type">
+      <Argument typename="QNetworkProxy.ProxyType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.setType">
+      <Argument typename="QNetworkProxy.ProxyType" typetype="enum" name="type"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkProxy.Capabilities" convert="1">
+    <Function name="QNetworkProxy.Capabilities.__init__"/>
+    <Function name="QNetworkProxy.Capabilities.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__init__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__ixor__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__xor__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__ior__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__or__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__iand__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__and__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__invert__">
+      <Argument typename="QNetworkProxy.Capabilities" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxy.Capabilities.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkProxyQuery">
+    <Function name="QNetworkProxyQuery.__init__"/>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QUrl" typetype="class" name="requestUrl"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type" default="QNetworkProxyQuery.UrlRequest"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="hostname"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QString" typetype="mappedtype" name="protocolTag" default="''"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type" default="QNetworkProxyQuery.TcpSocket"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="int" name="bindPort"/>
+      <Argument typename="QString" typetype="mappedtype" name="protocolTag" default="''"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type" default="QNetworkProxyQuery.TcpServer"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="networkConfiguration"/>
+      <Argument typename="QUrl" typetype="class" name="requestUrl"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="queryType" default="QNetworkProxyQuery.UrlRequest"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="networkConfiguration"/>
+      <Argument typename="QString" typetype="mappedtype" name="hostname"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QString" typetype="mappedtype" name="protocolTag" default="''"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type" default="QNetworkProxyQuery.TcpSocket"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="networkConfiguration"/>
+      <Argument typename="int" name="bindPort"/>
+      <Argument typename="QString" typetype="mappedtype" name="protocolTag" default="''"/>
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type" default="QNetworkProxyQuery.TcpServer"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__init__">
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkProxyQuery.QueryType">
+      <EnumMember name="QNetworkProxyQuery.TcpSocket"/>
+      <EnumMember name="QNetworkProxyQuery.UdpSocket"/>
+      <EnumMember name="QNetworkProxyQuery.TcpServer"/>
+      <EnumMember name="QNetworkProxyQuery.UrlRequest"/>
+    </Enum>
+    <Function name="QNetworkProxyQuery.swap">
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setNetworkConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="networkConfiguration"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.networkConfiguration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setProtocolTag">
+      <Argument typename="QString" typetype="mappedtype" name="protocolTag"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.protocolTag">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setLocalPort">
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.localPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setPeerHostName">
+      <Argument typename="QString" typetype="mappedtype" name="hostname"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.peerHostName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setPeerPort">
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.peerPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.setQueryType">
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.queryType">
+      <Argument typename="QNetworkProxyQuery.QueryType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkProxyQuery.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkProxyFactory">
+    <Function name="QNetworkProxyFactory.__init__"/>
+    <Function name="QNetworkProxyFactory.__init__">
+      <Argument typename="QNetworkProxyFactory" typetype="class"/>
+    </Function>
+    <Function name="QNetworkProxyFactory.setUseSystemConfiguration" static="1">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QNetworkProxyFactory.systemProxyForQuery" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="query" default="QNetworkProxyQuery()"/>
+    </Function>
+    <Function name="QNetworkProxyFactory.proxyForQuery" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="query"/>
+    </Function>
+    <Function name="QNetworkProxyFactory.setApplicationProxyFactory" static="1">
+      <Argument typename="QNetworkProxyFactory" typetype="class" name="factory" transfer="to"/>
+    </Function>
+    <Function name="QNetworkProxyFactory.queryProxy" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QNetworkProxyQuery" typetype="class" name="query" default="QNetworkProxyQuery()"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkReply" inherits="QIODevice">
+    <Function name="QNetworkReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNetworkReply.NetworkError">
+      <EnumMember name="QNetworkReply.NoError"/>
+      <EnumMember name="QNetworkReply.ConnectionRefusedError"/>
+      <EnumMember name="QNetworkReply.RemoteHostClosedError"/>
+      <EnumMember name="QNetworkReply.HostNotFoundError"/>
+      <EnumMember name="QNetworkReply.TimeoutError"/>
+      <EnumMember name="QNetworkReply.OperationCanceledError"/>
+      <EnumMember name="QNetworkReply.SslHandshakeFailedError"/>
+      <EnumMember name="QNetworkReply.UnknownNetworkError"/>
+      <EnumMember name="QNetworkReply.ProxyConnectionRefusedError"/>
+      <EnumMember name="QNetworkReply.ProxyConnectionClosedError"/>
+      <EnumMember name="QNetworkReply.ProxyNotFoundError"/>
+      <EnumMember name="QNetworkReply.ProxyTimeoutError"/>
+      <EnumMember name="QNetworkReply.ProxyAuthenticationRequiredError"/>
+      <EnumMember name="QNetworkReply.UnknownProxyError"/>
+      <EnumMember name="QNetworkReply.ContentAccessDenied"/>
+      <EnumMember name="QNetworkReply.ContentOperationNotPermittedError"/>
+      <EnumMember name="QNetworkReply.ContentNotFoundError"/>
+      <EnumMember name="QNetworkReply.AuthenticationRequiredError"/>
+      <EnumMember name="QNetworkReply.UnknownContentError"/>
+      <EnumMember name="QNetworkReply.ProtocolUnknownError"/>
+      <EnumMember name="QNetworkReply.ProtocolInvalidOperationError"/>
+      <EnumMember name="QNetworkReply.ProtocolFailure"/>
+      <EnumMember name="QNetworkReply.ContentReSendError"/>
+      <EnumMember name="QNetworkReply.TemporaryNetworkFailureError"/>
+      <EnumMember name="QNetworkReply.NetworkSessionFailedError"/>
+      <EnumMember name="QNetworkReply.BackgroundRequestNotAllowedError"/>
+    </Enum>
+    <Function name="QNetworkReply.ignoreSslErrorsImplementation" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype"/>
+    </Function>
+    <Function name="QNetworkReply.setSslConfigurationImplementation" virtual="1">
+      <Argument typename="QSslConfiguration" typetype="class"/>
+    </Function>
+    <Function name="QNetworkReply.sslConfigurationImplementation" virtual="1">
+      <Argument typename="QSslConfiguration" typetype="class"/>
+    </Function>
+    <Function name="QNetworkReply.rawHeaderPairs">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.isRunning">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.setFinished">
+      <Argument typename="bool" name="finished"/>
+    </Function>
+    <Function name="QNetworkReply.setAttribute">
+      <Argument typename="QNetworkRequest.Attribute" typetype="enum" name="code"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkReply.setRawHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkReply.setHeader">
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkReply.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkReply.setError">
+      <Argument typename="QNetworkReply.NetworkError" typetype="enum" name="errorCode"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+    </Function>
+    <Function name="QNetworkReply.setRequest">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QNetworkReply.setOperation">
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation"/>
+    </Function>
+    <Function name="QNetworkReply.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+    </Function>
+    <Signal default="1" name="QNetworkReply.downloadProgress" sig="void downloadProgress( ::qint64, ::qint64)"/>
+    <Signal default="1" name="QNetworkReply.uploadProgress" sig="void uploadProgress( ::qint64, ::qint64)"/>
+    <Signal default="1" name="QNetworkReply.sslErrors" sig="void sslErrors(const QList&lt;QSslError&gt;&amp;)"/>
+    <Signal default="1" name="QNetworkReply.encrypted" sig="void encrypted()"/>
+    <Signal default="1" name="QNetworkReply.finished" sig="void finished()"/>
+    <Signal default="1" name="QNetworkReply.metaDataChanged" sig="void metaDataChanged()"/>
+    <Function name="QNetworkReply.ignoreSslErrors" slot="void ignoreSslErrors()" virtual="1"/>
+    <Function name="QNetworkReply.ignoreSslErrors">
+      <Argument typename="unknown-type" typetype="mappedtype" name="errors"/>
+    </Function>
+    <Function name="QNetworkReply.setSslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" name="configuration"/>
+    </Function>
+    <Function name="QNetworkReply.sslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.attribute">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest.Attribute" typetype="enum" name="code"/>
+    </Function>
+    <Function name="QNetworkReply.rawHeader">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkReply.rawHeaderList">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.hasRawHeader">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkReply.header">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+    </Function>
+    <Function name="QNetworkReply.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.error">
+      <Argument typename="QNetworkReply.NetworkError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QNetworkReply.error" sig="void error( ::QNetworkReply::NetworkError)"/>
+    <Function name="QNetworkReply.request">
+      <Argument typename="QNetworkRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.operation">
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.manager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.setReadBufferSize" virtual="1">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QNetworkReply.readBufferSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.isSequential" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QNetworkReply.close" virtual="1"/>
+    <Function name="QNetworkReply.abort" abstract="1" virtual="1"/>
+  </Class>
+  <Class name="QNetworkRequest">
+    <Function name="QNetworkRequest.__init__">
+      <Argument typename="QUrl" typetype="class" name="url" default="QUrl()"/>
+    </Function>
+    <Function name="QNetworkRequest.__init__">
+      <Argument typename="QNetworkRequest" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QNetworkRequest.Priority">
+      <EnumMember name="QNetworkRequest.HighPriority"/>
+      <EnumMember name="QNetworkRequest.NormalPriority"/>
+      <EnumMember name="QNetworkRequest.LowPriority"/>
+    </Enum>
+    <Enum name="QNetworkRequest.LoadControl">
+      <EnumMember name="QNetworkRequest.Automatic"/>
+      <EnumMember name="QNetworkRequest.Manual"/>
+    </Enum>
+    <Enum name="QNetworkRequest.CacheLoadControl">
+      <EnumMember name="QNetworkRequest.AlwaysNetwork"/>
+      <EnumMember name="QNetworkRequest.PreferNetwork"/>
+      <EnumMember name="QNetworkRequest.PreferCache"/>
+      <EnumMember name="QNetworkRequest.AlwaysCache"/>
+    </Enum>
+    <Enum name="QNetworkRequest.Attribute">
+      <EnumMember name="QNetworkRequest.HttpStatusCodeAttribute"/>
+      <EnumMember name="QNetworkRequest.HttpReasonPhraseAttribute"/>
+      <EnumMember name="QNetworkRequest.RedirectionTargetAttribute"/>
+      <EnumMember name="QNetworkRequest.ConnectionEncryptedAttribute"/>
+      <EnumMember name="QNetworkRequest.CacheLoadControlAttribute"/>
+      <EnumMember name="QNetworkRequest.CacheSaveControlAttribute"/>
+      <EnumMember name="QNetworkRequest.SourceIsFromCacheAttribute"/>
+      <EnumMember name="QNetworkRequest.DoNotBufferUploadDataAttribute"/>
+      <EnumMember name="QNetworkRequest.HttpPipeliningAllowedAttribute"/>
+      <EnumMember name="QNetworkRequest.HttpPipeliningWasUsedAttribute"/>
+      <EnumMember name="QNetworkRequest.CustomVerbAttribute"/>
+      <EnumMember name="QNetworkRequest.CookieLoadControlAttribute"/>
+      <EnumMember name="QNetworkRequest.AuthenticationReuseAttribute"/>
+      <EnumMember name="QNetworkRequest.CookieSaveControlAttribute"/>
+      <EnumMember name="QNetworkRequest.BackgroundRequestAttribute"/>
+      <EnumMember name="QNetworkRequest.User"/>
+      <EnumMember name="QNetworkRequest.UserMax"/>
+    </Enum>
+    <Enum name="QNetworkRequest.KnownHeaders">
+      <EnumMember name="QNetworkRequest.ContentTypeHeader"/>
+      <EnumMember name="QNetworkRequest.ContentLengthHeader"/>
+      <EnumMember name="QNetworkRequest.LocationHeader"/>
+      <EnumMember name="QNetworkRequest.LastModifiedHeader"/>
+      <EnumMember name="QNetworkRequest.CookieHeader"/>
+      <EnumMember name="QNetworkRequest.SetCookieHeader"/>
+      <EnumMember name="QNetworkRequest.ContentDispositionHeader"/>
+      <EnumMember name="QNetworkRequest.UserAgentHeader"/>
+      <EnumMember name="QNetworkRequest.ServerHeader"/>
+    </Enum>
+    <Function name="QNetworkRequest.swap">
+      <Argument typename="QNetworkRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkRequest.setPriority">
+      <Argument typename="QNetworkRequest.Priority" typetype="enum" name="priority"/>
+    </Function>
+    <Function name="QNetworkRequest.priority">
+      <Argument typename="QNetworkRequest.Priority" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkRequest.originatingObject">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkRequest.setOriginatingObject">
+      <Argument typename="QObject" typetype="class" name="object"/>
+    </Function>
+    <Function name="QNetworkRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QNetworkRequest.setSslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" name="configuration"/>
+    </Function>
+    <Function name="QNetworkRequest.sslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkRequest.setAttribute">
+      <Argument typename="QNetworkRequest.Attribute" typetype="enum" name="code"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkRequest.attribute">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest.Attribute" typetype="enum" name="code"/>
+      <Argument typename="QVariant" typetype="class" name="defaultValue" default="None"/>
+    </Function>
+    <Function name="QNetworkRequest.setRawHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkRequest.rawHeader">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkRequest.rawHeaderList">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkRequest.hasRawHeader">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QNetworkRequest.setHeader">
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkRequest.header">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QNetworkRequest.KnownHeaders" typetype="enum" name="header"/>
+    </Function>
+    <Function name="QNetworkRequest.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QNetworkRequest.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkSession" inherits="QObject">
+    <Function name="QNetworkSession.__init__">
+      <Argument typename="QNetworkConfiguration" typetype="class" name="connConfig"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNetworkSession.UsagePolicy">
+      <EnumMember name="QNetworkSession.NoPolicy"/>
+      <EnumMember name="QNetworkSession.NoBackgroundTrafficPolicy"/>
+    </Enum>
+    <Enum name="QNetworkSession.SessionError">
+      <EnumMember name="QNetworkSession.UnknownSessionError"/>
+      <EnumMember name="QNetworkSession.SessionAbortedError"/>
+      <EnumMember name="QNetworkSession.RoamingError"/>
+      <EnumMember name="QNetworkSession.OperationNotSupportedError"/>
+      <EnumMember name="QNetworkSession.InvalidConfigurationError"/>
+    </Enum>
+    <Enum name="QNetworkSession.State">
+      <EnumMember name="QNetworkSession.Invalid"/>
+      <EnumMember name="QNetworkSession.NotAvailable"/>
+      <EnumMember name="QNetworkSession.Connecting"/>
+      <EnumMember name="QNetworkSession.Connected"/>
+      <EnumMember name="QNetworkSession.Closing"/>
+      <EnumMember name="QNetworkSession.Disconnected"/>
+      <EnumMember name="QNetworkSession.Roaming"/>
+    </Enum>
+    <Signal default="1" name="QNetworkSession.usagePoliciesChanged" sig="void usagePoliciesChanged( ::QNetworkSession::UsagePolicies)"/>
+    <Function name="QNetworkSession.usagePolicies">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.disconnectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class" name="signal"/>
+    </Function>
+    <Function name="QNetworkSession.connectNotify" virtual="1">
+      <Argument typename="QMetaMethod" typetype="class" name="signal"/>
+    </Function>
+    <Signal default="1" name="QNetworkSession.newConfigurationActivated" sig="void newConfigurationActivated()"/>
+    <Signal default="1" name="QNetworkSession.preferredConfigurationChanged" sig="void preferredConfigurationChanged(const  ::QNetworkConfiguration&amp;,bool)"/>
+    <Signal default="1" name="QNetworkSession.closed" sig="void closed()"/>
+    <Signal default="1" name="QNetworkSession.opened" sig="void opened()"/>
+    <Signal default="1" name="QNetworkSession.stateChanged" sig="void stateChanged( ::QNetworkSession::State)"/>
+    <Function name="QNetworkSession.reject" slot="void reject()"/>
+    <Function name="QNetworkSession.accept" slot="void accept()"/>
+    <Function name="QNetworkSession.ignore" slot="void ignore()"/>
+    <Function name="QNetworkSession.migrate" slot="void migrate()"/>
+    <Function name="QNetworkSession.stop" slot="void stop()"/>
+    <Function name="QNetworkSession.close" slot="void close()"/>
+    <Function name="QNetworkSession.open" slot="void open()"/>
+    <Function name="QNetworkSession.waitForOpened">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QNetworkSession.activeTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.bytesReceived">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.bytesWritten">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.setSessionProperty">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QNetworkSession.sessionProperty">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QNetworkSession.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.error">
+      <Argument typename="QNetworkSession.SessionError" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QNetworkSession.error" sig="void error( ::QNetworkSession::SessionError)"/>
+    <Function name="QNetworkSession.state">
+      <Argument typename="QNetworkSession.State" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.interface">
+      <Argument typename="QNetworkInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.configuration">
+      <Argument typename="QNetworkConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.isOpen">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QNetworkSession.UsagePolicies" convert="1">
+    <Function name="QNetworkSession.UsagePolicies.__init__"/>
+    <Function name="QNetworkSession.UsagePolicies.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__init__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__ixor__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__xor__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__ior__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__or__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__iand__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__and__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__invert__">
+      <Argument typename="QNetworkSession.UsagePolicies" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNetworkSession.UsagePolicies.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSsl">
+    <Enum name="QSsl.SslOption">
+      <EnumMember name="QSsl.SslOptionDisableEmptyFragments"/>
+      <EnumMember name="QSsl.SslOptionDisableSessionTickets"/>
+      <EnumMember name="QSsl.SslOptionDisableCompression"/>
+      <EnumMember name="QSsl.SslOptionDisableServerNameIndication"/>
+      <EnumMember name="QSsl.SslOptionDisableLegacyRenegotiation"/>
+      <EnumMember name="QSsl.SslOptionDisableSessionSharing"/>
+      <EnumMember name="QSsl.SslOptionDisableSessionPersistence"/>
+    </Enum>
+    <Enum name="QSsl.SslProtocol">
+      <EnumMember name="QSsl.UnknownProtocol"/>
+      <EnumMember name="QSsl.SslV3"/>
+      <EnumMember name="QSsl.SslV2"/>
+      <EnumMember name="QSsl.TlsV1_0"/>
+      <EnumMember name="QSsl.TlsV1_1"/>
+      <EnumMember name="QSsl.TlsV1_2"/>
+      <EnumMember name="QSsl.AnyProtocol"/>
+      <EnumMember name="QSsl.TlsV1SslV3"/>
+      <EnumMember name="QSsl.SecureProtocols"/>
+    </Enum>
+    <Enum name="QSsl.AlternativeNameEntryType">
+      <EnumMember name="QSsl.EmailEntry"/>
+      <EnumMember name="QSsl.DnsEntry"/>
+    </Enum>
+    <Enum name="QSsl.KeyAlgorithm">
+      <EnumMember name="QSsl.Opaque"/>
+      <EnumMember name="QSsl.Rsa"/>
+      <EnumMember name="QSsl.Dsa"/>
+    </Enum>
+    <Enum name="QSsl.EncodingFormat">
+      <EnumMember name="QSsl.Pem"/>
+      <EnumMember name="QSsl.Der"/>
+    </Enum>
+    <Enum name="QSsl.KeyType">
+      <EnumMember name="QSsl.PrivateKey"/>
+      <EnumMember name="QSsl.PublicKey"/>
+    </Enum>
+  </Class>
+  <Class name="QSsl.SslOptions" convert="1">
+    <Function name="QSsl.SslOptions.__init__"/>
+    <Function name="QSsl.SslOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__init__">
+      <Argument typename="QSsl.SslOptions" typetype="class"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSsl.SslOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSsl.SslOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__ixor__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__xor__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__ior__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__or__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__iand__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__and__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__invert__">
+      <Argument typename="QSsl.SslOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSsl.SslOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSslCertificate">
+    <Function name="QSslCertificate.__init__">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+    </Function>
+    <Function name="QSslCertificate.__init__">
+      <Argument typename="QByteArray" typetype="class" name="data" default="QByteArray()"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+    </Function>
+    <Function name="QSslCertificate.__init__">
+      <Argument typename="QSslCertificate" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QSslCertificate.SubjectInfo">
+      <EnumMember name="QSslCertificate.Organization"/>
+      <EnumMember name="QSslCertificate.CommonName"/>
+      <EnumMember name="QSslCertificate.LocalityName"/>
+      <EnumMember name="QSslCertificate.OrganizationalUnitName"/>
+      <EnumMember name="QSslCertificate.CountryName"/>
+      <EnumMember name="QSslCertificate.StateOrProvinceName"/>
+      <EnumMember name="QSslCertificate.DistinguishedNameQualifier"/>
+      <EnumMember name="QSslCertificate.SerialNumber"/>
+      <EnumMember name="QSslCertificate.EmailAddress"/>
+    </Enum>
+    <Function name="QSslCertificate.verify" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificateChain"/>
+      <Argument typename="QString" typetype="mappedtype" name="hostName" default="''"/>
+    </Function>
+    <Function name="QSslCertificate.toText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.extensions">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.issuerInfoAttributes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.subjectInfoAttributes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.isBlacklisted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.swap">
+      <Argument typename="QSslCertificate" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCertificate.handle">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.fromData" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+    </Function>
+    <Function name="QSslCertificate.fromDevice" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+    </Function>
+    <Function name="QSslCertificate.fromPath" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+      <Argument typename="QRegExp.PatternSyntax" typetype="enum" name="syntax" default="QRegExp.FixedString"/>
+    </Function>
+    <Function name="QSslCertificate.toDer">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.toPem">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.publicKey">
+      <Argument typename="QSslKey" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.expiryDate">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.effectiveDate">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.subjectAlternativeNames">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.subjectInfo">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSslCertificate.SubjectInfo" typetype="enum" name="info"/>
+    </Function>
+    <Function name="QSslCertificate.subjectInfo">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="attribute"/>
+    </Function>
+    <Function name="QSslCertificate.issuerInfo">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSslCertificate.SubjectInfo" typetype="enum" name="info"/>
+    </Function>
+    <Function name="QSslCertificate.issuerInfo">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="attribute"/>
+    </Function>
+    <Function name="QSslCertificate.digest">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QCryptographicHash.Algorithm" typetype="enum" name="algorithm" default="QCryptographicHash.Md5"/>
+    </Function>
+    <Function name="QSslCertificate.serialNumber">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.version">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.clear"/>
+    <Function name="QSslCertificate.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslCertificate.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslCertificate" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCertificate.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslCertificate" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QSslCertificateExtension">
+    <Function name="QSslCertificateExtension.__init__"/>
+    <Function name="QSslCertificateExtension.__init__">
+      <Argument typename="QSslCertificateExtension" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCertificateExtension.isSupported">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslCertificateExtension.isCritical">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslCertificateExtension.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslCertificateExtension.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificateExtension.oid">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCertificateExtension.swap">
+      <Argument typename="QSslCertificateExtension" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QSslCipher">
+    <Function name="QSslCipher.__init__"/>
+    <Function name="QSslCipher.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QSsl.SslProtocol" typetype="enum" name="protocol"/>
+    </Function>
+    <Function name="QSslCipher.__init__">
+      <Argument typename="QSslCipher" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCipher.swap">
+      <Argument typename="QSslCipher" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCipher.protocol">
+      <Argument typename="QSsl.SslProtocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.protocolString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.encryptionMethod">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.authenticationMethod">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.keyExchangeMethod">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.usedBits">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.supportedBits">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslCipher.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslCipher" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslCipher.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslCipher" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QSslConfiguration">
+    <Function name="QSslConfiguration.__init__"/>
+    <Function name="QSslConfiguration.__init__">
+      <Argument typename="QSslConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslConfiguration.sessionTicketLifeTimeHint">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setSessionTicket">
+      <Argument typename="QByteArray" typetype="class" name="sessionTicket"/>
+    </Function>
+    <Function name="QSslConfiguration.sessionTicket">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setLocalCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" name="localChain"/>
+    </Function>
+    <Function name="QSslConfiguration.localCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.swap">
+      <Argument typename="QSslConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslConfiguration.testSslOption">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSsl.SslOption" typetype="enum" name="option"/>
+    </Function>
+    <Function name="QSslConfiguration.setSslOption">
+      <Argument typename="QSsl.SslOption" typetype="enum" name="option"/>
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QSslConfiguration.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslConfiguration.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslConfiguration" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslConfiguration.setDefaultConfiguration" static="1">
+      <Argument typename="QSslConfiguration" typetype="class" name="configuration"/>
+    </Function>
+    <Function name="QSslConfiguration.defaultConfiguration" static="1">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setCaCertificates">
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificates"/>
+    </Function>
+    <Function name="QSslConfiguration.caCertificates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setCiphers">
+      <Argument typename="unknown-type" typetype="mappedtype" name="ciphers"/>
+    </Function>
+    <Function name="QSslConfiguration.ciphers">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setPrivateKey">
+      <Argument typename="QSslKey" typetype="class" name="key"/>
+    </Function>
+    <Function name="QSslConfiguration.privateKey">
+      <Argument typename="QSslKey" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.sessionCipher">
+      <Argument typename="QSslCipher" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.peerCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.peerCertificate">
+      <Argument typename="QSslCertificate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setLocalCertificate">
+      <Argument typename="QSslCertificate" typetype="class" name="certificate"/>
+    </Function>
+    <Function name="QSslConfiguration.localCertificate">
+      <Argument typename="QSslCertificate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setPeerVerifyDepth">
+      <Argument typename="int" name="depth"/>
+    </Function>
+    <Function name="QSslConfiguration.peerVerifyDepth">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setPeerVerifyMode">
+      <Argument typename="QSslSocket.PeerVerifyMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QSslConfiguration.peerVerifyMode">
+      <Argument typename="QSslSocket.PeerVerifyMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.setProtocol">
+      <Argument typename="QSsl.SslProtocol" typetype="enum" name="protocol"/>
+    </Function>
+    <Function name="QSslConfiguration.protocol">
+      <Argument typename="QSsl.SslProtocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslConfiguration.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSslError">
+    <Function name="QSslError.__init__"/>
+    <Function name="QSslError.__init__">
+      <Argument typename="QSslError.SslError" typetype="enum" name="error"/>
+    </Function>
+    <Function name="QSslError.__init__">
+      <Argument typename="QSslError.SslError" typetype="enum" name="error"/>
+      <Argument typename="QSslCertificate" typetype="class" name="certificate"/>
+    </Function>
+    <Function name="QSslError.__init__">
+      <Argument typename="QSslError" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QSslError.SslError">
+      <EnumMember name="QSslError.UnspecifiedError"/>
+      <EnumMember name="QSslError.NoError"/>
+      <EnumMember name="QSslError.UnableToGetIssuerCertificate"/>
+      <EnumMember name="QSslError.UnableToDecryptCertificateSignature"/>
+      <EnumMember name="QSslError.UnableToDecodeIssuerPublicKey"/>
+      <EnumMember name="QSslError.CertificateSignatureFailed"/>
+      <EnumMember name="QSslError.CertificateNotYetValid"/>
+      <EnumMember name="QSslError.CertificateExpired"/>
+      <EnumMember name="QSslError.InvalidNotBeforeField"/>
+      <EnumMember name="QSslError.InvalidNotAfterField"/>
+      <EnumMember name="QSslError.SelfSignedCertificate"/>
+      <EnumMember name="QSslError.SelfSignedCertificateInChain"/>
+      <EnumMember name="QSslError.UnableToGetLocalIssuerCertificate"/>
+      <EnumMember name="QSslError.UnableToVerifyFirstCertificate"/>
+      <EnumMember name="QSslError.CertificateRevoked"/>
+      <EnumMember name="QSslError.InvalidCaCertificate"/>
+      <EnumMember name="QSslError.PathLengthExceeded"/>
+      <EnumMember name="QSslError.InvalidPurpose"/>
+      <EnumMember name="QSslError.CertificateUntrusted"/>
+      <EnumMember name="QSslError.CertificateRejected"/>
+      <EnumMember name="QSslError.SubjectIssuerMismatch"/>
+      <EnumMember name="QSslError.AuthorityIssuerSerialNumberMismatch"/>
+      <EnumMember name="QSslError.NoPeerCertificate"/>
+      <EnumMember name="QSslError.HostNameMismatch"/>
+      <EnumMember name="QSslError.NoSslSupport"/>
+      <EnumMember name="QSslError.CertificateBlacklisted"/>
+    </Enum>
+    <Function name="QSslError.swap">
+      <Argument typename="QSslError" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslError.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslError" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslError.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslError" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslError.certificate">
+      <Argument typename="QSslCertificate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslError.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslError.error">
+      <Argument typename="QSslError.SslError" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSslKey">
+    <Function name="QSslKey.__init__"/>
+    <Function name="QSslKey.__init__">
+      <Argument typename="QByteArray" typetype="class" name="encoded"/>
+      <Argument typename="QSsl.KeyAlgorithm" typetype="enum" name="algorithm"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="encoding" default="QSsl.Pem"/>
+      <Argument typename="QSsl.KeyType" typetype="enum" name="type" default="QSsl.PrivateKey"/>
+      <Argument typename="QByteArray" typetype="class" name="passPhrase" default="QByteArray()"/>
+    </Function>
+    <Function name="QSslKey.__init__">
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+      <Argument typename="QSsl.KeyAlgorithm" typetype="enum" name="algorithm"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="encoding" default="QSsl.Pem"/>
+      <Argument typename="QSsl.KeyType" typetype="enum" name="type" default="QSsl.PrivateKey"/>
+      <Argument typename="QByteArray" typetype="class" name="passPhrase" default="QByteArray()"/>
+    </Function>
+    <Function name="QSslKey.__init__">
+      <Argument typename="sip.voidptr" name="handle"/>
+      <Argument typename="QSsl.KeyType" typetype="enum" name="type" default="QSsl.PrivateKey"/>
+    </Function>
+    <Function name="QSslKey.__init__">
+      <Argument typename="QSslKey" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslKey.swap">
+      <Argument typename="QSslKey" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSslKey.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslKey" typetype="class" name="key"/>
+    </Function>
+    <Function name="QSslKey.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSslKey" typetype="class" name="key"/>
+    </Function>
+    <Function name="QSslKey.handle">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QSslKey.toDer">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="passPhrase" default="QByteArray()"/>
+    </Function>
+    <Function name="QSslKey.toPem">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="passPhrase" default="QByteArray()"/>
+    </Function>
+    <Function name="QSslKey.algorithm">
+      <Argument typename="QSsl.KeyAlgorithm" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslKey.type">
+      <Argument typename="QSsl.KeyType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslKey.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslKey.clear"/>
+    <Function name="QSslKey.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QTcpSocket" inherits="QAbstractSocket">
+    <Function name="QTcpSocket.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+  </Class>
+  <Class name="QSslSocket" inherits="QTcpSocket">
+    <Function name="QSslSocket.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSslSocket.PeerVerifyMode">
+      <EnumMember name="QSslSocket.VerifyNone"/>
+      <EnumMember name="QSslSocket.QueryPeer"/>
+      <EnumMember name="QSslSocket.VerifyPeer"/>
+      <EnumMember name="QSslSocket.AutoVerifyPeer"/>
+    </Enum>
+    <Enum name="QSslSocket.SslMode">
+      <EnumMember name="QSslSocket.UnencryptedMode"/>
+      <EnumMember name="QSslSocket.SslClientMode"/>
+      <EnumMember name="QSslSocket.SslServerMode"/>
+    </Enum>
+    <Function name="QSslSocket.localCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setLocalCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" name="localChain"/>
+    </Function>
+    <Function name="QSslSocket.sslLibraryVersionString" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.sslLibraryVersionNumber" static="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.disconnectFromHost" virtual="1"/>
+    <Function name="QSslSocket.connectToHost" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+      <Argument typename="QAbstractSocket.NetworkLayerProtocol" typetype="enum" name="protocol" default="QAbstractSocket.AnyIPProtocol"/>
+    </Function>
+    <Function name="QSslSocket.resume" virtual="1"/>
+    <Function name="QSslSocket.setPeerVerifyName">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+    </Function>
+    <Function name="QSslSocket.peerVerifyName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.socketOption" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QAbstractSocket.SocketOption" typetype="enum" name="option"/>
+    </Function>
+    <Function name="QSslSocket.setSocketOption" virtual="1">
+      <Argument typename="QAbstractSocket.SocketOption" typetype="enum" name="option"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Signal default="1" name="QSslSocket.encryptedBytesWritten" sig="void encryptedBytesWritten( ::qint64)"/>
+    <Signal default="1" name="QSslSocket.peerVerifyError" sig="void peerVerifyError(const  ::QSslError&amp;)"/>
+    <Function name="QSslSocket.setSslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" name="config"/>
+    </Function>
+    <Function name="QSslSocket.sslConfiguration">
+      <Argument typename="QSslConfiguration" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.encryptedBytesToWrite">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.encryptedBytesAvailable">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setReadBufferSize" virtual="1">
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QSslSocket.setPeerVerifyDepth">
+      <Argument typename="int" name="depth"/>
+    </Function>
+    <Function name="QSslSocket.peerVerifyDepth">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setPeerVerifyMode">
+      <Argument typename="QSslSocket.PeerVerifyMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QSslSocket.peerVerifyMode">
+      <Argument typename="QSslSocket.PeerVerifyMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.writeData" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+    </Function>
+    <Function name="QSslSocket.readData" virtual="1">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+    </Function>
+    <Signal default="1" name="QSslSocket.modeChanged" sig="void modeChanged( ::QSslSocket::SslMode)"/>
+    <Signal default="1" name="QSslSocket.encrypted" sig="void encrypted()"/>
+    <Function name="QSslSocket.ignoreSslErrors" slot="void ignoreSslErrors()"/>
+    <Function name="QSslSocket.ignoreSslErrors">
+      <Argument typename="unknown-type" typetype="mappedtype" name="errors"/>
+    </Function>
+    <Function name="QSslSocket.startServerEncryption" slot="void startServerEncryption()"/>
+    <Function name="QSslSocket.startClientEncryption" slot="void startClientEncryption()"/>
+    <Function name="QSslSocket.supportsSsl" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.sslErrors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Signal default="1" name="QSslSocket.sslErrors" sig="void sslErrors(const QList&lt;QSslError&gt;&amp;)"/>
+    <Function name="QSslSocket.waitForDisconnected" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QSslSocket.waitForBytesWritten" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QSslSocket.waitForReadyRead" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QSslSocket.waitForEncrypted">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QSslSocket.waitForConnected" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="30000"/>
+    </Function>
+    <Function name="QSslSocket.systemCaCertificates" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.defaultCaCertificates" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setDefaultCaCertificates" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificates"/>
+    </Function>
+    <Function name="QSslSocket.addDefaultCaCertificate" static="1">
+      <Argument typename="QSslCertificate" typetype="class" name="certificate"/>
+    </Function>
+    <Function name="QSslSocket.addDefaultCaCertificates" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+      <Argument typename="QRegExp.PatternSyntax" typetype="enum" name="syntax" default="QRegExp.FixedString"/>
+    </Function>
+    <Function name="QSslSocket.addDefaultCaCertificates" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificates"/>
+    </Function>
+    <Function name="QSslSocket.caCertificates">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setCaCertificates">
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificates"/>
+    </Function>
+    <Function name="QSslSocket.addCaCertificate">
+      <Argument typename="QSslCertificate" typetype="class" name="certificate"/>
+    </Function>
+    <Function name="QSslSocket.addCaCertificates">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+      <Argument typename="QRegExp.PatternSyntax" typetype="enum" name="syntax" default="QRegExp.FixedString"/>
+    </Function>
+    <Function name="QSslSocket.addCaCertificates">
+      <Argument typename="unknown-type" typetype="mappedtype" name="certificates"/>
+    </Function>
+    <Function name="QSslSocket.supportedCiphers" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.defaultCiphers" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setDefaultCiphers" static="1">
+      <Argument typename="unknown-type" typetype="mappedtype" name="ciphers"/>
+    </Function>
+    <Function name="QSslSocket.setCiphers">
+      <Argument typename="unknown-type" typetype="mappedtype" name="ciphers"/>
+    </Function>
+    <Function name="QSslSocket.setCiphers">
+      <Argument typename="QString" typetype="mappedtype" name="ciphers"/>
+    </Function>
+    <Function name="QSslSocket.ciphers">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.privateKey">
+      <Argument typename="QSslKey" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setPrivateKey">
+      <Argument typename="QSslKey" typetype="class" name="key"/>
+    </Function>
+    <Function name="QSslSocket.setPrivateKey">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+      <Argument typename="QSsl.KeyAlgorithm" typetype="enum" name="algorithm" default="QSsl.Rsa"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+      <Argument typename="QByteArray" typetype="class" name="passPhrase" default="QByteArray()"/>
+    </Function>
+    <Function name="QSslSocket.sessionCipher">
+      <Argument typename="QSslCipher" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.peerCertificateChain">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.peerCertificate">
+      <Argument typename="QSslCertificate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.localCertificate">
+      <Argument typename="QSslCertificate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setLocalCertificate">
+      <Argument typename="QSslCertificate" typetype="class" name="certificate"/>
+    </Function>
+    <Function name="QSslSocket.setLocalCertificate">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+      <Argument typename="QSsl.EncodingFormat" typetype="enum" name="format" default="QSsl.Pem"/>
+    </Function>
+    <Function name="QSslSocket.abort"/>
+    <Function name="QSslSocket.flush">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.atEnd" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.close" virtual="1"/>
+    <Function name="QSslSocket.canReadLine" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.bytesToWrite" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.bytesAvailable" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setProtocol">
+      <Argument typename="QSsl.SslProtocol" typetype="enum" name="protocol"/>
+    </Function>
+    <Function name="QSslSocket.protocol">
+      <Argument typename="QSsl.SslProtocol" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.isEncrypted">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.mode">
+      <Argument typename="QSslSocket.SslMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSslSocket.setSocketDescriptor" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="qintptr" typetype="mappedtype" name="socketDescriptor"/>
+      <Argument typename="QAbstractSocket.SocketState" typetype="enum" name="state" default="QAbstractSocket.ConnectedState"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+    </Function>
+    <Function name="QSslSocket.connectToHostEncrypted">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+      <Argument typename="QAbstractSocket.NetworkLayerProtocol" typetype="enum" name="protocol" default="QAbstractSocket.AnyIPProtocol"/>
+    </Function>
+    <Function name="QSslSocket.connectToHostEncrypted">
+      <Argument typename="QString" typetype="mappedtype" name="hostName"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QString" typetype="mappedtype" name="sslPeerName"/>
+      <Argument typename="QIODevice.OpenMode" typetype="class" name="mode" default="QIODevice.ReadWrite"/>
+      <Argument typename="QAbstractSocket.NetworkLayerProtocol" typetype="enum" name="protocol" default="QAbstractSocket.AnyIPProtocol"/>
+    </Function>
+  </Class>
+  <Class name="QTcpServer" inherits="QObject">
+    <Function name="QTcpServer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QTcpServer.acceptError" sig="void acceptError( ::QAbstractSocket::SocketError)"/>
+    <Signal default="1" name="QTcpServer.newConnection" sig="void newConnection()"/>
+    <Function name="QTcpServer.addPendingConnection">
+      <Argument typename="QTcpSocket" typetype="class" name="socket"/>
+    </Function>
+    <Function name="QTcpServer.incomingConnection" virtual="1">
+      <Argument typename="qintptr" typetype="mappedtype" name="handle"/>
+    </Function>
+    <Function name="QTcpServer.resumeAccepting"/>
+    <Function name="QTcpServer.pauseAccepting"/>
+    <Function name="QTcpServer.proxy">
+      <Argument typename="QNetworkProxy" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.setProxy">
+      <Argument typename="QNetworkProxy" typetype="class" name="networkProxy"/>
+    </Function>
+    <Function name="QTcpServer.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.serverError">
+      <Argument typename="QAbstractSocket.SocketError" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.nextPendingConnection" virtual="1">
+      <Argument typename="QTcpSocket" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.hasPendingConnections" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.waitForNewConnection">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="msecs" default="0"/>
+      <Argument typename="bool" name="timedOut" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.setSocketDescriptor">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="qintptr" typetype="mappedtype" name="socketDescriptor"/>
+    </Function>
+    <Function name="QTcpServer.socketDescriptor">
+      <Argument typename="qintptr" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.serverAddress">
+      <Argument typename="QHostAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.serverPort">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.maxPendingConnections">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.setMaxPendingConnections">
+      <Argument typename="int" name="numConnections"/>
+    </Function>
+    <Function name="QTcpServer.isListening">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QTcpServer.close"/>
+    <Function name="QTcpServer.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address" default="QHostAddress.Any"/>
+      <Argument typename="int" name="port" default="0"/>
+    </Function>
+  </Class>
+  <Class name="QUdpSocket" inherits="QAbstractSocket">
+    <Function name="QUdpSocket.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QUdpSocket.setMulticastInterface">
+      <Argument typename="QNetworkInterface" typetype="class" name="iface"/>
+    </Function>
+    <Function name="QUdpSocket.multicastInterface">
+      <Argument typename="QNetworkInterface" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QUdpSocket.leaveMulticastGroup">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="groupAddress"/>
+    </Function>
+    <Function name="QUdpSocket.leaveMulticastGroup">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="groupAddress"/>
+      <Argument typename="QNetworkInterface" typetype="class" name="iface"/>
+    </Function>
+    <Function name="QUdpSocket.joinMulticastGroup">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="groupAddress"/>
+    </Function>
+    <Function name="QUdpSocket.joinMulticastGroup">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="groupAddress"/>
+      <Argument typename="QNetworkInterface" typetype="class" name="iface"/>
+    </Function>
+    <Function name="QUdpSocket.writeDatagram">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="bytes" name="data"/>
+      <Argument typename="QHostAddress" typetype="class" name="host"/>
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QUdpSocket.writeDatagram">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="datagram"/>
+      <Argument typename="QHostAddress" typetype="class" name="host"/>
+      <Argument typename="int" name="port"/>
+    </Function>
+    <Function name="QUdpSocket.readDatagram">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="maxlen"/>
+      <Argument typename="QHostAddress" typetype="class" name="host" dir="out"/>
+      <Argument typename="int" name="port" dir="out"/>
+    </Function>
+    <Function name="QUdpSocket.pendingDatagramSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QUdpSocket.hasPendingDatagrams">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QNetworkCacheMetaData" typetype="class"/>
+  </Function>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QHostAddress" typetype="class"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QNetworkCacheMetaData" typetype="class"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QHostAddress" typetype="class"/>
+  </Function>
+</Module>

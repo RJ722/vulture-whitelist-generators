@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtMacExtras">
+  <Class name="QMacPasteboardMime">
+    <Function name="QMacPasteboardMime.__init__">
+      <Argument typename="int" name="t"/>
+    </Function>
+    <Function name="QMacPasteboardMime.__init__">
+      <Argument typename="QMacPasteboardMime" typetype="class"/>
+    </Function>
+    <Enum name="QMacPasteboardMime.QMacPasteboardMimeType">
+      <EnumMember name="QMacPasteboardMime.MIME_DND"/>
+      <EnumMember name="QMacPasteboardMime.MIME_CLIP"/>
+      <EnumMember name="QMacPasteboardMime.MIME_QT_CONVERTOR"/>
+      <EnumMember name="QMacPasteboardMime.MIME_QT3_CONVERTOR"/>
+      <EnumMember name="QMacPasteboardMime.MIME_ALL"/>
+    </Enum>
+    <Function name="QMacPasteboardMime.count" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QMimeData" typetype="class" name="mimeData"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertFromMime" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="QVariant" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertToMime" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.flavorFor" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+    </Function>
+    <Function name="QMacPasteboardMime.mimeFor" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.canConvert" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mime"/>
+      <Argument typename="QString" typetype="mappedtype" name="flav"/>
+    </Function>
+    <Function name="QMacPasteboardMime.convertorName" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QtMac">
+    <Function name="QtMac.isMainWindow" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtMac.badgeLabelText" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QtMac.setBadgeLabelText" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+  </Class>
+  <Function name="qRegisterDraggedTypes" static="1">
+    <Argument typename="QStringList" typetype="mappedtype" name="types"/>
+  </Function>
+</Module>

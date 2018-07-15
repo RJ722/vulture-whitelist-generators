@@ -1,0 +1,1325 @@
+<?xml version="1.0"?>
+<Module version="0" name="_QOpenGLFunctions_4_1_Core">
+  <Class name="QOpenGLFunctions_4_1_Core" inherits="QAbstractOpenGLFunctions">
+    <Function name="QOpenGLFunctions_4_1_Core.__init__"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glReleaseShaderCompiler"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glDepthRangef">
+      <Argument typename="float" name="n"/>
+      <Argument typename="float" name="f"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClearDepthf">
+      <Argument typename="float" name="dd"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramParameteri">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUseProgramStages">
+      <Argument typename="int" name="pipeline"/>
+      <Argument typename="int" name="stages"/>
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glActiveShaderProgram">
+      <Argument typename="int" name="pipeline"/>
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindProgramPipeline">
+      <Argument typename="int" name="pipeline"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsProgramPipeline">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="pipeline"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform1i">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform1f">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform1d">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform1ui">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform2i">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform2f">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform2d">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform2ui">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform3i">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform3f">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform3d">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform3ui">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform4i">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+      <Argument typename="int" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform4f">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+      <Argument typename="float" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform4d">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+      <Argument typename="float" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProgramUniform4ui">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+      <Argument typename="int" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glValidateProgramPipeline">
+      <Argument typename="int" name="pipeline"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribL1d">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribL2d">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribL3d">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribL4d">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+      <Argument typename="float" name="w"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glViewportIndexedf">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="w"/>
+      <Argument typename="float" name="h"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glScissorIndexed">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="left"/>
+      <Argument typename="int" name="bottom"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDepthRangeIndexed">
+      <Argument typename="int" name="index"/>
+      <Argument typename="float" name="n"/>
+      <Argument typename="float" name="f"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glMinSampleShading">
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendEquationi">
+      <Argument typename="int" name="buf"/>
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendEquationSeparatei">
+      <Argument typename="int" name="buf"/>
+      <Argument typename="int" name="modeRGB"/>
+      <Argument typename="int" name="modeAlpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendFunci">
+      <Argument typename="int" name="buf"/>
+      <Argument typename="int" name="src"/>
+      <Argument typename="int" name="dst"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendFuncSeparatei">
+      <Argument typename="int" name="buf"/>
+      <Argument typename="int" name="srcRGB"/>
+      <Argument typename="int" name="dstRGB"/>
+      <Argument typename="int" name="srcAlpha"/>
+      <Argument typename="int" name="dstAlpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1d">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="x"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2d">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3d">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4d">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="z"/>
+      <Argument typename="float" name="w"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPatchParameteri">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindTransformFeedback">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsTransformFeedback">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPauseTransformFeedback"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glResumeTransformFeedback"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawTransformFeedback">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawTransformFeedbackStream">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="id"/>
+      <Argument typename="int" name="stream"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBeginQueryIndexed">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEndQueryIndexed">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribDivisor">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="divisor"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsSampler">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="sampler"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindSampler">
+      <Argument typename="int" name="unit"/>
+      <Argument typename="int" name="sampler"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glSamplerParameteri">
+      <Argument typename="int" name="sampler"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glSamplerParameterf">
+      <Argument typename="int" name="sampler"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="float" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glQueryCounter">
+      <Argument typename="int" name="id"/>
+      <Argument typename="int" name="target"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexP2ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexP3ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexP4ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexCoordP1ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexCoordP2ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexCoordP3ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexCoordP4ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glMultiTexCoordP1ui">
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glMultiTexCoordP2ui">
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glMultiTexCoordP3ui">
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glMultiTexCoordP4ui">
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glNormalP3ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="coords"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glColorP3ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="color"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glColorP4ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="color"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glSecondaryColorP3ui">
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="color"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribP1ui">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="normalized"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribP2ui">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="normalized"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribP3ui">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="normalized"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribP4ui">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="normalized"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferTexture">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="level"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glProvokingVertex">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexImage2DMultisample">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="samples"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="fixedsamplelocations"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexImage3DMultisample">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="samples"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="depth"/>
+      <Argument typename="int" name="fixedsamplelocations"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glSampleMaski">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawArraysInstanced">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="instancecount"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexBuffer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="buffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPrimitiveRestartIndex">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniformBlockBinding">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="uniformBlockIndex"/>
+      <Argument typename="int" name="uniformBlockBinding"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glColorMaski">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="r"/>
+      <Argument typename="int" name="g"/>
+      <Argument typename="int" name="b"/>
+      <Argument typename="int" name="a"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEnablei">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDisablei">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsEnabledi">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBeginTransformFeedback">
+      <Argument typename="int" name="primitiveMode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEndTransformFeedback"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindBufferBase">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="buffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClampColor">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="clamp"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBeginConditionalRender">
+      <Argument typename="int" name="id"/>
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEndConditionalRender"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1ui">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2ui">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3ui">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4ui">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+      <Argument typename="int" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClearBufferfi">
+      <Argument typename="int" name="buffer"/>
+      <Argument typename="int" name="drawbuffer"/>
+      <Argument typename="float" name="depth"/>
+      <Argument typename="int" name="stencil"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsRenderbuffer">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="renderbuffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindRenderbuffer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="renderbuffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glRenderbufferStorage">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsFramebuffer">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="framebuffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindFramebuffer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="framebuffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCheckFramebufferStatus">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="target"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferTexture1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="textarget"/>
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="level"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferTexture2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="textarget"/>
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="level"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferTexture3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="textarget"/>
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="zoffset"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferRenderbuffer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="renderbuffertarget"/>
+      <Argument typename="int" name="renderbuffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGenerateMipmap">
+      <Argument typename="int" name="target"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlitFramebuffer">
+      <Argument typename="int" name="srcX0"/>
+      <Argument typename="int" name="srcY0"/>
+      <Argument typename="int" name="srcX1"/>
+      <Argument typename="int" name="srcY1"/>
+      <Argument typename="int" name="dstX0"/>
+      <Argument typename="int" name="dstY0"/>
+      <Argument typename="int" name="dstX1"/>
+      <Argument typename="int" name="dstY1"/>
+      <Argument typename="int" name="mask"/>
+      <Argument typename="int" name="filter"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glRenderbufferStorageMultisample">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="samples"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFramebufferTextureLayer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="attachment"/>
+      <Argument typename="int" name="texture"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="layer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindVertexArray">
+      <Argument typename="int" name="array"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsVertexArray">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="array"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendEquationSeparate">
+      <Argument typename="int" name="modeRGB"/>
+      <Argument typename="int" name="modeAlpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawBuffers">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="bufs"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilOpSeparate">
+      <Argument typename="int" name="face"/>
+      <Argument typename="int" name="sfail"/>
+      <Argument typename="int" name="dpfail"/>
+      <Argument typename="int" name="dppass"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilFuncSeparate">
+      <Argument typename="int" name="face"/>
+      <Argument typename="int" name="func"/>
+      <Argument typename="int" name="ref"/>
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilMaskSeparate">
+      <Argument typename="int" name="face"/>
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glAttachShader">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindAttribLocation">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="str" name="name"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompileShader">
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCreateProgram">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCreateShader">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="type"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDeleteProgram">
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDeleteShader">
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDetachShader">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDisableVertexAttribArray">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEnableVertexAttribArray">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetActiveAttrib">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetActiveUniform">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetAttachedShaders">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetAttribLocation">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="program"/>
+      <Argument typename="str" name="name"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetProgramiv">
+      <Argument typename="int" name="program"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetProgramInfoLog">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetShaderiv">
+      <Argument typename="int" name="shader"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetShaderInfoLog">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetShaderSource">
+      <Argument typename="object" dir="out"/>
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetUniformLocation">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="program"/>
+      <Argument typename="str" name="name"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetVertexAttribdv">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetVertexAttribfv">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetVertexAttribiv">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsProgram">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsShader">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="shader"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glLinkProgram">
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUseProgram">
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1f">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2f">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3f">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4f">
+      <Argument typename="int" name="location"/>
+      <Argument typename="float" name="v0"/>
+      <Argument typename="float" name="v1"/>
+      <Argument typename="float" name="v2"/>
+      <Argument typename="float" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1i">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2i">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3i">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4i">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="v0"/>
+      <Argument typename="int" name="v1"/>
+      <Argument typename="int" name="v2"/>
+      <Argument typename="int" name="v3"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform1iv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform2iv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform3iv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniform4iv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniformMatrix2fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="transpose"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniformMatrix3fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="transpose"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUniformMatrix4fv">
+      <Argument typename="int" name="location"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="transpose"/>
+      <Argument typename="object" name="value"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glValidateProgram">
+      <Argument typename="int" name="program"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glVertexAttribPointer">
+      <Argument typename="int" name="index"/>
+      <Argument typename="int" name="size"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="int" name="normalized"/>
+      <Argument typename="int" name="stride"/>
+      <Argument typename="object" name="pointer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGenQueries">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="ids" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDeleteQueries">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="ids"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsQuery">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBeginQuery">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="id"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEndQuery">
+      <Argument typename="int" name="target"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetQueryiv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindBuffer">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="buffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDeleteBuffers">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="buffers"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGenBuffers">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="buffers" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsBuffer">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="buffer"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBufferData">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="size"/>
+      <Argument typename="object" name="data"/>
+      <Argument typename="int" name="usage"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBufferSubData">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="offset"/>
+      <Argument typename="int" name="size"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glUnmapBuffer">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="target"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetBufferParameteriv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendFuncSeparate">
+      <Argument typename="int" name="sfactorRGB"/>
+      <Argument typename="int" name="dfactorRGB"/>
+      <Argument typename="int" name="sfactorAlpha"/>
+      <Argument typename="int" name="dfactorAlpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPointParameterf">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="float" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPointParameterfv">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPointParameteri">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPointParameteriv">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glActiveTexture">
+      <Argument typename="int" name="texture"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glSampleCoverage">
+      <Argument typename="float" name="value"/>
+      <Argument typename="int" name="invert"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexImage3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="depth"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexSubImage3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="zoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="depth"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexSubImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCompressedTexSubImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="imageSize"/>
+      <Argument typename="object" name="data"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendColor">
+      <Argument typename="float" name="red"/>
+      <Argument typename="float" name="green"/>
+      <Argument typename="float" name="blue"/>
+      <Argument typename="float" name="alpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendEquation">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawRangeElements">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="start"/>
+      <Argument typename="int" name="end"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="indices"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexImage3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="depth"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexSubImage3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="zoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="depth"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCopyTexSubImage3D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="zoffset"/>
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawArrays">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="count"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawElements">
+      <Argument typename="int" name="mode"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="indices"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPolygonOffset">
+      <Argument typename="float" name="factor"/>
+      <Argument typename="float" name="units"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCopyTexImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="border"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCopyTexImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="border"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCopyTexSubImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCopyTexSubImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexSubImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexSubImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="xoffset"/>
+      <Argument typename="int" name="yoffset"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glBindTexture">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="texture"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDeleteTextures">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="textures"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGenTextures">
+      <Argument typename="int" name="n"/>
+      <Argument typename="object" name="textures" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsTexture">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="texture"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIndexub">
+      <Argument typename="int" name="c"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIndexubv">
+      <Argument typename="object" name="c"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glCullFace">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFrontFace">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glHint">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glLineWidth">
+      <Argument typename="float" name="width"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPointSize">
+      <Argument typename="float" name="size"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPolygonMode">
+      <Argument typename="int" name="face"/>
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glScissor">
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexParameterf">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="float" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexParameterfv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexParameteri">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexParameteriv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexImage1D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glTexImage2D">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="internalformat"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+      <Argument typename="int" name="border"/>
+      <Argument typename="int" name="format"/>
+      <Argument typename="int" name="type"/>
+      <Argument typename="object" name="pixels"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDrawBuffer">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClear">
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClearColor">
+      <Argument typename="float" name="red"/>
+      <Argument typename="float" name="green"/>
+      <Argument typename="float" name="blue"/>
+      <Argument typename="float" name="alpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClearStencil">
+      <Argument typename="int" name="s"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glClearDepth">
+      <Argument typename="float" name="depth"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilMask">
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glColorMask">
+      <Argument typename="int" name="red"/>
+      <Argument typename="int" name="green"/>
+      <Argument typename="int" name="blue"/>
+      <Argument typename="int" name="alpha"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDepthMask">
+      <Argument typename="int" name="flag"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDisable">
+      <Argument typename="int" name="cap"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glEnable">
+      <Argument typename="int" name="cap"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glFinish"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glFlush"/>
+    <Function name="QOpenGLFunctions_4_1_Core.glBlendFunc">
+      <Argument typename="int" name="sfactor"/>
+      <Argument typename="int" name="dfactor"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glLogicOp">
+      <Argument typename="int" name="opcode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilFunc">
+      <Argument typename="int" name="func"/>
+      <Argument typename="int" name="ref"/>
+      <Argument typename="int" name="mask"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glStencilOp">
+      <Argument typename="int" name="fail"/>
+      <Argument typename="int" name="zfail"/>
+      <Argument typename="int" name="zpass"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDepthFunc">
+      <Argument typename="int" name="func"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPixelStoref">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="float" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glPixelStorei">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="int" name="param"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glReadBuffer">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetBooleanv">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetDoublev">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetError">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetFloatv">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetIntegerv">
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetString">
+      <Argument typename="str" dir="out"/>
+      <Argument typename="int" name="name"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetTexParameterfv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetTexParameteriv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetTexLevelParameterfv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glGetTexLevelParameteriv">
+      <Argument typename="int" name="target"/>
+      <Argument typename="int" name="level"/>
+      <Argument typename="int" name="pname"/>
+      <Argument typename="object" name="params" dir="out"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glIsEnabled">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="int" name="cap"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glDepthRange">
+      <Argument typename="float" name="nearVal"/>
+      <Argument typename="float" name="farVal"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.glViewport">
+      <Argument typename="int" name="x"/>
+      <Argument typename="int" name="y"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QOpenGLFunctions_4_1_Core.initializeOpenGLFunctions" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+</Module>

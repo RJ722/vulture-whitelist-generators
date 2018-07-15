@@ -1,0 +1,650 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtXmlPatterns">
+  <Class name="QAbstractMessageHandler" inherits="QObject">
+    <Function name="QAbstractMessageHandler.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAbstractMessageHandler.handleMessage" abstract="1" virtual="1">
+      <Argument typename="QtMsgType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+      <Argument typename="QUrl" typetype="class" name="identifier"/>
+      <Argument typename="QSourceLocation" typetype="class" name="sourceLocation"/>
+    </Function>
+    <Function name="QAbstractMessageHandler.message">
+      <Argument typename="QtMsgType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+      <Argument typename="QUrl" typetype="class" name="identifier" default="QUrl()"/>
+      <Argument typename="QSourceLocation" typetype="class" name="sourceLocation" default="QSourceLocation()"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractUriResolver" inherits="QObject">
+    <Function name="QAbstractUriResolver.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAbstractUriResolver.resolve" abstract="1" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="relative"/>
+      <Argument typename="QUrl" typetype="class" name="baseURI"/>
+    </Function>
+  </Class>
+  <Class name="QXmlNodeModelIndex">
+    <Function name="QXmlNodeModelIndex.__init__"/>
+    <Function name="QXmlNodeModelIndex.__init__">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QXmlNodeModelIndex.DocumentOrder">
+      <EnumMember name="QXmlNodeModelIndex.Precedes"/>
+      <EnumMember name="QXmlNodeModelIndex.Is"/>
+      <EnumMember name="QXmlNodeModelIndex.Follows"/>
+    </Enum>
+    <Enum name="QXmlNodeModelIndex.NodeKind">
+      <EnumMember name="QXmlNodeModelIndex.Attribute"/>
+      <EnumMember name="QXmlNodeModelIndex.Comment"/>
+      <EnumMember name="QXmlNodeModelIndex.Document"/>
+      <EnumMember name="QXmlNodeModelIndex.Element"/>
+      <EnumMember name="QXmlNodeModelIndex.Namespace"/>
+      <EnumMember name="QXmlNodeModelIndex.ProcessingInstruction"/>
+      <EnumMember name="QXmlNodeModelIndex.Text"/>
+    </Enum>
+    <Function name="QXmlNodeModelIndex.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.additionalData">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.model">
+      <Argument typename="QAbstractXmlNodeModel" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.internalPointer">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.data">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlNodeModelIndex.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractXmlNodeModel">
+    <Function name="QAbstractXmlNodeModel.__init__"/>
+    <Enum name="QAbstractXmlNodeModel.SimpleAxis">
+      <EnumMember name="QAbstractXmlNodeModel.Parent"/>
+      <EnumMember name="QAbstractXmlNodeModel.FirstChild"/>
+      <EnumMember name="QAbstractXmlNodeModel.PreviousSibling"/>
+      <EnumMember name="QAbstractXmlNodeModel.NextSibling"/>
+    </Enum>
+    <Function name="QAbstractXmlNodeModel.createIndex">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="int" name="data"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.createIndex">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="int" name="data"/>
+      <Argument typename="int" name="additionalData"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.createIndex">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="object" name="pointer"/>
+      <Argument typename="int" name="additionalData" default="0"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.attributes" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="element"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.nextFromSimpleAxis" abstract="1" virtual="1">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QAbstractXmlNodeModel.SimpleAxis" typetype="enum" name="axis"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="origin"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.sourceLocation">
+      <Argument typename="QSourceLocation" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.nodesByIdref" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="NCName"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.elementById" abstract="1" virtual="1">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="NCName"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.namespaceBindings" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="n"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.typedValue" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="n"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.stringValue" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="n"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.name" abstract="1" virtual="1">
+      <Argument typename="QXmlName" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.root" abstract="1" virtual="1">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="n"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.compareOrder" abstract="1" virtual="1">
+      <Argument typename="QXmlNodeModelIndex.DocumentOrder" typetype="enum" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni1"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni2"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.kind" abstract="1" virtual="1">
+      <Argument typename="QXmlNodeModelIndex.NodeKind" typetype="enum" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.documentUri" abstract="1" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni"/>
+    </Function>
+    <Function name="QAbstractXmlNodeModel.baseUri" abstract="1" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="ni"/>
+    </Function>
+  </Class>
+  <Class name="QXmlItem">
+    <Function name="QXmlItem.__init__"/>
+    <Function name="QXmlItem.__init__">
+      <Argument typename="QXmlItem" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlItem.__init__">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="node"/>
+    </Function>
+    <Function name="QXmlItem.__init__">
+      <Argument typename="QVariant" typetype="class" name="atomicValue"/>
+    </Function>
+    <Function name="QXmlItem.toNodeModelIndex">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlItem.toAtomicValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlItem.isAtomicValue">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlItem.isNode">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlItem.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractXmlReceiver">
+    <Function name="QAbstractXmlReceiver.__init__"/>
+    <Function name="QAbstractXmlReceiver.endOfSequence" abstract="1" virtual="1"/>
+    <Function name="QAbstractXmlReceiver.startOfSequence" abstract="1" virtual="1"/>
+    <Function name="QAbstractXmlReceiver.namespaceBinding" abstract="1" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.atomicValue" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.processingInstruction" abstract="1" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="target"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.endDocument" abstract="1" virtual="1"/>
+    <Function name="QAbstractXmlReceiver.startDocument" abstract="1" virtual="1"/>
+    <Function name="QAbstractXmlReceiver.characters" abstract="1" virtual="1">
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.comment" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.attribute" abstract="1" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QAbstractXmlReceiver.endElement" abstract="1" virtual="1"/>
+    <Function name="QAbstractXmlReceiver.startElement" abstract="1" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+    </Function>
+  </Class>
+  <Class name="QSimpleXmlNodeModel" inherits="QAbstractXmlNodeModel">
+    <Function name="QSimpleXmlNodeModel.__init__">
+      <Argument typename="QXmlNamePool" typetype="class" name="namePool"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.nodesByIdref" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="idref"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.elementById" virtual="1">
+      <Argument typename="QXmlNodeModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="id"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.stringValue" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="node"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.namespaceBindings" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.namePool">
+      <Argument typename="QXmlNamePool" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSimpleXmlNodeModel.baseUri" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QXmlNodeModelIndex" typetype="class" name="node"/>
+    </Function>
+  </Class>
+  <Class name="QSourceLocation">
+    <Function name="QSourceLocation.__init__"/>
+    <Function name="QSourceLocation.__init__">
+      <Argument typename="QSourceLocation" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSourceLocation.__init__">
+      <Argument typename="QUrl" typetype="class" name="u"/>
+      <Argument typename="int" name="line" default="-1"/>
+      <Argument typename="int" name="column" default="-1"/>
+    </Function>
+    <Function name="QSourceLocation.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSourceLocation.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSourceLocation.setUri">
+      <Argument typename="QUrl" typetype="class" name="newUri"/>
+    </Function>
+    <Function name="QSourceLocation.uri">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSourceLocation.setLine">
+      <Argument typename="int" name="newLine"/>
+    </Function>
+    <Function name="QSourceLocation.line">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSourceLocation.setColumn">
+      <Argument typename="int" name="newColumn"/>
+    </Function>
+    <Function name="QSourceLocation.column">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSourceLocation.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSourceLocation" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSourceLocation.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSourceLocation" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QXmlSerializer" inherits="QAbstractXmlReceiver">
+    <Function name="QXmlSerializer.__init__">
+      <Argument typename="QXmlQuery" typetype="class" name="query"/>
+      <Argument typename="QIODevice" typetype="class" name="outputDevice"/>
+    </Function>
+    <Function name="QXmlSerializer.codec">
+      <Argument typename="QTextCodec" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSerializer.setCodec">
+      <Argument typename="QTextCodec" typetype="class" name="codec"/>
+    </Function>
+    <Function name="QXmlSerializer.outputDevice">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSerializer.endOfSequence" virtual="1"/>
+    <Function name="QXmlSerializer.startOfSequence" virtual="1"/>
+    <Function name="QXmlSerializer.endDocument" virtual="1"/>
+    <Function name="QXmlSerializer.startDocument" virtual="1"/>
+    <Function name="QXmlSerializer.atomicValue" virtual="1">
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QXmlSerializer.processingInstruction" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlSerializer.attribute" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlSerializer.endElement" virtual="1"/>
+    <Function name="QXmlSerializer.startElement" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+    </Function>
+    <Function name="QXmlSerializer.comment" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlSerializer.characters" virtual="1">
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlSerializer.namespaceBinding" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="nb"/>
+    </Function>
+  </Class>
+  <Class name="QXmlFormatter" inherits="QXmlSerializer">
+    <Function name="QXmlFormatter.__init__">
+      <Argument typename="QXmlQuery" typetype="class" name="query"/>
+      <Argument typename="QIODevice" typetype="class" name="outputDevice"/>
+    </Function>
+    <Function name="QXmlFormatter.setIndentationDepth">
+      <Argument typename="int" name="depth"/>
+    </Function>
+    <Function name="QXmlFormatter.indentationDepth">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlFormatter.endOfSequence" virtual="1"/>
+    <Function name="QXmlFormatter.startOfSequence" virtual="1"/>
+    <Function name="QXmlFormatter.endDocument" virtual="1"/>
+    <Function name="QXmlFormatter.startDocument" virtual="1"/>
+    <Function name="QXmlFormatter.atomicValue" virtual="1">
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QXmlFormatter.processingInstruction" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlFormatter.attribute" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlFormatter.endElement" virtual="1"/>
+    <Function name="QXmlFormatter.startElement" virtual="1">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+    </Function>
+    <Function name="QXmlFormatter.comment" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QXmlFormatter.characters" virtual="1">
+      <Argument typename="QStringRef" typetype="mappedtype" name="value"/>
+    </Function>
+  </Class>
+  <Class name="QXmlName">
+    <Function name="QXmlName.__init__"/>
+    <Function name="QXmlName.__init__">
+      <Argument typename="QXmlNamePool" typetype="class" name="namePool"/>
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QString" typetype="mappedtype" name="namespaceUri" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="prefix" default="''"/>
+    </Function>
+    <Function name="QXmlName.__init__">
+      <Argument typename="QXmlName" typetype="class"/>
+    </Function>
+    <Function name="QXmlName.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QXmlName.fromClarkName" static="1">
+      <Argument typename="QXmlName" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="clarkName"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="namePool"/>
+    </Function>
+    <Function name="QXmlName.isNCName" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="candidate"/>
+    </Function>
+    <Function name="QXmlName.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlName.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlName.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlName" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlName.toClarkName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="query"/>
+    </Function>
+    <Function name="QXmlName.localName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="query"/>
+    </Function>
+    <Function name="QXmlName.prefix">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="query"/>
+    </Function>
+    <Function name="QXmlName.namespaceUri">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="query"/>
+    </Function>
+  </Class>
+  <Class name="QXmlNamePool">
+    <Function name="QXmlNamePool.__init__"/>
+    <Function name="QXmlNamePool.__init__">
+      <Argument typename="QXmlNamePool" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QXmlQuery">
+    <Function name="QXmlQuery.__init__"/>
+    <Function name="QXmlQuery.__init__">
+      <Argument typename="QXmlQuery" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlQuery.__init__">
+      <Argument typename="QXmlNamePool" typetype="class" name="np"/>
+    </Function>
+    <Function name="QXmlQuery.__init__">
+      <Argument typename="QXmlQuery.QueryLanguage" typetype="enum" name="queryLanguage"/>
+      <Argument typename="QXmlNamePool" typetype="class" name="pool" default="QXmlNamePool()"/>
+    </Function>
+    <Enum name="QXmlQuery.QueryLanguage">
+      <EnumMember name="QXmlQuery.XQuery10"/>
+      <EnumMember name="QXmlQuery.XSLT20"/>
+    </Enum>
+    <Function name="QXmlQuery.queryLanguage">
+      <Argument typename="QXmlQuery.QueryLanguage" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.setNetworkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="newManager"/>
+    </Function>
+    <Function name="QXmlQuery.initialTemplateName">
+      <Argument typename="QXmlName" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.setInitialTemplateName">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+    </Function>
+    <Function name="QXmlQuery.setInitialTemplateName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QXmlQuery.setFocus">
+      <Argument typename="QXmlItem" typetype="class" name="item"/>
+    </Function>
+    <Function name="QXmlQuery.setFocus">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="documentURI"/>
+    </Function>
+    <Function name="QXmlQuery.setFocus">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="document"/>
+    </Function>
+    <Function name="QXmlQuery.setFocus">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="focus"/>
+    </Function>
+    <Function name="QXmlQuery.uriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.setUriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" name="resolver"/>
+    </Function>
+    <Function name="QXmlQuery.evaluateToString">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.evaluateToStringList">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.evaluateTo">
+      <Argument typename="QXmlResultItems" typetype="class" name="result"/>
+    </Function>
+    <Function name="QXmlQuery.evaluateTo">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QAbstractXmlReceiver" typetype="class" name="callback"/>
+    </Function>
+    <Function name="QXmlQuery.evaluateTo">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="target"/>
+    </Function>
+    <Function name="QXmlQuery.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QXmlItem" typetype="class" name="value"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QIODevice" typetype="class"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QXmlName" typetype="class" name="name"/>
+      <Argument typename="QXmlQuery" typetype="class" name="query"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QXmlItem" typetype="class" name="value"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QIODevice" typetype="class"/>
+    </Function>
+    <Function name="QXmlQuery.bindVariable">
+      <Argument typename="QString" typetype="mappedtype" name="localName"/>
+      <Argument typename="QXmlQuery" typetype="class" name="query"/>
+    </Function>
+    <Function name="QXmlQuery.namePool">
+      <Argument typename="QXmlNamePool" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.setQuery">
+      <Argument typename="QString" typetype="mappedtype" name="sourceCode"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlQuery.setQuery">
+      <Argument typename="QIODevice" typetype="class" name="sourceCode"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlQuery.setQuery">
+      <Argument typename="QUrl" typetype="class" name="queryURI"/>
+      <Argument typename="QUrl" typetype="class" name="baseUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlQuery.messageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlQuery.setMessageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" name="messageHandler"/>
+    </Function>
+  </Class>
+  <Class name="QXmlResultItems">
+    <Function name="QXmlResultItems.__init__"/>
+    <Function name="QXmlResultItems.current">
+      <Argument typename="QXmlItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlResultItems.next">
+      <Argument typename="QXmlItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlResultItems.hasError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QXmlSchema">
+    <Function name="QXmlSchema.__init__"/>
+    <Function name="QXmlSchema.__init__">
+      <Argument typename="QXmlSchema" typetype="class" name="other"/>
+    </Function>
+    <Function name="QXmlSchema.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.setNetworkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="networkmanager"/>
+    </Function>
+    <Function name="QXmlSchema.uriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.setUriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" name="resolver"/>
+    </Function>
+    <Function name="QXmlSchema.messageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.setMessageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSchema.documentUri">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.namePool">
+      <Argument typename="QXmlNamePool" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QXmlSchema.load">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="source"/>
+    </Function>
+    <Function name="QXmlSchema.load">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="source"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlSchema.load">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+  </Class>
+  <Class name="QXmlSchemaValidator">
+    <Function name="QXmlSchemaValidator.__init__"/>
+    <Function name="QXmlSchemaValidator.__init__">
+      <Argument typename="QXmlSchema" typetype="class" name="schema"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.setNetworkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="networkmanager"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.uriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.setUriResolver">
+      <Argument typename="QAbstractUriResolver" typetype="class" name="resolver"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.messageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.setMessageHandler">
+      <Argument typename="QAbstractMessageHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.schema">
+      <Argument typename="QXmlSchema" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.namePool">
+      <Argument typename="QXmlNamePool" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.validate">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="source"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.validate">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QIODevice" typetype="class" name="source"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.validate">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QUrl" typetype="class" name="documentUri" default="QUrl()"/>
+    </Function>
+    <Function name="QXmlSchemaValidator.setSchema">
+      <Argument typename="QXmlSchema" typetype="class" name="schema"/>
+    </Function>
+  </Class>
+</Module>

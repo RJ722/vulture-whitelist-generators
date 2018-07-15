@@ -1,0 +1,510 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWinExtras">
+  <Class name="QtWin">
+    <Enum name="QtWin.WindowFlip3DPolicy">
+      <EnumMember name="QtWin.FlipDefault"/>
+      <EnumMember name="QtWin.FlipExcludeBelow"/>
+      <EnumMember name="QtWin.FlipExcludeAbove"/>
+    </Enum>
+    <Enum name="QtWin.HBitmapFormat">
+      <EnumMember name="QtWin.HBitmapNoAlpha"/>
+      <EnumMember name="QtWin.HBitmapPremultipliedAlpha"/>
+      <EnumMember name="QtWin.HBitmapAlpha"/>
+    </Enum>
+    <Function name="QtWin.taskbarDeleteTab" static="1">
+      <Argument typename="QWindow" typetype="class"/>
+    </Function>
+    <Function name="QtWin.taskbarDeleteTab" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.taskbarAddTab" static="1">
+      <Argument typename="QWindow" typetype="class"/>
+    </Function>
+    <Function name="QtWin.taskbarAddTab" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.taskbarActivateTabAlt" static="1">
+      <Argument typename="QWindow" typetype="class"/>
+    </Function>
+    <Function name="QtWin.taskbarActivateTabAlt" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.taskbarActivateTab" static="1">
+      <Argument typename="QWindow" typetype="class"/>
+    </Function>
+    <Function name="QtWin.taskbarActivateTab" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.markFullscreenWindow" static="1">
+      <Argument typename="QWindow" typetype="class"/>
+      <Argument typename="bool" name="fullscreen" default="True"/>
+    </Function>
+    <Function name="QtWin.markFullscreenWindow" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="bool" name="fullscreen" default="True"/>
+    </Function>
+    <Function name="QtWin.setCurrentProcessExplicitAppUserModelID" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QtWin.isCompositionOpaque" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QtWin.setCompositionEnabled" static="1">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QtWin.isCompositionEnabled" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QtWin.disableBlurBehindWindow" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.disableBlurBehindWindow" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.enableBlurBehindWindow" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="QRegion" typetype="class" name="region"/>
+    </Function>
+    <Function name="QtWin.enableBlurBehindWindow" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.enableBlurBehindWindow" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="QRegion" typetype="class" name="region"/>
+    </Function>
+    <Function name="QtWin.enableBlurBehindWindow" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.resetExtendedFrame" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.resetExtendedFrame" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.extendFrameIntoClientArea" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="int" name="left"/>
+      <Argument typename="int" name="top"/>
+      <Argument typename="int" name="right"/>
+      <Argument typename="int" name="bottom"/>
+    </Function>
+    <Function name="QtWin.extendFrameIntoClientArea" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="QMargins" typetype="class" name="margins"/>
+    </Function>
+    <Function name="QtWin.extendFrameIntoClientArea" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="QMargins" typetype="class" name="margins"/>
+    </Function>
+    <Function name="QtWin.extendFrameIntoClientArea" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="int" name="left"/>
+      <Argument typename="int" name="top"/>
+      <Argument typename="int" name="right"/>
+      <Argument typename="int" name="bottom"/>
+    </Function>
+    <Function name="QtWin.windowFlip3DPolicy" static="1">
+      <Argument typename="QtWin.WindowFlip3DPolicy" typetype="enum" dir="out"/>
+      <Argument typename="QWindow" typetype="class"/>
+    </Function>
+    <Function name="QtWin.windowFlip3DPolicy" static="1">
+      <Argument typename="QtWin.WindowFlip3DPolicy" typetype="enum" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.setWindowFlip3DPolicy" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="QtWin.WindowFlip3DPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QtWin.setWindowFlip3DPolicy" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="QtWin.WindowFlip3DPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QtWin.isWindowPeekDisallowed" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.isWindowPeekDisallowed" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.setWindowDisallowPeek" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="bool" name="disallow"/>
+    </Function>
+    <Function name="QtWin.setWindowDisallowPeek" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="bool" name="disallow"/>
+    </Function>
+    <Function name="QtWin.isWindowExcludedFromPeek" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.isWindowExcludedFromPeek" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="window"/>
+    </Function>
+    <Function name="QtWin.setWindowExcludedFromPeek" static="1">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+      <Argument typename="bool" name="exclude"/>
+    </Function>
+    <Function name="QtWin.setWindowExcludedFromPeek" static="1">
+      <Argument typename="QWidget" typetype="class" name="window"/>
+      <Argument typename="bool" name="exclude"/>
+    </Function>
+    <Function name="QtWin.realColorizationColor" static="1">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QtWin.colorizationColor" static="1">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+      <Argument typename="bool" name="opaqueBlend" dir="out"/>
+    </Function>
+    <Function name="QtWin.errorStringFromHresult" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="hresult"/>
+    </Function>
+    <Function name="QtWin.stringFromHresult" static="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="hresult"/>
+    </Function>
+    <Function name="QtWin.fromHRGN" static="1">
+      <Argument typename="QRegion" typetype="class" dir="out"/>
+      <Argument typename="sip.voidptr" name="hrgn"/>
+    </Function>
+    <Function name="QtWin.toHRGN" static="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QRegion" typetype="class" name="region"/>
+    </Function>
+    <Function name="QtWin.fromHICON" static="1">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+      <Argument typename="sip.voidptr" name="icon"/>
+    </Function>
+    <Function name="QtWin.imageFromHBITMAP" static="1">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+      <Argument typename="sip.voidptr" name="hdc"/>
+      <Argument typename="sip.voidptr" name="bitmap"/>
+      <Argument typename="int" name="width"/>
+      <Argument typename="int" name="height"/>
+    </Function>
+    <Function name="QtWin.toHICON" static="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="p"/>
+    </Function>
+    <Function name="QtWin.fromHBITMAP" static="1">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+      <Argument typename="sip.voidptr" name="bitmap"/>
+      <Argument typename="QtWin.HBitmapFormat" typetype="enum" name="format" default="QtWin.HBitmapNoAlpha"/>
+    </Function>
+    <Function name="QtWin.toHBITMAP" static="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QPixmap" typetype="class" name="p"/>
+      <Argument typename="QtWin.HBitmapFormat" typetype="enum" name="format" default="QtWin.HBitmapNoAlpha"/>
+    </Function>
+    <Function name="QtWin.createMask" static="1">
+      <Argument typename="sip.voidptr" dir="out"/>
+      <Argument typename="QBitmap" typetype="class" name="bitmap"/>
+    </Function>
+  </Class>
+  <Class name="QWinJumpList" inherits="QObject">
+    <Function name="QWinJumpList.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWinJumpList.clear" slot="void clear()"/>
+    <Function name="QWinJumpList.addCategory">
+      <Argument typename="QWinJumpListCategory" typetype="class" name="category" transfer="to"/>
+    </Function>
+    <Function name="QWinJumpList.addCategory">
+      <Argument typename="QWinJumpListCategory" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="items" transfer="to" default="QList&lt;QWinJumpListItem*&gt;()"/>
+    </Function>
+    <Function name="QWinJumpList.categories">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpList.tasks">
+      <Argument typename="QWinJumpListCategory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinJumpList.frequent">
+      <Argument typename="QWinJumpListCategory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinJumpList.recent">
+      <Argument typename="QWinJumpListCategory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinJumpList.setIdentifier">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QWinJumpList.identifier">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWinJumpListCategory">
+    <Function name="QWinJumpListCategory.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="title" default="''"/>
+    </Function>
+    <Enum name="QWinJumpListCategory.Type">
+      <EnumMember name="QWinJumpListCategory.Custom"/>
+      <EnumMember name="QWinJumpListCategory.Recent"/>
+      <EnumMember name="QWinJumpListCategory.Frequent"/>
+      <EnumMember name="QWinJumpListCategory.Tasks"/>
+    </Enum>
+    <Function name="QWinJumpListCategory.clear"/>
+    <Function name="QWinJumpListCategory.addSeparator">
+      <Argument typename="QWinJumpListItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.addLink">
+      <Argument typename="QWinJumpListItem" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+      <Argument typename="QString" typetype="mappedtype" name="executablePath"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="arguments" default="[]"/>
+    </Function>
+    <Function name="QWinJumpListCategory.addLink">
+      <Argument typename="QWinJumpListItem" typetype="class" dir="out"/>
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+      <Argument typename="QString" typetype="mappedtype" name="executablePath"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="arguments" default="[]"/>
+    </Function>
+    <Function name="QWinJumpListCategory.addDestination">
+      <Argument typename="QWinJumpListItem" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filePath"/>
+    </Function>
+    <Function name="QWinJumpListCategory.addItem">
+      <Argument typename="QWinJumpListItem" typetype="class" name="item" transfer="to"/>
+    </Function>
+    <Function name="QWinJumpListCategory.items">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+    </Function>
+    <Function name="QWinJumpListCategory.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.setVisible">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+    <Function name="QWinJumpListCategory.isVisible">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListCategory.type">
+      <Argument typename="QWinJumpListCategory.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWinJumpListItem">
+    <Function name="QWinJumpListItem.__init__">
+      <Argument typename="QWinJumpListItem.Type" typetype="enum" name="type"/>
+    </Function>
+    <Enum name="QWinJumpListItem.Type">
+      <EnumMember name="QWinJumpListItem.Destination"/>
+      <EnumMember name="QWinJumpListItem.Link"/>
+      <EnumMember name="QWinJumpListItem.Separator"/>
+    </Enum>
+    <Function name="QWinJumpListItem.arguments">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setArguments">
+      <Argument typename="QStringList" typetype="mappedtype" name="arguments"/>
+    </Function>
+    <Function name="QWinJumpListItem.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setDescription">
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+    </Function>
+    <Function name="QWinJumpListItem.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+    </Function>
+    <Function name="QWinJumpListItem.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setIcon">
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QWinJumpListItem.workingDirectory">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setWorkingDirectory">
+      <Argument typename="QString" typetype="mappedtype" name="workingDirectory"/>
+    </Function>
+    <Function name="QWinJumpListItem.filePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setFilePath">
+      <Argument typename="QString" typetype="mappedtype" name="filePath"/>
+    </Function>
+    <Function name="QWinJumpListItem.type">
+      <Argument typename="QWinJumpListItem.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWinJumpListItem.setType">
+      <Argument typename="QWinJumpListItem.Type" typetype="enum" name="type"/>
+    </Function>
+  </Class>
+  <Class name="QWinTaskbarButton" inherits="QObject">
+    <Function name="QWinTaskbarButton.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWinTaskbarButton.clearOverlayIcon" slot="void clearOverlayIcon()"/>
+    <Function name="QWinTaskbarButton.setOverlayAccessibleDescription" slot="void setOverlayAccessibleDescription(const QString&amp;)">
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+    </Function>
+    <Function name="QWinTaskbarButton.setOverlayIcon" slot="void setOverlayIcon(const  ::QIcon&amp;)">
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QWinTaskbarButton.eventFilter" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QObject" typetype="class"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWinTaskbarButton.progress">
+      <Argument typename="QWinTaskbarProgress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarButton.overlayAccessibleDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarButton.overlayIcon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarButton.window">
+      <Argument typename="QWindow" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarButton.setWindow">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+  </Class>
+  <Class name="QWinTaskbarProgress" inherits="QObject">
+    <Function name="QWinTaskbarProgress.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QWinTaskbarProgress.visibilityChanged" sig="void visibilityChanged(bool)"/>
+    <Signal default="1" name="QWinTaskbarProgress.maximumChanged" sig="void maximumChanged(int)"/>
+    <Signal default="1" name="QWinTaskbarProgress.minimumChanged" sig="void minimumChanged(int)"/>
+    <Signal default="1" name="QWinTaskbarProgress.valueChanged" sig="void valueChanged(int)"/>
+    <Function name="QWinTaskbarProgress.stop" slot="void stop()"/>
+    <Function name="QWinTaskbarProgress.setPaused" slot="void setPaused(bool)">
+      <Argument typename="bool" name="paused"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.resume" slot="void resume()"/>
+    <Function name="QWinTaskbarProgress.pause" slot="void pause()"/>
+    <Function name="QWinTaskbarProgress.setVisible" slot="void setVisible(bool)">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.hide" slot="void hide()"/>
+    <Function name="QWinTaskbarProgress.show" slot="void show()"/>
+    <Function name="QWinTaskbarProgress.reset" slot="void reset()"/>
+    <Function name="QWinTaskbarProgress.setRange" slot="void setRange(int,int)">
+      <Argument typename="int" name="minimum"/>
+      <Argument typename="int" name="maximum"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.setMaximum" slot="void setMaximum(int)">
+      <Argument typename="int" name="maximum"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.setMinimum" slot="void setMinimum(int)">
+      <Argument typename="int" name="minimum"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.setValue" slot="void setValue(int)">
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.isStopped">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.isPaused">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.isVisible">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.maximum">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.minimum">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWinTaskbarProgress.value">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWinThumbnailToolBar" inherits="QObject">
+    <Function name="QWinThumbnailToolBar.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.clear" slot="void clear()"/>
+    <Function name="QWinThumbnailToolBar.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.buttons">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.setButtons">
+      <Argument typename="unknown-type" typetype="mappedtype" name="buttons"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.removeButton">
+      <Argument typename="QWinThumbnailToolButton" typetype="class" name="button"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.addButton">
+      <Argument typename="QWinThumbnailToolButton" typetype="class" name="button"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.window">
+      <Argument typename="QWindow" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolBar.setWindow">
+      <Argument typename="QWindow" typetype="class" name="window"/>
+    </Function>
+  </Class>
+  <Class name="QWinThumbnailToolButton" inherits="QObject">
+    <Function name="QWinThumbnailToolButton.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QWinThumbnailToolButton.clicked" sig="void clicked()"/>
+    <Function name="QWinThumbnailToolButton.click" slot="void click()"/>
+    <Function name="QWinThumbnailToolButton.isFlat">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setFlat">
+      <Argument typename="bool" name="flat"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.dismissOnClick">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setDismissOnClick">
+      <Argument typename="bool" name="dismiss"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.isVisible">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setVisible">
+      <Argument typename="bool" name="visible"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.isInteractive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setInteractive">
+      <Argument typename="bool" name="interactive"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.isEnabled">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setEnabled">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setIcon">
+      <Argument typename="QIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.toolTip">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWinThumbnailToolButton.setToolTip">
+      <Argument typename="QString" typetype="mappedtype" name="toolTip"/>
+    </Function>
+  </Class>
+</Module>

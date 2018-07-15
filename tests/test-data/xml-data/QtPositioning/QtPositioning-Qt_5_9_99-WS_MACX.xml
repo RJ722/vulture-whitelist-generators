@@ -1,0 +1,1009 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtPositioning">
+  <Class name="QGeoAddress">
+    <Function name="QGeoAddress.__init__"/>
+    <Function name="QGeoAddress.__init__">
+      <Argument typename="QGeoAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoAddress.isTextGenerated">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.clear"/>
+    <Function name="QGeoAddress.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setStreet">
+      <Argument typename="QString" typetype="mappedtype" name="street"/>
+    </Function>
+    <Function name="QGeoAddress.street">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setPostalCode">
+      <Argument typename="QString" typetype="mappedtype" name="postalCode"/>
+    </Function>
+    <Function name="QGeoAddress.postalCode">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setDistrict">
+      <Argument typename="QString" typetype="mappedtype" name="district"/>
+    </Function>
+    <Function name="QGeoAddress.district">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setCity">
+      <Argument typename="QString" typetype="mappedtype" name="city"/>
+    </Function>
+    <Function name="QGeoAddress.city">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setCounty">
+      <Argument typename="QString" typetype="mappedtype" name="county"/>
+    </Function>
+    <Function name="QGeoAddress.county">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setState">
+      <Argument typename="QString" typetype="mappedtype" name="state"/>
+    </Function>
+    <Function name="QGeoAddress.state">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setCountryCode">
+      <Argument typename="QString" typetype="mappedtype" name="countryCode"/>
+    </Function>
+    <Function name="QGeoAddress.countryCode">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setCountry">
+      <Argument typename="QString" typetype="mappedtype" name="country"/>
+    </Function>
+    <Function name="QGeoAddress.country">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QGeoAddress.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAddress.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAddress" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoAddress.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAddress" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoAreaMonitorInfo">
+    <Function name="QGeoAreaMonitorInfo.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name" default="''"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.__init__">
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.setNotificationParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.notificationParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.setPersistent">
+      <Argument typename="bool" name="isPersistent"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.isPersistent">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.setExpiration">
+      <Argument typename="QDateTime" typetype="class" name="expiry"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.expiration">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.setArea">
+      <Argument typename="QGeoShape" typetype="class" name="newShape"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.area">
+      <Argument typename="QGeoShape" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.identifier">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoAreaMonitorInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoAreaMonitorSource" inherits="QObject">
+    <Function name="QGeoAreaMonitorSource.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Enum name="QGeoAreaMonitorSource.AreaMonitorFeature">
+      <EnumMember name="QGeoAreaMonitorSource.PersistentAreaMonitorFeature"/>
+      <EnumMember name="QGeoAreaMonitorSource.AnyAreaMonitorFeature"/>
+    </Enum>
+    <Enum name="QGeoAreaMonitorSource.Error">
+      <EnumMember name="QGeoAreaMonitorSource.AccessError"/>
+      <EnumMember name="QGeoAreaMonitorSource.InsufficientPositionInfo"/>
+      <EnumMember name="QGeoAreaMonitorSource.UnknownSourceError"/>
+      <EnumMember name="QGeoAreaMonitorSource.NoError"/>
+    </Enum>
+    <Signal default="1" name="QGeoAreaMonitorSource.monitorExpired" sig="void monitorExpired(const  ::QGeoAreaMonitorInfo&amp;)"/>
+    <Signal default="1" name="QGeoAreaMonitorSource.areaExited" sig="void areaExited(const  ::QGeoAreaMonitorInfo&amp;,const  ::QGeoPositionInfo&amp;)"/>
+    <Signal default="1" name="QGeoAreaMonitorSource.areaEntered" sig="void areaEntered(const  ::QGeoAreaMonitorInfo&amp;,const  ::QGeoPositionInfo&amp;)"/>
+    <Function name="QGeoAreaMonitorSource.activeMonitors" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.activeMonitors" abstract="1" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QGeoShape" typetype="class" name="lookupArea"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.requestUpdate" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="monitor"/>
+      <Argument typename="str" name="signal"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.stopMonitoring" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="monitor"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.startMonitoring" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorInfo" typetype="class" name="monitor"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.supportedAreaMonitorFeatures" abstract="1" virtual="1">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.error" abstract="1" virtual="1">
+      <Argument typename="QGeoAreaMonitorSource.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QGeoAreaMonitorSource.error" sig="void error( ::QGeoAreaMonitorSource::Error)"/>
+    <Function name="QGeoAreaMonitorSource.sourceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.positionInfoSource" virtual="1">
+      <Argument typename="QGeoPositionInfoSource" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.setPositionInfoSource" virtual="1">
+      <Argument typename="QGeoPositionInfoSource" typetype="class" name="source" transfer="to"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.availableSources" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.createSource" static="1">
+      <Argument typename="QGeoAreaMonitorSource" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceName"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.createDefaultSource" static="1">
+      <Argument typename="QGeoAreaMonitorSource" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+  <Class name="QGeoAreaMonitorSource.AreaMonitorFeatures" convert="1">
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__init__"/>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__init__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__ixor__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__xor__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__ior__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__or__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__iand__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__and__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__invert__">
+      <Argument typename="QGeoAreaMonitorSource.AreaMonitorFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoAreaMonitorSource.AreaMonitorFeatures.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoShape">
+    <Function name="QGeoShape.__init__"/>
+    <Function name="QGeoShape.__init__">
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoShape.ShapeType">
+      <EnumMember name="QGeoShape.UnknownType"/>
+      <EnumMember name="QGeoShape.RectangleType"/>
+      <EnumMember name="QGeoShape.CircleType"/>
+      <EnumMember name="QGeoShape.PathType"/>
+    </Enum>
+    <Function name="QGeoShape.boundingGeoRectangle">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoShape.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoShape.center">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoShape.extendShape">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoShape.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoShape.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoShape.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoShape.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoShape.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoShape.type">
+      <Argument typename="QGeoShape.ShapeType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoCircle" inherits="QGeoShape">
+    <Function name="QGeoCircle.__init__"/>
+    <Function name="QGeoCircle.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="center"/>
+      <Argument typename="float" name="radius" default="-1"/>
+    </Function>
+    <Function name="QGeoCircle.__init__">
+      <Argument typename="QGeoCircle" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCircle.__init__">
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCircle.extendCircle">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoCircle.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoCircle.translated">
+      <Argument typename="QGeoCircle" typetype="class" dir="out"/>
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoCircle.translate">
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoCircle.radius">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoCircle.setRadius">
+      <Argument typename="float" name="radius"/>
+    </Function>
+    <Function name="QGeoCircle.center">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoCircle.setCenter">
+      <Argument typename="QGeoCoordinate" typetype="class" name="center"/>
+    </Function>
+    <Function name="QGeoCircle.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCircle" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCircle.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCircle" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoCoordinate">
+    <Function name="QGeoCoordinate.__init__"/>
+    <Function name="QGeoCoordinate.__init__">
+      <Argument typename="float" name="latitude"/>
+      <Argument typename="float" name="longitude"/>
+    </Function>
+    <Function name="QGeoCoordinate.__init__">
+      <Argument typename="float" name="latitude"/>
+      <Argument typename="float" name="longitude"/>
+      <Argument typename="float" name="altitude"/>
+    </Function>
+    <Function name="QGeoCoordinate.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoCoordinate.CoordinateFormat">
+      <EnumMember name="QGeoCoordinate.Degrees"/>
+      <EnumMember name="QGeoCoordinate.DegreesWithHemisphere"/>
+      <EnumMember name="QGeoCoordinate.DegreesMinutes"/>
+      <EnumMember name="QGeoCoordinate.DegreesMinutesWithHemisphere"/>
+      <EnumMember name="QGeoCoordinate.DegreesMinutesSeconds"/>
+      <EnumMember name="QGeoCoordinate.DegreesMinutesSecondsWithHemisphere"/>
+    </Enum>
+    <Enum name="QGeoCoordinate.CoordinateType">
+      <EnumMember name="QGeoCoordinate.InvalidCoordinate"/>
+      <EnumMember name="QGeoCoordinate.Coordinate2D"/>
+      <EnumMember name="QGeoCoordinate.Coordinate3D"/>
+    </Enum>
+    <Function name="QGeoCoordinate.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QGeoCoordinate.CoordinateFormat" typetype="enum" name="format" default="QGeoCoordinate.DegreesMinutesSecondsWithHemisphere"/>
+    </Function>
+    <Function name="QGeoCoordinate.atDistanceAndAzimuth">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+      <Argument typename="float" name="distance"/>
+      <Argument typename="float" name="azimuth"/>
+      <Argument typename="float" name="distanceUp" default="0"/>
+    </Function>
+    <Function name="QGeoCoordinate.azimuthTo">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCoordinate.distanceTo">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCoordinate.altitude">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.setAltitude">
+      <Argument typename="float" name="altitude"/>
+    </Function>
+    <Function name="QGeoCoordinate.longitude">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.setLongitude">
+      <Argument typename="float" name="longitude"/>
+    </Function>
+    <Function name="QGeoCoordinate.latitude">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.setLatitude">
+      <Argument typename="float" name="latitude"/>
+    </Function>
+    <Function name="QGeoCoordinate.type">
+      <Argument typename="QGeoCoordinate.CoordinateType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoCoordinate.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoCoordinate.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoLocation">
+    <Function name="QGeoLocation.__init__"/>
+    <Function name="QGeoLocation.__init__">
+      <Argument typename="QGeoLocation" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoLocation.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoLocation.setBoundingBox">
+      <Argument typename="QGeoRectangle" typetype="class" name="box"/>
+    </Function>
+    <Function name="QGeoLocation.boundingBox">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoLocation.setCoordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" name="position"/>
+    </Function>
+    <Function name="QGeoLocation.coordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoLocation.setAddress">
+      <Argument typename="QGeoAddress" typetype="class" name="address"/>
+    </Function>
+    <Function name="QGeoLocation.address">
+      <Argument typename="QGeoAddress" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoLocation.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoLocation" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoLocation.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoLocation" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoPath" inherits="QGeoShape">
+    <Function name="QGeoPath.__init__"/>
+    <Function name="QGeoPath.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="path"/>
+      <Argument typename="float" name="width" default="0"/>
+    </Function>
+    <Function name="QGeoPath.__init__">
+      <Argument typename="QGeoPath" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoPath.__init__">
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoPath.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoPath.removeCoordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPath.removeCoordinate">
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QGeoPath.containsCoordinate">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPath.coordinateAt">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+      <Argument typename="int" name="index"/>
+    </Function>
+    <Function name="QGeoPath.replaceCoordinate">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPath.insertCoordinate">
+      <Argument typename="int" name="index"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPath.addCoordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPath.length">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="int" name="indexFrom" default="0"/>
+      <Argument typename="int" name="indexTo" default="-1"/>
+    </Function>
+    <Function name="QGeoPath.translated">
+      <Argument typename="QGeoPath" typetype="class" dir="out"/>
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoPath.translate">
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoPath.width">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoPath.setWidth">
+      <Argument typename="float" name="width"/>
+    </Function>
+    <Function name="QGeoPath.path">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoPath.setPath">
+      <Argument typename="unknown-type" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QGeoPath.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPath" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoPath.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPath" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoPositionInfo">
+    <Function name="QGeoPositionInfo.__init__"/>
+    <Function name="QGeoPositionInfo.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+      <Argument typename="QDateTime" typetype="class" name="updateTime"/>
+    </Function>
+    <Function name="QGeoPositionInfo.__init__">
+      <Argument typename="QGeoPositionInfo" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoPositionInfo.Attribute">
+      <EnumMember name="QGeoPositionInfo.Direction"/>
+      <EnumMember name="QGeoPositionInfo.GroundSpeed"/>
+      <EnumMember name="QGeoPositionInfo.VerticalSpeed"/>
+      <EnumMember name="QGeoPositionInfo.MagneticVariation"/>
+      <EnumMember name="QGeoPositionInfo.HorizontalAccuracy"/>
+      <EnumMember name="QGeoPositionInfo.VerticalAccuracy"/>
+    </Enum>
+    <Function name="QGeoPositionInfo.hasAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPositionInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoPositionInfo.removeAttribute">
+      <Argument typename="QGeoPositionInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoPositionInfo.attribute">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="QGeoPositionInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoPositionInfo.setAttribute">
+      <Argument typename="QGeoPositionInfo.Attribute" typetype="enum" name="attribute"/>
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QGeoPositionInfo.coordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfo.setCoordinate">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoPositionInfo.timestamp">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfo.setTimestamp">
+      <Argument typename="QDateTime" typetype="class" name="timestamp"/>
+    </Function>
+    <Function name="QGeoPositionInfo.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPositionInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoPositionInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPositionInfo" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoPositionInfoSource" inherits="QObject">
+    <Function name="QGeoPositionInfoSource.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Enum name="QGeoPositionInfoSource.PositioningMethod">
+      <EnumMember name="QGeoPositionInfoSource.NoPositioningMethods"/>
+      <EnumMember name="QGeoPositionInfoSource.SatellitePositioningMethods"/>
+      <EnumMember name="QGeoPositionInfoSource.NonSatellitePositioningMethods"/>
+      <EnumMember name="QGeoPositionInfoSource.AllPositioningMethods"/>
+    </Enum>
+    <Enum name="QGeoPositionInfoSource.Error">
+      <EnumMember name="QGeoPositionInfoSource.AccessError"/>
+      <EnumMember name="QGeoPositionInfoSource.ClosedError"/>
+      <EnumMember name="QGeoPositionInfoSource.UnknownSourceError"/>
+      <EnumMember name="QGeoPositionInfoSource.NoError"/>
+    </Enum>
+    <Signal default="1" name="QGeoPositionInfoSource.updateTimeout" sig="void updateTimeout()"/>
+    <Signal default="1" name="QGeoPositionInfoSource.positionUpdated" sig="void positionUpdated(const  ::QGeoPositionInfo&amp;)"/>
+    <Function name="QGeoPositionInfoSource.requestUpdate" abstract="1" slot="void requestUpdate(int = 0)" virtual="1">
+      <Argument typename="int" name="timeout" default="0"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.stopUpdates" abstract="1" slot="void stopUpdates()" virtual="1"/>
+    <Function name="QGeoPositionInfoSource.startUpdates" abstract="1" slot="void startUpdates()" virtual="1"/>
+    <Function name="QGeoPositionInfoSource.error" abstract="1" virtual="1">
+      <Argument typename="QGeoPositionInfoSource.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QGeoPositionInfoSource.error" sig="void error( ::QGeoPositionInfoSource::Error)"/>
+    <Function name="QGeoPositionInfoSource.availableSources" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.createSource" static="1">
+      <Argument typename="QGeoPositionInfoSource" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceName"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.createDefaultSource" static="1">
+      <Argument typename="QGeoPositionInfoSource" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.sourceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.minimumUpdateInterval" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.supportedPositioningMethods" abstract="1" virtual="1">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.lastKnownPosition" abstract="1" virtual="1">
+      <Argument typename="QGeoPositionInfo" typetype="class" dir="out"/>
+      <Argument typename="bool" name="fromSatellitePositioningMethodsOnly" default="False"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.preferredPositioningMethods">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.setPreferredPositioningMethods" virtual="1">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" name="methods"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.updateInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.setUpdateInterval" virtual="1">
+      <Argument typename="int" name="msec"/>
+    </Function>
+  </Class>
+  <Class name="QGeoPositionInfoSource.PositioningMethods" convert="1">
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__init__"/>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__init__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__ixor__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__xor__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__ior__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__or__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__iand__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__and__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__invert__">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoPositionInfoSource.PositioningMethods.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRectangle" inherits="QGeoShape">
+    <Function name="QGeoRectangle.__init__"/>
+    <Function name="QGeoRectangle.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="center"/>
+      <Argument typename="float" name="degreesWidth"/>
+      <Argument typename="float" name="degreesHeight"/>
+    </Function>
+    <Function name="QGeoRectangle.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="topLeft"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="bottomRight"/>
+    </Function>
+    <Function name="QGeoRectangle.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="coordinates"/>
+    </Function>
+    <Function name="QGeoRectangle.__init__">
+      <Argument typename="QGeoRectangle" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRectangle.__init__">
+      <Argument typename="QGeoShape" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRectangle.extendRectangle">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoRectangle.toString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.__or__">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="rectangle"/>
+    </Function>
+    <Function name="QGeoRectangle.__ior__">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="rectangle"/>
+    </Function>
+    <Function name="QGeoRectangle.united">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="rectangle"/>
+    </Function>
+    <Function name="QGeoRectangle.translated">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoRectangle.translate">
+      <Argument typename="float" name="degreesLatitude"/>
+      <Argument typename="float" name="degreesLongitude"/>
+    </Function>
+    <Function name="QGeoRectangle.intersects">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="rectangle"/>
+    </Function>
+    <Function name="QGeoRectangle.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="rectangle"/>
+    </Function>
+    <Function name="QGeoRectangle.height">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setHeight">
+      <Argument typename="float" name="degreesHeight"/>
+    </Function>
+    <Function name="QGeoRectangle.width">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setWidth">
+      <Argument typename="float" name="degreesWidth"/>
+    </Function>
+    <Function name="QGeoRectangle.center">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setCenter">
+      <Argument typename="QGeoCoordinate" typetype="class" name="center"/>
+    </Function>
+    <Function name="QGeoRectangle.bottomRight">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setBottomRight">
+      <Argument typename="QGeoCoordinate" typetype="class" name="bottomRight"/>
+    </Function>
+    <Function name="QGeoRectangle.bottomLeft">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setBottomLeft">
+      <Argument typename="QGeoCoordinate" typetype="class" name="bottomLeft"/>
+    </Function>
+    <Function name="QGeoRectangle.topRight">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setTopRight">
+      <Argument typename="QGeoCoordinate" typetype="class" name="topRight"/>
+    </Function>
+    <Function name="QGeoRectangle.topLeft">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRectangle.setTopLeft">
+      <Argument typename="QGeoCoordinate" typetype="class" name="topLeft"/>
+    </Function>
+    <Function name="QGeoRectangle.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRectangle.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRectangle" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoSatelliteInfo">
+    <Function name="QGeoSatelliteInfo.__init__"/>
+    <Function name="QGeoSatelliteInfo.__init__">
+      <Argument typename="QGeoSatelliteInfo" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoSatelliteInfo.SatelliteSystem">
+      <EnumMember name="QGeoSatelliteInfo.Undefined"/>
+      <EnumMember name="QGeoSatelliteInfo.GPS"/>
+      <EnumMember name="QGeoSatelliteInfo.GLONASS"/>
+    </Enum>
+    <Enum name="QGeoSatelliteInfo.Attribute">
+      <EnumMember name="QGeoSatelliteInfo.Elevation"/>
+      <EnumMember name="QGeoSatelliteInfo.Azimuth"/>
+    </Enum>
+    <Function name="QGeoSatelliteInfo.hasAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoSatelliteInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.removeAttribute">
+      <Argument typename="QGeoSatelliteInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.attribute">
+      <Argument typename="float" dir="out"/>
+      <Argument typename="QGeoSatelliteInfo.Attribute" typetype="enum" name="attribute"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.setAttribute">
+      <Argument typename="QGeoSatelliteInfo.Attribute" typetype="enum" name="attribute"/>
+      <Argument typename="float" name="value"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.signalStrength">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.setSignalStrength">
+      <Argument typename="int" name="signalStrength"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.satelliteIdentifier">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.setSatelliteIdentifier">
+      <Argument typename="int" name="satId"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.satelliteSystem">
+      <Argument typename="QGeoSatelliteInfo.SatelliteSystem" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.setSatelliteSystem">
+      <Argument typename="QGeoSatelliteInfo.SatelliteSystem" typetype="enum" name="system"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoSatelliteInfo" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoSatelliteInfo.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoSatelliteInfo" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoSatelliteInfoSource" inherits="QObject">
+    <Function name="QGeoSatelliteInfoSource.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Enum name="QGeoSatelliteInfoSource.Error">
+      <EnumMember name="QGeoSatelliteInfoSource.AccessError"/>
+      <EnumMember name="QGeoSatelliteInfoSource.ClosedError"/>
+      <EnumMember name="QGeoSatelliteInfoSource.NoError"/>
+      <EnumMember name="QGeoSatelliteInfoSource.UnknownSourceError"/>
+    </Enum>
+    <Signal default="1" name="QGeoSatelliteInfoSource.requestTimeout" sig="void requestTimeout()"/>
+    <Signal default="1" name="QGeoSatelliteInfoSource.satellitesInUseUpdated" sig="void satellitesInUseUpdated(const QList&lt;QGeoSatelliteInfo&gt;&amp;)"/>
+    <Signal default="1" name="QGeoSatelliteInfoSource.satellitesInViewUpdated" sig="void satellitesInViewUpdated(const QList&lt;QGeoSatelliteInfo&gt;&amp;)"/>
+    <Function name="QGeoSatelliteInfoSource.requestUpdate" abstract="1" slot="void requestUpdate(int = 0)" virtual="1">
+      <Argument typename="int" name="timeout" default="0"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.stopUpdates" abstract="1" slot="void stopUpdates()" virtual="1"/>
+    <Function name="QGeoSatelliteInfoSource.startUpdates" abstract="1" slot="void startUpdates()" virtual="1"/>
+    <Function name="QGeoSatelliteInfoSource.error" abstract="1" virtual="1">
+      <Argument typename="QGeoSatelliteInfoSource.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QGeoSatelliteInfoSource.error" sig="void error( ::QGeoSatelliteInfoSource::Error)"/>
+    <Function name="QGeoSatelliteInfoSource.minimumUpdateInterval" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.updateInterval">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.setUpdateInterval" virtual="1">
+      <Argument typename="int" name="msec"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.sourceName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.availableSources" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.createSource" static="1">
+      <Argument typename="QGeoSatelliteInfoSource" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceName"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QGeoSatelliteInfoSource.createDefaultSource" static="1">
+      <Argument typename="QGeoSatelliteInfoSource" typetype="class" dir="out"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this"/>
+    </Function>
+  </Class>
+  <Class name="QNmeaPositionInfoSource" inherits="QGeoPositionInfoSource">
+    <Function name="QNmeaPositionInfoSource.__init__">
+      <Argument typename="QNmeaPositionInfoSource.UpdateMode" typetype="enum" name="updateMode"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QNmeaPositionInfoSource.UpdateMode">
+      <EnumMember name="QNmeaPositionInfoSource.RealTimeMode"/>
+      <EnumMember name="QNmeaPositionInfoSource.SimulationMode"/>
+    </Enum>
+    <Function name="QNmeaPositionInfoSource.userEquivalentRangeError">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.setUserEquivalentRangeError">
+      <Argument typename="float" name="uere"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.parsePosInfoFromNmeaData" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="str" name="data"/>
+      <Argument typename="int" name="size"/>
+      <Argument typename="QGeoPositionInfo" typetype="class" name="posInfo"/>
+      <Argument typename="bool" name="hasFix" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.requestUpdate" slot="void requestUpdate(int = 0)" virtual="1">
+      <Argument typename="int" name="timeout" default="0"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.stopUpdates" slot="void stopUpdates()" virtual="1"/>
+    <Function name="QNmeaPositionInfoSource.startUpdates" slot="void startUpdates()" virtual="1"/>
+    <Function name="QNmeaPositionInfoSource.error" virtual="1">
+      <Argument typename="QGeoPositionInfoSource.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.minimumUpdateInterval" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.supportedPositioningMethods" virtual="1">
+      <Argument typename="QGeoPositionInfoSource.PositioningMethods" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.lastKnownPosition" virtual="1">
+      <Argument typename="QGeoPositionInfo" typetype="class" dir="out"/>
+      <Argument typename="bool" name="fromSatellitePositioningMethodsOnly" default="False"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.setUpdateInterval" virtual="1">
+      <Argument typename="int" name="msec"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.device">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.setDevice">
+      <Argument typename="QIODevice" typetype="class" name="source"/>
+    </Function>
+    <Function name="QNmeaPositionInfoSource.updateMode">
+      <Argument typename="QNmeaPositionInfoSource.UpdateMode" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoAreaMonitorInfo" typetype="class"/>
+  </Function>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+  </Function>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoPositionInfo" typetype="class" name="info"/>
+  </Function>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoSatelliteInfo" typetype="class" name="info"/>
+  </Function>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoShape" typetype="class" name="shape"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoAreaMonitorInfo" typetype="class"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoPositionInfo" typetype="class" name="info"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoSatelliteInfo" typetype="class" name="info"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QGeoShape" typetype="class" name="shape"/>
+  </Function>
+</Module>

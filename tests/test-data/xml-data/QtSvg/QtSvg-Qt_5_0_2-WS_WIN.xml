@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtSvg">
+  <Class name="QGraphicsSvgItem" inherits="QGraphicsObject">
+    <Function name="QGraphicsSvgItem.__init__">
+      <Argument typename="QGraphicsItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+      <Argument typename="QGraphicsItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.type" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.paint" virtual="1">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+      <Argument typename="QStyleOptionGraphicsItem" typetype="class" name="option"/>
+      <Argument typename="QWidget" typetype="class" name="widget" default="None"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.boundingRect" virtual="1">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.maximumCacheSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.setMaximumCacheSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.elementId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.setElementId">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.renderer">
+      <Argument typename="QSvgRenderer" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsSvgItem.setSharedRenderer">
+      <Argument typename="QSvgRenderer" typetype="class" name="renderer"/>
+    </Function>
+  </Class>
+  <Class name="QSvgGenerator" inherits="QPaintDevice">
+    <Function name="QSvgGenerator.__init__"/>
+    <Function name="QSvgGenerator.metric" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPaintDevice.PaintDeviceMetric" typetype="enum" name="metric"/>
+    </Function>
+    <Function name="QSvgGenerator.paintEngine" virtual="1">
+      <Argument typename="QPaintEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setViewBox">
+      <Argument typename="QRect" typetype="class" name="viewBox"/>
+    </Function>
+    <Function name="QSvgGenerator.setViewBox">
+      <Argument typename="QRectF" typetype="class" name="viewBox"/>
+    </Function>
+    <Function name="QSvgGenerator.viewBoxF">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.viewBox">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setDescription">
+      <Argument typename="QString" typetype="mappedtype" name="description"/>
+    </Function>
+    <Function name="QSvgGenerator.description">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+    </Function>
+    <Function name="QSvgGenerator.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setResolution">
+      <Argument typename="int" name="resolution"/>
+    </Function>
+    <Function name="QSvgGenerator.resolution">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setOutputDevice">
+      <Argument typename="QIODevice" typetype="class" name="outputDevice"/>
+    </Function>
+    <Function name="QSvgGenerator.outputDevice">
+      <Argument typename="QIODevice" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setFileName">
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QSvgGenerator.fileName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSvgGenerator.setSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QSvgGenerator.size">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSvgRenderer" inherits="QObject">
+    <Function name="QSvgRenderer.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSvgRenderer.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSvgRenderer.__init__">
+      <Argument typename="QByteArray" typetype="class" name="contents"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSvgRenderer.__init__">
+      <Argument typename="QXmlStreamReader" typetype="class" name="contents"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QSvgRenderer.repaintNeeded" sig="void repaintNeeded()"/>
+    <Function name="QSvgRenderer.render" slot="void render( ::QPainter*)">
+      <Argument typename="QPainter" typetype="class" name="p"/>
+    </Function>
+    <Function name="QSvgRenderer.render" slot="void render( ::QPainter*,const  ::QRectF&amp;)">
+      <Argument typename="QPainter" typetype="class" name="p"/>
+      <Argument typename="QRectF" typetype="class" name="bounds"/>
+    </Function>
+    <Function name="QSvgRenderer.render" slot="void render( ::QPainter*,const QString&amp;,const  ::QRectF&amp; = QRectF())">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+      <Argument typename="QString" typetype="mappedtype" name="elementId"/>
+      <Argument typename="QRectF" typetype="class" name="bounds" default="QRectF()"/>
+    </Function>
+    <Function name="QSvgRenderer.load" slot="bool load(const QString&amp;)">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="filename"/>
+    </Function>
+    <Function name="QSvgRenderer.load" slot="bool load(const  ::QByteArray&amp;)">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="contents"/>
+    </Function>
+    <Function name="QSvgRenderer.load" slot="bool load( ::QXmlStreamReader*)">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QXmlStreamReader" typetype="class" name="contents"/>
+    </Function>
+    <Function name="QSvgRenderer.animationDuration">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.setCurrentFrame">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QSvgRenderer.currentFrame">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.setFramesPerSecond">
+      <Argument typename="int" name="num"/>
+    </Function>
+    <Function name="QSvgRenderer.framesPerSecond">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.boundsOnElement">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QSvgRenderer.animated">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.setViewBox">
+      <Argument typename="QRect" typetype="class" name="viewbox"/>
+    </Function>
+    <Function name="QSvgRenderer.setViewBox">
+      <Argument typename="QRectF" typetype="class" name="viewbox"/>
+    </Function>
+    <Function name="QSvgRenderer.viewBoxF">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.viewBox">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.elementExists">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QSvgRenderer.defaultSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgRenderer.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSvgWidget" inherits="QWidget">
+    <Function name="QSvgWidget.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSvgWidget.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="file"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSvgWidget.paintEvent" virtual="1">
+      <Argument typename="QPaintEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QSvgWidget.load" slot="void load(const QString&amp;)">
+      <Argument typename="QString" typetype="mappedtype" name="file"/>
+    </Function>
+    <Function name="QSvgWidget.load" slot="void load(const  ::QByteArray&amp;)">
+      <Argument typename="QByteArray" typetype="class" name="contents"/>
+    </Function>
+    <Function name="QSvgWidget.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSvgWidget.renderer">
+      <Argument typename="QSvgRenderer" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

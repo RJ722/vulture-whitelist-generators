@@ -1,0 +1,2297 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtQuick">
+  <Class name="QQuickItem" inherits="QObject QQmlParserStatus">
+    <Function name="QQuickItem.__init__">
+      <Argument typename="QQuickItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickItem.TransformOrigin">
+      <EnumMember name="QQuickItem.TopLeft"/>
+      <EnumMember name="QQuickItem.Top"/>
+      <EnumMember name="QQuickItem.TopRight"/>
+      <EnumMember name="QQuickItem.Left"/>
+      <EnumMember name="QQuickItem.Center"/>
+      <EnumMember name="QQuickItem.Right"/>
+      <EnumMember name="QQuickItem.BottomLeft"/>
+      <EnumMember name="QQuickItem.Bottom"/>
+      <EnumMember name="QQuickItem.BottomRight"/>
+    </Enum>
+    <Enum name="QQuickItem.ItemChange">
+      <EnumMember name="QQuickItem.ItemChildAddedChange"/>
+      <EnumMember name="QQuickItem.ItemChildRemovedChange"/>
+      <EnumMember name="QQuickItem.ItemSceneChange"/>
+      <EnumMember name="QQuickItem.ItemVisibleHasChanged"/>
+      <EnumMember name="QQuickItem.ItemParentHasChanged"/>
+      <EnumMember name="QQuickItem.ItemOpacityHasChanged"/>
+      <EnumMember name="QQuickItem.ItemActiveFocusHasChanged"/>
+      <EnumMember name="QQuickItem.ItemRotationHasChanged"/>
+      <EnumMember name="QQuickItem.ItemAntialiasingHasChanged"/>
+      <EnumMember name="QQuickItem.ItemDevicePixelRatioHasChanged"/>
+    </Enum>
+    <Enum name="QQuickItem.Flag">
+      <EnumMember name="QQuickItem.ItemClipsChildrenToShape"/>
+      <EnumMember name="QQuickItem.ItemAcceptsInputMethod"/>
+      <EnumMember name="QQuickItem.ItemIsFocusScope"/>
+      <EnumMember name="QQuickItem.ItemHasContents"/>
+      <EnumMember name="QQuickItem.ItemAcceptsDrops"/>
+    </Enum>
+    <Function name="QQuickItem.mapFromGlobal">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.mapToGlobal">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.isAncestorOf">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class" name="child"/>
+    </Function>
+    <Function name="QQuickItem.grabToImage">
+      <Argument typename="QQuickItemGrabResult" typetype="class" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="targetSize" default="QSize()"/>
+    </Function>
+    <Function name="QQuickItem.resetAntialiasing"/>
+    <Signal default="1" name="QQuickItem.windowChanged" sig="void windowChanged( ::QQuickWindow*)"/>
+    <Function name="QQuickItem.nextItemInFocusChain">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+      <Argument typename="bool" name="forward" default="True"/>
+    </Function>
+    <Function name="QQuickItem.setActiveFocusOnTab">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.activeFocusOnTab">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.updatePolish" virtual="1"/>
+    <Function name="QQuickItem.releaseResources" virtual="1"/>
+    <Function name="QQuickItem.updatePaintNode" virtual="1">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+      <Argument typename="QSGNode" typetype="class"/>
+      <Argument typename="QQuickItem.UpdatePaintNodeData" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.geometryChanged" virtual="1">
+      <Argument typename="QRectF" typetype="class" name="newGeometry"/>
+      <Argument typename="QRectF" typetype="class" name="oldGeometry"/>
+    </Function>
+    <Function name="QQuickItem.childMouseEventFilter" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.dropEvent" virtual="1">
+      <Argument typename="QDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.dragLeaveEvent" virtual="1">
+      <Argument typename="QDragLeaveEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.dragMoveEvent" virtual="1">
+      <Argument typename="QDragMoveEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.dragEnterEvent" virtual="1">
+      <Argument typename="QDragEnterEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.hoverLeaveEvent" virtual="1">
+      <Argument typename="QHoverEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.hoverMoveEvent" virtual="1">
+      <Argument typename="QHoverEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.hoverEnterEvent" virtual="1">
+      <Argument typename="QHoverEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.touchEvent" virtual="1">
+      <Argument typename="QTouchEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.wheelEvent" virtual="1">
+      <Argument typename="QWheelEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.touchUngrabEvent" virtual="1"/>
+    <Function name="QQuickItem.mouseUngrabEvent" virtual="1"/>
+    <Function name="QQuickItem.mouseDoubleClickEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.mouseReleaseEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.mouseMoveEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.mousePressEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.focusOutEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.focusInEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.inputMethodEvent" virtual="1">
+      <Argument typename="QInputMethodEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QQuickItem.componentComplete" virtual="1"/>
+    <Function name="QQuickItem.classBegin" virtual="1"/>
+    <Function name="QQuickItem.heightValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.widthValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.updateInputMethod">
+      <Argument typename="Qt.InputMethodQueries" typetype="class" name="queries" default="Qt.ImQueryInput"/>
+    </Function>
+    <Function name="QQuickItem.itemChange" virtual="1">
+      <Argument typename="QQuickItem.ItemChange" typetype="enum"/>
+      <Argument typename="QQuickItem.ItemChangeData" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.isComponentComplete">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.update" slot="void update()"/>
+    <Function name="QQuickItem.textureProvider" virtual="1">
+      <Argument typename="QSGTextureProvider" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.isTextureProvider" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.inputMethodQuery" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="Qt.InputMethodQuery" typetype="enum" name="query"/>
+    </Function>
+    <Function name="QQuickItem.childAt">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+    </Function>
+    <Function name="QQuickItem.forceActiveFocus"/>
+    <Function name="QQuickItem.forceActiveFocus">
+      <Argument typename="Qt.FocusReason" typetype="enum" name="reason"/>
+    </Function>
+    <Function name="QQuickItem.polish"/>
+    <Function name="QQuickItem.mapRectFromScene">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QQuickItem.mapRectFromItem">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class" name="item"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QQuickItem.mapFromScene">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.mapFromItem">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class" name="item"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.mapRectToScene">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QQuickItem.mapRectToItem">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class" name="item"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QQuickItem.mapToScene">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.mapToItem">
+      <Argument typename="QPointF" typetype="class" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class" name="item"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.contains" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPointF" typetype="class" name="point"/>
+    </Function>
+    <Function name="QQuickItem.setKeepTouchGrab">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.keepTouchGrab">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.ungrabTouchPoints"/>
+    <Function name="QQuickItem.grabTouchPoints">
+      <Argument typename="unknown-type" typetype="mappedtype" name="ids"/>
+    </Function>
+    <Function name="QQuickItem.setFiltersChildMouseEvents">
+      <Argument typename="bool" name="filter"/>
+    </Function>
+    <Function name="QQuickItem.filtersChildMouseEvents">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setKeepMouseGrab">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.keepMouseGrab">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.ungrabMouse"/>
+    <Function name="QQuickItem.grabMouse"/>
+    <Function name="QQuickItem.unsetCursor"/>
+    <Function name="QQuickItem.setCursor">
+      <Argument typename="QCursor" typetype="class" name="cursor"/>
+    </Function>
+    <Function name="QQuickItem.cursor">
+      <Argument typename="QCursor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setAcceptHoverEvents">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QQuickItem.acceptHoverEvents">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setAcceptedMouseButtons">
+      <Argument typename="Qt.MouseButtons" typetype="class" name="buttons"/>
+    </Function>
+    <Function name="QQuickItem.acceptedMouseButtons">
+      <Argument typename="Qt.MouseButtons" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.scopedFocusItem">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.isFocusScope">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setFocus">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.setFocus">
+      <Argument typename="bool" name="focus"/>
+      <Argument typename="Qt.FocusReason" typetype="enum" name="reason"/>
+    </Function>
+    <Function name="QQuickItem.hasFocus">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.hasActiveFocus">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setFlags">
+      <Argument typename="QQuickItem.Flags" typetype="class" name="flags"/>
+    </Function>
+    <Function name="QQuickItem.setFlag">
+      <Argument typename="QQuickItem.Flag" typetype="enum" name="flag"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QQuickItem.flags">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setAntialiasing">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.antialiasing">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setSmooth">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.smooth">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setEnabled">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.isEnabled">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setVisible">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.isVisible">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setOpacity">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.opacity">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setScale">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.scale">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setRotation">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.rotation">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setZ">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.z">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setTransformOrigin">
+      <Argument typename="QQuickItem.TransformOrigin" typetype="enum"/>
+    </Function>
+    <Function name="QQuickItem.transformOrigin">
+      <Argument typename="QQuickItem.TransformOrigin" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.implicitHeight">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setImplicitHeight">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.resetHeight"/>
+    <Function name="QQuickItem.setHeight">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.height">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.implicitWidth">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setImplicitWidth">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.resetWidth"/>
+    <Function name="QQuickItem.setWidth">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.width">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setY">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.setX">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.y">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.x">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setBaselineOffset">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickItem.baselineOffset">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setState">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QQuickItem.state">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.setClip">
+      <Argument typename="bool"/>
+    </Function>
+    <Function name="QQuickItem.clip">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.childItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.childrenRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.stackAfter">
+      <Argument typename="QQuickItem" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.stackBefore">
+      <Argument typename="QQuickItem" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.setParentItem">
+      <Argument typename="QQuickItem" typetype="class" name="parent"/>
+    </Function>
+    <Function name="QQuickItem.parentItem">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.window">
+      <Argument typename="QQuickWindow" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickFramebufferObject" inherits="QQuickItem">
+    <Function name="QQuickFramebufferObject.__init__">
+      <Argument typename="QQuickItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QQuickFramebufferObject.mirrorVerticallyChanged" sig="void mirrorVerticallyChanged(bool)"/>
+    <Function name="QQuickFramebufferObject.setMirrorVertically">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.mirrorVertically">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.releaseResources" virtual="1"/>
+    <Function name="QQuickFramebufferObject.textureProvider" virtual="1">
+      <Argument typename="QSGTextureProvider" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.isTextureProvider" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Signal default="1" name="QQuickFramebufferObject.textureFollowsItemSizeChanged" sig="void textureFollowsItemSizeChanged(bool)"/>
+    <Function name="QQuickFramebufferObject.updatePaintNode" virtual="1">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+      <Argument typename="QSGNode" typetype="class"/>
+      <Argument typename="QQuickItem.UpdatePaintNodeData" typetype="class"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.geometryChanged" virtual="1">
+      <Argument typename="QRectF" typetype="class" name="newGeometry"/>
+      <Argument typename="QRectF" typetype="class" name="oldGeometry"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.createRenderer" abstract="1" virtual="1">
+      <Argument typename="QQuickFramebufferObject.Renderer" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.setTextureFollowsItemSize">
+      <Argument typename="bool" name="follows"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.textureFollowsItemSize">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickFramebufferObject.Renderer">
+    <Function name="QQuickFramebufferObject.Renderer.__init__"/>
+    <Function name="QQuickFramebufferObject.Renderer.__init__">
+      <Argument typename="QQuickFramebufferObject.Renderer" typetype="class"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.Renderer.invalidateFramebufferObject"/>
+    <Function name="QQuickFramebufferObject.Renderer.update"/>
+    <Function name="QQuickFramebufferObject.Renderer.framebufferObject">
+      <Argument typename="QOpenGLFramebufferObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.Renderer.synchronize" virtual="1">
+      <Argument typename="QQuickFramebufferObject" typetype="class"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.Renderer.createFramebufferObject" virtual="1">
+      <Argument typename="QOpenGLFramebufferObject" typetype="class" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QQuickFramebufferObject.Renderer.render" abstract="1" virtual="1"/>
+  </Class>
+  <Class name="QQuickTextureFactory" inherits="QObject">
+    <Function name="QQuickTextureFactory.__init__"/>
+    <Function name="QQuickTextureFactory.textureFactoryForImage" static="1">
+      <Argument typename="QQuickTextureFactory" typetype="class" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+    </Function>
+    <Function name="QQuickTextureFactory.image" virtual="1">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickTextureFactory.textureByteCount" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickTextureFactory.textureSize" abstract="1" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickTextureFactory.createTexture" abstract="1" virtual="1">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="QQuickWindow" typetype="class" name="window"/>
+    </Function>
+  </Class>
+  <Class name="QQuickImageProvider" inherits="QQmlImageProviderBase">
+    <Function name="QQuickImageProvider.__init__">
+      <Argument typename="QQmlImageProviderBase.ImageType" typetype="enum" name="type"/>
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" name="flags" default="0"/>
+    </Function>
+    <Function name="QQuickImageProvider.__init__">
+      <Argument typename="QQuickImageProvider" typetype="class"/>
+    </Function>
+    <Function name="QQuickImageProvider.requestTexture" virtual="1">
+      <Argument typename="QQuickTextureFactory" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QSize" typetype="class" name="size" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="requestedSize"/>
+    </Function>
+    <Function name="QQuickImageProvider.requestPixmap" virtual="1">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QSize" typetype="class" name="size" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="requestedSize"/>
+    </Function>
+    <Function name="QQuickImageProvider.requestImage" virtual="1">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QSize" typetype="class" name="size" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="requestedSize"/>
+    </Function>
+    <Function name="QQuickImageProvider.flags" virtual="1">
+      <Argument typename="QQmlImageProviderBase.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickImageProvider.imageType" virtual="1">
+      <Argument typename="QQmlImageProviderBase.ImageType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickImageResponse" inherits="QObject">
+    <Function name="QQuickImageResponse.__init__"/>
+    <Signal default="1" name="QQuickImageResponse.finished" sig="void finished()"/>
+    <Function name="QQuickImageResponse.cancel" slot="void cancel()" virtual="1"/>
+    <Function name="QQuickImageResponse.errorString" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickImageResponse.textureFactory" abstract="1" virtual="1">
+      <Argument typename="QQuickTextureFactory" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickAsyncImageProvider" inherits="QQuickImageProvider">
+    <Function name="QQuickAsyncImageProvider.__init__"/>
+    <Function name="QQuickAsyncImageProvider.__init__">
+      <Argument typename="QQuickAsyncImageProvider" typetype="class"/>
+    </Function>
+    <Function name="QQuickAsyncImageProvider.requestImageResponse" abstract="1" virtual="1">
+      <Argument typename="QQuickImageResponse" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+      <Argument typename="QSize" typetype="class" name="requestedSize"/>
+    </Function>
+  </Class>
+  <Class name="QQuickItem.Flags" convert="1">
+    <Function name="QQuickItem.Flags.__init__"/>
+    <Function name="QQuickItem.Flags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__init__">
+      <Argument typename="QQuickItem.Flags" typetype="class"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickItem.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickItem.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__ixor__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__xor__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__ior__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__or__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__iand__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__and__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__invert__">
+      <Argument typename="QQuickItem.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItem.Flags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickItem.ItemChangeData">
+    <Function name="QQuickItem.ItemChangeData.__init__">
+      <Argument typename="QQuickItem" typetype="class" name="v"/>
+    </Function>
+    <Function name="QQuickItem.ItemChangeData.__init__">
+      <Argument typename="QQuickWindow" typetype="class" name="v"/>
+    </Function>
+    <Function name="QQuickItem.ItemChangeData.__init__">
+      <Argument typename="float" name="v"/>
+    </Function>
+    <Function name="QQuickItem.ItemChangeData.__init__">
+      <Argument typename="bool" name="v"/>
+    </Function>
+    <Function name="QQuickItem.ItemChangeData.__init__">
+      <Argument typename="QQuickItem.ItemChangeData" typetype="class"/>
+    </Function>
+    <Member name="QQuickItem.ItemChangeData.boolValue" typename="bool"/>
+    <Member name="QQuickItem.ItemChangeData.item" typename="QQuickItem" typetype="class"/>
+    <Member name="QQuickItem.ItemChangeData.realValue" typename="float"/>
+    <Member name="QQuickItem.ItemChangeData.window" typename="QQuickWindow" typetype="class"/>
+  </Class>
+  <Class name="QQuickItem.UpdatePaintNodeData">
+    <Function name="QQuickItem.UpdatePaintNodeData.__init__">
+      <Argument typename="QQuickItem.UpdatePaintNodeData" typetype="class"/>
+    </Function>
+    <Member name="QQuickItem.UpdatePaintNodeData.transformNode" typename="QSGTransformNode" typetype="class"/>
+  </Class>
+  <Class name="QQuickItemGrabResult" inherits="QObject">
+    <Signal default="1" name="QQuickItemGrabResult.ready" sig="void ready()"/>
+    <Function name="QQuickItemGrabResult.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickItemGrabResult.saveToFile">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fileName"/>
+    </Function>
+    <Function name="QQuickItemGrabResult.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickItemGrabResult.image">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickPaintedItem" inherits="QQuickItem">
+    <Function name="QQuickPaintedItem.__init__">
+      <Argument typename="QQuickItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickPaintedItem.PerformanceHint">
+      <EnumMember name="QQuickPaintedItem.FastFBOResizing"/>
+    </Enum>
+    <Enum name="QQuickPaintedItem.RenderTarget">
+      <EnumMember name="QQuickPaintedItem.Image"/>
+      <EnumMember name="QQuickPaintedItem.FramebufferObject"/>
+      <EnumMember name="QQuickPaintedItem.InvertedYFramebufferObject"/>
+    </Enum>
+    <Signal default="1" name="QQuickPaintedItem.textureSizeChanged" sig="void textureSizeChanged()"/>
+    <Function name="QQuickPaintedItem.setTextureSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QQuickPaintedItem.textureSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.itemChange" virtual="1">
+      <Argument typename="QQuickItem.ItemChange" typetype="enum"/>
+      <Argument typename="QQuickItem.ItemChangeData" typetype="class"/>
+    </Function>
+    <Function name="QQuickPaintedItem.releaseResources" virtual="1"/>
+    <Function name="QQuickPaintedItem.textureProvider" virtual="1">
+      <Argument typename="QSGTextureProvider" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.isTextureProvider" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.updatePaintNode" virtual="1">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+      <Argument typename="QSGNode" typetype="class"/>
+      <Argument typename="QQuickItem.UpdatePaintNodeData" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QQuickPaintedItem.renderTargetChanged" sig="void renderTargetChanged()"/>
+    <Signal default="1" name="QQuickPaintedItem.contentsScaleChanged" sig="void contentsScaleChanged()"/>
+    <Signal default="1" name="QQuickPaintedItem.contentsSizeChanged" sig="void contentsSizeChanged()"/>
+    <Signal default="1" name="QQuickPaintedItem.fillColorChanged" sig="void fillColorChanged()"/>
+    <Function name="QQuickPaintedItem.paint" abstract="1" virtual="1">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setRenderTarget">
+      <Argument typename="QQuickPaintedItem.RenderTarget" typetype="enum" name="target"/>
+    </Function>
+    <Function name="QQuickPaintedItem.renderTarget">
+      <Argument typename="QQuickPaintedItem.RenderTarget" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setFillColor">
+      <Argument typename="QColor" typetype="class"/>
+    </Function>
+    <Function name="QQuickPaintedItem.fillColor">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setContentsScale">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QQuickPaintedItem.contentsScale">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.resetContentsSize"/>
+    <Function name="QQuickPaintedItem.setContentsSize">
+      <Argument typename="QSize" typetype="class"/>
+    </Function>
+    <Function name="QQuickPaintedItem.contentsSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.contentsBoundingRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setPerformanceHints">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" name="hints"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setPerformanceHint">
+      <Argument typename="QQuickPaintedItem.PerformanceHint" typetype="enum" name="hint"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QQuickPaintedItem.performanceHints">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setMipmap">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QQuickPaintedItem.mipmap">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setAntialiasing">
+      <Argument typename="bool" name="enable"/>
+    </Function>
+    <Function name="QQuickPaintedItem.antialiasing">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.setOpaquePainting">
+      <Argument typename="bool" name="opaque"/>
+    </Function>
+    <Function name="QQuickPaintedItem.opaquePainting">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.update">
+      <Argument typename="QRect" typetype="class" name="rect" default="QRect()"/>
+    </Function>
+  </Class>
+  <Class name="QQuickPaintedItem.PerformanceHints" convert="1">
+    <Function name="QQuickPaintedItem.PerformanceHints.__init__"/>
+    <Function name="QQuickPaintedItem.PerformanceHints.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__init__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__ixor__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__xor__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__ior__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__or__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__iand__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__and__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__invert__">
+      <Argument typename="QQuickPaintedItem.PerformanceHints" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickPaintedItem.PerformanceHints.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickRenderControl" inherits="QObject">
+    <Function name="QQuickRenderControl.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QQuickRenderControl.sceneChanged" sig="void sceneChanged()"/>
+    <Signal default="1" name="QQuickRenderControl.renderRequested" sig="void renderRequested()"/>
+    <Function name="QQuickRenderControl.prepareThread">
+      <Argument typename="QThread" typetype="class" name="targetThread"/>
+    </Function>
+    <Function name="QQuickRenderControl.renderWindow" virtual="1">
+      <Argument typename="QWindow" typetype="class" dir="out"/>
+      <Argument typename="QPoint" typetype="class" name="offset"/>
+    </Function>
+    <Function name="QQuickRenderControl.renderWindowFor" static="1">
+      <Argument typename="QWindow" typetype="class" dir="out"/>
+      <Argument typename="QQuickWindow" typetype="class" name="win"/>
+      <Argument typename="QPoint" typetype="class" name="offset" default="None"/>
+    </Function>
+    <Function name="QQuickRenderControl.grab">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickRenderControl.sync">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickRenderControl.render"/>
+    <Function name="QQuickRenderControl.polishItems"/>
+    <Function name="QQuickRenderControl.invalidate"/>
+    <Function name="QQuickRenderControl.initialize">
+      <Argument typename="QOpenGLContext" typetype="class" name="gl"/>
+    </Function>
+  </Class>
+  <Class name="QQuickTextDocument" inherits="QObject">
+    <Function name="QQuickTextDocument.__init__">
+      <Argument typename="QQuickItem" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QQuickTextDocument.textDocument">
+      <Argument typename="QTextDocument" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickWindow" inherits="QWindow">
+    <Function name="QQuickWindow.__init__">
+      <Argument typename="QWindow" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickWindow.RenderStage">
+      <EnumMember name="QQuickWindow.BeforeSynchronizingStage"/>
+      <EnumMember name="QQuickWindow.AfterSynchronizingStage"/>
+      <EnumMember name="QQuickWindow.BeforeRenderingStage"/>
+      <EnumMember name="QQuickWindow.AfterRenderingStage"/>
+      <EnumMember name="QQuickWindow.AfterSwapStage"/>
+      <EnumMember name="QQuickWindow.NoStage"/>
+    </Enum>
+    <Enum name="QQuickWindow.SceneGraphError">
+      <EnumMember name="QQuickWindow.ContextNotAvailable"/>
+    </Enum>
+    <Enum name="QQuickWindow.CreateTextureOption">
+      <EnumMember name="QQuickWindow.TextureHasAlphaChannel"/>
+      <EnumMember name="QQuickWindow.TextureHasMipmaps"/>
+      <EnumMember name="QQuickWindow.TextureOwnsGLTexture"/>
+      <EnumMember name="QQuickWindow.TextureCanUseAtlas"/>
+      <EnumMember name="QQuickWindow.TextureIsOpaque"/>
+    </Enum>
+    <Function name="QQuickWindow.isSceneGraphInitialized">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.effectiveDevicePixelRatio">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.scheduleRenderJob">
+      <Argument typename="QRunnable" typetype="class" name="job" transfer="to"/>
+      <Argument typename="QQuickWindow.RenderStage" typetype="enum" name="schedule"/>
+    </Function>
+    <Signal default="1" name="QQuickWindow.sceneGraphError" sig="void sceneGraphError( ::QQuickWindow::SceneGraphError,const QString&amp;)"/>
+    <Signal default="1" name="QQuickWindow.sceneGraphAboutToStop" sig="void sceneGraphAboutToStop()"/>
+    <Signal default="1" name="QQuickWindow.afterAnimating" sig="void afterAnimating()"/>
+    <Signal default="1" name="QQuickWindow.afterSynchronizing" sig="void afterSynchronizing()"/>
+    <Signal default="1" name="QQuickWindow.openglContextCreated" sig="void openglContextCreated( ::QOpenGLContext*)"/>
+    <Function name="QQuickWindow.resetOpenGLState"/>
+    <Signal default="1" name="QQuickWindow.activeFocusItemChanged" sig="void activeFocusItemChanged()"/>
+    <Signal default="1" name="QQuickWindow.closing" sig="void closing( ::QQuickCloseEvent*)"/>
+    <Function name="QQuickWindow.setDefaultAlphaBuffer" static="1">
+      <Argument typename="bool" name="useAlpha"/>
+    </Function>
+    <Function name="QQuickWindow.hasDefaultAlphaBuffer" static="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.wheelEvent" virtual="1">
+      <Argument typename="QWheelEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.mouseMoveEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.mouseDoubleClickEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.mouseReleaseEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.mousePressEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.focusOutEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.focusInEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.hideEvent" virtual="1">
+      <Argument typename="QHideEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.showEvent" virtual="1">
+      <Argument typename="QShowEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.exposeEvent" virtual="1">
+      <Argument typename="QExposeEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.releaseResources" slot="void releaseResources()"/>
+    <Function name="QQuickWindow.update" slot="void update()"/>
+    <Signal default="1" name="QQuickWindow.colorChanged" sig="void colorChanged(const  ::QColor&amp;)"/>
+    <Signal default="1" name="QQuickWindow.afterRendering" sig="void afterRendering()"/>
+    <Signal default="1" name="QQuickWindow.beforeRendering" sig="void beforeRendering()"/>
+    <Signal default="1" name="QQuickWindow.beforeSynchronizing" sig="void beforeSynchronizing()"/>
+    <Signal default="1" name="QQuickWindow.sceneGraphInvalidated" sig="void sceneGraphInvalidated()"/>
+    <Signal default="1" name="QQuickWindow.sceneGraphInitialized" sig="void sceneGraphInitialized()"/>
+    <Signal default="1" name="QQuickWindow.frameSwapped" sig="void frameSwapped()"/>
+    <Function name="QQuickWindow.openglContext">
+      <Argument typename="QOpenGLContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.isPersistentSceneGraph">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.setPersistentSceneGraph">
+      <Argument typename="bool" name="persistent"/>
+    </Function>
+    <Function name="QQuickWindow.isPersistentOpenGLContext">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.setPersistentOpenGLContext">
+      <Argument typename="bool" name="persistent"/>
+    </Function>
+    <Function name="QQuickWindow.color">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.setColor">
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QQuickWindow.clearBeforeRendering">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.setClearBeforeRendering">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QQuickWindow.createTextureFromId">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="int" name="id"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" name="options" default="QQuickWindow.CreateTextureOption(0)"/>
+    </Function>
+    <Function name="QQuickWindow.createTextureFromImage">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+    </Function>
+    <Function name="QQuickWindow.createTextureFromImage">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" name="options"/>
+    </Function>
+    <Function name="QQuickWindow.incubationController">
+      <Argument typename="QQmlIncubationController" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.renderTargetSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.renderTargetId">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.renderTarget">
+      <Argument typename="QOpenGLFramebufferObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.setRenderTarget">
+      <Argument typename="QOpenGLFramebufferObject" typetype="class" name="fbo"/>
+    </Function>
+    <Function name="QQuickWindow.setRenderTarget">
+      <Argument typename="int" name="fboId"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QQuickWindow.grabWindow">
+      <Argument typename="QImage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.sendEvent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickItem" typetype="class"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.mouseGrabberItem">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.focusObject" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.activeFocusItem">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.contentItem">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickView" inherits="QQuickWindow">
+    <Function name="QQuickView.__init__">
+      <Argument typename="QWindow" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QQuickView.__init__">
+      <Argument typename="QQmlEngine" typetype="class" name="engine"/>
+      <Argument typename="QWindow" typetype="class" name="parent" transfer="this"/>
+    </Function>
+    <Function name="QQuickView.__init__">
+      <Argument typename="QUrl" typetype="class" name="source"/>
+      <Argument typename="QWindow" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QQuickView.Status">
+      <EnumMember name="QQuickView.Null"/>
+      <EnumMember name="QQuickView.Ready"/>
+      <EnumMember name="QQuickView.Loading"/>
+      <EnumMember name="QQuickView.Error"/>
+    </Enum>
+    <Enum name="QQuickView.ResizeMode">
+      <EnumMember name="QQuickView.SizeViewToRootObject"/>
+      <EnumMember name="QQuickView.SizeRootObjectToView"/>
+    </Enum>
+    <Function name="QQuickView.mouseMoveEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.mouseReleaseEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.mousePressEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.timerEvent" virtual="1">
+      <Argument typename="QTimerEvent" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QQuickView.statusChanged" sig="void statusChanged( ::QQuickView::Status)"/>
+    <Function name="QQuickView.setSource" slot="void setSource(const  ::QUrl&amp;)">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QQuickView.initialSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickView.errors">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QQuickView.status">
+      <Argument typename="QQuickView.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickView.setResizeMode">
+      <Argument typename="QQuickView.ResizeMode" typetype="enum"/>
+    </Function>
+    <Function name="QQuickView.resizeMode">
+      <Argument typename="QQuickView.ResizeMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QQuickView.rootObject">
+      <Argument typename="QQuickItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickView.rootContext">
+      <Argument typename="QQmlContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickView.engine">
+      <Argument typename="QQmlEngine" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickView.source">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QQuickWindow.CreateTextureOptions" convert="1">
+    <Function name="QQuickWindow.CreateTextureOptions.__init__"/>
+    <Function name="QQuickWindow.CreateTextureOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__init__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__ixor__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__xor__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__ior__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__or__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__iand__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__and__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__invert__">
+      <Argument typename="QQuickWindow.CreateTextureOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QQuickWindow.CreateTextureOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <OpaqueClass name="QQuickCloseEvent"/>
+  <Class name="QSGAbstractRenderer" inherits="QObject">
+    <Enum name="QSGAbstractRenderer.ClearModeBit">
+      <EnumMember name="QSGAbstractRenderer.ClearColorBuffer"/>
+      <EnumMember name="QSGAbstractRenderer.ClearDepthBuffer"/>
+      <EnumMember name="QSGAbstractRenderer.ClearStencilBuffer"/>
+    </Enum>
+    <Signal default="1" name="QSGAbstractRenderer.sceneGraphChanged" sig="void sceneGraphChanged()"/>
+    <Function name="QSGAbstractRenderer.renderScene" abstract="1" virtual="1">
+      <Argument typename="int" name="fboId" default="0"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.clearMode">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setClearMode">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.clearColor">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setClearColor">
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.projectionMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setProjectionMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" name="matrix"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setProjectionMatrixToRect">
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.viewportRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setViewportRect">
+      <Argument typename="QRect" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setViewportRect">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.deviceRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setDeviceRect">
+      <Argument typename="QRect" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.setDeviceRect">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+  </Class>
+  <Class name="QSGAbstractRenderer.ClearMode" convert="1">
+    <Function name="QSGAbstractRenderer.ClearMode.__init__"/>
+    <Function name="QSGAbstractRenderer.ClearMode.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__init__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__ixor__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__xor__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__ior__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__or__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__iand__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__and__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__invert__">
+      <Argument typename="QSGAbstractRenderer.ClearMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGAbstractRenderer.ClearMode.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGEngine" inherits="QObject">
+    <Function name="QSGEngine.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSGEngine.CreateTextureOption">
+      <EnumMember name="QSGEngine.TextureHasAlphaChannel"/>
+      <EnumMember name="QSGEngine.TextureOwnsGLTexture"/>
+      <EnumMember name="QSGEngine.TextureCanUseAtlas"/>
+      <EnumMember name="QSGEngine.TextureIsOpaque"/>
+    </Enum>
+    <Function name="QSGEngine.createTextureFromId">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="int" name="id"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" name="options" default="QSGEngine.CreateTextureOption(0)"/>
+    </Function>
+    <Function name="QSGEngine.createTextureFromImage">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+      <Argument typename="QImage" typetype="class" name="image"/>
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" name="options" default="QSGEngine.CreateTextureOption(0)"/>
+    </Function>
+    <Function name="QSGEngine.createRenderer">
+      <Argument typename="QSGAbstractRenderer" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGEngine.invalidate"/>
+    <Function name="QSGEngine.initialize">
+      <Argument typename="QOpenGLContext" typetype="class" name="context"/>
+    </Function>
+  </Class>
+  <Class name="QSGEngine.CreateTextureOptions" convert="1">
+    <Function name="QSGEngine.CreateTextureOptions.__init__"/>
+    <Function name="QSGEngine.CreateTextureOptions.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__init__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__ixor__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__xor__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__ior__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__or__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__iand__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__and__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__invert__">
+      <Argument typename="QSGEngine.CreateTextureOptions" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGEngine.CreateTextureOptions.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGMaterial">
+    <Function name="QSGMaterial.__init__"/>
+    <Enum name="QSGMaterial.Flag">
+      <EnumMember name="QSGMaterial.Blending"/>
+      <EnumMember name="QSGMaterial.RequiresDeterminant"/>
+      <EnumMember name="QSGMaterial.RequiresFullMatrixExceptTranslate"/>
+      <EnumMember name="QSGMaterial.RequiresFullMatrix"/>
+      <EnumMember name="QSGMaterial.CustomCompileStep"/>
+    </Enum>
+    <Function name="QSGMaterial.setFlag">
+      <Argument typename="QSGMaterial.Flags" typetype="class" name="flags"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QSGMaterial.flags">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterial.compare" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QSGMaterial" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSGMaterial.createShader" abstract="1" virtual="1">
+      <Argument typename="QSGMaterialShader" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterial.type" abstract="1" virtual="1">
+      <Argument typename="QSGMaterialType" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGFlatColorMaterial" inherits="QSGMaterial">
+    <Function name="QSGFlatColorMaterial.__init__"/>
+    <Function name="QSGFlatColorMaterial.compare" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QSGMaterial" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSGFlatColorMaterial.color">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGFlatColorMaterial.setColor">
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QSGFlatColorMaterial.createShader" virtual="1">
+      <Argument typename="QSGMaterialShader" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGFlatColorMaterial.type" virtual="1">
+      <Argument typename="QSGMaterialType" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometry">
+    <Function name="QSGGeometry.__init__">
+      <Argument typename="QSGGeometry.AttributeSet" typetype="class" name="attribs"/>
+      <Argument typename="int" name="vertexCount"/>
+      <Argument typename="int" name="indexCount" default="0"/>
+      <Argument typename="int" name="indexType" default="GL_UNSIGNED_SHORT"/>
+    </Function>
+    <Function name="QSGGeometry.__init__">
+      <Argument typename="QSGGeometry" typetype="class"/>
+    </Function>
+    <Enum name="QSGGeometry.DataPattern">
+      <EnumMember name="QSGGeometry.AlwaysUploadPattern"/>
+      <EnumMember name="QSGGeometry.StreamPattern"/>
+      <EnumMember name="QSGGeometry.DynamicPattern"/>
+      <EnumMember name="QSGGeometry.StaticPattern"/>
+    </Enum>
+    <Member name="QSGGeometry.GL_POINTS" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_LINES" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_LINE_LOOP" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_LINE_STRIP" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_TRIANGLES" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_TRIANGLE_STRIP" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_TRIANGLE_FAN" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_BYTE" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_DOUBLE" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_FLOAT" const="1" typename="int"/>
+    <Member name="QSGGeometry.GL_INT" const="1" typename="int"/>
+    <Function name="QSGGeometry.sizeOfIndex">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.vertexDataAsColoredPoint2D">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.vertexDataAsTexturedPoint2D">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.vertexDataAsPoint2D">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.indexDataAsUShort">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.indexDataAsUInt">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.setLineWidth">
+      <Argument typename="float" name="w"/>
+    </Function>
+    <Function name="QSGGeometry.lineWidth">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.markVertexDataDirty"/>
+    <Function name="QSGGeometry.markIndexDataDirty"/>
+    <Function name="QSGGeometry.vertexDataPattern">
+      <Argument typename="QSGGeometry.DataPattern" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.setVertexDataPattern">
+      <Argument typename="QSGGeometry.DataPattern" typetype="enum" name="p"/>
+    </Function>
+    <Function name="QSGGeometry.indexDataPattern">
+      <Argument typename="QSGGeometry.DataPattern" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.setIndexDataPattern">
+      <Argument typename="QSGGeometry.DataPattern" typetype="enum" name="p"/>
+    </Function>
+    <Function name="QSGGeometry.updateTexturedRectGeometry" static="1">
+      <Argument typename="QSGGeometry" typetype="class" name="g"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+      <Argument typename="QRectF" typetype="class" name="sourceRect"/>
+    </Function>
+    <Function name="QSGGeometry.updateRectGeometry" static="1">
+      <Argument typename="QSGGeometry" typetype="class" name="g"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGGeometry.sizeOfVertex">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.attributes">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.attributeCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.indexData">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.indexCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.indexType">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.vertexData">
+      <Argument typename="sip.voidptr" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.vertexCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.allocate">
+      <Argument typename="int" name="vertexCount"/>
+      <Argument typename="int" name="indexCount" default="0"/>
+    </Function>
+    <Function name="QSGGeometry.drawingMode">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.setDrawingMode">
+      <Argument typename="int" name="mode"/>
+    </Function>
+    <Function name="QSGGeometry.defaultAttributes_ColoredPoint2D" static="1">
+      <Argument typename="QSGGeometry.AttributeSet" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.defaultAttributes_TexturedPoint2D" static="1">
+      <Argument typename="QSGGeometry.AttributeSet" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGGeometry.defaultAttributes_Point2D" static="1">
+      <Argument typename="QSGGeometry.AttributeSet" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometry.Attribute">
+    <Function name="QSGGeometry.Attribute.__init__"/>
+    <Function name="QSGGeometry.Attribute.__init__">
+      <Argument typename="QSGGeometry.Attribute" typetype="class"/>
+    </Function>
+    <Member name="QSGGeometry.Attribute.isVertexCoordinate" typename="int"/>
+    <Member name="QSGGeometry.Attribute.position" typename="int"/>
+    <Member name="QSGGeometry.Attribute.tupleSize" typename="int"/>
+    <Member name="QSGGeometry.Attribute.type" typename="int"/>
+    <Function name="QSGGeometry.Attribute.create" static="1">
+      <Argument typename="QSGGeometry.Attribute" typetype="class" dir="out"/>
+      <Argument typename="int" name="pos"/>
+      <Argument typename="int" name="tupleSize"/>
+      <Argument typename="int" name="primitiveType"/>
+      <Argument typename="bool" name="isPosition" default="False"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometry.AttributeSet">
+    <Function name="QSGGeometry.AttributeSet.__init__">
+      <Argument typename="object" name="attributes"/>
+      <Argument typename="int" name="stride" default="0"/>
+    </Function>
+    <Member name="QSGGeometry.AttributeSet.attributes" const="1" typename="QSGGeometry.Attribute" typetype="class"/>
+    <Member name="QSGGeometry.AttributeSet.count" typename="int"/>
+    <Member name="QSGGeometry.AttributeSet.stride" typename="int"/>
+  </Class>
+  <Class name="QSGGeometry.Point2D">
+    <Function name="QSGGeometry.Point2D.__init__"/>
+    <Function name="QSGGeometry.Point2D.__init__">
+      <Argument typename="QSGGeometry.Point2D" typetype="class"/>
+    </Function>
+    <Member name="QSGGeometry.Point2D.x" typename="float"/>
+    <Member name="QSGGeometry.Point2D.y" typename="float"/>
+    <Function name="QSGGeometry.Point2D.set">
+      <Argument typename="float" name="nx"/>
+      <Argument typename="float" name="ny"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometry.TexturedPoint2D">
+    <Function name="QSGGeometry.TexturedPoint2D.__init__"/>
+    <Function name="QSGGeometry.TexturedPoint2D.__init__">
+      <Argument typename="QSGGeometry.TexturedPoint2D" typetype="class"/>
+    </Function>
+    <Member name="QSGGeometry.TexturedPoint2D.tx" typename="float"/>
+    <Member name="QSGGeometry.TexturedPoint2D.ty" typename="float"/>
+    <Member name="QSGGeometry.TexturedPoint2D.x" typename="float"/>
+    <Member name="QSGGeometry.TexturedPoint2D.y" typename="float"/>
+    <Function name="QSGGeometry.TexturedPoint2D.set">
+      <Argument typename="float" name="nx"/>
+      <Argument typename="float" name="ny"/>
+      <Argument typename="float" name="ntx"/>
+      <Argument typename="float" name="nty"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometry.ColoredPoint2D">
+    <Function name="QSGGeometry.ColoredPoint2D.__init__"/>
+    <Function name="QSGGeometry.ColoredPoint2D.__init__">
+      <Argument typename="QSGGeometry.ColoredPoint2D" typetype="class"/>
+    </Function>
+    <Member name="QSGGeometry.ColoredPoint2D.a" typename="int"/>
+    <Member name="QSGGeometry.ColoredPoint2D.b" typename="int"/>
+    <Member name="QSGGeometry.ColoredPoint2D.g" typename="int"/>
+    <Member name="QSGGeometry.ColoredPoint2D.r" typename="int"/>
+    <Member name="QSGGeometry.ColoredPoint2D.x" typename="float"/>
+    <Member name="QSGGeometry.ColoredPoint2D.y" typename="float"/>
+    <Function name="QSGGeometry.ColoredPoint2D.set">
+      <Argument typename="float" name="nx"/>
+      <Argument typename="float" name="ny"/>
+      <Argument typename="int" name="nr"/>
+      <Argument typename="int" name="ng"/>
+      <Argument typename="int" name="nb"/>
+      <Argument typename="int" name="na"/>
+    </Function>
+  </Class>
+  <Class name="QSGMaterialShader">
+    <Function name="QSGMaterialShader.__init__"/>
+    <Function name="QSGMaterialShader.setShaderSourceFiles">
+      <Argument typename="QOpenGLShader.ShaderType" typetype="class" name="type"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="sourceFiles"/>
+    </Function>
+    <Function name="QSGMaterialShader.setShaderSourceFile">
+      <Argument typename="QOpenGLShader.ShaderType" typetype="class" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceFile"/>
+    </Function>
+    <Function name="QSGMaterialShader.fragmentShader" virtual="1">
+      <Argument typename="str" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.vertexShader" virtual="1">
+      <Argument typename="str" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.initialize" virtual="1"/>
+    <Function name="QSGMaterialShader.compile" virtual="1"/>
+    <Function name="QSGMaterialShader.program">
+      <Argument typename="QOpenGLShaderProgram" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.attributeNames" abstract="1" virtual="1">
+      <Argument typename="object" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.updateState" virtual="1">
+      <Argument typename="QSGMaterialShader.RenderState" typetype="class" name="state"/>
+      <Argument typename="QSGMaterial" typetype="class" name="newMaterial"/>
+      <Argument typename="QSGMaterial" typetype="class" name="oldMaterial"/>
+    </Function>
+    <Function name="QSGMaterialShader.deactivate" virtual="1"/>
+    <Function name="QSGMaterialShader.activate" virtual="1"/>
+  </Class>
+  <Class name="QSGMaterialShader.RenderState">
+    <Function name="QSGMaterialShader.RenderState.__init__"/>
+    <Function name="QSGMaterialShader.RenderState.__init__">
+      <Argument typename="QSGMaterialShader.RenderState" typetype="class"/>
+    </Function>
+    <Enum name="QSGMaterialShader.RenderState.DirtyState">
+      <EnumMember name="QSGMaterialShader.RenderState.DirtyMatrix"/>
+      <EnumMember name="QSGMaterialShader.RenderState.DirtyOpacity"/>
+    </Enum>
+    <Function name="QSGMaterialShader.RenderState.devicePixelRatio">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.projectionMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.context">
+      <Argument typename="QOpenGLContext" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.determinant">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.deviceRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.viewportRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.modelViewMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.combinedMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.opacity">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.isOpacityDirty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.isMatrixDirty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.dirtyStates">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGMaterialShader.RenderState.DirtyStates" convert="1">
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__init__"/>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__init__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__ixor__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__xor__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__ior__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__or__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__iand__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__and__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__invert__">
+      <Argument typename="QSGMaterialShader.RenderState.DirtyStates" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterialShader.RenderState.DirtyStates.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGMaterialType">
+    <Function name="QSGMaterialType.__init__"/>
+    <Function name="QSGMaterialType.__init__">
+      <Argument typename="QSGMaterialType" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QSGMaterial.Flags" convert="1">
+    <Function name="QSGMaterial.Flags.__init__"/>
+    <Function name="QSGMaterial.Flags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__init__">
+      <Argument typename="QSGMaterial.Flags" typetype="class"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGMaterial.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGMaterial.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__ixor__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__xor__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__ior__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__or__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__iand__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__and__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__invert__">
+      <Argument typename="QSGMaterial.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGMaterial.Flags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGNode">
+    <Function name="QSGNode.__init__"/>
+    <Enum name="QSGNode.DirtyStateBit">
+      <EnumMember name="QSGNode.DirtyMatrix"/>
+      <EnumMember name="QSGNode.DirtyNodeAdded"/>
+      <EnumMember name="QSGNode.DirtyNodeRemoved"/>
+      <EnumMember name="QSGNode.DirtyGeometry"/>
+      <EnumMember name="QSGNode.DirtyMaterial"/>
+      <EnumMember name="QSGNode.DirtyOpacity"/>
+    </Enum>
+    <Enum name="QSGNode.Flag">
+      <EnumMember name="QSGNode.OwnedByParent"/>
+      <EnumMember name="QSGNode.UsePreprocess"/>
+      <EnumMember name="QSGNode.OwnsGeometry"/>
+      <EnumMember name="QSGNode.OwnsMaterial"/>
+      <EnumMember name="QSGNode.OwnsOpaqueMaterial"/>
+    </Enum>
+    <Enum name="QSGNode.NodeType">
+      <EnumMember name="QSGNode.BasicNodeType"/>
+      <EnumMember name="QSGNode.GeometryNodeType"/>
+      <EnumMember name="QSGNode.TransformNodeType"/>
+      <EnumMember name="QSGNode.ClipNodeType"/>
+      <EnumMember name="QSGNode.OpacityNodeType"/>
+    </Enum>
+    <Function name="QSGNode.preprocess" virtual="1"/>
+    <Function name="QSGNode.setFlags">
+      <Argument typename="QSGNode.Flags" typetype="class"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QSGNode.setFlag">
+      <Argument typename="QSGNode.Flag" typetype="enum"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QSGNode.flags">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.isSubtreeBlocked" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGNode.markDirty">
+      <Argument typename="QSGNode.DirtyState" typetype="class" name="bits"/>
+    </Function>
+    <Function name="QSGNode.type">
+      <Argument typename="QSGNode.NodeType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGNode.previousSibling">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.nextSibling">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.lastChild">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.firstChild">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.childAtIndex">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSGNode.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.childCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.insertChildNodeAfter">
+      <Argument typename="QSGNode" typetype="class" name="node"/>
+      <Argument typename="QSGNode" typetype="class" name="after"/>
+    </Function>
+    <Function name="QSGNode.insertChildNodeBefore">
+      <Argument typename="QSGNode" typetype="class" name="node"/>
+      <Argument typename="QSGNode" typetype="class" name="before"/>
+    </Function>
+    <Function name="QSGNode.appendChildNode">
+      <Argument typename="QSGNode" typetype="class" name="node"/>
+    </Function>
+    <Function name="QSGNode.prependChildNode">
+      <Argument typename="QSGNode" typetype="class" name="node"/>
+    </Function>
+    <Function name="QSGNode.removeAllChildNodes"/>
+    <Function name="QSGNode.removeChildNode">
+      <Argument typename="QSGNode" typetype="class" name="node"/>
+    </Function>
+    <Function name="QSGNode.parent">
+      <Argument typename="QSGNode" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGNode.Flags" convert="1">
+    <Function name="QSGNode.Flags.__init__"/>
+    <Function name="QSGNode.Flags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__init__">
+      <Argument typename="QSGNode.Flags" typetype="class"/>
+    </Function>
+    <Function name="QSGNode.Flags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.Flags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.Flags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGNode.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGNode.Flags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__ixor__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__xor__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__ior__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__or__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__iand__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__and__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.Flags.__invert__">
+      <Argument typename="QSGNode.Flags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.Flags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGNode.DirtyState" convert="1">
+    <Function name="QSGNode.DirtyState.__init__"/>
+    <Function name="QSGNode.DirtyState.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__init__">
+      <Argument typename="QSGNode.DirtyState" typetype="class"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGNode.DirtyState" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGNode.DirtyState" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__ixor__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__xor__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__ior__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__or__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__iand__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__and__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__invert__">
+      <Argument typename="QSGNode.DirtyState" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGNode.DirtyState.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGBasicGeometryNode" inherits="QSGNode">
+    <Function name="QSGBasicGeometryNode.geometry">
+      <Argument typename="QSGGeometry" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGBasicGeometryNode.setGeometry">
+      <Argument typename="QSGGeometry" typetype="class" name="geometry"/>
+    </Function>
+  </Class>
+  <Class name="QSGGeometryNode" inherits="QSGBasicGeometryNode">
+    <Function name="QSGGeometryNode.__init__"/>
+    <Function name="QSGGeometryNode.opaqueMaterial">
+      <Argument typename="QSGMaterial" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGGeometryNode.setOpaqueMaterial">
+      <Argument typename="QSGMaterial" typetype="class" name="material"/>
+    </Function>
+    <Function name="QSGGeometryNode.material">
+      <Argument typename="QSGMaterial" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGGeometryNode.setMaterial">
+      <Argument typename="QSGMaterial" typetype="class" name="material"/>
+    </Function>
+  </Class>
+  <Class name="QSGClipNode" inherits="QSGBasicGeometryNode">
+    <Function name="QSGClipNode.__init__"/>
+    <Function name="QSGClipNode.clipRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGClipNode.setClipRect">
+      <Argument typename="QRectF" typetype="class"/>
+    </Function>
+    <Function name="QSGClipNode.isRectangular">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGClipNode.setIsRectangular">
+      <Argument typename="bool" name="rectHint"/>
+    </Function>
+  </Class>
+  <Class name="QSGTransformNode" inherits="QSGNode">
+    <Function name="QSGTransformNode.__init__"/>
+    <Function name="QSGTransformNode.matrix">
+      <Argument typename="QMatrix4x4" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGTransformNode.setMatrix">
+      <Argument typename="QMatrix4x4" typetype="class" name="matrix"/>
+    </Function>
+  </Class>
+  <Class name="QSGOpacityNode" inherits="QSGNode">
+    <Function name="QSGOpacityNode.__init__"/>
+    <Function name="QSGOpacityNode.opacity">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QSGOpacityNode.setOpacity">
+      <Argument typename="float" name="opacity"/>
+    </Function>
+  </Class>
+  <Class name="QSGSimpleRectNode" inherits="QSGGeometryNode">
+    <Function name="QSGSimpleRectNode.__init__">
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QSGSimpleRectNode.__init__"/>
+    <Function name="QSGSimpleRectNode.color">
+      <Argument typename="QColor" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleRectNode.setColor">
+      <Argument typename="QColor" typetype="class" name="color"/>
+    </Function>
+    <Function name="QSGSimpleRectNode.rect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleRectNode.setRect">
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGSimpleRectNode.setRect">
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="w"/>
+      <Argument typename="float" name="h"/>
+    </Function>
+  </Class>
+  <Class name="QSGSimpleTextureNode" inherits="QSGGeometryNode">
+    <Function name="QSGSimpleTextureNode.__init__"/>
+    <Enum name="QSGSimpleTextureNode.TextureCoordinatesTransformFlag">
+      <EnumMember name="QSGSimpleTextureNode.NoTransform"/>
+      <EnumMember name="QSGSimpleTextureNode.MirrorHorizontally"/>
+      <EnumMember name="QSGSimpleTextureNode.MirrorVertically"/>
+    </Enum>
+    <Function name="QSGSimpleTextureNode.sourceRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setSourceRect">
+      <Argument typename="QRectF" typetype="class" name="r"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setSourceRect">
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="w"/>
+      <Argument typename="float" name="h"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.ownsTexture">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setOwnsTexture">
+      <Argument typename="bool" name="owns"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.textureCoordinatesTransform">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setTextureCoordinatesTransform">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" name="mode"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.filtering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" name="filtering"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.texture">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setTexture">
+      <Argument typename="QSGTexture" typetype="class" name="texture"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.rect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setRect">
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.setRect">
+      <Argument typename="float" name="x"/>
+      <Argument typename="float" name="y"/>
+      <Argument typename="float" name="w"/>
+      <Argument typename="float" name="h"/>
+    </Function>
+  </Class>
+  <Class name="QSGSimpleTextureNode.TextureCoordinatesTransformMode" convert="1">
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__init__"/>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__init__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__ixor__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__xor__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__ior__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__or__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__iand__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__and__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__invert__">
+      <Argument typename="QSGSimpleTextureNode.TextureCoordinatesTransformMode" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGSimpleTextureNode.TextureCoordinatesTransformMode.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGTexture" inherits="QObject">
+    <Function name="QSGTexture.__init__"/>
+    <Enum name="QSGTexture.Filtering">
+      <EnumMember name="QSGTexture.None"/>
+      <EnumMember name="QSGTexture.Nearest"/>
+      <EnumMember name="QSGTexture.Linear"/>
+    </Enum>
+    <Enum name="QSGTexture.WrapMode">
+      <EnumMember name="QSGTexture.Repeat"/>
+      <EnumMember name="QSGTexture.ClampToEdge"/>
+    </Enum>
+    <Function name="QSGTexture.convertToNormalizedSourceRect">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QSGTexture.verticalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.setVerticalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" name="vwrap"/>
+    </Function>
+    <Function name="QSGTexture.horizontalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.setHorizontalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" name="hwrap"/>
+    </Function>
+    <Function name="QSGTexture.filtering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.setFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" name="filter"/>
+    </Function>
+    <Function name="QSGTexture.mipmapFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.setMipmapFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" name="filter"/>
+    </Function>
+    <Function name="QSGTexture.updateBindOptions">
+      <Argument typename="bool" name="force" default="False"/>
+    </Function>
+    <Function name="QSGTexture.bind" abstract="1" virtual="1"/>
+    <Function name="QSGTexture.removedFromAtlas" virtual="1">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.isAtlasTexture" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.normalizedTextureSubRect" virtual="1">
+      <Argument typename="QRectF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.hasMipmaps" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.hasAlphaChannel" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.textureSize" abstract="1" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGTexture.textureId" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGDynamicTexture" inherits="QSGTexture">
+    <Function name="QSGDynamicTexture.__init__"/>
+    <Function name="QSGDynamicTexture.updateTexture" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGOpaqueTextureMaterial" inherits="QSGMaterial">
+    <Function name="QSGOpaqueTextureMaterial.__init__"/>
+    <Function name="QSGOpaqueTextureMaterial.verticalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.setVerticalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.horizontalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.setHorizontalWrapMode">
+      <Argument typename="QSGTexture.WrapMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.filtering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.setFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" name="filtering"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.mipmapFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.setMipmapFiltering">
+      <Argument typename="QSGTexture.Filtering" typetype="enum" name="filtering"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.texture">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.setTexture">
+      <Argument typename="QSGTexture" typetype="class" name="texture"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.compare" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QSGMaterial" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.createShader" virtual="1">
+      <Argument typename="QSGMaterialShader" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGOpaqueTextureMaterial.type" virtual="1">
+      <Argument typename="QSGMaterialType" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGTextureMaterial" inherits="QSGOpaqueTextureMaterial">
+    <Function name="QSGTextureMaterial.__init__"/>
+    <Function name="QSGTextureMaterial.createShader" virtual="1">
+      <Argument typename="QSGMaterialShader" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGTextureMaterial.type" virtual="1">
+      <Argument typename="QSGMaterialType" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGTextureProvider" inherits="QObject">
+    <Function name="QSGTextureProvider.__init__"/>
+    <Signal default="1" name="QSGTextureProvider.textureChanged" sig="void textureChanged()"/>
+    <Function name="QSGTextureProvider.texture" abstract="1" virtual="1">
+      <Argument typename="QSGTexture" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSGVertexColorMaterial" inherits="QSGMaterial">
+    <Function name="QSGVertexColorMaterial.__init__"/>
+    <Function name="QSGVertexColorMaterial.createShader" virtual="1">
+      <Argument typename="QSGMaterialShader" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGVertexColorMaterial.type" virtual="1">
+      <Argument typename="QSGMaterialType" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSGVertexColorMaterial.compare" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QSGMaterial" typetype="class" name="other"/>
+    </Function>
+  </Class>
+</Module>

@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtNetworkAuth">
+  <Class name="QAbstractOAuth" inherits="QObject">
+    <Enum name="QAbstractOAuth.ContentType">
+      <EnumMember name="QAbstractOAuth.WwwFormUrlEncoded"/>
+      <EnumMember name="QAbstractOAuth.Json"/>
+    </Enum>
+    <Enum name="QAbstractOAuth.Error">
+      <EnumMember name="QAbstractOAuth.NoError"/>
+      <EnumMember name="QAbstractOAuth.NetworkError"/>
+      <EnumMember name="QAbstractOAuth.ServerError"/>
+      <EnumMember name="QAbstractOAuth.OAuthTokenNotFoundError"/>
+      <EnumMember name="QAbstractOAuth.OAuthTokenSecretNotFoundError"/>
+      <EnumMember name="QAbstractOAuth.OAuthCallbackNotVerified"/>
+    </Enum>
+    <Enum name="QAbstractOAuth.Stage">
+      <EnumMember name="QAbstractOAuth.RequestingTemporaryCredentials"/>
+      <EnumMember name="QAbstractOAuth.RequestingAuthorization"/>
+      <EnumMember name="QAbstractOAuth.RequestingAccessToken"/>
+      <EnumMember name="QAbstractOAuth.RefreshingAccessToken"/>
+    </Enum>
+    <Enum name="QAbstractOAuth.Status">
+      <EnumMember name="QAbstractOAuth.NotAuthenticated"/>
+      <EnumMember name="QAbstractOAuth.TemporaryCredentialsReceived"/>
+      <EnumMember name="QAbstractOAuth.Granted"/>
+      <EnumMember name="QAbstractOAuth.RefreshingToken"/>
+    </Enum>
+    <Function name="QAbstractOAuth.generateRandomString" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="int" name="length"/>
+    </Function>
+    <Function name="QAbstractOAuth.resourceOwnerAuthorization" virtual="1">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QAbstractOAuth.callback">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setStatus">
+      <Argument typename="QAbstractOAuth.Status" typetype="enum" name="status"/>
+    </Function>
+    <Signal default="1" name="QAbstractOAuth.replyDataReceived" sig="void replyDataReceived(const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth.finished" sig="void finished( ::QNetworkReply*)"/>
+    <Signal default="1" name="QAbstractOAuth.granted" sig="void granted()"/>
+    <Signal default="1" name="QAbstractOAuth.authorizeWithBrowser" sig="void authorizeWithBrowser(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth.requestFailed" sig="void requestFailed(const  ::QAbstractOAuth::Error)"/>
+    <Signal default="1" name="QAbstractOAuth.contentTypeChanged" sig="void contentTypeChanged( ::QAbstractOAuth::ContentType)"/>
+    <Signal default="1" name="QAbstractOAuth.extraTokensChanged" sig="void extraTokensChanged(const  ::QVariantMap&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth.authorizationUrlChanged" sig="void authorizationUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth.statusChanged" sig="void statusChanged( ::QAbstractOAuth::Status)"/>
+    <Signal default="1" name="QAbstractOAuth.tokenChanged" sig="void tokenChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth.clientIdentifierChanged" sig="void clientIdentifierChanged(const QString&amp;)"/>
+    <Function name="QAbstractOAuth.grant" abstract="1" slot="void grant()" virtual="1"/>
+    <Function name="QAbstractOAuth.setContentType">
+      <Argument typename="QAbstractOAuth.ContentType" typetype="enum" name="contentType"/>
+    </Function>
+    <Function name="QAbstractOAuth.contentType">
+      <Argument typename="QAbstractOAuth.ContentType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setModifyParametersFunction">
+      <Argument typename="callable" name="modifyParametersFunction" allownone="1"/>
+    </Function>
+    <Function name="QAbstractOAuth.modifyParametersFunction">
+      <Argument typename="callable" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.deleteResource" abstract="1" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth.put" abstract="1" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth.post" abstract="1" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth.get" abstract="1" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth.head" abstract="1" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth.setReplyHandler">
+      <Argument typename="QAbstractOAuthReplyHandler" typetype="class" name="handler"/>
+    </Function>
+    <Function name="QAbstractOAuth.replyHandler">
+      <Argument typename="QAbstractOAuthReplyHandler" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.extraTokens">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setAuthorizationUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QAbstractOAuth.authorizationUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.status">
+      <Argument typename="QAbstractOAuth.Status" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setNetworkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="networkAccessManager"/>
+    </Function>
+    <Function name="QAbstractOAuth.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setToken">
+      <Argument typename="QString" typetype="mappedtype" name="token"/>
+    </Function>
+    <Function name="QAbstractOAuth.token">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth.setClientIdentifier">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifier"/>
+    </Function>
+    <Function name="QAbstractOAuth.clientIdentifier">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractOAuth2" inherits="QAbstractOAuth">
+    <Function name="QAbstractOAuth2.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAbstractOAuth2.__init__">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QAbstractOAuth2.setResponseType">
+      <Argument typename="QString" typetype="mappedtype" name="responseType"/>
+    </Function>
+    <Signal default="1" name="QAbstractOAuth2.authorizationCallbackReceived" sig="void authorizationCallbackReceived(const  ::QVariantMap&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.error" sig="void error(const QString&amp;,const QString&amp;,const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.expirationAtChanged" sig="void expirationAtChanged(const  ::QDateTime&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.stateChanged" sig="void stateChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.clientIdentifierSharedKeyChanged" sig="void clientIdentifierSharedKeyChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.responseTypeChanged" sig="void responseTypeChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.userAgentChanged" sig="void userAgentChanged(const QString&amp;)"/>
+    <Signal default="1" name="QAbstractOAuth2.scopeChanged" sig="void scopeChanged(const QString&amp;)"/>
+    <Function name="QAbstractOAuth2.setRefreshToken">
+      <Argument typename="QString" typetype="mappedtype" name="refreshToken"/>
+    </Function>
+    <Function name="QAbstractOAuth2.refreshToken">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.expirationAt">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.setState">
+      <Argument typename="QString" typetype="mappedtype" name="state"/>
+    </Function>
+    <Function name="QAbstractOAuth2.state">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.setClientIdentifierSharedKey">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifierSharedKey"/>
+    </Function>
+    <Function name="QAbstractOAuth2.clientIdentifierSharedKey">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.responseType">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.setUserAgent">
+      <Argument typename="QString" typetype="mappedtype" name="userAgent"/>
+    </Function>
+    <Function name="QAbstractOAuth2.userAgent">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.setScope">
+      <Argument typename="QString" typetype="mappedtype" name="scope"/>
+    </Function>
+    <Function name="QAbstractOAuth2.scope">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QAbstractOAuth2.deleteResource" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth2.put" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth2.post" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth2.get" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth2.head" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QAbstractOAuth2.createAuthenticatedUrl" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+  </Class>
+  <Class name="QAbstractOAuthReplyHandler" inherits="QObject">
+    <Function name="QAbstractOAuthReplyHandler.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QAbstractOAuthReplyHandler.callbackDataReceived" sig="void callbackDataReceived(const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QAbstractOAuthReplyHandler.replyDataReceived" sig="void replyDataReceived(const  ::QByteArray&amp;)"/>
+    <Signal default="1" name="QAbstractOAuthReplyHandler.tokensReceived" sig="void tokensReceived(const  ::QVariantMap&amp;)"/>
+    <Signal default="1" name="QAbstractOAuthReplyHandler.callbackReceived" sig="void callbackReceived(const  ::QVariantMap&amp;)"/>
+    <Function name="QAbstractOAuthReplyHandler.networkReplyFinished" abstract="1" slot="void networkReplyFinished( ::QNetworkReply*)" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" name="reply"/>
+    </Function>
+    <Function name="QAbstractOAuthReplyHandler.callback" abstract="1" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOAuth1" inherits="QAbstractOAuth">
+    <Function name="QOAuth1.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth1.__init__">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth1.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifier"/>
+      <Argument typename="QString" typetype="mappedtype" name="clientSharedSecret"/>
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QOAuth1.SignatureMethod">
+      <EnumMember name="QOAuth1.Hmac_Sha1"/>
+      <EnumMember name="QOAuth1.Rsa_Sha1"/>
+      <EnumMember name="QOAuth1.PlainText"/>
+    </Enum>
+    <Function name="QOAuth1.generateAuthorizationHeader" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="oauthParams"/>
+    </Function>
+    <Function name="QOAuth1.nonce" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setup">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="signingParameters"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation"/>
+    </Function>
+    <Function name="QOAuth1.requestTokenCredentials">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="temporaryToken"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.requestTemporaryCredentials">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Signal default="1" name="QOAuth1.tokenCredentialsUrlChanged" sig="void tokenCredentialsUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QOAuth1.temporaryCredentialsUrlChanged" sig="void temporaryCredentialsUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QOAuth1.tokenSecretChanged" sig="void tokenSecretChanged(const QString&amp;)"/>
+    <Signal default="1" name="QOAuth1.clientSharedSecretChanged" sig="void clientSharedSecretChanged(const QString&amp;)"/>
+    <Signal default="1" name="QOAuth1.signatureMethodChanged" sig="void signatureMethodChanged( ::QOAuth1::SignatureMethod)"/>
+    <Function name="QOAuth1.continueGrantWithVerifier" slot="void continueGrantWithVerifier(const QString&amp;)">
+      <Argument typename="QString" typetype="mappedtype" name="verifier"/>
+    </Function>
+    <Function name="QOAuth1.grant" slot="void grant()" virtual="1"/>
+    <Function name="QOAuth1.deleteResource" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.put" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.post" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.get" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.head" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1.setSignatureMethod">
+      <Argument typename="QOAuth1.SignatureMethod" typetype="enum" name="value"/>
+    </Function>
+    <Function name="QOAuth1.signatureMethod">
+      <Argument typename="QOAuth1.SignatureMethod" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setTokenCredentialsUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QOAuth1.tokenCredentialsUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setTemporaryCredentialsUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QOAuth1.temporaryCredentialsUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setTokenCredentials">
+      <Argument typename="unknown-type" typetype="mappedtype" name="tokenCredentials"/>
+    </Function>
+    <Function name="QOAuth1.setTokenCredentials">
+      <Argument typename="QString" typetype="mappedtype" name="token"/>
+      <Argument typename="QString" typetype="mappedtype" name="tokenSecret"/>
+    </Function>
+    <Function name="QOAuth1.tokenCredentials">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setTokenSecret">
+      <Argument typename="QString" typetype="mappedtype" name="tokenSecret"/>
+    </Function>
+    <Function name="QOAuth1.tokenSecret">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setClientCredentials">
+      <Argument typename="unknown-type" typetype="mappedtype" name="clientCredentials"/>
+    </Function>
+    <Function name="QOAuth1.setClientCredentials">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifier"/>
+      <Argument typename="QString" typetype="mappedtype" name="clientSharedSecret"/>
+    </Function>
+    <Function name="QOAuth1.clientCredentials">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1.setClientSharedSecret">
+      <Argument typename="QString" typetype="mappedtype" name="clientSharedSecret"/>
+    </Function>
+    <Function name="QOAuth1.clientSharedSecret">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOAuth1Signature">
+    <Function name="QOAuth1Signature.__init__">
+      <Argument typename="QUrl" typetype="class" name="url" default="QUrl()"/>
+      <Argument typename="QOAuth1Signature.HttpRequestMethod" typetype="enum" name="method" default="QOAuth1Signature.HttpRequestMethod.Post"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1Signature.__init__">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QString" typetype="mappedtype" name="clientSharedKey"/>
+      <Argument typename="QString" typetype="mappedtype" name="tokenSecret"/>
+      <Argument typename="QOAuth1Signature.HttpRequestMethod" typetype="enum" name="method" default="QOAuth1Signature.HttpRequestMethod.Post"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth1Signature.__init__">
+      <Argument typename="QOAuth1Signature" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QOAuth1Signature.HttpRequestMethod">
+      <EnumMember name="QOAuth1Signature.Head"/>
+      <EnumMember name="QOAuth1Signature.Get"/>
+      <EnumMember name="QOAuth1Signature.Put"/>
+      <EnumMember name="QOAuth1Signature.Post"/>
+      <EnumMember name="QOAuth1Signature.Delete"/>
+      <EnumMember name="QOAuth1Signature.Custom"/>
+      <EnumMember name="QOAuth1Signature.Unknown"/>
+    </Enum>
+    <Function name="QOAuth1Signature.swap">
+      <Argument typename="QOAuth1Signature" typetype="class" name="other"/>
+    </Function>
+    <Function name="QOAuth1Signature.plainText">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.plainText" static="1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="clientSharedSecret"/>
+      <Argument typename="QString" typetype="mappedtype" name="tokenSecret"/>
+    </Function>
+    <Function name="QOAuth1Signature.rsaSha1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.hmacSha1">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.setTokenSecret">
+      <Argument typename="QString" typetype="mappedtype" name="secret"/>
+    </Function>
+    <Function name="QOAuth1Signature.tokenSecret">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.setClientSharedKey">
+      <Argument typename="QString" typetype="mappedtype" name="secret"/>
+    </Function>
+    <Function name="QOAuth1Signature.clientSharedKey">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="defaultValue" default="None"/>
+    </Function>
+    <Function name="QOAuth1Signature.take">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+    </Function>
+    <Function name="QOAuth1Signature.keys">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.insert">
+      <Argument typename="QString" typetype="mappedtype" name="key"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QOAuth1Signature.addRequestBody">
+      <Argument typename="QUrlQuery" typetype="class" name="body"/>
+    </Function>
+    <Function name="QOAuth1Signature.setParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QOAuth1Signature.parameters">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QOAuth1Signature.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QOAuth1Signature.setHttpRequestMethod">
+      <Argument typename="QOAuth1Signature.HttpRequestMethod" typetype="enum" name="method"/>
+    </Function>
+    <Function name="QOAuth1Signature.httpRequestMethod">
+      <Argument typename="QOAuth1Signature.HttpRequestMethod" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOAuth2AuthorizationCodeFlow" inherits="QAbstractOAuth2">
+    <Function name="QOAuth2AuthorizationCodeFlow.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.__init__">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifier"/>
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.__init__">
+      <Argument typename="QUrl" typetype="class" name="authorizationUrl"/>
+      <Argument typename="QUrl" typetype="class" name="accessTokenUrl"/>
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="clientIdentifier"/>
+      <Argument typename="QUrl" typetype="class" name="authorizationUrl"/>
+      <Argument typename="QUrl" typetype="class" name="accessTokenUrl"/>
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.resourceOwnerAuthorization" virtual="1">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.requestAccessToken">
+      <Argument typename="QString" typetype="mappedtype" name="code"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.buildAuthenticateUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QVariantMap()"/>
+    </Function>
+    <Signal default="1" name="QOAuth2AuthorizationCodeFlow.accessTokenUrlChanged" sig="void accessTokenUrlChanged(const  ::QUrl&amp;)"/>
+    <Function name="QOAuth2AuthorizationCodeFlow.refreshAccessToken" slot="void refreshAccessToken()"/>
+    <Function name="QOAuth2AuthorizationCodeFlow.grant" slot="void grant()" virtual="1"/>
+    <Function name="QOAuth2AuthorizationCodeFlow.setAccessTokenUrl">
+      <Argument typename="QUrl" typetype="class" name="accessTokenUrl"/>
+    </Function>
+    <Function name="QOAuth2AuthorizationCodeFlow.accessTokenUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOAuthOobReplyHandler" inherits="QAbstractOAuthReplyHandler">
+    <Function name="QOAuthOobReplyHandler.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuthOobReplyHandler.networkReplyFinished" virtual="1">
+      <Argument typename="QNetworkReply" typetype="class" name="reply"/>
+    </Function>
+    <Function name="QOAuthOobReplyHandler.callback" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QOAuthHttpServerReplyHandler" inherits="QOAuthOobReplyHandler">
+    <Function name="QOAuthHttpServerReplyHandler.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.__init__">
+      <Argument typename="int" name="port"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.__init__">
+      <Argument typename="QHostAddress" typetype="class" name="address"/>
+      <Argument typename="int" name="port"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.isListening">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.close"/>
+    <Function name="QOAuthHttpServerReplyHandler.listen">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QHostAddress" typetype="class" name="address" default="QHostAddress.SpecialAddress.Any"/>
+      <Argument typename="int" name="port" default="0"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.port">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.setCallbackText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.callbackText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.setCallbackPath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.callbackPath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QOAuthHttpServerReplyHandler.callback" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+</Module>

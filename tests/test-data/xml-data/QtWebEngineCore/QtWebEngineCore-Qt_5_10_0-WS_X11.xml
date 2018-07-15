@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebEngineCore">
+  <Class name="QWebEngineCookieStore" inherits="QObject">
+    <Signal default="1" name="QWebEngineCookieStore.cookieRemoved" sig="void cookieRemoved(const  ::QNetworkCookie&amp;)"/>
+    <Signal default="1" name="QWebEngineCookieStore.cookieAdded" sig="void cookieAdded(const  ::QNetworkCookie&amp;)"/>
+    <Function name="QWebEngineCookieStore.loadAllCookies"/>
+    <Function name="QWebEngineCookieStore.deleteAllCookies"/>
+    <Function name="QWebEngineCookieStore.deleteSessionCookies"/>
+    <Function name="QWebEngineCookieStore.deleteCookie">
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+      <Argument typename="QUrl" typetype="class" name="origin" default="QUrl()"/>
+    </Function>
+    <Function name="QWebEngineCookieStore.setCookie">
+      <Argument typename="QNetworkCookie" typetype="class" name="cookie"/>
+      <Argument typename="QUrl" typetype="class" name="origin" default="QUrl()"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineHttpRequest">
+    <Function name="QWebEngineHttpRequest.__init__">
+      <Argument typename="QUrl" typetype="class" name="url" default="QUrl()"/>
+      <Argument typename="QWebEngineHttpRequest.Method" typetype="enum" name="method" default="QWebEngineHttpRequest.Method.Get"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.__init__">
+      <Argument typename="QWebEngineHttpRequest" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QWebEngineHttpRequest.Method">
+      <EnumMember name="QWebEngineHttpRequest.Get"/>
+      <EnumMember name="QWebEngineHttpRequest.Post"/>
+    </Enum>
+    <Function name="QWebEngineHttpRequest.unsetHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.setHeader">
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.header">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.headers">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.hasHeader">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QByteArray" typetype="class" name="headerName"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.setPostData">
+      <Argument typename="QByteArray" typetype="class" name="postData"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.postData">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.setMethod">
+      <Argument typename="QWebEngineHttpRequest.Method" typetype="enum" name="method"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.method">
+      <Argument typename="QWebEngineHttpRequest.Method" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineHttpRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineHttpRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.swap">
+      <Argument typename="QWebEngineHttpRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineHttpRequest.postRequest" static="1">
+      <Argument typename="QWebEngineHttpRequest" typetype="class" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="postData"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineUrlRequestInfo">
+    <Enum name="QWebEngineUrlRequestInfo.NavigationType">
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeLink"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeTyped"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeFormSubmitted"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeBackForward"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeReload"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.NavigationTypeOther"/>
+    </Enum>
+    <Enum name="QWebEngineUrlRequestInfo.ResourceType">
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeMainFrame"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeSubFrame"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeStylesheet"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeScript"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeImage"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeFontResource"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeSubResource"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeObject"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeMedia"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeWorker"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeSharedWorker"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypePrefetch"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeFavicon"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeXhr"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypePing"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeServiceWorker"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeUnknown"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypeCspReport"/>
+      <EnumMember name="QWebEngineUrlRequestInfo.ResourceTypePluginResource"/>
+    </Enum>
+    <Function name="QWebEngineUrlRequestInfo.setHttpHeader">
+      <Argument typename="QByteArray" typetype="class" name="name"/>
+      <Argument typename="QByteArray" typetype="class" name="value"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.redirect">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.block">
+      <Argument typename="bool" name="shouldBlock"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.requestMethod">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.firstPartyUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.requestUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.navigationType">
+      <Argument typename="QWebEngineUrlRequestInfo.NavigationType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInfo.resourceType">
+      <Argument typename="QWebEngineUrlRequestInfo.ResourceType" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineUrlRequestInterceptor" inherits="QObject">
+    <Function name="QWebEngineUrlRequestInterceptor.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestInterceptor.interceptRequest" abstract="1" virtual="1">
+      <Argument typename="QWebEngineUrlRequestInfo" typetype="class" name="info"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineUrlRequestJob" inherits="QObject">
+    <Enum name="QWebEngineUrlRequestJob.Error">
+      <EnumMember name="QWebEngineUrlRequestJob.NoError"/>
+      <EnumMember name="QWebEngineUrlRequestJob.UrlNotFound"/>
+      <EnumMember name="QWebEngineUrlRequestJob.UrlInvalid"/>
+      <EnumMember name="QWebEngineUrlRequestJob.RequestAborted"/>
+      <EnumMember name="QWebEngineUrlRequestJob.RequestDenied"/>
+      <EnumMember name="QWebEngineUrlRequestJob.RequestFailed"/>
+    </Enum>
+    <Function name="QWebEngineUrlRequestJob.redirect">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestJob.fail">
+      <Argument typename="QWebEngineUrlRequestJob.Error" typetype="enum" name="error"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestJob.reply">
+      <Argument typename="QByteArray" typetype="class" name="contentType"/>
+      <Argument typename="QIODevice" typetype="class" name="device"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestJob.requestMethod">
+      <Argument typename="QByteArray" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineUrlRequestJob.requestUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineUrlSchemeHandler" inherits="QObject">
+    <Function name="QWebEngineUrlSchemeHandler.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebEngineUrlSchemeHandler.requestStarted" abstract="1" virtual="1">
+      <Argument typename="QWebEngineUrlRequestJob" typetype="class"/>
+    </Function>
+  </Class>
+</Module>

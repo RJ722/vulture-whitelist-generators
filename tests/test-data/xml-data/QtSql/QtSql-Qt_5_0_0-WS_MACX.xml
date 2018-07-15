@@ -1,0 +1,1363 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtSql">
+  <Class name="QSql">
+    <Enum name="QSql.NumericalPrecisionPolicy">
+      <EnumMember name="QSql.LowPrecisionInt32"/>
+      <EnumMember name="QSql.LowPrecisionInt64"/>
+      <EnumMember name="QSql.LowPrecisionDouble"/>
+      <EnumMember name="QSql.HighPrecision"/>
+    </Enum>
+    <Enum name="QSql.TableType">
+      <EnumMember name="QSql.Tables"/>
+      <EnumMember name="QSql.SystemTables"/>
+      <EnumMember name="QSql.Views"/>
+      <EnumMember name="QSql.AllTables"/>
+    </Enum>
+    <Enum name="QSql.ParamTypeFlag">
+      <EnumMember name="QSql.In"/>
+      <EnumMember name="QSql.Out"/>
+      <EnumMember name="QSql.InOut"/>
+      <EnumMember name="QSql.Binary"/>
+    </Enum>
+    <Enum name="QSql.Location">
+      <EnumMember name="QSql.BeforeFirstRow"/>
+      <EnumMember name="QSql.AfterLastRow"/>
+    </Enum>
+  </Class>
+  <Class name="QSql.ParamType" convert="1">
+    <Function name="QSql.ParamType.__init__"/>
+    <Function name="QSql.ParamType.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__init__">
+      <Argument typename="QSql.ParamType" typetype="class"/>
+    </Function>
+    <Function name="QSql.ParamType.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSql.ParamType.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSql.ParamType.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__ixor__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__xor__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__ior__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__or__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__iand__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__and__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QSql.ParamType.__invert__">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSql.ParamType.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlDriverCreatorBase">
+    <Function name="QSqlDriverCreatorBase.__init__"/>
+    <Function name="QSqlDriverCreatorBase.__init__">
+      <Argument typename="QSqlDriverCreatorBase" typetype="class"/>
+    </Function>
+    <Function name="QSqlDriverCreatorBase.createObject" abstract="1" virtual="1">
+      <Argument typename="QSqlDriver" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlDatabase">
+    <Function name="QSqlDatabase.__init__"/>
+    <Function name="QSqlDatabase.__init__">
+      <Argument typename="QSqlDatabase" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlDatabase.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="type"/>
+    </Function>
+    <Function name="QSqlDatabase.__init__">
+      <Argument typename="QSqlDriver" typetype="class" name="driver"/>
+    </Function>
+    <Function name="QSqlDatabase.numericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.setNumericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" name="precisionPolicy"/>
+    </Function>
+    <Function name="QSqlDatabase.isDriverAvailable" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlDatabase.registerSqlDriver" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QSqlDriverCreatorBase" typetype="class" name="creator" transfer="to"/>
+    </Function>
+    <Function name="QSqlDatabase.connectionNames" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.drivers" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.contains" static="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="connectionName" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.removeDatabase" static="1">
+      <Argument typename="QString" typetype="mappedtype" name="connectionName"/>
+    </Function>
+    <Function name="QSqlDatabase.database" static="1">
+      <Argument typename="QSqlDatabase" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="connectionName" default="''"/>
+      <Argument typename="bool" name="open" default="True"/>
+    </Function>
+    <Function name="QSqlDatabase.cloneDatabase" static="1">
+      <Argument typename="QSqlDatabase" typetype="class" dir="out"/>
+      <Argument typename="QSqlDatabase" typetype="class" name="other"/>
+      <Argument typename="QString" typetype="mappedtype" name="connectionName"/>
+    </Function>
+    <Function name="QSqlDatabase.addDatabase" static="1">
+      <Argument typename="QSqlDatabase" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="connectionName" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.addDatabase" static="1">
+      <Argument typename="QSqlDatabase" typetype="class" dir="out"/>
+      <Argument typename="QSqlDriver" typetype="class" name="driver"/>
+      <Argument typename="QString" typetype="mappedtype" name="connectionName" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.driver">
+      <Argument typename="QSqlDriver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.connectionName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.connectOptions">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.port">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.driverName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.hostName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.password">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.userName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.databaseName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.setConnectOptions">
+      <Argument typename="QString" typetype="mappedtype" name="options" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.setPort">
+      <Argument typename="int" name="p"/>
+    </Function>
+    <Function name="QSqlDatabase.setHostName">
+      <Argument typename="QString" typetype="mappedtype" name="host"/>
+    </Function>
+    <Function name="QSqlDatabase.setPassword">
+      <Argument typename="QString" typetype="mappedtype" name="password"/>
+    </Function>
+    <Function name="QSqlDatabase.setUserName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlDatabase.setDatabaseName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlDatabase.rollback">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.commit">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.transaction">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.lastError">
+      <Argument typename="QSqlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.exec">
+      <Argument typename="QSqlQuery" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.exec_">
+      <Argument typename="QSqlQuery" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query" default="''"/>
+    </Function>
+    <Function name="QSqlDatabase.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tablename"/>
+    </Function>
+    <Function name="QSqlDatabase.primaryIndex">
+      <Argument typename="QSqlIndex" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tablename"/>
+    </Function>
+    <Function name="QSqlDatabase.tables">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSql.TableType" typetype="enum" name="type" default="QSql.Tables"/>
+    </Function>
+    <Function name="QSqlDatabase.isOpenError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.isOpen">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.close"/>
+    <Function name="QSqlDatabase.open">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDatabase.open">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="user"/>
+      <Argument typename="QString" typetype="mappedtype" name="password"/>
+    </Function>
+  </Class>
+  <Class name="QSqlDriver" inherits="QObject">
+    <Function name="QSqlDriver.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QSqlDriver.NotificationSource">
+      <EnumMember name="QSqlDriver.UnknownSource"/>
+      <EnumMember name="QSqlDriver.SelfSource"/>
+      <EnumMember name="QSqlDriver.OtherSource"/>
+    </Enum>
+    <Enum name="QSqlDriver.IdentifierType">
+      <EnumMember name="QSqlDriver.FieldName"/>
+      <EnumMember name="QSqlDriver.TableName"/>
+    </Enum>
+    <Enum name="QSqlDriver.StatementType">
+      <EnumMember name="QSqlDriver.WhereStatement"/>
+      <EnumMember name="QSqlDriver.SelectStatement"/>
+      <EnumMember name="QSqlDriver.UpdateStatement"/>
+      <EnumMember name="QSqlDriver.InsertStatement"/>
+      <EnumMember name="QSqlDriver.DeleteStatement"/>
+    </Enum>
+    <Enum name="QSqlDriver.DriverFeature">
+      <EnumMember name="QSqlDriver.Transactions"/>
+      <EnumMember name="QSqlDriver.QuerySize"/>
+      <EnumMember name="QSqlDriver.BLOB"/>
+      <EnumMember name="QSqlDriver.Unicode"/>
+      <EnumMember name="QSqlDriver.PreparedQueries"/>
+      <EnumMember name="QSqlDriver.NamedPlaceholders"/>
+      <EnumMember name="QSqlDriver.PositionalPlaceholders"/>
+      <EnumMember name="QSqlDriver.LastInsertId"/>
+      <EnumMember name="QSqlDriver.BatchOperations"/>
+      <EnumMember name="QSqlDriver.SimpleLocking"/>
+      <EnumMember name="QSqlDriver.LowPrecisionNumbers"/>
+      <EnumMember name="QSqlDriver.EventNotifications"/>
+      <EnumMember name="QSqlDriver.FinishQuery"/>
+      <EnumMember name="QSqlDriver.MultipleResultSets"/>
+    </Enum>
+    <Function name="QSqlDriver.numericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.setNumericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" name="precisionPolicy"/>
+    </Function>
+    <Function name="QSqlDriver.stripDelimiters" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+      <Argument typename="QSqlDriver.IdentifierType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QSqlDriver.isIdentifierEscaped" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+      <Argument typename="QSqlDriver.IdentifierType" typetype="enum" name="type"/>
+    </Function>
+    <Signal default="1" name="QSqlDriver.notification" sig="void notification(const QString&amp;)"/>
+    <Signal name="QSqlDriver.notification" sig="void notification(const QString&amp;, ::QSqlDriver::NotificationSource,const  ::QVariant&amp;)"/>
+    <Function name="QSqlDriver.subscribedToNotifications" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.unsubscribeFromNotification" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlDriver.subscribeToNotification" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlDriver.setLastError" virtual="1">
+      <Argument typename="QSqlError" typetype="class" name="e"/>
+    </Function>
+    <Function name="QSqlDriver.setOpenError" virtual="1">
+      <Argument typename="bool" name="e"/>
+    </Function>
+    <Function name="QSqlDriver.setOpen" virtual="1">
+      <Argument typename="bool" name="o"/>
+    </Function>
+    <Function name="QSqlDriver.open" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="db"/>
+      <Argument typename="QString" typetype="mappedtype" name="user" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="password" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="host" default="''"/>
+      <Argument typename="int" name="port" default="-1"/>
+      <Argument typename="QString" typetype="mappedtype" name="options" default="''"/>
+    </Function>
+    <Function name="QSqlDriver.createResult" abstract="1" virtual="1">
+      <Argument typename="QSqlResult" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.close" abstract="1" virtual="1"/>
+    <Function name="QSqlDriver.hasFeature" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlDriver.DriverFeature" typetype="enum" name="f"/>
+    </Function>
+    <Function name="QSqlDriver.handle" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.lastError">
+      <Argument typename="QSqlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.sqlStatement" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSqlDriver.StatementType" typetype="enum" name="type"/>
+      <Argument typename="QString" typetype="mappedtype" name="tableName"/>
+      <Argument typename="QSqlRecord" typetype="class" name="rec"/>
+      <Argument typename="bool" name="preparedStatement"/>
+    </Function>
+    <Function name="QSqlDriver.escapeIdentifier" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+      <Argument typename="QSqlDriver.IdentifierType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QSqlDriver.formatValue" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+      <Argument typename="bool" name="trimStrings" default="False"/>
+    </Function>
+    <Function name="QSqlDriver.record" virtual="1">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tableName"/>
+    </Function>
+    <Function name="QSqlDriver.primaryIndex" virtual="1">
+      <Argument typename="QSqlIndex" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="tableName"/>
+    </Function>
+    <Function name="QSqlDriver.tables" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QSql.TableType" typetype="enum" name="tableType"/>
+    </Function>
+    <Function name="QSqlDriver.rollbackTransaction" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.commitTransaction" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.beginTransaction" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.isOpenError">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlDriver.isOpen" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlError">
+    <Function name="QSqlError.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="driverText" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="databaseText" default="''"/>
+      <Argument typename="QSqlError.ErrorType" typetype="enum" name="type" default="QSqlError.NoError"/>
+      <Argument typename="int" name="number" default="-1"/>
+    </Function>
+    <Function name="QSqlError.__init__">
+      <Argument typename="QSqlError" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QSqlError.ErrorType">
+      <EnumMember name="QSqlError.NoError"/>
+      <EnumMember name="QSqlError.ConnectionError"/>
+      <EnumMember name="QSqlError.StatementError"/>
+      <EnumMember name="QSqlError.TransactionError"/>
+      <EnumMember name="QSqlError.UnknownError"/>
+    </Enum>
+    <Function name="QSqlError.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlError" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlError.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlError" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlError.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlError.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlError.setNumber">
+      <Argument typename="int" name="number"/>
+    </Function>
+    <Function name="QSqlError.number">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlError.setType">
+      <Argument typename="QSqlError.ErrorType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QSqlError.type">
+      <Argument typename="QSqlError.ErrorType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlError.setDatabaseText">
+      <Argument typename="QString" typetype="mappedtype" name="databaseText"/>
+    </Function>
+    <Function name="QSqlError.databaseText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlError.setDriverText">
+      <Argument typename="QString" typetype="mappedtype" name="driverText"/>
+    </Function>
+    <Function name="QSqlError.driverText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlField">
+    <Function name="QSqlField.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="fieldName" default="''"/>
+      <Argument typename="QVariant.Type" typetype="enum" name="type" default="QVariant.Invalid"/>
+    </Function>
+    <Function name="QSqlField.__init__">
+      <Argument typename="QSqlField" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QSqlField.RequiredStatus">
+      <EnumMember name="QSqlField.Unknown"/>
+      <EnumMember name="QSqlField.Optional"/>
+      <EnumMember name="QSqlField.Required"/>
+    </Enum>
+    <Function name="QSqlField.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlField.isGenerated">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlField.typeID">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlField.defaultValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlField.precision">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlField.length">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlField.requiredStatus">
+      <Argument typename="QSqlField.RequiredStatus" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlField.setAutoValue">
+      <Argument typename="bool" name="autoVal"/>
+    </Function>
+    <Function name="QSqlField.setGenerated">
+      <Argument typename="bool" name="gen"/>
+    </Function>
+    <Function name="QSqlField.setSqlType">
+      <Argument typename="int" name="type"/>
+    </Function>
+    <Function name="QSqlField.setDefaultValue">
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QSqlField.setPrecision">
+      <Argument typename="int" name="precision"/>
+    </Function>
+    <Function name="QSqlField.setLength">
+      <Argument typename="int" name="fieldLength"/>
+    </Function>
+    <Function name="QSqlField.setRequired">
+      <Argument typename="bool" name="required"/>
+    </Function>
+    <Function name="QSqlField.setRequiredStatus">
+      <Argument typename="QSqlField.RequiredStatus" typetype="enum" name="status"/>
+    </Function>
+    <Function name="QSqlField.setType">
+      <Argument typename="QVariant.Type" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QSqlField.isAutoValue">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlField.type">
+      <Argument typename="QVariant.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlField.clear"/>
+    <Function name="QSqlField.isReadOnly">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlField.setReadOnly">
+      <Argument typename="bool" name="readOnly"/>
+    </Function>
+    <Function name="QSqlField.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlField.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlField.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlField.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlField.setValue">
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QSqlField.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlField" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlField.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlField" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QSqlRecord">
+    <Function name="QSqlRecord.__init__"/>
+    <Function name="QSqlRecord.__init__">
+      <Argument typename="QSqlRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlRecord.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlRecord.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlRecord.clearValues"/>
+    <Function name="QSqlRecord.clear"/>
+    <Function name="QSqlRecord.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlRecord.remove">
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QSqlRecord.insert">
+      <Argument typename="int" name="pos"/>
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+    </Function>
+    <Function name="QSqlRecord.replace">
+      <Argument typename="int" name="pos"/>
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+    </Function>
+    <Function name="QSqlRecord.append">
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+    </Function>
+    <Function name="QSqlRecord.setGenerated">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="bool" name="generated"/>
+    </Function>
+    <Function name="QSqlRecord.setGenerated">
+      <Argument typename="int" name="i"/>
+      <Argument typename="bool" name="generated"/>
+    </Function>
+    <Function name="QSqlRecord.isGenerated">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.isGenerated">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.field">
+      <Argument typename="QSqlField" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.field">
+      <Argument typename="QSqlField" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.fieldName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.indexOf">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.isNull">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.isNull">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.setNull">
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.setNull">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.setValue">
+      <Argument typename="int" name="i"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+    </Function>
+    <Function name="QSqlRecord.setValue">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+    </Function>
+    <Function name="QSqlRecord.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlRecord.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlRecord.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlRecord" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlRecord.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlRecord" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QSqlIndex" inherits="QSqlRecord">
+    <Function name="QSqlIndex.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="cursorName" default="''"/>
+      <Argument typename="QString" typetype="mappedtype" name="name" default="''"/>
+    </Function>
+    <Function name="QSqlIndex.__init__">
+      <Argument typename="QSqlIndex" typetype="class" name="other"/>
+    </Function>
+    <Function name="QSqlIndex.setDescending">
+      <Argument typename="int" name="i"/>
+      <Argument typename="bool" name="desc"/>
+    </Function>
+    <Function name="QSqlIndex.isDescending">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlIndex.append">
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+    </Function>
+    <Function name="QSqlIndex.append">
+      <Argument typename="QSqlField" typetype="class" name="field"/>
+      <Argument typename="bool" name="desc"/>
+    </Function>
+    <Function name="QSqlIndex.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlIndex.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlIndex.cursorName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlIndex.setCursorName">
+      <Argument typename="QString" typetype="mappedtype" name="cursorName"/>
+    </Function>
+  </Class>
+  <Class name="QSqlQuery">
+    <Function name="QSqlQuery.__init__">
+      <Argument typename="QSqlResult" typetype="class" name="r"/>
+    </Function>
+    <Function name="QSqlQuery.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="query" default="''"/>
+      <Argument typename="QSqlDatabase" typetype="class" name="db" default="QSqlDatabase()"/>
+    </Function>
+    <Function name="QSqlQuery.__init__">
+      <Argument typename="QSqlDatabase" typetype="class" name="db"/>
+    </Function>
+    <Function name="QSqlQuery.__init__">
+      <Argument typename="QSqlQuery" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QSqlQuery.BatchExecutionMode">
+      <EnumMember name="QSqlQuery.ValuesAsRows"/>
+      <EnumMember name="QSqlQuery.ValuesAsColumns"/>
+    </Enum>
+    <Function name="QSqlQuery.nextResult">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.finish"/>
+    <Function name="QSqlQuery.numericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.setNumericalPrecisionPolicy">
+      <Argument typename="QSql.NumericalPrecisionPolicy" typetype="enum" name="precisionPolicy"/>
+    </Function>
+    <Function name="QSqlQuery.lastInsertId">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.executedQuery">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.boundValues">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.boundValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeholder"/>
+    </Function>
+    <Function name="QSqlQuery.boundValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QSqlQuery.addBindValue">
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type" default="QSql.In"/>
+    </Function>
+    <Function name="QSqlQuery.bindValue">
+      <Argument typename="QString" typetype="mappedtype" name="placeholder"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type" default="QSql.In"/>
+    </Function>
+    <Function name="QSqlQuery.bindValue">
+      <Argument typename="int" name="pos"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type" default="QSql.In"/>
+    </Function>
+    <Function name="QSqlQuery.prepare">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QSqlQuery.execBatch">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlQuery.BatchExecutionMode" typetype="enum" name="mode" default="QSqlQuery.ValuesAsRows"/>
+    </Function>
+    <Function name="QSqlQuery.clear"/>
+    <Function name="QSqlQuery.last">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.first">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.previous">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.next">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.seek">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="index"/>
+      <Argument typename="bool" name="relative" default="False"/>
+    </Function>
+    <Function name="QSqlQuery.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlQuery.value">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QSqlQuery.exec">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QSqlQuery.exec_">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QSqlQuery.exec_">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.setForwardOnly">
+      <Argument typename="bool" name="forward"/>
+    </Function>
+    <Function name="QSqlQuery.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.isForwardOnly">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.result">
+      <Argument typename="QSqlResult" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.driver">
+      <Argument typename="QSqlDriver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.size">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.isSelect">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.lastError">
+      <Argument typename="QSqlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.numRowsAffected">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.lastQuery">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.at">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.isNull">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="field"/>
+    </Function>
+    <Function name="QSqlQuery.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlQuery.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlQueryModel" inherits="QAbstractTableModel">
+    <Function name="QSqlQueryModel.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSqlQueryModel.endRemoveColumns"/>
+    <Function name="QSqlQueryModel.beginRemoveColumns">
+      <Argument typename="QModelIndex" typetype="class" name="parent"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="last"/>
+    </Function>
+    <Function name="QSqlQueryModel.endInsertColumns"/>
+    <Function name="QSqlQueryModel.beginInsertColumns">
+      <Argument typename="QModelIndex" typetype="class" name="parent"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="last"/>
+    </Function>
+    <Function name="QSqlQueryModel.endRemoveRows"/>
+    <Function name="QSqlQueryModel.beginRemoveRows">
+      <Argument typename="QModelIndex" typetype="class" name="parent"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="last"/>
+    </Function>
+    <Function name="QSqlQueryModel.endInsertRows"/>
+    <Function name="QSqlQueryModel.beginInsertRows">
+      <Argument typename="QModelIndex" typetype="class" name="parent"/>
+      <Argument typename="int" name="first"/>
+      <Argument typename="int" name="last"/>
+    </Function>
+    <Function name="QSqlQueryModel.endResetModel"/>
+    <Function name="QSqlQueryModel.beginResetModel"/>
+    <Function name="QSqlQueryModel.setLastError">
+      <Argument typename="QSqlError" typetype="class" name="error"/>
+    </Function>
+    <Function name="QSqlQueryModel.indexInQuery" virtual="1">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="item"/>
+    </Function>
+    <Function name="QSqlQueryModel.queryChange" virtual="1"/>
+    <Function name="QSqlQueryModel.canFetchMore" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlQueryModel.fetchMore" virtual="1">
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlQueryModel.lastError">
+      <Argument typename="QSqlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQueryModel.clear" virtual="1"/>
+    <Function name="QSqlQueryModel.query">
+      <Argument typename="QSqlQuery" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQueryModel.setQuery">
+      <Argument typename="QSqlQuery" typetype="class" name="query"/>
+    </Function>
+    <Function name="QSqlQueryModel.setQuery">
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+      <Argument typename="QSqlDatabase" typetype="class" name="db" default="QSqlDatabase()"/>
+    </Function>
+    <Function name="QSqlQueryModel.removeColumns" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="column"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlQueryModel.insertColumns" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="column"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlQueryModel.setHeaderData" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="section"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+      <Argument typename="int" name="role" default="Qt.EditRole"/>
+    </Function>
+    <Function name="QSqlQueryModel.headerData" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="section"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+      <Argument typename="int" name="role" default="Qt.DisplayRole"/>
+    </Function>
+    <Function name="QSqlQueryModel.data" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="item"/>
+      <Argument typename="int" name="role" default="Qt.DisplayRole"/>
+    </Function>
+    <Function name="QSqlQueryModel.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlQueryModel.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlQueryModel.columnCount" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlQueryModel.rowCount" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+  </Class>
+  <Class name="QSqlRelationalDelegate" inherits="QItemDelegate">
+    <Function name="QSqlRelationalDelegate.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QSqlRelationalDelegate.setModelData" virtual="1">
+      <Argument typename="QWidget" typetype="class" name="editor"/>
+      <Argument typename="QAbstractItemModel" typetype="class" name="model"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QSqlRelationalDelegate.createEditor" virtual="1">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this"/>
+      <Argument typename="QStyleOptionViewItem" typetype="class" name="option"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+  </Class>
+  <Class name="QSqlRelation">
+    <Function name="QSqlRelation.__init__"/>
+    <Function name="QSqlRelation.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="aTableName"/>
+      <Argument typename="QString" typetype="mappedtype" name="indexCol"/>
+      <Argument typename="QString" typetype="mappedtype" name="displayCol"/>
+    </Function>
+    <Function name="QSqlRelation.__init__">
+      <Argument typename="QSqlRelation" typetype="class"/>
+    </Function>
+    <Function name="QSqlRelation.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlRelation.displayColumn">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlRelation.indexColumn">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlRelation.tableName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlTableModel" inherits="QSqlQueryModel">
+    <Function name="QSqlTableModel.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QSqlDatabase" typetype="class" name="db" default="QSqlDatabase()"/>
+    </Function>
+    <Enum name="QSqlTableModel.EditStrategy">
+      <EnumMember name="QSqlTableModel.OnFieldChange"/>
+      <EnumMember name="QSqlTableModel.OnRowChange"/>
+      <EnumMember name="QSqlTableModel.OnManualSubmit"/>
+    </Enum>
+    <Function name="QSqlTableModel.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.record">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlTableModel.selectRow" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlTableModel.indexInQuery" virtual="1">
+      <Argument typename="QModelIndex" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="item"/>
+    </Function>
+    <Function name="QSqlTableModel.setQuery">
+      <Argument typename="QSqlQuery" typetype="class" name="query"/>
+    </Function>
+    <Function name="QSqlTableModel.setPrimaryKey">
+      <Argument typename="QSqlIndex" typetype="class" name="key"/>
+    </Function>
+    <Function name="QSqlTableModel.selectStatement" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.orderByClause" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.deleteRowFromTable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlTableModel.insertRowIntoTable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlRecord" typetype="class" name="values"/>
+    </Function>
+    <Function name="QSqlTableModel.updateRowInTable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="QSqlRecord" typetype="class" name="values"/>
+    </Function>
+    <Signal default="1" name="QSqlTableModel.beforeDelete" sig="void beforeDelete(int)"/>
+    <Signal default="1" name="QSqlTableModel.beforeUpdate" sig="void beforeUpdate(int, ::QSqlRecord&amp;)"/>
+    <Signal default="1" name="QSqlTableModel.beforeInsert" sig="void beforeInsert( ::QSqlRecord&amp;)"/>
+    <Signal default="1" name="QSqlTableModel.primeInsert" sig="void primeInsert(int, ::QSqlRecord&amp;)"/>
+    <Function name="QSqlTableModel.revertAll" slot="void revertAll()"/>
+    <Function name="QSqlTableModel.submitAll" slot="bool submitAll()">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.revert" slot="void revert()" virtual="1"/>
+    <Function name="QSqlTableModel.submit" slot="bool submit()" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.revertRow" virtual="1">
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlTableModel.setRecord">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="QSqlRecord" typetype="class" name="record"/>
+    </Function>
+    <Function name="QSqlTableModel.insertRecord">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="QSqlRecord" typetype="class" name="record"/>
+    </Function>
+    <Function name="QSqlTableModel.insertRows" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlTableModel.removeRows" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlTableModel.removeColumns" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="column"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlTableModel.rowCount" virtual="1">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlTableModel.setFilter" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="filter"/>
+    </Function>
+    <Function name="QSqlTableModel.filter">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.setSort" virtual="1">
+      <Argument typename="int" name="column"/>
+      <Argument typename="Qt.SortOrder" typetype="enum" name="order"/>
+    </Function>
+    <Function name="QSqlTableModel.sort" virtual="1">
+      <Argument typename="int" name="column"/>
+      <Argument typename="Qt.SortOrder" typetype="enum" name="order"/>
+    </Function>
+    <Function name="QSqlTableModel.fieldIndex">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="fieldName"/>
+    </Function>
+    <Function name="QSqlTableModel.database">
+      <Argument typename="QSqlDatabase" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.primaryKey">
+      <Argument typename="QSqlIndex" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.editStrategy">
+      <Argument typename="QSqlTableModel.EditStrategy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.setEditStrategy" virtual="1">
+      <Argument typename="QSqlTableModel.EditStrategy" typetype="enum" name="strategy"/>
+    </Function>
+    <Function name="QSqlTableModel.clear" virtual="1"/>
+    <Function name="QSqlTableModel.isDirty">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QSqlTableModel.isDirty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.headerData" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="section"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+      <Argument typename="int" name="role" default="Qt.DisplayRole"/>
+    </Function>
+    <Function name="QSqlTableModel.setData" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+      <Argument typename="int" name="role" default="Qt.EditRole"/>
+    </Function>
+    <Function name="QSqlTableModel.data" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+      <Argument typename="int" name="role" default="Qt.DisplayRole"/>
+    </Function>
+    <Function name="QSqlTableModel.flags" virtual="1">
+      <Argument typename="Qt.ItemFlags" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+    </Function>
+    <Function name="QSqlTableModel.tableName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlTableModel.setTable" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="tableName"/>
+    </Function>
+    <Function name="QSqlTableModel.select" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QSqlRelationalTableModel" inherits="QSqlTableModel">
+    <Function name="QSqlRelationalTableModel.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+      <Argument typename="QSqlDatabase" typetype="class" name="db" default="QSqlDatabase()"/>
+    </Function>
+    <Enum name="QSqlRelationalTableModel.JoinMode">
+      <EnumMember name="QSqlRelationalTableModel.InnerJoin"/>
+      <EnumMember name="QSqlRelationalTableModel.LeftJoin"/>
+    </Enum>
+    <Function name="QSqlRelationalTableModel.setJoinMode">
+      <Argument typename="QSqlRelationalTableModel.JoinMode" typetype="enum" name="joinMode"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.insertRowIntoTable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QSqlRecord" typetype="class" name="values"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.orderByClause" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.updateRowInTable" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="row"/>
+      <Argument typename="QSqlRecord" typetype="class" name="values"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.selectStatement" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.removeColumns" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="column"/>
+      <Argument typename="int" name="count"/>
+      <Argument typename="QModelIndex" typetype="class" name="parent" default="QModelIndex()"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.revertRow" virtual="1">
+      <Argument typename="int" name="row"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.relationModel" virtual="1">
+      <Argument typename="QSqlTableModel" typetype="class" dir="out"/>
+      <Argument typename="int" name="column"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.relation">
+      <Argument typename="QSqlRelation" typetype="class" dir="out"/>
+      <Argument typename="int" name="column"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.setRelation" virtual="1">
+      <Argument typename="int" name="column"/>
+      <Argument typename="QSqlRelation" typetype="class" name="relation"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.setTable" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="tableName"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.select" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.clear" virtual="1"/>
+    <Function name="QSqlRelationalTableModel.setData" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+      <Argument typename="int" name="role" default="Qt.EditRole"/>
+    </Function>
+    <Function name="QSqlRelationalTableModel.data" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QModelIndex" typetype="class" name="index"/>
+      <Argument typename="int" name="role" default="Qt.DisplayRole"/>
+    </Function>
+  </Class>
+  <Class name="QSqlResult">
+    <Function name="QSqlResult.__init__">
+      <Argument typename="QSqlDriver" typetype="class" name="db"/>
+    </Function>
+    <Enum name="QSqlResult.BindingSyntax">
+      <EnumMember name="QSqlResult.PositionalBinding"/>
+      <EnumMember name="QSqlResult.NamedBinding"/>
+    </Enum>
+    <Function name="QSqlResult.lastInsertId" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.record" virtual="1">
+      <Argument typename="QSqlRecord" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.numRowsAffected" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.size" abstract="1" virtual="1">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.fetchLast" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.fetchFirst" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.fetchPrevious" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.fetchNext" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.fetch" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlResult.reset" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="sqlquery"/>
+    </Function>
+    <Function name="QSqlResult.isNull" abstract="1" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlResult.data" abstract="1" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QSqlResult.bindingSyntax">
+      <Argument typename="QSqlResult.BindingSyntax" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.hasOutValues">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.clear"/>
+    <Function name="QSqlResult.boundValueName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QSqlResult.executedQuery">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.boundValues">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.boundValueCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.bindValueType">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeholder"/>
+    </Function>
+    <Function name="QSqlResult.bindValueType">
+      <Argument typename="QSql.ParamType" typetype="class" dir="out"/>
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QSqlResult.boundValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeholder"/>
+    </Function>
+    <Function name="QSqlResult.boundValue">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="int" name="pos"/>
+    </Function>
+    <Function name="QSqlResult.addBindValue">
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type"/>
+    </Function>
+    <Function name="QSqlResult.bindValue" virtual="1">
+      <Argument typename="int" name="pos"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type"/>
+    </Function>
+    <Function name="QSqlResult.bindValue" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="placeholder"/>
+      <Argument typename="QVariant" typetype="class" name="val"/>
+      <Argument typename="QSql.ParamType" typetype="class" name="type"/>
+    </Function>
+    <Function name="QSqlResult.savePrepare" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="sqlquery"/>
+    </Function>
+    <Function name="QSqlResult.prepare" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QSqlResult.exec" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.exec_" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.setForwardOnly" virtual="1">
+      <Argument typename="bool" name="forward"/>
+    </Function>
+    <Function name="QSqlResult.setSelect" virtual="1">
+      <Argument typename="bool" name="s"/>
+    </Function>
+    <Function name="QSqlResult.setQuery" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="query"/>
+    </Function>
+    <Function name="QSqlResult.setLastError" virtual="1">
+      <Argument typename="QSqlError" typetype="class" name="e"/>
+    </Function>
+    <Function name="QSqlResult.setActive" virtual="1">
+      <Argument typename="bool" name="a"/>
+    </Function>
+    <Function name="QSqlResult.setAt" virtual="1">
+      <Argument typename="int" name="at"/>
+    </Function>
+    <Function name="QSqlResult.driver">
+      <Argument typename="QSqlDriver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.isForwardOnly">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.isSelect">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.isActive">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.lastError">
+      <Argument typename="QSqlError" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.lastQuery">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.at">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QSqlResult.handle" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

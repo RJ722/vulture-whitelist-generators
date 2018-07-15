@@ -1,0 +1,1201 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebKitWidgets">
+  <Class name="QGraphicsWebView" inherits="QGraphicsWidget">
+    <Function name="QGraphicsWebView.__init__">
+      <Argument typename="QGraphicsItem" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGraphicsWebView.setRenderHint">
+      <Argument typename="QPainter.RenderHint" typetype="enum" name="hint"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QGraphicsWebView.setRenderHints">
+      <Argument typename="QPainter.RenderHints" typetype="class" name="hints"/>
+    </Function>
+    <Function name="QGraphicsWebView.renderHints">
+      <Argument typename="QPainter.RenderHints" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setTiledBackingStoreFrozen">
+      <Argument typename="bool" name="frozen"/>
+    </Function>
+    <Function name="QGraphicsWebView.isTiledBackingStoreFrozen">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setResizesToContents">
+      <Argument typename="bool" name="enabled"/>
+    </Function>
+    <Function name="QGraphicsWebView.resizesToContents">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.sceneEvent" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.focusNextPrevChild" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="next"/>
+    </Function>
+    <Function name="QGraphicsWebView.inputMethodEvent" virtual="1">
+      <Argument typename="QInputMethodEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.focusOutEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.focusInEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.dropEvent" virtual="1">
+      <Argument typename="QGraphicsSceneDragDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.dragMoveEvent" virtual="1">
+      <Argument typename="QGraphicsSceneDragDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.dragLeaveEvent" virtual="1">
+      <Argument typename="QGraphicsSceneDragDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.dragEnterEvent" virtual="1">
+      <Argument typename="QGraphicsSceneDragDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.contextMenuEvent" virtual="1">
+      <Argument typename="QGraphicsSceneContextMenuEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.wheelEvent" virtual="1">
+      <Argument typename="QGraphicsSceneWheelEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.hoverLeaveEvent" virtual="1">
+      <Argument typename="QGraphicsSceneHoverEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.hoverMoveEvent" virtual="1">
+      <Argument typename="QGraphicsSceneHoverEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.mouseMoveEvent" virtual="1">
+      <Argument typename="QGraphicsSceneMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.mouseReleaseEvent" virtual="1">
+      <Argument typename="QGraphicsSceneMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.mouseDoubleClickEvent" virtual="1">
+      <Argument typename="QGraphicsSceneMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.mousePressEvent" virtual="1">
+      <Argument typename="QGraphicsSceneMouseEvent" typetype="class"/>
+    </Function>
+    <Signal default="1" name="QGraphicsWebView.linkClicked" sig="void linkClicked(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QGraphicsWebView.statusBarMessage" sig="void statusBarMessage(const QString&amp;)"/>
+    <Signal default="1" name="QGraphicsWebView.iconChanged" sig="void iconChanged()"/>
+    <Signal default="1" name="QGraphicsWebView.titleChanged" sig="void titleChanged(const QString&amp;)"/>
+    <Signal default="1" name="QGraphicsWebView.urlChanged" sig="void urlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QGraphicsWebView.loadProgress" sig="void loadProgress(int)"/>
+    <Signal default="1" name="QGraphicsWebView.loadFinished" sig="void loadFinished(bool)"/>
+    <Signal default="1" name="QGraphicsWebView.loadStarted" sig="void loadStarted()"/>
+    <Function name="QGraphicsWebView.reload" slot="void reload()"/>
+    <Function name="QGraphicsWebView.forward" slot="void forward()"/>
+    <Function name="QGraphicsWebView.back" slot="void back()"/>
+    <Function name="QGraphicsWebView.stop" slot="void stop()"/>
+    <Function name="QGraphicsWebView.inputMethodQuery" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="Qt.InputMethodQuery" typetype="enum" name="query"/>
+    </Function>
+    <Function name="QGraphicsWebView.sizeHint" virtual="1">
+      <Argument typename="QSizeF" typetype="class" dir="out"/>
+      <Argument typename="Qt.SizeHint" typetype="enum" name="which"/>
+      <Argument typename="QSizeF" typetype="class" name="constraint"/>
+    </Function>
+    <Function name="QGraphicsWebView.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.itemChange" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QGraphicsItem.GraphicsItemChange" typetype="enum" name="change"/>
+      <Argument typename="QVariant" typetype="class" name="value"/>
+    </Function>
+    <Function name="QGraphicsWebView.paint" virtual="1">
+      <Argument typename="QPainter" typetype="class" name="painter"/>
+      <Argument typename="QStyleOptionGraphicsItem" typetype="class" name="option"/>
+      <Argument typename="QWidget" typetype="class" name="widget" default="None"/>
+    </Function>
+    <Function name="QGraphicsWebView.updateGeometry" virtual="1"/>
+    <Function name="QGraphicsWebView.setGeometry" virtual="1">
+      <Argument typename="QRectF" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QGraphicsWebView.findText">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="subString"/>
+      <Argument typename="QWebPage.FindFlags" typetype="class" name="options" default="0"/>
+    </Function>
+    <Function name="QGraphicsWebView.triggerPageAction">
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+      <Argument typename="bool" name="checked" default="False"/>
+    </Function>
+    <Function name="QGraphicsWebView.pageAction">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QGraphicsWebView.settings">
+      <Argument typename="QWebSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.history">
+      <Argument typename="QWebHistory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setContent">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QGraphicsWebView.setHtml">
+      <Argument typename="QString" typetype="mappedtype" name="html"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QGraphicsWebView.load">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QGraphicsWebView.load">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation" default="QNetworkAccessManager.GetOperation"/>
+      <Argument typename="QByteArray" typetype="class" name="body" default="QByteArray()"/>
+    </Function>
+    <Function name="QGraphicsWebView.isModified">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setZoomFactor">
+      <Argument typename="float"/>
+    </Function>
+    <Function name="QGraphicsWebView.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setUrl">
+      <Argument typename="QUrl" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGraphicsWebView.setPage">
+      <Argument typename="QWebPage" typetype="class"/>
+    </Function>
+    <Function name="QGraphicsWebView.page">
+      <Argument typename="QWebPage" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebHitTestResult">
+    <Function name="QWebHitTestResult.__init__"/>
+    <Function name="QWebHitTestResult.__init__">
+      <Argument typename="QWebHitTestResult" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkTitleString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.mediaUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.element">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkElement">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.enclosingBlockElement">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.boundingRect">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.frame">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.isContentSelected">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.isContentEditable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.pixmap">
+      <Argument typename="QPixmap" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.imageUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.alternateText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkTargetFrame">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkTitle">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.linkText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.pos">
+      <Argument typename="QPoint" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebHitTestResult.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebFrame" inherits="QObject">
+    <Enum name="QWebFrame.RenderLayer">
+      <EnumMember name="QWebFrame.ContentsLayer"/>
+      <EnumMember name="QWebFrame.ScrollBarLayer"/>
+      <EnumMember name="QWebFrame.PanIconLayer"/>
+      <EnumMember name="QWebFrame.AllLayers"/>
+    </Enum>
+    <Enum name="QWebFrame.ValueOwnership">
+      <EnumMember name="QWebFrame.QtOwnership"/>
+      <EnumMember name="QWebFrame.ScriptOwnership"/>
+      <EnumMember name="QWebFrame.AutoOwnership"/>
+    </Enum>
+    <Function name="QWebFrame.scrollToAnchor">
+      <Argument typename="QString" typetype="mappedtype" name="anchor"/>
+    </Function>
+    <Signal default="1" name="QWebFrame.pageChanged" sig="void pageChanged()"/>
+    <Signal default="1" name="QWebFrame.loadFinished" sig="void loadFinished(bool)"/>
+    <Signal default="1" name="QWebFrame.loadStarted" sig="void loadStarted()"/>
+    <Signal default="1" name="QWebFrame.contentsSizeChanged" sig="void contentsSizeChanged(const  ::QSize&amp;)"/>
+    <Function name="QWebFrame.findFirstElement">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="selectorQuery"/>
+    </Function>
+    <Function name="QWebFrame.findAllElements">
+      <Argument typename="QWebElementCollection" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="selectorQuery"/>
+    </Function>
+    <Function name="QWebFrame.documentElement">
+      <Argument typename="QWebElement" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.setFocus"/>
+    <Function name="QWebFrame.hasFocus">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.render">
+      <Argument typename="QPainter" typetype="class"/>
+      <Argument typename="QRegion" typetype="class" name="clip" default="QRegion()"/>
+    </Function>
+    <Function name="QWebFrame.render">
+      <Argument typename="QPainter" typetype="class"/>
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" name="layer"/>
+      <Argument typename="QRegion" typetype="class" name="clip" default="QRegion()"/>
+    </Function>
+    <Function name="QWebFrame.scrollBarGeometry">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QWebFrame.baseUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.requestedUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.securityOrigin">
+      <Argument typename="QWebSecurityOrigin" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.setZoomFactor">
+      <Argument typename="float" name="factor"/>
+    </Function>
+    <Function name="QWebFrame.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.setScrollPosition">
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+    </Function>
+    <Function name="QWebFrame.scrollPosition">
+      <Argument typename="QPoint" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.scroll">
+      <Argument typename="int"/>
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QWebFrame.metaData">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Signal default="1" name="QWebFrame.iconChanged" sig="void iconChanged()"/>
+    <Signal default="1" name="QWebFrame.initialLayoutCompleted" sig="void initialLayoutCompleted()"/>
+    <Signal default="1" name="QWebFrame.urlChanged" sig="void urlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebFrame.titleChanged" sig="void titleChanged(const QString&amp;)"/>
+    <Signal default="1" name="QWebFrame.javaScriptWindowObjectCleared" sig="void javaScriptWindowObjectCleared()"/>
+    <Function name="QWebFrame.print" slot="void print( ::QPrinter*) const">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+    </Function>
+    <Function name="QWebFrame.print_" slot="void print( ::QPrinter*) const">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+    </Function>
+    <Function name="QWebFrame.evaluateJavaScript" slot=" ::QVariant evaluateJavaScript(const QString&amp;)">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="scriptSource"/>
+    </Function>
+    <Function name="QWebFrame.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebFrame.hitTestContent">
+      <Argument typename="QWebHitTestResult" typetype="class" dir="out"/>
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+    </Function>
+    <Function name="QWebFrame.contentsSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.geometry">
+      <Argument typename="QRect" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.pos">
+      <Argument typename="QPoint" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.scrollBarMaximum">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QWebFrame.scrollBarMinimum">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QWebFrame.scrollBarValue">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QWebFrame.setScrollBarValue">
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+      <Argument typename="int" name="value"/>
+    </Function>
+    <Function name="QWebFrame.setScrollBarPolicy">
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+      <Argument typename="Qt.ScrollBarPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QWebFrame.scrollBarPolicy">
+      <Argument typename="Qt.ScrollBarPolicy" typetype="enum" dir="out"/>
+      <Argument typename="Qt.Orientation" typetype="enum" name="orientation"/>
+    </Function>
+    <Function name="QWebFrame.childFrames">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.parentFrame">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.frameName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebFrame.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.toPlainText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.toHtml">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.addToJavaScriptWindowObject">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QObject" typetype="class" name="object"/>
+      <Argument typename="QWebFrame.ValueOwnership" typetype="enum" name="ownership" default="QWebFrame.QtOwnership"/>
+    </Function>
+    <Function name="QWebFrame.setContent">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebFrame.setHtml">
+      <Argument typename="QString" typetype="mappedtype" name="html"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebFrame.load">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebFrame.load">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation" default="QNetworkAccessManager.GetOperation"/>
+      <Argument typename="QByteArray" typetype="class" name="body" default="QByteArray()"/>
+    </Function>
+    <Function name="QWebFrame.page">
+      <Argument typename="QWebPage" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebFrame.RenderLayers" convert="1">
+    <Function name="QWebFrame.RenderLayers.__init__"/>
+    <Function name="QWebFrame.RenderLayers.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__init__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__ixor__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__xor__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__ior__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__or__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__iand__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__and__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__invert__">
+      <Argument typename="QWebFrame.RenderLayers" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebFrame.RenderLayers.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebInspector" inherits="QWidget">
+    <Function name="QWebInspector.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebInspector.closeEvent" virtual="1">
+      <Argument typename="QCloseEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QWebInspector.hideEvent" virtual="1">
+      <Argument typename="QHideEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QWebInspector.showEvent" virtual="1">
+      <Argument typename="QShowEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QWebInspector.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QWebInspector.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebInspector.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebInspector.page">
+      <Argument typename="QWebPage" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebInspector.setPage">
+      <Argument typename="QWebPage" typetype="class" name="page"/>
+    </Function>
+  </Class>
+  <Class name="QWebPage" inherits="QObject">
+    <Function name="QWebPage.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QWebPage.VisibilityState">
+      <EnumMember name="QWebPage.VisibilityStateVisible"/>
+      <EnumMember name="QWebPage.VisibilityStateHidden"/>
+      <EnumMember name="QWebPage.VisibilityStatePrerender"/>
+      <EnumMember name="QWebPage.VisibilityStateUnloaded"/>
+    </Enum>
+    <Enum name="QWebPage.Feature">
+      <EnumMember name="QWebPage.Notifications"/>
+      <EnumMember name="QWebPage.Geolocation"/>
+    </Enum>
+    <Enum name="QWebPage.PermissionPolicy">
+      <EnumMember name="QWebPage.PermissionUnknown"/>
+      <EnumMember name="QWebPage.PermissionGrantedByUser"/>
+      <EnumMember name="QWebPage.PermissionDeniedByUser"/>
+    </Enum>
+    <Enum name="QWebPage.ErrorDomain">
+      <EnumMember name="QWebPage.QtNetwork"/>
+      <EnumMember name="QWebPage.Http"/>
+      <EnumMember name="QWebPage.WebKit"/>
+    </Enum>
+    <Enum name="QWebPage.Extension">
+      <EnumMember name="QWebPage.ChooseMultipleFilesExtension"/>
+      <EnumMember name="QWebPage.ErrorPageExtension"/>
+    </Enum>
+    <Enum name="QWebPage.WebWindowType">
+      <EnumMember name="QWebPage.WebBrowserWindow"/>
+      <EnumMember name="QWebPage.WebModalDialog"/>
+    </Enum>
+    <Enum name="QWebPage.LinkDelegationPolicy">
+      <EnumMember name="QWebPage.DontDelegateLinks"/>
+      <EnumMember name="QWebPage.DelegateExternalLinks"/>
+      <EnumMember name="QWebPage.DelegateAllLinks"/>
+    </Enum>
+    <Enum name="QWebPage.FindFlag">
+      <EnumMember name="QWebPage.FindBackward"/>
+      <EnumMember name="QWebPage.FindCaseSensitively"/>
+      <EnumMember name="QWebPage.FindWrapsAroundDocument"/>
+      <EnumMember name="QWebPage.HighlightAllOccurrences"/>
+      <EnumMember name="QWebPage.FindAtWordBeginningsOnly"/>
+      <EnumMember name="QWebPage.TreatMedialCapitalAsWordBeginning"/>
+      <EnumMember name="QWebPage.FindBeginsInSelection"/>
+    </Enum>
+    <Enum name="QWebPage.WebAction">
+      <EnumMember name="QWebPage.NoWebAction"/>
+      <EnumMember name="QWebPage.OpenLink"/>
+      <EnumMember name="QWebPage.OpenLinkInNewWindow"/>
+      <EnumMember name="QWebPage.OpenFrameInNewWindow"/>
+      <EnumMember name="QWebPage.DownloadLinkToDisk"/>
+      <EnumMember name="QWebPage.CopyLinkToClipboard"/>
+      <EnumMember name="QWebPage.OpenImageInNewWindow"/>
+      <EnumMember name="QWebPage.DownloadImageToDisk"/>
+      <EnumMember name="QWebPage.CopyImageToClipboard"/>
+      <EnumMember name="QWebPage.Back"/>
+      <EnumMember name="QWebPage.Forward"/>
+      <EnumMember name="QWebPage.Stop"/>
+      <EnumMember name="QWebPage.Reload"/>
+      <EnumMember name="QWebPage.Cut"/>
+      <EnumMember name="QWebPage.Copy"/>
+      <EnumMember name="QWebPage.Paste"/>
+      <EnumMember name="QWebPage.Undo"/>
+      <EnumMember name="QWebPage.Redo"/>
+      <EnumMember name="QWebPage.MoveToNextChar"/>
+      <EnumMember name="QWebPage.MoveToPreviousChar"/>
+      <EnumMember name="QWebPage.MoveToNextWord"/>
+      <EnumMember name="QWebPage.MoveToPreviousWord"/>
+      <EnumMember name="QWebPage.MoveToNextLine"/>
+      <EnumMember name="QWebPage.MoveToPreviousLine"/>
+      <EnumMember name="QWebPage.MoveToStartOfLine"/>
+      <EnumMember name="QWebPage.MoveToEndOfLine"/>
+      <EnumMember name="QWebPage.MoveToStartOfBlock"/>
+      <EnumMember name="QWebPage.MoveToEndOfBlock"/>
+      <EnumMember name="QWebPage.MoveToStartOfDocument"/>
+      <EnumMember name="QWebPage.MoveToEndOfDocument"/>
+      <EnumMember name="QWebPage.SelectNextChar"/>
+      <EnumMember name="QWebPage.SelectPreviousChar"/>
+      <EnumMember name="QWebPage.SelectNextWord"/>
+      <EnumMember name="QWebPage.SelectPreviousWord"/>
+      <EnumMember name="QWebPage.SelectNextLine"/>
+      <EnumMember name="QWebPage.SelectPreviousLine"/>
+      <EnumMember name="QWebPage.SelectStartOfLine"/>
+      <EnumMember name="QWebPage.SelectEndOfLine"/>
+      <EnumMember name="QWebPage.SelectStartOfBlock"/>
+      <EnumMember name="QWebPage.SelectEndOfBlock"/>
+      <EnumMember name="QWebPage.SelectStartOfDocument"/>
+      <EnumMember name="QWebPage.SelectEndOfDocument"/>
+      <EnumMember name="QWebPage.DeleteStartOfWord"/>
+      <EnumMember name="QWebPage.DeleteEndOfWord"/>
+      <EnumMember name="QWebPage.SetTextDirectionDefault"/>
+      <EnumMember name="QWebPage.SetTextDirectionLeftToRight"/>
+      <EnumMember name="QWebPage.SetTextDirectionRightToLeft"/>
+      <EnumMember name="QWebPage.ToggleBold"/>
+      <EnumMember name="QWebPage.ToggleItalic"/>
+      <EnumMember name="QWebPage.ToggleUnderline"/>
+      <EnumMember name="QWebPage.InspectElement"/>
+      <EnumMember name="QWebPage.InsertParagraphSeparator"/>
+      <EnumMember name="QWebPage.InsertLineSeparator"/>
+      <EnumMember name="QWebPage.SelectAll"/>
+      <EnumMember name="QWebPage.ReloadAndBypassCache"/>
+      <EnumMember name="QWebPage.PasteAndMatchStyle"/>
+      <EnumMember name="QWebPage.RemoveFormat"/>
+      <EnumMember name="QWebPage.ToggleStrikethrough"/>
+      <EnumMember name="QWebPage.ToggleSubscript"/>
+      <EnumMember name="QWebPage.ToggleSuperscript"/>
+      <EnumMember name="QWebPage.InsertUnorderedList"/>
+      <EnumMember name="QWebPage.InsertOrderedList"/>
+      <EnumMember name="QWebPage.Indent"/>
+      <EnumMember name="QWebPage.Outdent"/>
+      <EnumMember name="QWebPage.AlignCenter"/>
+      <EnumMember name="QWebPage.AlignJustified"/>
+      <EnumMember name="QWebPage.AlignLeft"/>
+      <EnumMember name="QWebPage.AlignRight"/>
+      <EnumMember name="QWebPage.StopScheduledPageRefresh"/>
+      <EnumMember name="QWebPage.CopyImageUrlToClipboard"/>
+      <EnumMember name="QWebPage.OpenLinkInThisWindow"/>
+      <EnumMember name="QWebPage.DownloadMediaToDisk"/>
+      <EnumMember name="QWebPage.CopyMediaUrlToClipboard"/>
+      <EnumMember name="QWebPage.ToggleMediaControls"/>
+      <EnumMember name="QWebPage.ToggleMediaLoop"/>
+      <EnumMember name="QWebPage.ToggleMediaPlayPause"/>
+      <EnumMember name="QWebPage.ToggleMediaMute"/>
+      <EnumMember name="QWebPage.ToggleVideoFullscreen"/>
+    </Enum>
+    <Enum name="QWebPage.NavigationType">
+      <EnumMember name="QWebPage.NavigationTypeLinkClicked"/>
+      <EnumMember name="QWebPage.NavigationTypeFormSubmitted"/>
+      <EnumMember name="QWebPage.NavigationTypeBackOrForward"/>
+      <EnumMember name="QWebPage.NavigationTypeReload"/>
+      <EnumMember name="QWebPage.NavigationTypeFormResubmitted"/>
+      <EnumMember name="QWebPage.NavigationTypeOther"/>
+    </Enum>
+    <Function name="QWebPage.setVisibilityState">
+      <Argument typename="QWebPage.VisibilityState" typetype="enum"/>
+    </Function>
+    <Function name="QWebPage.visibilityState">
+      <Argument typename="QWebPage.VisibilityState" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QWebPage.featurePermissionRequestCanceled" sig="void featurePermissionRequestCanceled( ::QWebFrame*, ::QWebPage::Feature)"/>
+    <Signal default="1" name="QWebPage.featurePermissionRequested" sig="void featurePermissionRequested( ::QWebFrame*, ::QWebPage::Feature)"/>
+    <Signal default="1" name="QWebPage.viewportChangeRequested" sig="void viewportChangeRequested()"/>
+    <Signal default="1" name="QWebPage.applicationCacheQuotaExceeded" sig="void applicationCacheQuotaExceeded( ::QWebSecurityOrigin*, ::quint64, ::quint64)"/>
+    <Function name="QWebPage.supportsContentType">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType"/>
+    </Function>
+    <Function name="QWebPage.supportedContentTypes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setFeaturePermission">
+      <Argument typename="QWebFrame" typetype="class" name="frame"/>
+      <Argument typename="QWebPage.Feature" typetype="enum" name="feature"/>
+      <Argument typename="QWebPage.PermissionPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QWebPage.setActualVisibleContentRect">
+      <Argument typename="QRect" typetype="class" name="rect"/>
+    </Function>
+    <Function name="QWebPage.viewportAttributesForSize">
+      <Argument typename="QWebPage.ViewportAttributes" typetype="class" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="availableSize"/>
+    </Function>
+    <Function name="QWebPage.selectedHtml">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebPage.hasSelection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.shouldInterruptJavaScript" virtual="1">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setPreferredContentsSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QWebPage.preferredContentsSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.frameAt">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+    </Function>
+    <Signal default="1" name="QWebPage.restoreFrameStateRequested" sig="void restoreFrameStateRequested( ::QWebFrame*)"/>
+    <Signal default="1" name="QWebPage.saveFrameStateRequested" sig="void saveFrameStateRequested( ::QWebFrame*, ::QWebHistoryItem*)"/>
+    <Signal default="1" name="QWebPage.databaseQuotaExceeded" sig="void databaseQuotaExceeded( ::QWebFrame*,QString)"/>
+    <Signal default="1" name="QWebPage.contentsChanged" sig="void contentsChanged()"/>
+    <Function name="QWebPage.createStandardContextMenu">
+      <Argument typename="QMenu" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.isContentEditable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setContentEditable">
+      <Argument typename="bool" name="editable"/>
+    </Function>
+    <Function name="QWebPage.userAgentForUrl" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebPage.javaScriptConsoleMessage" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" name="message"/>
+      <Argument typename="int" name="lineNumber"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceID"/>
+    </Function>
+    <Function name="QWebPage.javaScriptPrompt" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebFrame" typetype="class" name="originatingFrame"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue"/>
+      <Argument typename="QString" typetype="mappedtype" name="result" dir="out"/>
+    </Function>
+    <Function name="QWebPage.javaScriptConfirm" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebFrame" typetype="class" name="originatingFrame"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QWebPage.javaScriptAlert" virtual="1">
+      <Argument typename="QWebFrame" typetype="class" name="originatingFrame"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QWebPage.chooseFile" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QWebFrame" typetype="class" name="originatingFrame"/>
+      <Argument typename="QString" typetype="mappedtype" name="oldFile"/>
+    </Function>
+    <Function name="QWebPage.acceptNavigationRequest" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebFrame" typetype="class" name="frame"/>
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QWebPage.NavigationType" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebPage.createPlugin" virtual="1">
+      <Argument typename="QObject" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="classid"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="paramNames"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="paramValues"/>
+    </Function>
+    <Function name="QWebPage.createWindow" virtual="1">
+      <Argument typename="QWebPage" typetype="class" dir="out"/>
+      <Argument typename="QWebPage.WebWindowType" typetype="enum" name="type"/>
+    </Function>
+    <Signal default="1" name="QWebPage.microFocusChanged" sig="void microFocusChanged()"/>
+    <Signal default="1" name="QWebPage.downloadRequested" sig="void downloadRequested(const  ::QNetworkRequest&amp;)"/>
+    <Signal default="1" name="QWebPage.unsupportedContent" sig="void unsupportedContent( ::QNetworkReply*)"/>
+    <Signal default="1" name="QWebPage.menuBarVisibilityChangeRequested" sig="void menuBarVisibilityChangeRequested(bool)"/>
+    <Signal default="1" name="QWebPage.statusBarVisibilityChangeRequested" sig="void statusBarVisibilityChangeRequested(bool)"/>
+    <Signal default="1" name="QWebPage.toolBarVisibilityChangeRequested" sig="void toolBarVisibilityChangeRequested(bool)"/>
+    <Signal default="1" name="QWebPage.linkClicked" sig="void linkClicked(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebPage.printRequested" sig="void printRequested( ::QWebFrame*)"/>
+    <Signal default="1" name="QWebPage.windowCloseRequested" sig="void windowCloseRequested()"/>
+    <Signal default="1" name="QWebPage.scrollRequested" sig="void scrollRequested(int,int,const  ::QRect&amp;)"/>
+    <Signal default="1" name="QWebPage.repaintRequested" sig="void repaintRequested(const  ::QRect&amp;)"/>
+    <Signal default="1" name="QWebPage.geometryChangeRequested" sig="void geometryChangeRequested(const  ::QRect&amp;)"/>
+    <Signal default="1" name="QWebPage.frameCreated" sig="void frameCreated( ::QWebFrame*)"/>
+    <Signal default="1" name="QWebPage.selectionChanged" sig="void selectionChanged()"/>
+    <Signal default="1" name="QWebPage.statusBarMessage" sig="void statusBarMessage(const QString&amp;)"/>
+    <Signal default="1" name="QWebPage.linkHovered" sig="void linkHovered(const QString&amp;,const QString&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QWebPage.loadStarted" sig="void loadStarted()"/>
+    <Signal default="1" name="QWebPage.loadProgress" sig="void loadProgress(int)"/>
+    <Signal default="1" name="QWebPage.loadFinished" sig="void loadFinished(bool)"/>
+    <Function name="QWebPage.supportsExtension" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPage.Extension" typetype="enum" name="extension"/>
+    </Function>
+    <Function name="QWebPage.extension" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPage.Extension" typetype="enum" name="extension"/>
+      <Argument typename="QWebPage.ExtensionOption" typetype="class" name="option" default="None"/>
+      <Argument typename="QWebPage.ExtensionReturn" typetype="class" name="output" default="None"/>
+    </Function>
+    <Function name="QWebPage.updatePositionDependentActions">
+      <Argument typename="QPoint" typetype="class" name="pos"/>
+    </Function>
+    <Function name="QWebPage.swallowContextMenuEvent">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QContextMenuEvent" typetype="class" name="event"/>
+    </Function>
+    <Function name="QWebPage.palette">
+      <Argument typename="QPalette" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setPalette">
+      <Argument typename="QPalette" typetype="class" name="palette"/>
+    </Function>
+    <Function name="QWebPage.linkDelegationPolicy">
+      <Argument typename="QWebPage.LinkDelegationPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setLinkDelegationPolicy">
+      <Argument typename="QWebPage.LinkDelegationPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QWebPage.forwardUnsupportedContent">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setForwardUnsupportedContent">
+      <Argument typename="bool" name="forward"/>
+    </Function>
+    <Function name="QWebPage.findText">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="subString"/>
+      <Argument typename="QWebPage.FindFlags" typetype="class" name="options" default="0"/>
+    </Function>
+    <Function name="QWebPage.inputMethodQuery">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="Qt.InputMethodQuery" typetype="enum" name="property"/>
+    </Function>
+    <Function name="QWebPage.focusNextPrevChild">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="next"/>
+    </Function>
+    <Function name="QWebPage.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebPage.setViewportSize">
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QWebPage.viewportSize">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.triggerAction" virtual="1">
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+      <Argument typename="bool" name="checked" default="False"/>
+    </Function>
+    <Function name="QWebPage.action">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QWebPage.selectedText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebPage.bytesReceived">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebPage.totalBytes">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebPage.pluginFactory">
+      <Argument typename="QWebPluginFactory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setPluginFactory">
+      <Argument typename="QWebPluginFactory" typetype="class" name="factory"/>
+    </Function>
+    <Function name="QWebPage.networkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setNetworkAccessManager">
+      <Argument typename="QNetworkAccessManager" typetype="class" name="manager"/>
+    </Function>
+    <Function name="QWebPage.undoStack">
+      <Argument typename="QUndoStack" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.isModified">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.view">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.setView">
+      <Argument typename="QWidget" typetype="class" name="view"/>
+    </Function>
+    <Function name="QWebPage.settings">
+      <Argument typename="QWebSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.history">
+      <Argument typename="QWebHistory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.currentFrame">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.mainFrame">
+      <Argument typename="QWebFrame" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebPage.FindFlags" convert="1">
+    <Function name="QWebPage.FindFlags.__init__"/>
+    <Function name="QWebPage.FindFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__init__">
+      <Argument typename="QWebPage.FindFlags" typetype="class"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPage.FindFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebPage.FindFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__ixor__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__xor__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__ior__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__or__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__iand__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__and__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__invert__">
+      <Argument typename="QWebPage.FindFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.FindFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebPage.ExtensionOption">
+    <Function name="QWebPage.ExtensionOption.__init__"/>
+    <Function name="QWebPage.ExtensionOption.__init__">
+      <Argument typename="QWebPage.ExtensionOption" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QWebPage.ExtensionReturn">
+    <Function name="QWebPage.ExtensionReturn.__init__"/>
+    <Function name="QWebPage.ExtensionReturn.__init__">
+      <Argument typename="QWebPage.ExtensionReturn" typetype="class"/>
+    </Function>
+  </Class>
+  <Class name="QWebPage.ChooseMultipleFilesExtensionOption" inherits="QWebPage.ExtensionOption">
+    <Function name="QWebPage.ChooseMultipleFilesExtensionOption.__init__"/>
+    <Function name="QWebPage.ChooseMultipleFilesExtensionOption.__init__">
+      <Argument typename="QWebPage.ChooseMultipleFilesExtensionOption" typetype="class"/>
+    </Function>
+    <Member name="QWebPage.ChooseMultipleFilesExtensionOption.parentFrame" typename="QWebFrame" typetype="class"/>
+    <Member name="QWebPage.ChooseMultipleFilesExtensionOption.suggestedFileNames" typename="QStringList" typetype="mappedtype"/>
+  </Class>
+  <Class name="QWebPage.ChooseMultipleFilesExtensionReturn" inherits="QWebPage.ExtensionReturn">
+    <Function name="QWebPage.ChooseMultipleFilesExtensionReturn.__init__"/>
+    <Function name="QWebPage.ChooseMultipleFilesExtensionReturn.__init__">
+      <Argument typename="QWebPage.ChooseMultipleFilesExtensionReturn" typetype="class"/>
+    </Function>
+    <Member name="QWebPage.ChooseMultipleFilesExtensionReturn.fileNames" typename="QStringList" typetype="mappedtype"/>
+  </Class>
+  <Class name="QWebPage.ErrorPageExtensionOption" inherits="QWebPage.ExtensionOption">
+    <Function name="QWebPage.ErrorPageExtensionOption.__init__"/>
+    <Function name="QWebPage.ErrorPageExtensionOption.__init__">
+      <Argument typename="QWebPage.ErrorPageExtensionOption" typetype="class"/>
+    </Function>
+    <Member name="QWebPage.ErrorPageExtensionOption.domain" typename="QWebPage.ErrorDomain" typetype="enum"/>
+    <Member name="QWebPage.ErrorPageExtensionOption.error" typename="int"/>
+    <Member name="QWebPage.ErrorPageExtensionOption.errorString" typename="QString" typetype="mappedtype"/>
+    <Member name="QWebPage.ErrorPageExtensionOption.frame" typename="QWebFrame" typetype="class"/>
+    <Member name="QWebPage.ErrorPageExtensionOption.url" typename="QUrl" typetype="class"/>
+  </Class>
+  <Class name="QWebPage.ErrorPageExtensionReturn" inherits="QWebPage.ExtensionReturn">
+    <Function name="QWebPage.ErrorPageExtensionReturn.__init__"/>
+    <Function name="QWebPage.ErrorPageExtensionReturn.__init__">
+      <Argument typename="QWebPage.ErrorPageExtensionReturn" typetype="class"/>
+    </Function>
+    <Member name="QWebPage.ErrorPageExtensionReturn.baseUrl" typename="QUrl" typetype="class"/>
+    <Member name="QWebPage.ErrorPageExtensionReturn.content" typename="QByteArray" typetype="class"/>
+    <Member name="QWebPage.ErrorPageExtensionReturn.contentType" typename="QString" typetype="mappedtype"/>
+    <Member name="QWebPage.ErrorPageExtensionReturn.encoding" typename="QString" typetype="mappedtype"/>
+  </Class>
+  <Class name="QWebPage.ViewportAttributes">
+    <Function name="QWebPage.ViewportAttributes.__init__"/>
+    <Function name="QWebPage.ViewportAttributes.__init__">
+      <Argument typename="QWebPage.ViewportAttributes" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.size">
+      <Argument typename="QSizeF" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.isUserScalable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.devicePixelRatio">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.maximumScaleFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.minimumScaleFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebPage.ViewportAttributes.initialScaleFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebView" inherits="QWidget">
+    <Function name="QWebView.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebView.selectedHtml">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebView.hasSelection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebView.setRenderHint">
+      <Argument typename="QPainter.RenderHint" typetype="enum" name="hint"/>
+      <Argument typename="bool" name="enabled" default="True"/>
+    </Function>
+    <Function name="QWebView.setRenderHints">
+      <Argument typename="QPainter.RenderHints" typetype="class" name="hints"/>
+    </Function>
+    <Function name="QWebView.renderHints">
+      <Argument typename="QPainter.RenderHints" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.setZoomFactor">
+      <Argument typename="float" name="factor"/>
+    </Function>
+    <Function name="QWebView.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebView.focusNextPrevChild" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="bool" name="next"/>
+    </Function>
+    <Function name="QWebView.inputMethodEvent" virtual="1">
+      <Argument typename="QInputMethodEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.focusOutEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.focusInEvent" virtual="1">
+      <Argument typename="QFocusEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.dropEvent" virtual="1">
+      <Argument typename="QDropEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.dragMoveEvent" virtual="1">
+      <Argument typename="QDragMoveEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.dragLeaveEvent" virtual="1">
+      <Argument typename="QDragLeaveEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.dragEnterEvent" virtual="1">
+      <Argument typename="QDragEnterEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.keyReleaseEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.keyPressEvent" virtual="1">
+      <Argument typename="QKeyEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.wheelEvent" virtual="1">
+      <Argument typename="QWheelEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.contextMenuEvent" virtual="1">
+      <Argument typename="QContextMenuEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.mouseReleaseEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.mouseDoubleClickEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.mousePressEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.mouseMoveEvent" virtual="1">
+      <Argument typename="QMouseEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.changeEvent" virtual="1">
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.paintEvent" virtual="1">
+      <Argument typename="QPaintEvent" typetype="class" name="ev"/>
+    </Function>
+    <Function name="QWebView.resizeEvent" virtual="1">
+      <Argument typename="QResizeEvent" typetype="class" name="e"/>
+    </Function>
+    <Function name="QWebView.createWindow" virtual="1">
+      <Argument typename="QWebView" typetype="class" dir="out"/>
+      <Argument typename="QWebPage.WebWindowType" typetype="enum" name="type"/>
+    </Function>
+    <Signal default="1" name="QWebView.urlChanged" sig="void urlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebView.iconChanged" sig="void iconChanged()"/>
+    <Signal default="1" name="QWebView.selectionChanged" sig="void selectionChanged()"/>
+    <Signal default="1" name="QWebView.linkClicked" sig="void linkClicked(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebView.statusBarMessage" sig="void statusBarMessage(const QString&amp;)"/>
+    <Signal default="1" name="QWebView.titleChanged" sig="void titleChanged(const QString&amp;)"/>
+    <Signal default="1" name="QWebView.loadFinished" sig="void loadFinished(bool)"/>
+    <Signal default="1" name="QWebView.loadProgress" sig="void loadProgress(int)"/>
+    <Signal default="1" name="QWebView.loadStarted" sig="void loadStarted()"/>
+    <Function name="QWebView.print" slot="void print( ::QPrinter*) const">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+    </Function>
+    <Function name="QWebView.print_" slot="void print( ::QPrinter*) const">
+      <Argument typename="QPrinter" typetype="class" name="printer"/>
+    </Function>
+    <Function name="QWebView.reload" slot="void reload()"/>
+    <Function name="QWebView.forward" slot="void forward()"/>
+    <Function name="QWebView.back" slot="void back()"/>
+    <Function name="QWebView.stop" slot="void stop()"/>
+    <Function name="QWebView.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebView.findText">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="subString"/>
+      <Argument typename="QWebPage.FindFlags" typetype="class" name="options" default="0"/>
+    </Function>
+    <Function name="QWebView.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.inputMethodQuery" virtual="1">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+      <Argument typename="Qt.InputMethodQuery" typetype="enum" name="property"/>
+    </Function>
+    <Function name="QWebView.isModified">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebView.triggerPageAction">
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+      <Argument typename="bool" name="checked" default="False"/>
+    </Function>
+    <Function name="QWebView.pageAction">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QWebPage.WebAction" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QWebView.selectedText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebView.icon">
+      <Argument typename="QIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebView.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebView.settings">
+      <Argument typename="QWebSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.history">
+      <Argument typename="QWebHistory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebView.setContent">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebView.setHtml">
+      <Argument typename="QString" typetype="mappedtype" name="html"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebView.load">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebView.load">
+      <Argument typename="QNetworkRequest" typetype="class" name="request"/>
+      <Argument typename="QNetworkAccessManager.Operation" typetype="enum" name="operation" default="QNetworkAccessManager.GetOperation"/>
+      <Argument typename="QByteArray" typetype="class" name="body" default="QByteArray()"/>
+    </Function>
+    <Function name="QWebView.setPage">
+      <Argument typename="QWebPage" typetype="class" name="page"/>
+    </Function>
+    <Function name="QWebView.page">
+      <Argument typename="QWebPage" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+</Module>

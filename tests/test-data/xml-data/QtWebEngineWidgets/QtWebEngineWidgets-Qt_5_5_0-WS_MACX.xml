@@ -1,0 +1,762 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtWebEngineWidgets">
+  <Class name="QWebEngineCertificateError">
+    <Enum name="QWebEngineCertificateError.Error">
+      <EnumMember name="QWebEngineCertificateError.SslPinnedKeyNotInCertificateChain"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateCommonNameInvalid"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateDateInvalid"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateAuthorityInvalid"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateContainsErrors"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateNoRevocationMechanism"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateUnableToCheckRevocation"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateRevoked"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateInvalid"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateWeakSignatureAlgorithm"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateNonUniqueName"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateWeakKey"/>
+      <EnumMember name="QWebEngineCertificateError.CertificateNameConstraintViolation"/>
+    </Enum>
+    <Function name="QWebEngineCertificateError.errorDescription">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineCertificateError.isOverridable">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineCertificateError.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineCertificateError.error">
+      <Argument typename="QWebEngineCertificateError.Error" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineDownloadItem" inherits="QObject">
+    <Enum name="QWebEngineDownloadItem.DownloadState">
+      <EnumMember name="QWebEngineDownloadItem.DownloadRequested"/>
+      <EnumMember name="QWebEngineDownloadItem.DownloadInProgress"/>
+      <EnumMember name="QWebEngineDownloadItem.DownloadCompleted"/>
+      <EnumMember name="QWebEngineDownloadItem.DownloadCancelled"/>
+      <EnumMember name="QWebEngineDownloadItem.DownloadInterrupted"/>
+    </Enum>
+    <Signal default="1" name="QWebEngineDownloadItem.downloadProgress" sig="void downloadProgress( ::qint64, ::qint64)"/>
+    <Signal default="1" name="QWebEngineDownloadItem.stateChanged" sig="void stateChanged( ::QWebEngineDownloadItem::DownloadState)"/>
+    <Signal default="1" name="QWebEngineDownloadItem.finished" sig="void finished()"/>
+    <Function name="QWebEngineDownloadItem.cancel" slot="void cancel()"/>
+    <Function name="QWebEngineDownloadItem.accept" slot="void accept()"/>
+    <Function name="QWebEngineDownloadItem.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.setPath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.path">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.receivedBytes">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.totalBytes">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.state">
+      <Argument typename="QWebEngineDownloadItem.DownloadState" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineDownloadItem.id">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineHistoryItem">
+    <Function name="QWebEngineHistoryItem.__init__">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.iconUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.lastVisited">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistoryItem.originalUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineHistory">
+    <Function name="QWebEngineHistory.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.currentItemIndex">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.itemAt">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" dir="out"/>
+      <Argument typename="int" name="i"/>
+    </Function>
+    <Function name="QWebEngineHistory.forwardItem">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.currentItem">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.backItem">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.goToItem">
+      <Argument typename="QWebEngineHistoryItem" typetype="class" name="item"/>
+    </Function>
+    <Function name="QWebEngineHistory.forward"/>
+    <Function name="QWebEngineHistory.back"/>
+    <Function name="QWebEngineHistory.canGoForward">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.canGoBack">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.forwardItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="maxItems"/>
+    </Function>
+    <Function name="QWebEngineHistory.backItems">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="int" name="maxItems"/>
+    </Function>
+    <Function name="QWebEngineHistory.items">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineHistory.clear"/>
+  </Class>
+  <Class name="QWebEnginePage" inherits="QObject">
+    <Function name="QWebEnginePage.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebEnginePage.__init__">
+      <Argument typename="QWebEngineProfile" typetype="class" name="profile"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QWebEnginePage.NavigationType">
+      <EnumMember name="QWebEnginePage.NavigationTypeLinkClicked"/>
+      <EnumMember name="QWebEnginePage.NavigationTypeTyped"/>
+      <EnumMember name="QWebEnginePage.NavigationTypeFormSubmitted"/>
+      <EnumMember name="QWebEnginePage.NavigationTypeBackForward"/>
+      <EnumMember name="QWebEnginePage.NavigationTypeReload"/>
+      <EnumMember name="QWebEnginePage.NavigationTypeOther"/>
+    </Enum>
+    <Enum name="QWebEnginePage.JavaScriptConsoleMessageLevel">
+      <EnumMember name="QWebEnginePage.InfoMessageLevel"/>
+      <EnumMember name="QWebEnginePage.WarningMessageLevel"/>
+      <EnumMember name="QWebEnginePage.ErrorMessageLevel"/>
+    </Enum>
+    <Enum name="QWebEnginePage.FileSelectionMode">
+      <EnumMember name="QWebEnginePage.FileSelectOpen"/>
+      <EnumMember name="QWebEnginePage.FileSelectOpenMultiple"/>
+    </Enum>
+    <Enum name="QWebEnginePage.Feature">
+      <EnumMember name="QWebEnginePage.Geolocation"/>
+      <EnumMember name="QWebEnginePage.MediaAudioCapture"/>
+      <EnumMember name="QWebEnginePage.MediaVideoCapture"/>
+      <EnumMember name="QWebEnginePage.MediaAudioVideoCapture"/>
+      <EnumMember name="QWebEnginePage.MouseLock"/>
+    </Enum>
+    <Enum name="QWebEnginePage.PermissionPolicy">
+      <EnumMember name="QWebEnginePage.PermissionUnknown"/>
+      <EnumMember name="QWebEnginePage.PermissionGrantedByUser"/>
+      <EnumMember name="QWebEnginePage.PermissionDeniedByUser"/>
+    </Enum>
+    <Enum name="QWebEnginePage.WebWindowType">
+      <EnumMember name="QWebEnginePage.WebBrowserWindow"/>
+      <EnumMember name="QWebEnginePage.WebBrowserTab"/>
+      <EnumMember name="QWebEnginePage.WebDialog"/>
+    </Enum>
+    <Enum name="QWebEnginePage.FindFlag">
+      <EnumMember name="QWebEnginePage.FindBackward"/>
+      <EnumMember name="QWebEnginePage.FindCaseSensitively"/>
+    </Enum>
+    <Enum name="QWebEnginePage.WebAction">
+      <EnumMember name="QWebEnginePage.NoWebAction"/>
+      <EnumMember name="QWebEnginePage.Back"/>
+      <EnumMember name="QWebEnginePage.Forward"/>
+      <EnumMember name="QWebEnginePage.Stop"/>
+      <EnumMember name="QWebEnginePage.Reload"/>
+      <EnumMember name="QWebEnginePage.Cut"/>
+      <EnumMember name="QWebEnginePage.Copy"/>
+      <EnumMember name="QWebEnginePage.Paste"/>
+      <EnumMember name="QWebEnginePage.Undo"/>
+      <EnumMember name="QWebEnginePage.Redo"/>
+      <EnumMember name="QWebEnginePage.SelectAll"/>
+      <EnumMember name="QWebEnginePage.ReloadAndBypassCache"/>
+      <EnumMember name="QWebEnginePage.PasteAndMatchStyle"/>
+    </Enum>
+    <Function name="QWebEnginePage.acceptNavigationRequest" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+      <Argument typename="QWebEnginePage.NavigationType" typetype="enum" name="type"/>
+      <Argument typename="bool" name="isMainFrame"/>
+    </Function>
+    <Function name="QWebEnginePage.setWebChannel">
+      <Argument typename="QWebChannel" typetype="class"/>
+    </Function>
+    <Function name="QWebEnginePage.webChannel">
+      <Argument typename="QWebChannel" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.scripts">
+      <Argument typename="QWebEngineScriptCollection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.profile">
+      <Argument typename="QWebEngineProfile" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.certificateError" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineCertificateError" typetype="class" name="certificateError"/>
+    </Function>
+    <Function name="QWebEnginePage.javaScriptConsoleMessage" virtual="1">
+      <Argument typename="QWebEnginePage.JavaScriptConsoleMessageLevel" typetype="enum" name="level"/>
+      <Argument typename="QString" typetype="mappedtype" name="message"/>
+      <Argument typename="int" name="lineNumber"/>
+      <Argument typename="QString" typetype="mappedtype" name="sourceID"/>
+    </Function>
+    <Function name="QWebEnginePage.javaScriptPrompt" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="securityOrigin"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+      <Argument typename="QString" typetype="mappedtype" name="defaultValue"/>
+      <Argument typename="QString" typetype="mappedtype" name="result" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.javaScriptConfirm" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="securityOrigin"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QWebEnginePage.javaScriptAlert" virtual="1">
+      <Argument typename="QUrl" typetype="class" name="securityOrigin"/>
+      <Argument typename="QString" typetype="mappedtype" name="msg"/>
+    </Function>
+    <Function name="QWebEnginePage.chooseFiles" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QWebEnginePage.FileSelectionMode" typetype="enum" name="mode"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="oldFiles"/>
+      <Argument typename="QStringList" typetype="mappedtype" name="acceptedMimeTypes"/>
+    </Function>
+    <Function name="QWebEnginePage.createWindow" virtual="1">
+      <Argument typename="QWebEnginePage" typetype="class" dir="out"/>
+      <Argument typename="QWebEnginePage.WebWindowType" typetype="enum" name="type"/>
+    </Function>
+    <Signal default="1" name="QWebEnginePage.iconUrlChanged" sig="void iconUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.urlChanged" sig="void urlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.titleChanged" sig="void titleChanged(const QString&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.proxyAuthenticationRequired" sig="void proxyAuthenticationRequired(const  ::QUrl&amp;, ::QAuthenticator*,const QString&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.authenticationRequired" sig="void authenticationRequired(const  ::QUrl&amp;, ::QAuthenticator*)"/>
+    <Signal default="1" name="QWebEnginePage.featurePermissionRequestCanceled" sig="void featurePermissionRequestCanceled(const  ::QUrl&amp;, ::QWebEnginePage::Feature)"/>
+    <Signal default="1" name="QWebEnginePage.featurePermissionRequested" sig="void featurePermissionRequested(const  ::QUrl&amp;, ::QWebEnginePage::Feature)"/>
+    <Signal default="1" name="QWebEnginePage.windowCloseRequested" sig="void windowCloseRequested()"/>
+    <Signal default="1" name="QWebEnginePage.geometryChangeRequested" sig="void geometryChangeRequested(const  ::QRect&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.selectionChanged" sig="void selectionChanged()"/>
+    <Signal default="1" name="QWebEnginePage.linkHovered" sig="void linkHovered(const QString&amp;)"/>
+    <Signal default="1" name="QWebEnginePage.loadFinished" sig="void loadFinished(bool)"/>
+    <Signal default="1" name="QWebEnginePage.loadProgress" sig="void loadProgress(int)"/>
+    <Signal default="1" name="QWebEnginePage.loadStarted" sig="void loadStarted()"/>
+    <Function name="QWebEnginePage.settings">
+      <Argument typename="QWebEngineSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.runJavaScript">
+      <Argument typename="QString" typetype="mappedtype" name="scriptSource"/>
+    </Function>
+    <Function name="QWebEnginePage.runJavaScript">
+      <Argument typename="QString" typetype="mappedtype" name="scriptSource"/>
+      <Argument typename="callable" name="resultCallback"/>
+    </Function>
+    <Function name="QWebEnginePage.setZoomFactor">
+      <Argument typename="float" name="factor"/>
+    </Function>
+    <Function name="QWebEnginePage.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.iconUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.requestedUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEnginePage.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.toPlainText">
+      <Argument typename="callable" name="resultCallback"/>
+    </Function>
+    <Function name="QWebEnginePage.toHtml">
+      <Argument typename="callable" name="resultCallback"/>
+    </Function>
+    <Function name="QWebEnginePage.setContent">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebEnginePage.setHtml">
+      <Argument typename="QString" typetype="mappedtype" name="html"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebEnginePage.load">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEnginePage.setFeaturePermission">
+      <Argument typename="QUrl" typetype="class" name="securityOrigin"/>
+      <Argument typename="QWebEnginePage.Feature" typetype="enum" name="feature"/>
+      <Argument typename="QWebEnginePage.PermissionPolicy" typetype="enum" name="policy"/>
+    </Function>
+    <Function name="QWebEnginePage.createStandardContextMenu">
+      <Argument typename="QMenu" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.findText">
+      <Argument typename="QString" typetype="mappedtype" name="subString"/>
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" name="options" default="0"/>
+      <Argument typename="callable" name="resultCallback" allownone="1" default="0"/>
+    </Function>
+    <Function name="QWebEnginePage.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebEnginePage.triggerAction" virtual="1">
+      <Argument typename="QWebEnginePage.WebAction" typetype="enum" name="action"/>
+      <Argument typename="bool" name="checked" default="False"/>
+    </Function>
+    <Function name="QWebEnginePage.action">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QWebEnginePage.WebAction" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QWebEnginePage.selectedText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.hasSelection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.view">
+      <Argument typename="QWidget" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.setView">
+      <Argument typename="QWidget" typetype="class" name="view"/>
+    </Function>
+    <Function name="QWebEnginePage.history">
+      <Argument typename="QWebEngineHistory" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEnginePage.FindFlags" convert="1">
+    <Function name="QWebEnginePage.FindFlags.__init__"/>
+    <Function name="QWebEnginePage.FindFlags.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__init__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__ixor__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__xor__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__ior__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__or__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__iand__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__and__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__invert__">
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEnginePage.FindFlags.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineProfile" inherits="QObject">
+    <Function name="QWebEngineProfile.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebEngineProfile.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QWebEngineProfile.PersistentCookiesPolicy">
+      <EnumMember name="QWebEngineProfile.NoPersistentCookies"/>
+      <EnumMember name="QWebEngineProfile.AllowPersistentCookies"/>
+      <EnumMember name="QWebEngineProfile.ForcePersistentCookies"/>
+    </Enum>
+    <Enum name="QWebEngineProfile.HttpCacheType">
+      <EnumMember name="QWebEngineProfile.MemoryHttpCache"/>
+      <EnumMember name="QWebEngineProfile.DiskHttpCache"/>
+    </Enum>
+    <Signal default="1" name="QWebEngineProfile.downloadRequested" sig="void downloadRequested( ::QWebEngineDownloadItem*)"/>
+    <Function name="QWebEngineProfile.defaultProfile" static="1">
+      <Argument typename="QWebEngineProfile" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.scripts">
+      <Argument typename="QWebEngineScriptCollection" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.settings">
+      <Argument typename="QWebEngineSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.visitedLinksContainsUrl">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineProfile.clearVisitedLinks">
+      <Argument typename="unknown-type" typetype="mappedtype" name="urls"/>
+    </Function>
+    <Function name="QWebEngineProfile.clearAllVisitedLinks"/>
+    <Function name="QWebEngineProfile.setHttpCacheMaximumSize">
+      <Argument typename="int" name="maxSize"/>
+    </Function>
+    <Function name="QWebEngineProfile.httpCacheMaximumSize">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.setPersistentCookiesPolicy">
+      <Argument typename="QWebEngineProfile.PersistentCookiesPolicy" typetype="enum"/>
+    </Function>
+    <Function name="QWebEngineProfile.persistentCookiesPolicy">
+      <Argument typename="QWebEngineProfile.PersistentCookiesPolicy" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.setHttpCacheType">
+      <Argument typename="QWebEngineProfile.HttpCacheType" typetype="enum"/>
+    </Function>
+    <Function name="QWebEngineProfile.httpCacheType">
+      <Argument typename="QWebEngineProfile.HttpCacheType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.setHttpUserAgent">
+      <Argument typename="QString" typetype="mappedtype" name="userAgent"/>
+    </Function>
+    <Function name="QWebEngineProfile.httpUserAgent">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.setCachePath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebEngineProfile.cachePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.setPersistentStoragePath">
+      <Argument typename="QString" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QWebEngineProfile.persistentStoragePath">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.isOffTheRecord">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineProfile.storageName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineScript">
+    <Function name="QWebEngineScript.__init__"/>
+    <Function name="QWebEngineScript.__init__">
+      <Argument typename="QWebEngineScript" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QWebEngineScript.ScriptWorldId">
+      <EnumMember name="QWebEngineScript.MainWorld"/>
+      <EnumMember name="QWebEngineScript.ApplicationWorld"/>
+      <EnumMember name="QWebEngineScript.UserWorld"/>
+    </Enum>
+    <Enum name="QWebEngineScript.InjectionPoint">
+      <EnumMember name="QWebEngineScript.Deferred"/>
+      <EnumMember name="QWebEngineScript.DocumentReady"/>
+      <EnumMember name="QWebEngineScript.DocumentCreation"/>
+    </Enum>
+    <Function name="QWebEngineScript.swap">
+      <Argument typename="QWebEngineScript" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineScript.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineScript" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineScript.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineScript" typetype="class" name="other"/>
+    </Function>
+    <Function name="QWebEngineScript.setRunsOnSubFrames">
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QWebEngineScript.runsOnSubFrames">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScript.setWorldId">
+      <Argument typename="int"/>
+    </Function>
+    <Function name="QWebEngineScript.worldId">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScript.setInjectionPoint">
+      <Argument typename="QWebEngineScript.InjectionPoint" typetype="enum"/>
+    </Function>
+    <Function name="QWebEngineScript.injectionPoint">
+      <Argument typename="QWebEngineScript.InjectionPoint" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScript.setSourceCode">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QWebEngineScript.sourceCode">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScript.setName">
+      <Argument typename="QString" typetype="mappedtype"/>
+    </Function>
+    <Function name="QWebEngineScript.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScript.isNull">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineScriptCollection">
+    <Function name="QWebEngineScriptCollection.toList">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.clear"/>
+    <Function name="QWebEngineScriptCollection.remove">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineScript" typetype="class"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.insert">
+      <Argument typename="QWebEngineScript" typetype="class"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.insert">
+      <Argument typename="unknown-type" typetype="mappedtype" name="list"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.findScripts">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.findScript">
+      <Argument typename="QWebEngineScript" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.contains">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineScript" typetype="class" name="value"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.__len__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QWebEngineScriptCollection.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineSettings">
+    <Enum name="QWebEngineSettings.FontSize">
+      <EnumMember name="QWebEngineSettings.MinimumFontSize"/>
+      <EnumMember name="QWebEngineSettings.MinimumLogicalFontSize"/>
+      <EnumMember name="QWebEngineSettings.DefaultFontSize"/>
+      <EnumMember name="QWebEngineSettings.DefaultFixedFontSize"/>
+    </Enum>
+    <Enum name="QWebEngineSettings.WebAttribute">
+      <EnumMember name="QWebEngineSettings.AutoLoadImages"/>
+      <EnumMember name="QWebEngineSettings.JavascriptEnabled"/>
+      <EnumMember name="QWebEngineSettings.JavascriptCanOpenWindows"/>
+      <EnumMember name="QWebEngineSettings.JavascriptCanAccessClipboard"/>
+      <EnumMember name="QWebEngineSettings.LinksIncludedInFocusChain"/>
+      <EnumMember name="QWebEngineSettings.LocalStorageEnabled"/>
+      <EnumMember name="QWebEngineSettings.LocalContentCanAccessRemoteUrls"/>
+      <EnumMember name="QWebEngineSettings.XSSAuditingEnabled"/>
+      <EnumMember name="QWebEngineSettings.SpatialNavigationEnabled"/>
+      <EnumMember name="QWebEngineSettings.LocalContentCanAccessFileUrls"/>
+      <EnumMember name="QWebEngineSettings.HyperlinkAuditingEnabled"/>
+      <EnumMember name="QWebEngineSettings.ScrollAnimatorEnabled"/>
+      <EnumMember name="QWebEngineSettings.ErrorPageEnabled"/>
+    </Enum>
+    <Enum name="QWebEngineSettings.FontFamily">
+      <EnumMember name="QWebEngineSettings.StandardFont"/>
+      <EnumMember name="QWebEngineSettings.FixedFont"/>
+      <EnumMember name="QWebEngineSettings.SerifFont"/>
+      <EnumMember name="QWebEngineSettings.SansSerifFont"/>
+      <EnumMember name="QWebEngineSettings.CursiveFont"/>
+      <EnumMember name="QWebEngineSettings.FantasyFont"/>
+    </Enum>
+    <Function name="QWebEngineSettings.defaultTextEncoding">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineSettings.setDefaultTextEncoding">
+      <Argument typename="QString" typetype="mappedtype" name="encoding"/>
+    </Function>
+    <Function name="QWebEngineSettings.resetAttribute">
+      <Argument typename="QWebEngineSettings.WebAttribute" typetype="enum" name="attr"/>
+    </Function>
+    <Function name="QWebEngineSettings.testAttribute">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QWebEngineSettings.WebAttribute" typetype="enum" name="attr"/>
+    </Function>
+    <Function name="QWebEngineSettings.setAttribute">
+      <Argument typename="QWebEngineSettings.WebAttribute" typetype="enum" name="attr"/>
+      <Argument typename="bool" name="on"/>
+    </Function>
+    <Function name="QWebEngineSettings.resetFontSize">
+      <Argument typename="QWebEngineSettings.FontSize" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebEngineSettings.fontSize">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QWebEngineSettings.FontSize" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QWebEngineSettings.setFontSize">
+      <Argument typename="QWebEngineSettings.FontSize" typetype="enum" name="type"/>
+      <Argument typename="int" name="size"/>
+    </Function>
+    <Function name="QWebEngineSettings.resetFontFamily">
+      <Argument typename="QWebEngineSettings.FontFamily" typetype="enum" name="which"/>
+    </Function>
+    <Function name="QWebEngineSettings.fontFamily">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QWebEngineSettings.FontFamily" typetype="enum" name="which"/>
+    </Function>
+    <Function name="QWebEngineSettings.setFontFamily">
+      <Argument typename="QWebEngineSettings.FontFamily" typetype="enum" name="which"/>
+      <Argument typename="QString" typetype="mappedtype" name="family"/>
+    </Function>
+    <Function name="QWebEngineSettings.globalSettings" static="1">
+      <Argument typename="QWebEngineSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineSettings.defaultSettings" static="1">
+      <Argument typename="QWebEngineSettings" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QWebEngineView" inherits="QWidget">
+    <Function name="QWebEngineView.__init__">
+      <Argument typename="QWidget" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QWebEngineView.event" virtual="1">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebEngineView.contextMenuEvent" virtual="1">
+      <Argument typename="QContextMenuEvent" typetype="class"/>
+    </Function>
+    <Function name="QWebEngineView.createWindow" virtual="1">
+      <Argument typename="QWebEngineView" typetype="class" dir="out"/>
+      <Argument typename="QWebEnginePage.WebWindowType" typetype="enum" name="type"/>
+    </Function>
+    <Signal default="1" name="QWebEngineView.iconUrlChanged" sig="void iconUrlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebEngineView.urlChanged" sig="void urlChanged(const  ::QUrl&amp;)"/>
+    <Signal default="1" name="QWebEngineView.selectionChanged" sig="void selectionChanged()"/>
+    <Signal default="1" name="QWebEngineView.titleChanged" sig="void titleChanged(const QString&amp;)"/>
+    <Signal default="1" name="QWebEngineView.loadFinished" sig="void loadFinished(bool)"/>
+    <Signal default="1" name="QWebEngineView.loadProgress" sig="void loadProgress(int)"/>
+    <Signal default="1" name="QWebEngineView.loadStarted" sig="void loadStarted()"/>
+    <Function name="QWebEngineView.reload" slot="void reload()"/>
+    <Function name="QWebEngineView.forward" slot="void forward()"/>
+    <Function name="QWebEngineView.back" slot="void back()"/>
+    <Function name="QWebEngineView.stop" slot="void stop()"/>
+    <Function name="QWebEngineView.settings">
+      <Argument typename="QWebEngineSettings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.sizeHint" virtual="1">
+      <Argument typename="QSize" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.findText">
+      <Argument typename="QString" typetype="mappedtype" name="subString"/>
+      <Argument typename="QWebEnginePage.FindFlags" typetype="class" name="options" default="0"/>
+      <Argument typename="callable" name="resultCallback" allownone="1" default="0"/>
+    </Function>
+    <Function name="QWebEngineView.setZoomFactor">
+      <Argument typename="float" name="factor"/>
+    </Function>
+    <Function name="QWebEngineView.zoomFactor">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.triggerPageAction">
+      <Argument typename="QWebEnginePage.WebAction" typetype="enum" name="action"/>
+      <Argument typename="bool" name="checked" default="False"/>
+    </Function>
+    <Function name="QWebEngineView.pageAction">
+      <Argument typename="QAction" typetype="class" dir="out"/>
+      <Argument typename="QWebEnginePage.WebAction" typetype="enum" name="action"/>
+    </Function>
+    <Function name="QWebEngineView.selectedText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.hasSelection">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.iconUrl">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineView.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.history">
+      <Argument typename="QWebEngineHistory" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QWebEngineView.setContent">
+      <Argument typename="QByteArray" typetype="class" name="data"/>
+      <Argument typename="QString" typetype="mappedtype" name="mimeType" default="''"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebEngineView.setHtml">
+      <Argument typename="QString" typetype="mappedtype" name="html"/>
+      <Argument typename="QUrl" typetype="class" name="baseUrl" default="QUrl()"/>
+    </Function>
+    <Function name="QWebEngineView.load">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QWebEngineView.setPage">
+      <Argument typename="QWebEnginePage" typetype="class" name="page"/>
+    </Function>
+    <Function name="QWebEngineView.page">
+      <Argument typename="QWebEnginePage" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Function name="__rshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QWebEngineHistory" typetype="class"/>
+  </Function>
+  <Function name="__lshift__" extends="QDataStream">
+    <Argument typename="QDataStream" typetype="class" dir="out"/>
+    <Argument typename="QWebEngineHistory" typetype="class"/>
+  </Function>
+</Module>

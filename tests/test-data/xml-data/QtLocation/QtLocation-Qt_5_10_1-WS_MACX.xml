@@ -1,0 +1,2396 @@
+<?xml version="1.0"?>
+<Module version="0" name="QtLocation">
+  <Class name="QGeoCodeReply" inherits="QObject">
+    <Function name="QGeoCodeReply.__init__">
+      <Argument typename="QGeoCodeReply.Error" typetype="enum" name="error"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGeoCodeReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QGeoCodeReply.Error">
+      <EnumMember name="QGeoCodeReply.NoError"/>
+      <EnumMember name="QGeoCodeReply.EngineNotSetError"/>
+      <EnumMember name="QGeoCodeReply.CommunicationError"/>
+      <EnumMember name="QGeoCodeReply.ParseError"/>
+      <EnumMember name="QGeoCodeReply.UnsupportedOptionError"/>
+      <EnumMember name="QGeoCodeReply.CombinationError"/>
+      <EnumMember name="QGeoCodeReply.UnknownError"/>
+    </Enum>
+    <Function name="QGeoCodeReply.setOffset">
+      <Argument typename="int" name="offset"/>
+    </Function>
+    <Function name="QGeoCodeReply.setLimit">
+      <Argument typename="int" name="limit"/>
+    </Function>
+    <Function name="QGeoCodeReply.setLocations">
+      <Argument typename="unknown-type" typetype="mappedtype" name="locations"/>
+    </Function>
+    <Function name="QGeoCodeReply.addLocation">
+      <Argument typename="QGeoLocation" typetype="class" name="location"/>
+    </Function>
+    <Function name="QGeoCodeReply.setViewport">
+      <Argument typename="QGeoShape" typetype="class" name="viewport"/>
+    </Function>
+    <Function name="QGeoCodeReply.setFinished">
+      <Argument typename="bool" name="finished"/>
+    </Function>
+    <Function name="QGeoCodeReply.setError">
+      <Argument typename="QGeoCodeReply.Error" typetype="enum" name="error"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+    </Function>
+    <Signal default="1" name="QGeoCodeReply.finished" sig="void finished()"/>
+    <Signal default="1" name="QGeoCodeReply.aborted" sig="void aborted()"/>
+    <Function name="QGeoCodeReply.abort" virtual="1"/>
+    <Function name="QGeoCodeReply.offset">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoCodeReply.limit">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoCodeReply.locations">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoCodeReply.viewport">
+      <Argument typename="QGeoShape" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoCodeReply.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoCodeReply.error">
+      <Argument typename="QGeoCodeReply.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QGeoCodeReply.error" sig="void error( ::QGeoCodeReply::Error,const QString&amp; = QString())"/>
+    <Function name="QGeoCodeReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoCodingManager" inherits="QObject">
+    <Signal default="1" name="QGeoCodingManager.error" sig="void error( ::QGeoCodeReply*, ::QGeoCodeReply::Error,QString = QString())"/>
+    <Signal default="1" name="QGeoCodingManager.finished" sig="void finished( ::QGeoCodeReply*)"/>
+    <Function name="QGeoCodingManager.locale">
+      <Argument typename="QLocale" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoCodingManager.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QGeoCodingManager.reverseGeocode">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds" default="QGeoShape()"/>
+    </Function>
+    <Function name="QGeoCodingManager.geocode">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoAddress" typetype="class" name="address"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds" default="QGeoShape()"/>
+    </Function>
+    <Function name="QGeoCodingManager.geocode">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="searchString"/>
+      <Argument typename="int" name="limit" default="-1"/>
+      <Argument typename="int" name="offset" default="0"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds" default="QGeoShape()"/>
+    </Function>
+    <Function name="QGeoCodingManager.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoCodingManager.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoCodingManagerEngine" inherits="QObject">
+    <Function name="QGeoCodingManagerEngine.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Signal default="1" name="QGeoCodingManagerEngine.error" sig="void error( ::QGeoCodeReply*, ::QGeoCodeReply::Error,QString = QString())"/>
+    <Signal default="1" name="QGeoCodingManagerEngine.finished" sig="void finished( ::QGeoCodeReply*)"/>
+    <Function name="QGeoCodingManagerEngine.locale">
+      <Argument typename="QLocale" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.reverseGeocode" virtual="1">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.geocode" virtual="1">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoAddress" typetype="class" name="address"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.geocode" virtual="1">
+      <Argument typename="QGeoCodeReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="address"/>
+      <Argument typename="int" name="limit"/>
+      <Argument typename="int" name="offset"/>
+      <Argument typename="QGeoShape" typetype="class" name="bounds"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoCodingManagerEngine.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoManeuver">
+    <Function name="QGeoManeuver.__init__"/>
+    <Function name="QGeoManeuver.__init__">
+      <Argument typename="QGeoManeuver" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoManeuver.InstructionDirection">
+      <EnumMember name="QGeoManeuver.NoDirection"/>
+      <EnumMember name="QGeoManeuver.DirectionForward"/>
+      <EnumMember name="QGeoManeuver.DirectionBearRight"/>
+      <EnumMember name="QGeoManeuver.DirectionLightRight"/>
+      <EnumMember name="QGeoManeuver.DirectionRight"/>
+      <EnumMember name="QGeoManeuver.DirectionHardRight"/>
+      <EnumMember name="QGeoManeuver.DirectionUTurnRight"/>
+      <EnumMember name="QGeoManeuver.DirectionUTurnLeft"/>
+      <EnumMember name="QGeoManeuver.DirectionHardLeft"/>
+      <EnumMember name="QGeoManeuver.DirectionLeft"/>
+      <EnumMember name="QGeoManeuver.DirectionLightLeft"/>
+      <EnumMember name="QGeoManeuver.DirectionBearLeft"/>
+    </Enum>
+    <Function name="QGeoManeuver.waypoint">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setWaypoint">
+      <Argument typename="QGeoCoordinate" typetype="class" name="coordinate"/>
+    </Function>
+    <Function name="QGeoManeuver.distanceToNextInstruction">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setDistanceToNextInstruction">
+      <Argument typename="float" name="distance"/>
+    </Function>
+    <Function name="QGeoManeuver.timeToNextInstruction">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setTimeToNextInstruction">
+      <Argument typename="int" name="secs"/>
+    </Function>
+    <Function name="QGeoManeuver.direction">
+      <Argument typename="QGeoManeuver.InstructionDirection" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setDirection">
+      <Argument typename="QGeoManeuver.InstructionDirection" typetype="enum" name="direction"/>
+    </Function>
+    <Function name="QGeoManeuver.instructionText">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setInstructionText">
+      <Argument typename="QString" typetype="mappedtype" name="instructionText"/>
+    </Function>
+    <Function name="QGeoManeuver.position">
+      <Argument typename="QGeoCoordinate" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.setPosition">
+      <Argument typename="QGeoCoordinate" typetype="class" name="position"/>
+    </Function>
+    <Function name="QGeoManeuver.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoManeuver.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoManeuver" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoManeuver.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoManeuver" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRoute">
+    <Function name="QGeoRoute.__init__"/>
+    <Function name="QGeoRoute.__init__">
+      <Argument typename="QGeoRoute" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRoute.path">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setPath">
+      <Argument typename="unknown-type" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QGeoRoute.travelMode">
+      <Argument typename="QGeoRouteRequest.TravelMode" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setTravelMode">
+      <Argument typename="QGeoRouteRequest.TravelMode" typetype="enum" name="mode"/>
+    </Function>
+    <Function name="QGeoRoute.distance">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setDistance">
+      <Argument typename="float" name="distance"/>
+    </Function>
+    <Function name="QGeoRoute.travelTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setTravelTime">
+      <Argument typename="int" name="secs"/>
+    </Function>
+    <Function name="QGeoRoute.firstRouteSegment">
+      <Argument typename="QGeoRouteSegment" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setFirstRouteSegment">
+      <Argument typename="QGeoRouteSegment" typetype="class" name="routeSegment"/>
+    </Function>
+    <Function name="QGeoRoute.bounds">
+      <Argument typename="QGeoRectangle" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setBounds">
+      <Argument typename="QGeoRectangle" typetype="class" name="bounds"/>
+    </Function>
+    <Function name="QGeoRoute.request">
+      <Argument typename="QGeoRouteRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setRequest">
+      <Argument typename="QGeoRouteRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QGeoRoute.routeId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRoute.setRouteId">
+      <Argument typename="QString" typetype="mappedtype" name="id"/>
+    </Function>
+    <Function name="QGeoRoute.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRoute" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRoute.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRoute" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteReply" inherits="QObject">
+    <Function name="QGeoRouteReply.__init__">
+      <Argument typename="QGeoRouteReply.Error" typetype="enum" name="error"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGeoRouteReply.__init__">
+      <Argument typename="QGeoRouteRequest" typetype="class" name="request"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QGeoRouteReply.Error">
+      <EnumMember name="QGeoRouteReply.NoError"/>
+      <EnumMember name="QGeoRouteReply.EngineNotSetError"/>
+      <EnumMember name="QGeoRouteReply.CommunicationError"/>
+      <EnumMember name="QGeoRouteReply.ParseError"/>
+      <EnumMember name="QGeoRouteReply.UnsupportedOptionError"/>
+      <EnumMember name="QGeoRouteReply.UnknownError"/>
+    </Enum>
+    <Function name="QGeoRouteReply.addRoutes">
+      <Argument typename="unknown-type" typetype="mappedtype" name="routes"/>
+    </Function>
+    <Function name="QGeoRouteReply.setRoutes">
+      <Argument typename="unknown-type" typetype="mappedtype" name="routes"/>
+    </Function>
+    <Function name="QGeoRouteReply.setFinished">
+      <Argument typename="bool" name="finished"/>
+    </Function>
+    <Function name="QGeoRouteReply.setError">
+      <Argument typename="QGeoRouteReply.Error" typetype="enum" name="error"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+    </Function>
+    <Signal default="1" name="QGeoRouteReply.finished" sig="void finished()"/>
+    <Signal default="1" name="QGeoRouteReply.aborted" sig="void aborted()"/>
+    <Function name="QGeoRouteReply.abort" virtual="1"/>
+    <Function name="QGeoRouteReply.routes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteReply.request">
+      <Argument typename="QGeoRouteRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteReply.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteReply.error">
+      <Argument typename="QGeoRouteReply.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QGeoRouteReply.error" sig="void error( ::QGeoRouteReply::Error,const QString&amp; = QString())"/>
+    <Function name="QGeoRouteReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest">
+    <Function name="QGeoRouteRequest.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="waypoints" default="[]"/>
+    </Function>
+    <Function name="QGeoRouteRequest.__init__">
+      <Argument typename="QGeoCoordinate" typetype="class" name="origin"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="destination"/>
+    </Function>
+    <Function name="QGeoRouteRequest.__init__">
+      <Argument typename="QGeoRouteRequest" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QGeoRouteRequest.ManeuverDetail">
+      <EnumMember name="QGeoRouteRequest.NoManeuvers"/>
+      <EnumMember name="QGeoRouteRequest.BasicManeuvers"/>
+    </Enum>
+    <Enum name="QGeoRouteRequest.SegmentDetail">
+      <EnumMember name="QGeoRouteRequest.NoSegmentData"/>
+      <EnumMember name="QGeoRouteRequest.BasicSegmentData"/>
+    </Enum>
+    <Enum name="QGeoRouteRequest.RouteOptimization">
+      <EnumMember name="QGeoRouteRequest.ShortestRoute"/>
+      <EnumMember name="QGeoRouteRequest.FastestRoute"/>
+      <EnumMember name="QGeoRouteRequest.MostEconomicRoute"/>
+      <EnumMember name="QGeoRouteRequest.MostScenicRoute"/>
+    </Enum>
+    <Enum name="QGeoRouteRequest.FeatureWeight">
+      <EnumMember name="QGeoRouteRequest.NeutralFeatureWeight"/>
+      <EnumMember name="QGeoRouteRequest.PreferFeatureWeight"/>
+      <EnumMember name="QGeoRouteRequest.RequireFeatureWeight"/>
+      <EnumMember name="QGeoRouteRequest.AvoidFeatureWeight"/>
+      <EnumMember name="QGeoRouteRequest.DisallowFeatureWeight"/>
+    </Enum>
+    <Enum name="QGeoRouteRequest.FeatureType">
+      <EnumMember name="QGeoRouteRequest.NoFeature"/>
+      <EnumMember name="QGeoRouteRequest.TollFeature"/>
+      <EnumMember name="QGeoRouteRequest.HighwayFeature"/>
+      <EnumMember name="QGeoRouteRequest.PublicTransitFeature"/>
+      <EnumMember name="QGeoRouteRequest.FerryFeature"/>
+      <EnumMember name="QGeoRouteRequest.TunnelFeature"/>
+      <EnumMember name="QGeoRouteRequest.DirtRoadFeature"/>
+      <EnumMember name="QGeoRouteRequest.ParksFeature"/>
+      <EnumMember name="QGeoRouteRequest.MotorPoolLaneFeature"/>
+      <EnumMember name="QGeoRouteRequest.TrafficFeature"/>
+    </Enum>
+    <Enum name="QGeoRouteRequest.TravelMode">
+      <EnumMember name="QGeoRouteRequest.CarTravel"/>
+      <EnumMember name="QGeoRouteRequest.PedestrianTravel"/>
+      <EnumMember name="QGeoRouteRequest.BicycleTravel"/>
+      <EnumMember name="QGeoRouteRequest.PublicTransitTravel"/>
+      <EnumMember name="QGeoRouteRequest.TruckTravel"/>
+    </Enum>
+    <Function name="QGeoRouteRequest.maneuverDetail">
+      <Argument typename="QGeoRouteRequest.ManeuverDetail" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setManeuverDetail">
+      <Argument typename="QGeoRouteRequest.ManeuverDetail" typetype="enum" name="maneuverDetail"/>
+    </Function>
+    <Function name="QGeoRouteRequest.segmentDetail">
+      <Argument typename="QGeoRouteRequest.SegmentDetail" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setSegmentDetail">
+      <Argument typename="QGeoRouteRequest.SegmentDetail" typetype="enum" name="segmentDetail"/>
+    </Function>
+    <Function name="QGeoRouteRequest.routeOptimization">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setRouteOptimization">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" name="optimization"/>
+    </Function>
+    <Function name="QGeoRouteRequest.featureTypes">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.featureWeight">
+      <Argument typename="QGeoRouteRequest.FeatureWeight" typetype="enum" dir="out"/>
+      <Argument typename="QGeoRouteRequest.FeatureType" typetype="enum" name="featureType"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setFeatureWeight">
+      <Argument typename="QGeoRouteRequest.FeatureType" typetype="enum" name="featureType"/>
+      <Argument typename="QGeoRouteRequest.FeatureWeight" typetype="enum" name="featureWeight"/>
+    </Function>
+    <Function name="QGeoRouteRequest.travelModes">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setTravelModes">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" name="travelModes"/>
+    </Function>
+    <Function name="QGeoRouteRequest.numberAlternativeRoutes">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setNumberAlternativeRoutes">
+      <Argument typename="int" name="alternatives"/>
+    </Function>
+    <Function name="QGeoRouteRequest.excludeAreas">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setExcludeAreas">
+      <Argument typename="unknown-type" typetype="mappedtype" name="areas"/>
+    </Function>
+    <Function name="QGeoRouteRequest.waypoints">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.setWaypoints">
+      <Argument typename="unknown-type" typetype="mappedtype" name="waypoints"/>
+    </Function>
+    <Function name="QGeoRouteRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRouteRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.TravelModes" convert="1">
+    <Function name="QGeoRouteRequest.TravelModes.__init__"/>
+    <Function name="QGeoRouteRequest.TravelModes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__init__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__ixor__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__xor__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__ior__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__or__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__iand__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__and__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__invert__">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.TravelModes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.FeatureTypes" convert="1">
+    <Function name="QGeoRouteRequest.FeatureTypes.__init__"/>
+    <Function name="QGeoRouteRequest.FeatureTypes.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__init__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__ixor__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__xor__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__ior__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__or__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__iand__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__and__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__invert__">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureTypes.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.FeatureWeights" convert="1">
+    <Function name="QGeoRouteRequest.FeatureWeights.__init__"/>
+    <Function name="QGeoRouteRequest.FeatureWeights.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__init__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__ixor__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__xor__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__ior__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__or__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__iand__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__and__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__invert__">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.FeatureWeights.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.RouteOptimizations" convert="1">
+    <Function name="QGeoRouteRequest.RouteOptimizations.__init__"/>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__init__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__ixor__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__xor__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__ior__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__or__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__iand__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__and__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__invert__">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.RouteOptimizations.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.SegmentDetails" convert="1">
+    <Function name="QGeoRouteRequest.SegmentDetails.__init__"/>
+    <Function name="QGeoRouteRequest.SegmentDetails.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__init__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__ixor__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__xor__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__ior__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__or__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__iand__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__and__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__invert__">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.SegmentDetails.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteRequest.ManeuverDetails" convert="1">
+    <Function name="QGeoRouteRequest.ManeuverDetails.__init__"/>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__init__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__ixor__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__xor__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__ior__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__or__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__iand__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__and__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__invert__">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteRequest.ManeuverDetails.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRouteSegment">
+    <Function name="QGeoRouteSegment.__init__"/>
+    <Function name="QGeoRouteSegment.__init__">
+      <Argument typename="QGeoRouteSegment" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRouteSegment.maneuver">
+      <Argument typename="QGeoManeuver" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.setManeuver">
+      <Argument typename="QGeoManeuver" typetype="class" name="maneuver"/>
+    </Function>
+    <Function name="QGeoRouteSegment.path">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.setPath">
+      <Argument typename="unknown-type" typetype="mappedtype" name="path"/>
+    </Function>
+    <Function name="QGeoRouteSegment.distance">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.setDistance">
+      <Argument typename="float" name="distance"/>
+    </Function>
+    <Function name="QGeoRouteSegment.travelTime">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.setTravelTime">
+      <Argument typename="int" name="secs"/>
+    </Function>
+    <Function name="QGeoRouteSegment.nextRouteSegment">
+      <Argument typename="QGeoRouteSegment" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.setNextRouteSegment">
+      <Argument typename="QGeoRouteSegment" typetype="class" name="routeSegment"/>
+    </Function>
+    <Function name="QGeoRouteSegment.isValid">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QGeoRouteSegment.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteSegment" typetype="class" name="other"/>
+    </Function>
+    <Function name="QGeoRouteSegment.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoRouteSegment" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRoutingManager" inherits="QObject">
+    <Signal default="1" name="QGeoRoutingManager.error" sig="void error( ::QGeoRouteReply*, ::QGeoRouteReply::Error,QString = QString())"/>
+    <Signal default="1" name="QGeoRoutingManager.finished" sig="void finished( ::QGeoRouteReply*)"/>
+    <Function name="QGeoRoutingManager.measurementSystem">
+      <Argument typename="QLocale.MeasurementSystem" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.setMeasurementSystem">
+      <Argument typename="QLocale.MeasurementSystem" typetype="enum" name="system"/>
+    </Function>
+    <Function name="QGeoRoutingManager.locale">
+      <Argument typename="QLocale" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedManeuverDetails">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedSegmentDetails">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedRouteOptimizations">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedFeatureWeights">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedFeatureTypes">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.supportedTravelModes">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.updateRoute">
+      <Argument typename="QGeoRouteReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoRoute" typetype="class" name="route"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="position"/>
+    </Function>
+    <Function name="QGeoRoutingManager.calculateRoute">
+      <Argument typename="QGeoRouteReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoRouteRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QGeoRoutingManager.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManager.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoRoutingManagerEngine" inherits="QObject">
+    <Function name="QGeoRoutingManagerEngine.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedManeuverDetails">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" name="maneuverDetails"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedSegmentDetails">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" name="segmentDetails"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedRouteOptimizations">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" name="optimizations"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedFeatureWeights">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" name="featureWeights"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedFeatureTypes">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" name="featureTypes"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setSupportedTravelModes">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" name="travelModes"/>
+    </Function>
+    <Signal default="1" name="QGeoRoutingManagerEngine.error" sig="void error( ::QGeoRouteReply*, ::QGeoRouteReply::Error,QString = QString())"/>
+    <Signal default="1" name="QGeoRoutingManagerEngine.finished" sig="void finished( ::QGeoRouteReply*)"/>
+    <Function name="QGeoRoutingManagerEngine.measurementSystem">
+      <Argument typename="QLocale.MeasurementSystem" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setMeasurementSystem">
+      <Argument typename="QLocale.MeasurementSystem" typetype="enum" name="system"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.locale">
+      <Argument typename="QLocale" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedManeuverDetails">
+      <Argument typename="QGeoRouteRequest.ManeuverDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedSegmentDetails">
+      <Argument typename="QGeoRouteRequest.SegmentDetails" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedRouteOptimizations">
+      <Argument typename="QGeoRouteRequest.RouteOptimizations" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedFeatureWeights">
+      <Argument typename="QGeoRouteRequest.FeatureWeights" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedFeatureTypes">
+      <Argument typename="QGeoRouteRequest.FeatureTypes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.supportedTravelModes">
+      <Argument typename="QGeoRouteRequest.TravelModes" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.updateRoute" virtual="1">
+      <Argument typename="QGeoRouteReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoRoute" typetype="class" name="route"/>
+      <Argument typename="QGeoCoordinate" typetype="class" name="position"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.calculateRoute" abstract="1" virtual="1">
+      <Argument typename="QGeoRouteReply" typetype="class" dir="out"/>
+      <Argument typename="QGeoRouteRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoRoutingManagerEngine.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoServiceProvider" inherits="QObject">
+    <Function name="QGeoServiceProvider.__init__">
+      <Argument typename="QString" typetype="mappedtype" name="providerName"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters" default="QMap&lt;QString,QVariant&gt;()"/>
+      <Argument typename="bool" name="allowExperimental" default="False"/>
+    </Function>
+    <Enum name="QGeoServiceProvider.PlacesFeature">
+      <EnumMember name="QGeoServiceProvider.NoPlacesFeatures"/>
+      <EnumMember name="QGeoServiceProvider.OnlinePlacesFeature"/>
+      <EnumMember name="QGeoServiceProvider.OfflinePlacesFeature"/>
+      <EnumMember name="QGeoServiceProvider.SavePlaceFeature"/>
+      <EnumMember name="QGeoServiceProvider.RemovePlaceFeature"/>
+      <EnumMember name="QGeoServiceProvider.SaveCategoryFeature"/>
+      <EnumMember name="QGeoServiceProvider.RemoveCategoryFeature"/>
+      <EnumMember name="QGeoServiceProvider.PlaceRecommendationsFeature"/>
+      <EnumMember name="QGeoServiceProvider.SearchSuggestionsFeature"/>
+      <EnumMember name="QGeoServiceProvider.LocalizedPlacesFeature"/>
+      <EnumMember name="QGeoServiceProvider.NotificationsFeature"/>
+      <EnumMember name="QGeoServiceProvider.PlaceMatchingFeature"/>
+      <EnumMember name="QGeoServiceProvider.AnyPlacesFeatures"/>
+    </Enum>
+    <Enum name="QGeoServiceProvider.MappingFeature">
+      <EnumMember name="QGeoServiceProvider.NoMappingFeatures"/>
+      <EnumMember name="QGeoServiceProvider.OnlineMappingFeature"/>
+      <EnumMember name="QGeoServiceProvider.OfflineMappingFeature"/>
+      <EnumMember name="QGeoServiceProvider.LocalizedMappingFeature"/>
+      <EnumMember name="QGeoServiceProvider.AnyMappingFeatures"/>
+    </Enum>
+    <Enum name="QGeoServiceProvider.GeocodingFeature">
+      <EnumMember name="QGeoServiceProvider.NoGeocodingFeatures"/>
+      <EnumMember name="QGeoServiceProvider.OnlineGeocodingFeature"/>
+      <EnumMember name="QGeoServiceProvider.OfflineGeocodingFeature"/>
+      <EnumMember name="QGeoServiceProvider.ReverseGeocodingFeature"/>
+      <EnumMember name="QGeoServiceProvider.LocalizedGeocodingFeature"/>
+      <EnumMember name="QGeoServiceProvider.AnyGeocodingFeatures"/>
+    </Enum>
+    <Enum name="QGeoServiceProvider.RoutingFeature">
+      <EnumMember name="QGeoServiceProvider.NoRoutingFeatures"/>
+      <EnumMember name="QGeoServiceProvider.OnlineRoutingFeature"/>
+      <EnumMember name="QGeoServiceProvider.OfflineRoutingFeature"/>
+      <EnumMember name="QGeoServiceProvider.LocalizedRoutingFeature"/>
+      <EnumMember name="QGeoServiceProvider.RouteUpdatesFeature"/>
+      <EnumMember name="QGeoServiceProvider.AlternativeRoutesFeature"/>
+      <EnumMember name="QGeoServiceProvider.ExcludeAreasRoutingFeature"/>
+      <EnumMember name="QGeoServiceProvider.AnyRoutingFeatures"/>
+    </Enum>
+    <Enum name="QGeoServiceProvider.Error">
+      <EnumMember name="QGeoServiceProvider.NoError"/>
+      <EnumMember name="QGeoServiceProvider.NotSupportedError"/>
+      <EnumMember name="QGeoServiceProvider.UnknownParameterError"/>
+      <EnumMember name="QGeoServiceProvider.MissingRequiredParameterError"/>
+      <EnumMember name="QGeoServiceProvider.ConnectionError"/>
+    </Enum>
+    <Function name="QGeoServiceProvider.setAllowExperimental">
+      <Argument typename="bool" name="allow"/>
+    </Function>
+    <Function name="QGeoServiceProvider.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QGeoServiceProvider.setParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QGeoServiceProvider.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.error">
+      <Argument typename="QGeoServiceProvider.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.placeManager">
+      <Argument typename="QPlaceManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.routingManager">
+      <Argument typename="QGeoRoutingManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.geocodingManager">
+      <Argument typename="QGeoCodingManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.placesFeatures">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.mappingFeatures">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.geocodingFeatures">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.routingFeatures">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.availableServiceProviders" static="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoServiceProvider.RoutingFeatures" convert="1">
+    <Function name="QGeoServiceProvider.RoutingFeatures.__init__"/>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__init__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__ixor__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__xor__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__ior__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__or__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__iand__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__and__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__invert__">
+      <Argument typename="QGeoServiceProvider.RoutingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.RoutingFeatures.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoServiceProvider.GeocodingFeatures" convert="1">
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__init__"/>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__init__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__ixor__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__xor__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__ior__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__or__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__iand__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__and__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__invert__">
+      <Argument typename="QGeoServiceProvider.GeocodingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.GeocodingFeatures.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoServiceProvider.MappingFeatures" convert="1">
+    <Function name="QGeoServiceProvider.MappingFeatures.__init__"/>
+    <Function name="QGeoServiceProvider.MappingFeatures.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__init__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__ixor__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__xor__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__ior__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__or__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__iand__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__and__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__invert__">
+      <Argument typename="QGeoServiceProvider.MappingFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.MappingFeatures.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QGeoServiceProvider.PlacesFeatures" convert="1">
+    <Function name="QGeoServiceProvider.PlacesFeatures.__init__"/>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__init__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__ixor__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__xor__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__ior__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__or__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__iand__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__and__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__invert__">
+      <Argument typename="QGeoServiceProvider.PlacesFeatures" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QGeoServiceProvider.PlacesFeatures.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QLocation">
+    <Enum name="QLocation.Visibility">
+      <EnumMember name="QLocation.UnspecifiedVisibility"/>
+      <EnumMember name="QLocation.DeviceVisibility"/>
+      <EnumMember name="QLocation.PrivateVisibility"/>
+      <EnumMember name="QLocation.PublicVisibility"/>
+    </Enum>
+  </Class>
+  <Class name="QLocation.VisibilityScope" convert="1">
+    <Function name="QLocation.VisibilityScope.__init__"/>
+    <Function name="QLocation.VisibilityScope.__init__">
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__init__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__hash__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__bool__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLocation.VisibilityScope" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QLocation.VisibilityScope" typetype="class" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__ixor__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__xor__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__ior__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__or__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__iand__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__and__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+      <Argument typename="int" name="f"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__invert__">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QLocation.VisibilityScope.__int__">
+      <Argument typename="int" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlace">
+    <Function name="QPlace.__init__"/>
+    <Function name="QPlace.__init__">
+      <Argument typename="QPlace" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlace.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlace.setVisibility">
+      <Argument typename="QLocation.Visibility" typetype="enum" name="visibility"/>
+    </Function>
+    <Function name="QPlace.visibility">
+      <Argument typename="QLocation.Visibility" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlace.removeContactDetails">
+      <Argument typename="QString" typetype="mappedtype" name="contactType"/>
+    </Function>
+    <Function name="QPlace.appendContactDetail">
+      <Argument typename="QString" typetype="mappedtype" name="contactType"/>
+      <Argument typename="QPlaceContactDetail" typetype="class" name="detail"/>
+    </Function>
+    <Function name="QPlace.setContactDetails">
+      <Argument typename="QString" typetype="mappedtype" name="contactType"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="details"/>
+    </Function>
+    <Function name="QPlace.contactDetails">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="contactType"/>
+    </Function>
+    <Function name="QPlace.contactTypes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.removeExtendedAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="attributeType"/>
+    </Function>
+    <Function name="QPlace.setExtendedAttribute">
+      <Argument typename="QString" typetype="mappedtype" name="attributeType"/>
+      <Argument typename="QPlaceAttribute" typetype="class" name="attribute"/>
+    </Function>
+    <Function name="QPlace.extendedAttribute">
+      <Argument typename="QPlaceAttribute" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="attributeType"/>
+    </Function>
+    <Function name="QPlace.extendedAttributeTypes">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.setDetailsFetched">
+      <Argument typename="bool" name="fetched"/>
+    </Function>
+    <Function name="QPlace.detailsFetched">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlace.primaryWebsite">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlace.primaryEmail">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.primaryFax">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.primaryPhone">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.setPlaceId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlace.placeId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QPlace.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.setTotalContentCount">
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+      <Argument typename="int" name="total"/>
+    </Function>
+    <Function name="QPlace.totalContentCount">
+      <Argument typename="int" dir="out"/>
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QPlace.insertContent">
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="content"/>
+    </Function>
+    <Function name="QPlace.setContent">
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+      <Argument typename="unknown-type" typetype="mappedtype" name="content"/>
+    </Function>
+    <Function name="QPlace.content">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QPlace.setIcon">
+      <Argument typename="QPlaceIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QPlace.icon">
+      <Argument typename="QPlaceIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlace.setAttribution">
+      <Argument typename="QString" typetype="mappedtype" name="attribution"/>
+    </Function>
+    <Function name="QPlace.attribution">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.setSupplier">
+      <Argument typename="QPlaceSupplier" typetype="class" name="supplier"/>
+    </Function>
+    <Function name="QPlace.supplier">
+      <Argument typename="QPlaceSupplier" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlace.setRatings">
+      <Argument typename="QPlaceRatings" typetype="class" name="ratings"/>
+    </Function>
+    <Function name="QPlace.ratings">
+      <Argument typename="QPlaceRatings" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlace.setLocation">
+      <Argument typename="QGeoLocation" typetype="class" name="location"/>
+    </Function>
+    <Function name="QPlace.location">
+      <Argument typename="QGeoLocation" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlace.setCategories">
+      <Argument typename="unknown-type" typetype="mappedtype" name="categories"/>
+    </Function>
+    <Function name="QPlace.setCategory">
+      <Argument typename="QPlaceCategory" typetype="class" name="category"/>
+    </Function>
+    <Function name="QPlace.categories">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlace.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlace.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceAttribute">
+    <Function name="QPlaceAttribute.__init__"/>
+    <Function name="QPlaceAttribute.__init__">
+      <Argument typename="QPlaceAttribute" typetype="class" name="other"/>
+    </Function>
+    <Member name="QPlaceAttribute.OpeningHours" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QPlaceAttribute.Payment" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QPlaceAttribute.Provider" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Function name="QPlaceAttribute.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceAttribute.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QPlaceAttribute.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceAttribute.setLabel">
+      <Argument typename="QString" typetype="mappedtype" name="label"/>
+    </Function>
+    <Function name="QPlaceAttribute.label">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceAttribute.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceAttribute" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceAttribute.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceAttribute" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceCategory">
+    <Function name="QPlaceCategory.__init__"/>
+    <Function name="QPlaceCategory.__init__">
+      <Argument typename="QPlaceCategory" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceCategory.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceCategory.setIcon">
+      <Argument typename="QPlaceIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QPlaceCategory.icon">
+      <Argument typename="QPlaceIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceCategory.setVisibility">
+      <Argument typename="QLocation.Visibility" typetype="enum" name="visibility"/>
+    </Function>
+    <Function name="QPlaceCategory.visibility">
+      <Argument typename="QLocation.Visibility" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceCategory.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QPlaceCategory.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceCategory.setCategoryId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceCategory.categoryId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceCategory.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceCategory" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceCategory.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceCategory" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceContactDetail">
+    <Function name="QPlaceContactDetail.__init__"/>
+    <Function name="QPlaceContactDetail.__init__">
+      <Argument typename="QPlaceContactDetail" typetype="class" name="other"/>
+    </Function>
+    <Member name="QPlaceContactDetail.Email" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QPlaceContactDetail.Fax" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QPlaceContactDetail.Phone" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Member name="QPlaceContactDetail.Website" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Function name="QPlaceContactDetail.clear"/>
+    <Function name="QPlaceContactDetail.setValue">
+      <Argument typename="QString" typetype="mappedtype" name="value"/>
+    </Function>
+    <Function name="QPlaceContactDetail.value">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceContactDetail.setLabel">
+      <Argument typename="QString" typetype="mappedtype" name="label"/>
+    </Function>
+    <Function name="QPlaceContactDetail.label">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceContactDetail.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContactDetail" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceContactDetail.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContactDetail" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceContent">
+    <Function name="QPlaceContent.__init__"/>
+    <Function name="QPlaceContent.__init__">
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QPlaceContent.Type">
+      <EnumMember name="QPlaceContent.NoType"/>
+      <EnumMember name="QPlaceContent.ImageType"/>
+      <EnumMember name="QPlaceContent.ReviewType"/>
+      <EnumMember name="QPlaceContent.EditorialType"/>
+    </Enum>
+    <Function name="QPlaceContent.setAttribution">
+      <Argument typename="QString" typetype="mappedtype" name="attribution"/>
+    </Function>
+    <Function name="QPlaceContent.attribution">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceContent.setUser">
+      <Argument typename="QPlaceUser" typetype="class" name="user"/>
+    </Function>
+    <Function name="QPlaceContent.user">
+      <Argument typename="QPlaceUser" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContent.setSupplier">
+      <Argument typename="QPlaceSupplier" typetype="class" name="supplier"/>
+    </Function>
+    <Function name="QPlaceContent.supplier">
+      <Argument typename="QPlaceSupplier" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContent.type">
+      <Argument typename="QPlaceContent.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceContent.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceContent.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceReply" inherits="QObject">
+    <Function name="QPlaceReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QPlaceReply.Type">
+      <EnumMember name="QPlaceReply.Reply"/>
+      <EnumMember name="QPlaceReply.DetailsReply"/>
+      <EnumMember name="QPlaceReply.SearchReply"/>
+      <EnumMember name="QPlaceReply.SearchSuggestionReply"/>
+      <EnumMember name="QPlaceReply.ContentReply"/>
+      <EnumMember name="QPlaceReply.IdReply"/>
+      <EnumMember name="QPlaceReply.MatchReply"/>
+    </Enum>
+    <Enum name="QPlaceReply.Error">
+      <EnumMember name="QPlaceReply.NoError"/>
+      <EnumMember name="QPlaceReply.PlaceDoesNotExistError"/>
+      <EnumMember name="QPlaceReply.CategoryDoesNotExistError"/>
+      <EnumMember name="QPlaceReply.CommunicationError"/>
+      <EnumMember name="QPlaceReply.ParseError"/>
+      <EnumMember name="QPlaceReply.PermissionsError"/>
+      <EnumMember name="QPlaceReply.UnsupportedError"/>
+      <EnumMember name="QPlaceReply.BadArgumentError"/>
+      <EnumMember name="QPlaceReply.CancelError"/>
+      <EnumMember name="QPlaceReply.UnknownError"/>
+    </Enum>
+    <Function name="QPlaceReply.setError">
+      <Argument typename="QPlaceReply.Error" typetype="enum" name="error"/>
+      <Argument typename="QString" typetype="mappedtype" name="errorString"/>
+    </Function>
+    <Function name="QPlaceReply.setFinished">
+      <Argument typename="bool" name="finished"/>
+    </Function>
+    <Signal default="1" name="QPlaceReply.finished" sig="void finished()"/>
+    <Signal default="1" name="QPlaceReply.aborted" sig="void aborted()"/>
+    <Function name="QPlaceReply.abort" slot="void abort()" virtual="1"/>
+    <Function name="QPlaceReply.error">
+      <Argument typename="QPlaceReply.Error" typetype="enum" dir="out"/>
+    </Function>
+    <Signal default="1" name="QPlaceReply.error" sig="void error( ::QPlaceReply::Error,const QString&amp; = QString())"/>
+    <Function name="QPlaceReply.errorString">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceReply.isFinished">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceContentReply" inherits="QPlaceReply">
+    <Function name="QPlaceContentReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceContentReply.setNextPageRequest">
+      <Argument typename="QPlaceContentRequest" typetype="class" name="next"/>
+    </Function>
+    <Function name="QPlaceContentReply.setPreviousPageRequest">
+      <Argument typename="QPlaceContentRequest" typetype="class" name="previous"/>
+    </Function>
+    <Function name="QPlaceContentReply.setRequest">
+      <Argument typename="QPlaceContentRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceContentReply.setTotalCount">
+      <Argument typename="int" name="total"/>
+    </Function>
+    <Function name="QPlaceContentReply.setContent">
+      <Argument typename="unknown-type" typetype="mappedtype" name="content"/>
+    </Function>
+    <Function name="QPlaceContentReply.nextPageRequest">
+      <Argument typename="QPlaceContentRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentReply.previousPageRequest">
+      <Argument typename="QPlaceContentRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentReply.request">
+      <Argument typename="QPlaceContentRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentReply.totalCount">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentReply.content">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceContentRequest">
+    <Function name="QPlaceContentRequest.__init__"/>
+    <Function name="QPlaceContentRequest.__init__">
+      <Argument typename="QPlaceContentRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceContentRequest.clear"/>
+    <Function name="QPlaceContentRequest.setLimit">
+      <Argument typename="int" name="limit"/>
+    </Function>
+    <Function name="QPlaceContentRequest.limit">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentRequest.setContentContext">
+      <Argument typename="QVariant" typetype="class" name="context"/>
+    </Function>
+    <Function name="QPlaceContentRequest.contentContext">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentRequest.setPlaceId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceContentRequest.placeId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentRequest.setContentType">
+      <Argument typename="QPlaceContent.Type" typetype="enum" name="type"/>
+    </Function>
+    <Function name="QPlaceContentRequest.contentType">
+      <Argument typename="QPlaceContent.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceContentRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContentRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceContentRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceContentRequest" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceDetailsReply" inherits="QPlaceReply">
+    <Function name="QPlaceDetailsReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceDetailsReply.setPlace">
+      <Argument typename="QPlace" typetype="class" name="place"/>
+    </Function>
+    <Function name="QPlaceDetailsReply.place">
+      <Argument typename="QPlace" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceDetailsReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceEditorial" inherits="QPlaceContent">
+    <Function name="QPlaceEditorial.__init__"/>
+    <Function name="QPlaceEditorial.__init__">
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceEditorial.__init__">
+      <Argument typename="QPlaceEditorial" typetype="class"/>
+    </Function>
+    <Function name="QPlaceEditorial.setLanguage">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceEditorial.language">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceEditorial.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceEditorial.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceEditorial.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QPlaceEditorial.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceIcon">
+    <Function name="QPlaceIcon.__init__"/>
+    <Function name="QPlaceIcon.__init__">
+      <Argument typename="QPlaceIcon" typetype="class" name="other"/>
+    </Function>
+    <Member name="QPlaceIcon.SingleUrl" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Function name="QPlaceIcon.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceIcon.setParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QPlaceIcon.parameters">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceIcon.setManager">
+      <Argument typename="QPlaceManager" typetype="class" name="manager"/>
+    </Function>
+    <Function name="QPlaceIcon.manager">
+      <Argument typename="QPlaceManager" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceIcon.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QSize" typetype="class" name="size" default="QSize()"/>
+    </Function>
+    <Function name="QPlaceIcon.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceIcon" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceIcon.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceIcon" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceIdReply" inherits="QPlaceReply">
+    <Function name="QPlaceIdReply.__init__">
+      <Argument typename="QPlaceIdReply.OperationType" typetype="enum" name="operationType"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Enum name="QPlaceIdReply.OperationType">
+      <EnumMember name="QPlaceIdReply.SavePlace"/>
+      <EnumMember name="QPlaceIdReply.SaveCategory"/>
+      <EnumMember name="QPlaceIdReply.RemovePlace"/>
+      <EnumMember name="QPlaceIdReply.RemoveCategory"/>
+    </Enum>
+    <Function name="QPlaceIdReply.setId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceIdReply.id">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceIdReply.operationType">
+      <Argument typename="QPlaceIdReply.OperationType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceIdReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceImage" inherits="QPlaceContent">
+    <Function name="QPlaceImage.__init__"/>
+    <Function name="QPlaceImage.__init__">
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceImage.__init__">
+      <Argument typename="QPlaceImage" typetype="class"/>
+    </Function>
+    <Function name="QPlaceImage.setMimeType">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceImage.mimeType">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceImage.setImageId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceImage.imageId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceImage.setUrl">
+      <Argument typename="QUrl" typetype="class" name="url"/>
+    </Function>
+    <Function name="QPlaceImage.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceManager" inherits="QObject">
+    <Signal default="1" name="QPlaceManager.dataChanged" sig="void dataChanged()"/>
+    <Signal default="1" name="QPlaceManager.categoryRemoved" sig="void categoryRemoved(const QString&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.categoryUpdated" sig="void categoryUpdated(const  ::QPlaceCategory&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.categoryAdded" sig="void categoryAdded(const  ::QPlaceCategory&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.placeRemoved" sig="void placeRemoved(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.placeUpdated" sig="void placeUpdated(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.placeAdded" sig="void placeAdded(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManager.error" sig="void error( ::QPlaceReply*, ::QPlaceReply::Error,const QString&amp; = QString())"/>
+    <Signal default="1" name="QPlaceManager.finished" sig="void finished( ::QPlaceReply*)"/>
+    <Function name="QPlaceManager.matchingPlaces">
+      <Argument typename="QPlaceMatchReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManager.compatiblePlace">
+      <Argument typename="QPlace" typetype="class" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="place"/>
+    </Function>
+    <Function name="QPlaceManager.setLocales">
+      <Argument typename="unknown-type" typetype="mappedtype" name="locale"/>
+    </Function>
+    <Function name="QPlaceManager.setLocale">
+      <Argument typename="QLocale" typetype="class" name="locale"/>
+    </Function>
+    <Function name="QPlaceManager.locales">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceManager.childCategories">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="parentId" default="''"/>
+    </Function>
+    <Function name="QPlaceManager.category">
+      <Argument typename="QPlaceCategory" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManager.childCategoryIds">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="parentId" default="''"/>
+    </Function>
+    <Function name="QPlaceManager.parentCategoryId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManager.initializeCategories">
+      <Argument typename="QPlaceReply" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceManager.removeCategory">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManager.saveCategory">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceCategory" typetype="class" name="category"/>
+      <Argument typename="QString" typetype="mappedtype" name="parentId" default="''"/>
+    </Function>
+    <Function name="QPlaceManager.removePlace">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeId"/>
+    </Function>
+    <Function name="QPlaceManager.savePlace">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="place"/>
+    </Function>
+    <Function name="QPlaceManager.searchSuggestions">
+      <Argument typename="QPlaceSearchSuggestionReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManager.search">
+      <Argument typename="QPlaceSearchReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="query"/>
+    </Function>
+    <Function name="QPlaceManager.getPlaceContent">
+      <Argument typename="QPlaceContentReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceContentRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManager.getPlaceDetails">
+      <Argument typename="QPlaceDetailsReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeId"/>
+    </Function>
+    <Function name="QPlaceManager.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceManager.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceManagerEngine" inherits="QObject">
+    <Function name="QPlaceManagerEngine.__init__">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.manager">
+      <Argument typename="QPlaceManager" typetype="class" dir="out"/>
+    </Function>
+    <Signal default="1" name="QPlaceManagerEngine.dataChanged" sig="void dataChanged()"/>
+    <Signal default="1" name="QPlaceManagerEngine.categoryRemoved" sig="void categoryRemoved(const QString&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.categoryUpdated" sig="void categoryUpdated(const  ::QPlaceCategory&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.categoryAdded" sig="void categoryAdded(const  ::QPlaceCategory&amp;,const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.placeRemoved" sig="void placeRemoved(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.placeUpdated" sig="void placeUpdated(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.placeAdded" sig="void placeAdded(const QString&amp;)"/>
+    <Signal default="1" name="QPlaceManagerEngine.error" sig="void error( ::QPlaceReply*, ::QPlaceReply::Error,const QString&amp; = QString())"/>
+    <Signal default="1" name="QPlaceManagerEngine.finished" sig="void finished( ::QPlaceReply*)"/>
+    <Function name="QPlaceManagerEngine.matchingPlaces" virtual="1">
+      <Argument typename="QPlaceMatchReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.compatiblePlace" virtual="1">
+      <Argument typename="QPlace" typetype="class" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="original"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.constructIconUrl" virtual="1">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+      <Argument typename="QPlaceIcon" typetype="class" name="icon"/>
+      <Argument typename="QSize" typetype="class" name="size"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.setLocales" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" name="locales"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.locales" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.childCategories" virtual="1">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="parentId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.category" virtual="1">
+      <Argument typename="QPlaceCategory" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.childCategoryIds" virtual="1">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.parentCategoryId" virtual="1">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.initializeCategories" virtual="1">
+      <Argument typename="QPlaceReply" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.removeCategory" virtual="1">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="categoryId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.saveCategory" virtual="1">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceCategory" typetype="class" name="category"/>
+      <Argument typename="QString" typetype="mappedtype" name="parentId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.removePlace" virtual="1">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.savePlace" virtual="1">
+      <Argument typename="QPlaceIdReply" typetype="class" dir="out"/>
+      <Argument typename="QPlace" typetype="class" name="place"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.searchSuggestions" virtual="1">
+      <Argument typename="QPlaceSearchSuggestionReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.search" virtual="1">
+      <Argument typename="QPlaceSearchReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.getPlaceContent" virtual="1">
+      <Argument typename="QPlaceContentReply" typetype="class" dir="out"/>
+      <Argument typename="QPlaceContentRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.getPlaceDetails" virtual="1">
+      <Argument typename="QPlaceDetailsReply" typetype="class" dir="out"/>
+      <Argument typename="QString" typetype="mappedtype" name="placeId"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.managerVersion">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceManagerEngine.managerName">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceMatchReply" inherits="QPlaceReply">
+    <Function name="QPlaceMatchReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceMatchReply.setRequest">
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceMatchReply.setPlaces">
+      <Argument typename="unknown-type" typetype="mappedtype" name="results"/>
+    </Function>
+    <Function name="QPlaceMatchReply.request">
+      <Argument typename="QPlaceMatchRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceMatchReply.places">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceMatchReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceMatchRequest">
+    <Function name="QPlaceMatchRequest.__init__"/>
+    <Function name="QPlaceMatchRequest.__init__">
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="other"/>
+    </Function>
+    <Member name="QPlaceMatchRequest.AlternativeId" const="1" static="1" typename="QString" typetype="mappedtype"/>
+    <Function name="QPlaceMatchRequest.clear"/>
+    <Function name="QPlaceMatchRequest.setParameters">
+      <Argument typename="unknown-type" typetype="mappedtype" name="parameters"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.parameters">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.setResults">
+      <Argument typename="unknown-type" typetype="mappedtype" name="results"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.setPlaces">
+      <Argument typename="unknown-type" typetype="mappedtype" name="places"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.places">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceMatchRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceMatchRequest" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceSearchResult">
+    <Function name="QPlaceSearchResult.__init__"/>
+    <Function name="QPlaceSearchResult.__init__">
+      <Argument typename="QPlaceSearchResult" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QPlaceSearchResult.SearchResultType">
+      <EnumMember name="QPlaceSearchResult.UnknownSearchResult"/>
+      <EnumMember name="QPlaceSearchResult.PlaceResult"/>
+      <EnumMember name="QPlaceSearchResult.ProposedSearchResult"/>
+    </Enum>
+    <Function name="QPlaceSearchResult.setIcon">
+      <Argument typename="QPlaceIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QPlaceSearchResult.icon">
+      <Argument typename="QPlaceIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchResult.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="title"/>
+    </Function>
+    <Function name="QPlaceSearchResult.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchResult.type">
+      <Argument typename="QPlaceSearchResult.SearchResultType" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchResult.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSearchResult" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceSearchResult.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSearchResult" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceProposedSearchResult" inherits="QPlaceSearchResult">
+    <Function name="QPlaceProposedSearchResult.__init__"/>
+    <Function name="QPlaceProposedSearchResult.__init__">
+      <Argument typename="QPlaceSearchResult" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceProposedSearchResult.__init__">
+      <Argument typename="QPlaceProposedSearchResult" typetype="class"/>
+    </Function>
+    <Function name="QPlaceProposedSearchResult.setSearchRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceProposedSearchResult.searchRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceRatings">
+    <Function name="QPlaceRatings.__init__"/>
+    <Function name="QPlaceRatings.__init__">
+      <Argument typename="QPlaceRatings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceRatings.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceRatings.setMaximum">
+      <Argument typename="float" name="max"/>
+    </Function>
+    <Function name="QPlaceRatings.maximum">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QPlaceRatings.setCount">
+      <Argument typename="int" name="count"/>
+    </Function>
+    <Function name="QPlaceRatings.count">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceRatings.setAverage">
+      <Argument typename="float" name="average"/>
+    </Function>
+    <Function name="QPlaceRatings.average">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QPlaceRatings.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceRatings" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceRatings.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceRatings" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceResult" inherits="QPlaceSearchResult">
+    <Function name="QPlaceResult.__init__"/>
+    <Function name="QPlaceResult.__init__">
+      <Argument typename="QPlaceSearchResult" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceResult.__init__">
+      <Argument typename="QPlaceResult" typetype="class"/>
+    </Function>
+    <Function name="QPlaceResult.setSponsored">
+      <Argument typename="bool" name="sponsored"/>
+    </Function>
+    <Function name="QPlaceResult.isSponsored">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceResult.setPlace">
+      <Argument typename="QPlace" typetype="class" name="place"/>
+    </Function>
+    <Function name="QPlaceResult.place">
+      <Argument typename="QPlace" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceResult.setDistance">
+      <Argument typename="float" name="distance"/>
+    </Function>
+    <Function name="QPlaceResult.distance">
+      <Argument typename="float" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceReview" inherits="QPlaceContent">
+    <Function name="QPlaceReview.__init__"/>
+    <Function name="QPlaceReview.__init__">
+      <Argument typename="QPlaceContent" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceReview.__init__">
+      <Argument typename="QPlaceReview" typetype="class"/>
+    </Function>
+    <Function name="QPlaceReview.setTitle">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceReview.title">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceReview.setReviewId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceReview.reviewId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceReview.setRating">
+      <Argument typename="float" name="data"/>
+    </Function>
+    <Function name="QPlaceReview.rating">
+      <Argument typename="float" dir="out"/>
+    </Function>
+    <Function name="QPlaceReview.setLanguage">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceReview.language">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceReview.setText">
+      <Argument typename="QString" typetype="mappedtype" name="text"/>
+    </Function>
+    <Function name="QPlaceReview.text">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceReview.setDateTime">
+      <Argument typename="QDateTime" typetype="class" name="dt"/>
+    </Function>
+    <Function name="QPlaceReview.dateTime">
+      <Argument typename="QDateTime" typetype="class" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceSearchReply" inherits="QPlaceReply">
+    <Function name="QPlaceSearchReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceSearchReply.setNextPageRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="next"/>
+    </Function>
+    <Function name="QPlaceSearchReply.setPreviousPageRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="previous"/>
+    </Function>
+    <Function name="QPlaceSearchReply.setRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="request"/>
+    </Function>
+    <Function name="QPlaceSearchReply.setResults">
+      <Argument typename="unknown-type" typetype="mappedtype" name="results"/>
+    </Function>
+    <Function name="QPlaceSearchReply.nextPageRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchReply.previousPageRequest">
+      <Argument typename="QPlaceSearchRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchReply.request">
+      <Argument typename="QPlaceSearchRequest" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchReply.results">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceSearchRequest">
+    <Function name="QPlaceSearchRequest.__init__"/>
+    <Function name="QPlaceSearchRequest.__init__">
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="other"/>
+    </Function>
+    <Enum name="QPlaceSearchRequest.RelevanceHint">
+      <EnumMember name="QPlaceSearchRequest.UnspecifiedHint"/>
+      <EnumMember name="QPlaceSearchRequest.DistanceHint"/>
+      <EnumMember name="QPlaceSearchRequest.LexicalPlaceNameHint"/>
+    </Enum>
+    <Function name="QPlaceSearchRequest.clear"/>
+    <Function name="QPlaceSearchRequest.setLimit">
+      <Argument typename="int" name="limit"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.limit">
+      <Argument typename="int" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setRelevanceHint">
+      <Argument typename="QPlaceSearchRequest.RelevanceHint" typetype="enum" name="hint"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.relevanceHint">
+      <Argument typename="QPlaceSearchRequest.RelevanceHint" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setVisibilityScope">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" name="visibilityScopes"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.visibilityScope">
+      <Argument typename="QLocation.VisibilityScope" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setSearchContext">
+      <Argument typename="QVariant" typetype="class" name="context"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.searchContext">
+      <Argument typename="QVariant" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setRecommendationId">
+      <Argument typename="QString" typetype="mappedtype" name="recommendationId"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.recommendationId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setSearchArea">
+      <Argument typename="QGeoShape" typetype="class" name="area"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.searchArea">
+      <Argument typename="QGeoShape" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setCategories">
+      <Argument typename="unknown-type" typetype="mappedtype" name="categories"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setCategory">
+      <Argument typename="QPlaceCategory" typetype="class" name="category"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.categories">
+      <Argument typename="unknown-type" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.setSearchTerm">
+      <Argument typename="QString" typetype="mappedtype" name="term"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.searchTerm">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceSearchRequest.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSearchRequest" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceSearchSuggestionReply" inherits="QPlaceReply">
+    <Function name="QPlaceSearchSuggestionReply.__init__">
+      <Argument typename="QObject" typetype="class" name="parent" transfer="this" default="None"/>
+    </Function>
+    <Function name="QPlaceSearchSuggestionReply.setSuggestions">
+      <Argument typename="QStringList" typetype="mappedtype" name="suggestions"/>
+    </Function>
+    <Function name="QPlaceSearchSuggestionReply.type" virtual="1">
+      <Argument typename="QPlaceReply.Type" typetype="enum" dir="out"/>
+    </Function>
+    <Function name="QPlaceSearchSuggestionReply.suggestions">
+      <Argument typename="QStringList" typetype="mappedtype" dir="out"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceSupplier">
+    <Function name="QPlaceSupplier.__init__"/>
+    <Function name="QPlaceSupplier.__init__">
+      <Argument typename="QPlaceSupplier" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceSupplier.isEmpty">
+      <Argument typename="bool" dir="out"/>
+    </Function>
+    <Function name="QPlaceSupplier.setIcon">
+      <Argument typename="QPlaceIcon" typetype="class" name="icon"/>
+    </Function>
+    <Function name="QPlaceSupplier.icon">
+      <Argument typename="QPlaceIcon" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSupplier.setUrl">
+      <Argument typename="QUrl" typetype="class" name="data"/>
+    </Function>
+    <Function name="QPlaceSupplier.url">
+      <Argument typename="QUrl" typetype="class" dir="out"/>
+    </Function>
+    <Function name="QPlaceSupplier.setSupplierId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceSupplier.supplierId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSupplier.setName">
+      <Argument typename="QString" typetype="mappedtype" name="data"/>
+    </Function>
+    <Function name="QPlaceSupplier.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceSupplier.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSupplier" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceSupplier.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceSupplier" typetype="class" name="other"/>
+    </Function>
+  </Class>
+  <Class name="QPlaceUser">
+    <Function name="QPlaceUser.__init__"/>
+    <Function name="QPlaceUser.__init__">
+      <Argument typename="QPlaceUser" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceUser.setName">
+      <Argument typename="QString" typetype="mappedtype" name="name"/>
+    </Function>
+    <Function name="QPlaceUser.name">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceUser.setUserId">
+      <Argument typename="QString" typetype="mappedtype" name="identifier"/>
+    </Function>
+    <Function name="QPlaceUser.userId">
+      <Argument typename="QString" typetype="mappedtype" dir="out"/>
+    </Function>
+    <Function name="QPlaceUser.__ne__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceUser" typetype="class" name="other"/>
+    </Function>
+    <Function name="QPlaceUser.__eq__">
+      <Argument typename="bool" dir="out"/>
+      <Argument typename="QPlaceUser" typetype="class" name="other"/>
+    </Function>
+  </Class>
+</Module>
