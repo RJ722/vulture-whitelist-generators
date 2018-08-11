@@ -3,3 +3,4 @@ omit =
   setup.py
   .tox/*
 parallel = True
+branch=True
