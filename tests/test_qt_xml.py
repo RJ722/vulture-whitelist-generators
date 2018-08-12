@@ -7,7 +7,7 @@ from tests import TESTS, SAMPLE_WHITELISTS
 
 def test_whitelist_from_xml(tmpdir):
     whitelist = str(tmpdir.mkdir("whitelists").join("xml-whitelist.py"))
-    c = QtWhitelistCreator(whitelist, 'sip')
+    c = QtWhitelistCreator(sip='sip')
     with open(whitelist, 'w') as outfile:
         xmldata = os.path.join(TESTS, 'test-data', 'xml-data')
         for xmldir in sorted(os.listdir(xmldata)):
