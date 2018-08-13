@@ -21,10 +21,10 @@ install:
   - make
   - sudo make install
   - popd
-  - pip install coveralls lxml tox
+  - pip install codecov lxml tox
   - python setup.py bdist_wheel
   - pip install --use-wheel ./dist/vulture_whitelist*.whl
 script:
   - tox -e cleanup,py,docs,style,vulture
 after_success:
-  - coveralls
+  - codecov

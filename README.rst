@@ -1,6 +1,10 @@
 vulture-whitelist-generators
 ============================
 
+.. image:: https://codecov.io/gh/RJ722/vulture-whitelist-generators/branch/master/graph/badge.svg
+  :target: https://codecov.io/gh/RJ722/vulture-whitelist-generators
+
+
 Create whitelists to tackle false positives in Vulture automatically for
 frameworks using Python bindings for C and C++ libraries, e.g. PyQt.
 
