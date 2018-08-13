@@ -78,7 +78,7 @@ class QtWhitelistCreator(Creator):
             self.create_xml(module, tmpdir, self.sip)
             self._write_mod_whitelist(outfile, module, self.name_set(tmpdir))
 
-    def create(self):
-        with open(self.whitelist_name, 'w') as outfile:
+    def create(self, whitelist_name):
+        with open(whitelist_name, 'w') as outfile:
             for module in self.get_modules():
                 self.create_mod_whitelist(module, outfile)

@@ -15,7 +15,6 @@ class Creator:
     Abstract class to register a new creator.
     """
 
-    def __init__(self, whitelist_name, *args):
-        self.whitelist_name = whitelist_name
-        for arg in args:
-            setattr(self, arg, arg)
+    def __init__(self, **kwargs):
+        for key, value in kwargs.items():
+            setattr(self, key, value)
