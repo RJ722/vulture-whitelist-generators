@@ -23,7 +23,7 @@ install:
   - popd
   - pip install codecov lxml tox
   - python setup.py bdist_wheel
-  - pip install --use-wheel ./dist/vulture_whitelist*.whl
+  - "pip install --only-binary=:all: ./dist/vulture_whitelist*.whl"
 script:
   - tox -e cleanup,py,docs,style,vulture
 after_success:
