@@ -1,0 +1,4 @@
+DO NOT DELETE
+
+This file is required for testing the behaviour of vulture-whitelist with
+non-directory files inside the modules folder.
